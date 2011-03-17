@@ -1,0 +1,506 @@
+/*
+Theme Name: Seen On Screen Fitness
+Theme URI: http://seeonscreenfitness.com/
+Description: A theme for Seen On Screen Fitness - child theme of Scaffolding
+Template: Scaffolding
+Author: J&J
+Version: 0.1
+*/
+
+body {
+	width: 100%;
+	/*font-family: 'PT Sans', 'Helvetica Neue', Helvetica;*/
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	/*font-family: 'Puritan', 'Helvetica Neue', Helvetica;*/
+	background: url(images/sliced/bg_gradient.jpg) top left repeat-x;
+}
+
+h1 {
+	width: 291px;
+	height: 50px;
+	background: url(images/sliced/logo.png) right bottom no-repeat;
+	overflow: hidden;
+	text-indent: -9999px;
+	margin-bottom: 0;
+}
+
+#header, #footer {
+	color: #eee;
+}
+
+#header {
+	color: #eee;
+	position: relative;
+	height: 229px;
+	margin-bottom: 20px;
+	width: 1041px; /* to fit in all the dancer photos; for some reason, 1040px is too small with ordinary browser fonts */
+}
+
+#logo {
+	position: absolute;
+	bottom: 5px;
+	right: 15px;
+	z-index: 1;
+}
+
+#gallery {
+	position: relative;
+	left: -20px;
+}
+
+#nav {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	position: absolute;
+	bottom: 5px;
+	margin: 0;
+}
+
+#leftpane {
+	/*background-color: #f8f881;*/
+}
+
+#rightpane {
+	/*background-color: #abf57b;*/
+}
+
+#sidebar {
+	/*background-color: #cfb1fa;*/
+}
+
+#footerContainer {
+	background-color: #a4a49a;
+	position: relative;
+}
+
+#footer a {
+	color: inherit;
+	text-decoration: none;
+}
+
+#contact_us_now_footer {
+	background: url(images/sliced/contact-us.png) left top no-repeat;
+	height: 28px;
+	width: 203px;
+	text-indent: -9999px;
+	overflow: hidden;
+	position: relative;
+	top: 12px;
+	display: block;
+}
+
+.padleft {
+	padding-left: 20px;
+}
+
+#home_dancers {
+	padding-top: 10px;
+}
+
+/*** generic classes ***/
+.jbasewrap {
+	width: 1040px;
+}
+
+h2 {
+	font-size: 2.8em;
+}
+
+.hidden {
+	display: none;
+}
+
+ul.inline {
+	margin-left: 0;
+	padding-left: 0;
+	display: inline;
+} 
+
+	ul.inline li {
+		margin-left: 0;
+		/*border-left: 1px solid #000;*/
+		list-style: none;
+		display: inline;
+	}
+	
+		
+	ul.inline li.first {
+		margin-left: 0;
+		/*border-left: none;*/
+		list-style: none;
+		display: inline;
+	}
+
+.brownbox {
+	border: 4px solid #9e9888;
+}
+	
+/*** more styles ***/
+
+#gallery ul.inline li {
+	/* doesn't work with display: inline; width: 135px; */
+	padding: 0px;
+}
+
+#gallery ul.inline li a {
+	text-indent: -9999px;
+	height: 200px;
+	width: 170px;
+	display: inline-block;
+	background-position: -0px top;
+	background-repeat: no-repeat;
+}
+
+#gallery ul.inline li a:hover {
+	background-position: -0px -229px;
+}
+
+#abby {
+	background-image: url(images/sliced/abby.jpg);
+}
+
+#dean {
+	background-image: url(images/sliced/dean.jpg);
+}
+
+#keeley {
+	background-image: url(images/sliced/keeley.jpg);
+}
+
+#lianne {
+	background-image: url(images/sliced/lianne.jpg);
+}
+
+#nicole {
+	background-image: url(images/sliced/nicole.jpg);
+}
+
+#shaun {
+	background-image: url(images/sliced/shaun.jpg);
+}
+
+#nav a {
+	color: inherit;
+	text-decoration: none;
+	padding: 0 10px 15px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	font-size: 0.8em;
+}
+
+#nav a.active, #nav a:hover {
+	color: #545454;
+	background-color: #FFF;
+}
+
+/*#nav a:hover {
+
+}*/
+
+#nav li {
+	/* doesn't work with display: inline; width: 135px; */
+	padding: 0px 5px;
+}
+
+#nav li.first {
+
+}
+
+ul.starred {
+	margin-left: 0;
+	font-size: 1.5em;
+}
+
+	ul.starred li {
+		list-style: none;
+		margin-bottom: 5px;
+
+	}
+
+#artistsBox {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#artists li {
+	-webkit-transition: background-color 0.75s ease-in-out;
+	-moz-transition: background-color 0.75s ease-in-out;
+	-o-transition: background-color 0.75s ease-in-out;
+	-webkit-transition: background-color 0.75s ease-in-out;
+	transition: background-color 0.75s ease-in-out;
+}
+#artists li:hover {
+	background-color: #c4c4c4;
+}
+
+ul.boxed {
+	margin-left: 0;
+}
+
+ul.boxed li {
+	width: 165px;
+	padding: 6px;
+	list-style: none;
+	color: #333333;
+	background-color: #e6e6e6;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	margin-bottom: 5px;
+}
+
+#dancersMiniList {
+	margin-left: 0;
+}
+
+#dancersMiniList li {
+	list-style: none;
+	line-height: 1.25em;
+}
+
+#dancersMiniList a {
+	text-decoration: none;
+	color: #333;
+}
+
+#dancersMiniList a:hover {
+	text-decoration: underline;
+}
+
+ul.starred li {
+	font-size: 1.25em;
+	padding-left: 80px;
+	background: url('images/star.jpg') top left no-repeat;
+	/*height: 60px;*/
+	/*line-height: 60px;*/
+	padding-top: 0.5em;
+}
+
+ul.starred div.adr {
+	font-size: 0.7em;
+	line-height: 1.25em;
+	margin-top: 10px;
+}
+
+#tweets ul {
+	margin: 0;
+}
+
+#tweets {
+	margin-left: 1em;
+}
+
+	#tweets ul li {
+		list-style: none;
+		line-height: 1.25em;
+	}
+	
+		#tweets ul li a {
+			color: #88ff00;
+			text-shadow:0px 0px 0px #333333;
+			text-decoration: none;
+		}
+
+/* customizing Twitter's widget */
+.twtr-widget .twtr-hd, .twtr-widget .twtr-ft {
+	display: none;
+}
+
+#twtr-widget-1 {
+	font-size: 1em !important;
+}
+
+#twtr-widget-1 p {
+	line-height: 1.25em !important;
+}
+
+#footer {
+	font-size: 2em;
+}
+
+#footer .right a {
+	margin-right: 5px;
+}
+
+/* bookings page-specific */
+.dancerbg {
+	background-image: url('images/dancer_bg.jpg');
+	background-position: right bottom;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.box {
+	position: relative;
+	background-color: #D9DBD9;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+	.box ul {
+		margin: 0;
+	}
+		.box ul li {
+			list-style: none;
+			border-bottom: 1px white solid;
+		}
+
+.bookbutton {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url(images/sliced/book-now.png) left top no-repeat;
+	height: 46px;
+	width: 46px;
+}
+
+/* packages page-specific */
+#softcore, #mediumcore, #hardcore, #book_assessment {
+	overflow: hidden;
+	text-indent: -9999px;
+	display: block;
+	height: 34px;
+	width: 190px;
+}
+#mediumcore {
+	position: relative;
+	left: -20px;
+}
+
+#softcore {
+	background: url(images/sliced/softcore.gif) left top no-repeat;
+}
+
+#mediumcore {
+	background: url(images/sliced/mediumcore.gif) left top no-repeat;
+	width: 215px;
+}
+
+#hardcore {
+	background: url(images/sliced/hardcore.gif) left top no-repeat;
+}
+
+p.huge {
+	font-size: 1.7em;
+	line-height: 1.2em;
+	margin-bottom: 0.857em; /* half of 1.714em */
+}
+#book_assessment {
+	background: url(images/sliced/book-text.png) left top no-repeat;
+	height: 80px;
+	width: 257px;
+}
+
+#grey_shadow {
+	bottom: -145px;
+}
+
+.bottomline {
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+}
+
+#content {
+	position: relative;
+}
+
+/* contact page-specific */
+#contactForm {
+	background-color: #E2E6DA;
+	overflow: hidden;
+	width: 765px;
+	padding: 10px 0 50px 15px;
+	margin-bottom: 20px;
+	position: relative;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#contactForm label {
+	margin-top: 5px;
+	display: block;
+}
+
+#contactForm input, #contactForm textarea {
+	display: block;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font-size: 1.5em;
+	border: 0;
+	padding: 2px 3px 3px;
+	font-family: inherit;
+}
+
+#contactForm input:focus, #contactForm textarea:focus {
+	-webkit-box-shadow: 0px 0px 20px #80bd3b;
+	-moz-box-shadow: 0px 0px 20px #80bd3b;
+	box-shadow: 0px 0px 20px #80bd3b;
+}
+
+#contactForm input[type=submit]:focus {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+#contactForm textarea {
+	margin-bottom: 1em;
+}
+
+#contactForm .button {
+	background: url("images/oval-green-left.gif") no-repeat scroll left top transparent;
+	padding-left: 8px;
+}
+
+#contactForm #submitButton {
+	border: 0;
+	padding: 4px 11px 4px 0;
+	display: inline;
+	background: url("images/oval-green-right.gif") no-repeat scroll right top transparent;
+	font-size: 0.8em;
+	line-height: 1.5em;
+}
+
+/* dancer page-specific */
+.dancer ul {
+	overflow: hidden;
+	margin-left: 0;
+}
+
+.dancer ul li {
+	list-style: none;
+}
+
+ul.mini.starred {
+	font-size: 1.25em;
+	overflow: hidden;
+}
+
+ul.mini.starred li {
+	padding-left: 40px;
+	font-size: 1em;
+	width: 110px; /* grid3col - padding-left */
+	float: left;
+	height: auto;
+	/*line-height: 35px;*/
+	background: url('images/mini_star.jpg') top left no-repeat;
+}
+
+a.book {
+	width: 100%;
+	background-color: #8F0;
+	color: #FFF;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+.paddingtopsmall {
+	padding-top: 10px;
+	overflow: hidden;
+}
