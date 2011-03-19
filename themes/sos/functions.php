@@ -1,8 +1,8 @@
 <?php
 
 add_theme_support( 'post-thumbnails' );
-add_image_size( 'main-image', 470, 340, true );
-add_image_size( 'small-thumb', 120, 80, true );
+add_image_size( 'main-image', 426, 340 );
+add_image_size( 'small-thumb', 120, 80 );
 
 function attachment_toolbox($size = thumbnail, $ulClass = '', $liClass = '') {
 
