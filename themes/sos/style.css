@@ -461,6 +461,7 @@ p.huge {
 	border: 0;
 	padding: 2px 3px 3px;
 	font-family: inherit;
+	font-weight: inherit;
 }
 
 #contactForm input:focus, #contactForm textarea:focus {
@@ -469,7 +470,7 @@ p.huge {
 	box-shadow: 0px 0px 20px #80bd3b;
 }
 
-#contactForm #submitButton:focus, #contactForm #submitButton:hover {
+#contactForm .submitButton:focus, #contactForm .submitButton:hover {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
@@ -489,7 +490,7 @@ p.huge {
 	background-position: left -24px;
 }
 
-#contactForm #submitButton {
+#contactForm .submitButton {
 	border: 0;
 	padding: 4px 11px 4px 0;
 	display: inline;
@@ -506,6 +507,11 @@ p.huge {
 
 .dancer ul li {
 	list-style: none;
+}
+
+.dancer img { /* centre the image in case it is not wide enough */
+	display: block;
+	margin: auto;
 }
 
 ul.mini.starred {

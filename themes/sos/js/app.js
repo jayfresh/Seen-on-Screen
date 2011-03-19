@@ -5,6 +5,8 @@ $.fn.equalize = function() {
 	$collection.each(function(i, elem) {
 		heights.push($(elem).height());
 	});
+	/* add minimum height of 2 lines */
+	heights.push(parseInt($collection.eq(0).css('lineHeight'),10)*2);
 	maxHeight = Math.max.apply(Math, heights);
 	$collection.height(maxHeight);
 	return this;
