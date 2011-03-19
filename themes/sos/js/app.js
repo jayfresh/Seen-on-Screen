@@ -109,3 +109,10 @@ $(document).ready(function() {
 		}
 	}
 });
+
+/* highlight dancer on dancer page */
+$(document).ready(function() {
+	if(window.highlightDancer) {
+		$('#'+window.highlightDancer.toLowerCase()).addClass('hoverClass');
+	}
+});

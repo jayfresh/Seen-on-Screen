@@ -20,7 +20,7 @@ global $post;
 				</div>
 				<div class="rightpane left dancer">
 					<div>
-						<?php the_post_thumbnail(); ?>
+						<?php the_post_thumbnail('main-image'); ?>
 					</div>
 				</div>
 			</div>
@@ -30,7 +30,7 @@ global $post;
 				</div>
 				<div class="rightpane left dancer">
 					<div>
-						<?php attachment_toolbox('small-thumb', '', 'grid2col left'); ?>
+						<?php //attachment_toolbox('small-thumb', '', 'grid2col left'); ?>
 						<!--<ul class="inline">
 							
 						</ul>-->
@@ -38,4 +38,7 @@ global $post;
 					<a href="<?php bloginfo('url'); ?>/contact?page=dancer&class=<?php the_title(); ?>" class="book">Book a session with <?php the_title(); ?> now &raquo;</a>
 				</div>
 			</div>
+			<script type="text/javascript">
+				window.highlightDancer = "<?php the_title(); ?>";
+			</script>
 <?php get_footer(); ?>
