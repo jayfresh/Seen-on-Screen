@@ -52,6 +52,10 @@ $(document).ready(function() {
 	}, function() {
 		// do nothing
 	});
+	$('#dancersMiniList a').live('hover', function() {
+		var dancer = $(this).text().toLowerCase();
+		$('#'+dancer).toggleClass('hoverClass');
+	});
 });
 
 function extractParams(q) {

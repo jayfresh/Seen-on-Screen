@@ -31,7 +31,7 @@
 	    avatars: true,
 	    behavior: 'all'
 	  }
-	}).render().setUser('jayfresh').start();
+	}).render().setUser('seen_on_screen').start();
 	</script>
 					<!--<ul>
 						<li>
