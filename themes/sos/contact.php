@@ -5,7 +5,7 @@ get_header();
 
 ?>
 
-<form class="grid10col" id="contactForm">
+<!--<form class="grid10col" id="contactForm">
 	<div class="grid3col left">
 		<h2>Contact</h2>
 		<img class="bottomline" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/contact_dancer.jpg" alt="dancer image" />
@@ -23,7 +23,7 @@ get_header();
 			<input type="submit" name="submitButton" id="submitButton" class="grid2col" value="Send message" />
 		</div>
 	</div>
-</form>
+</form>-->
 <div class="grid10col" id="contactForm">
 	<div class="grid3col left">
 		<h2>Contact</h2>
