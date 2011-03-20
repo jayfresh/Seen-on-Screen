@@ -50,7 +50,7 @@
 							<p>This week, the Seen On Screen dancers are appearing at the Notting Hill Carnival! Go guys!!</p>
 						</li>
 					</ul>-->
-					<a href="http://twitter.com/seen_on_screen">more &raquo;</a>
+					<a href="http://twitter.com/seen_on_screen" id="moreTweets">more &raquo;</a>
 				</div>
 			</div>
             <div class="push clearboth"></div>

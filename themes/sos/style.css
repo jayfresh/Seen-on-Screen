@@ -61,6 +61,14 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
+a {
+	color: #88ff00;
+}
+
+small {
+	font-size: small;
+}
+
 /* grid-system width overrides and supplements */
 
 #content {
@@ -332,6 +340,19 @@ ul.starred div.adr {
 			text-decoration: none;
 		}
 
+#moreTweets {
+	width: 110px;
+	height: 23px;
+	background: url(images/sliced/more-sprite.gif) top left no-repeat;
+	overflow: hidden;
+	text-indent: -9999px;
+	display: block;
+}
+
+#moreTweets:hover {
+	background-position: 0 -23px;
+}
+
 /* customizing Twitter's widget */
 .twtr-widget .twtr-hd, .twtr-widget .twtr-ft {
 	display: none;
@@ -355,7 +376,7 @@ ul.starred div.adr {
 
 /* bookings page-specific */
 .dancerbg {
-	background-image: url('images/dancer_bg.jpg');
+	background-image: url('images/sliced/dancer-silhouette.gif');
 	background-position: right bottom;
 	background-attachment: scroll;
 	background-repeat: no-repeat;
@@ -438,7 +459,8 @@ p.huge {
 
 /* contact page-specific */
 #contactForm {
-	background-color: #E2E6DA;
+	/*background-color: #E2E6DA;*/
+	background-color: #DDDDD9;
 	overflow: hidden;
 	width: 765px;
 	padding: 10px 0 50px 15px;

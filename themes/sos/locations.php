@@ -35,7 +35,7 @@ get_header();
 				</div>
 				<div class="rightpane left marginright">
 					<div>
-						<iframe class="brownbox" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=203304872355046718911.00049d4b6de792a203b86&amp;ll=51.51793,-0.135956&amp;spn=0.074774,0.145912&amp;z=12&amp;output=embed"></iframe><br /><small>View <a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=203304872355046718911.00049d4b6de792a203b86&amp;ll=51.51793,-0.135956&amp;spn=0.074774,0.145912&amp;z=12&amp;source=embed" style="color:#0000FF;text-align:left">Seen On Screen studios</a> in a larger map</small>
+						<iframe class="brownbox" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=203304872355046718911.00049d4b6de792a203b86&amp;ll=51.51793,-0.135956&amp;spn=0.074774,0.145912&amp;z=12&amp;output=embed"></iframe><br /><small>View <a href="http://maps.google.co.uk/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=203304872355046718911.00049d4b6de792a203b86&amp;ll=51.51793,-0.135956&amp;spn=0.074774,0.145912&amp;z=12&amp;source=embed">Seen On Screen studios</a> in a larger map</small>
 					</div>
 					<!--<div>
 						<ul class="inline">
