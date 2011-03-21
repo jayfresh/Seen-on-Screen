@@ -80,19 +80,19 @@ function extractParams(q) {
 
 function mapParamsToFormFields(params) {
 	var fields = {
-		subject: "",
-		message: ""
+		id: "si_contact_subject1",
+		text: ""
 	},
 	class = params.class;
 	switch(params.page) {
 		case "dancer":
-			fields.subject = "Enquiry for class with "+class;
+			fields.text = "Enquiry for class with "+class;
 			break;
 		case "bookings":
-			fields.subject = "Enquiry for "+class+" class";
+			fields.text = "Enquiry for "+class+" class";
 			break;
 		case "packages":
-			fields.subject = "Enquiry for "+class+" package";
+			fields.text = "Enquiry for "+class+" package";
 			break;
 	}
 	return fields;
@@ -107,9 +107,7 @@ $(document).ready(function() {
 		params = extractParams(window.location.search);
 		if(params) {
 			fields = mapParamsToFormFields(params);
-			$.each(fields, function(id, text) {
-				$('#'+id).val(text);
-			});
+			$('#'+fields.id).val(fields.text);
 		}
 	}
 });
