@@ -9,9 +9,11 @@ get_header();
 						<div class="box">
 							<h3>One To One</h3>
 							<ul>
-								<li>One to One &pound;90</li>
-								<li>Get fit with a friend - from &pound;150</li>
+								<li>One to One <strong>&pound;90</strong></li>
+								<li>Get fit with a friend - <strong>from &pound;150</strong></li>
 								<li>Choice of 3 studio locations</li>
+								<li>Lorem ipsum</li>
+								<li>Lorem ipsum</li>
 							</ul>
 							<a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=1-2-1" class="bookbutton">Book now</a>
 						</div>
@@ -23,7 +25,9 @@ get_header();
 						<div class="box">
 							<h3>Group Booking</h3>
 							<ul>
-								<li>Private parties, events, workshops</li>
+								<li>Private parties</li>
+								<li>Events</li>
+								<li>Workshops</li>
 								<li>Seen on Screen experience days</li>
 								<li>Price determined by your needs</li>
 							</ul>

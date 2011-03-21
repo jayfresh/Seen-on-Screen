@@ -496,6 +496,9 @@ p.huge {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+}
+
+#contactForm .submitButton:hover {
 	background-position: right -24px;
 }
 

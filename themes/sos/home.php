@@ -17,7 +17,7 @@
 				</div>
 				<div class="rightpane left marginright">
 					<div>
-						<img class="fullwidth" id="home_dancers" class="grid6col" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/dancers.jpg" alt="dancers" />
+						<img class="fullwidth" id="home_dancers" class="grid6col" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/rihanna_performance.jpg" alt="dancers" />
 					</div>
 					<h2 class="margintop">Dance yourself fit with TV's top dancers</h2>
 					<p>Have you ever watched your favourite stars on television or stage and thought, wow, I would love to dance like that? Or have you ever noticed the professional dancers bringing the production to life around them?</p>

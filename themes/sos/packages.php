@@ -47,6 +47,6 @@ get_header();
 						<a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=hardcore" class="bookbutton">Book now</a>
 					</div>
 					<!--<a href="#" title="Click to book a FREE assessment with Bonnie Parsons">--><img class="fullwidth" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/sliced/bon_portrait.jpg" alt="book button" />
-					<p class="smaller">Your consultation will be with Bonnie Parsons, Seen On Screen's managing director.<!--<a href="#"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/green_right_arrow.jpg" alt="book button" /></a>--></p>
+					<p class="smaller">Your consultation will be with Bonnie Parsons, Seen On Screen's director.<!--<a href="#"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/green_right_arrow.jpg" alt="book button" /></a>--></p>
 				</div>
 <?php get_footer(); ?>
