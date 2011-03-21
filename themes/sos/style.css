@@ -326,7 +326,7 @@ ul.starred div.adr {
 }
 
 #tweets {
-	margin-left: 1em;
+	/*margin-left: 1em;*/
 }
 
 	#tweets ul li {
@@ -356,14 +356,6 @@ ul.starred div.adr {
 /* customizing Twitter's widget */
 .twtr-widget .twtr-hd, .twtr-widget .twtr-ft {
 	display: none;
-}
-
-#twtr-widget-1 {
-	font-size: 1em !important;
-}
-
-#twtr-widget-1 p {
-	line-height: 1.25em !important;
 }
 
 #footer {

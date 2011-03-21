@@ -2,15 +2,17 @@
 			<div id="sidebar" class="grid2col left">
 <div id="tweets">
 	<!--<h3>We're tweeting</h3>-->
-	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+	<!--<script src="http://widgets.twimg.com/j/2/widget.js"></script>-->
+	<script type="text/javascript" src="/sos/wp-content/themes/sos/js/widget.js"></script>
 	<script>
 	new TWTR.Widget({
 	  version: 2,
 	  type: 'profile',
 	  rpp: 4,
 	  interval: 6000,
-	  width: 200,
+	  width: 160,
 	  height: 500,
+	  creator: true,
 	  theme: {
 	    shell: {
 	      background: '#FFF',
@@ -26,7 +28,7 @@
 	    scrollbar: false,
 	    loop: false,
 	    live: false,
-	    hashtags: true,
+	    hashtags: false,
 	    timestamp: true,
 	    avatars: true,
 	    behavior: 'all'
