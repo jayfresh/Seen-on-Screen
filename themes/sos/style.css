@@ -306,7 +306,8 @@ ul.boxed li {
 }
 
 #dancersMiniList a:hover {
-	text-decoration: underline;
+	/*text-decoration: underline;*/
+	border-bottom: 1px solid #333;
 }
 
 ul.starred li {
