@@ -370,6 +370,11 @@ ul.starred div.adr {
 	margin-right: 5px;
 }
 
+/* locations-page specific */
+#locations h2 {
+	font-size: 1.33em;
+}
+
 /* bookings page-specific */
 .dancerbg {
 	background-image: url('images/sliced/dancer-silhouette.gif');

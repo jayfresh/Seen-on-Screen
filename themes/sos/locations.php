@@ -4,31 +4,34 @@
 get_header();
 
 ?>
-<div class="leftpane marginright left">
-					<h2>Locations</h2>
+<div class="leftpane marginright left" id="locations">
+					<!--<h2>Locations</h2>-->
 					<ul class="starred">
-						<li>Covent Garden
+						<li><h2>Covent Garden</h2>
 							<div class="adr">
-								<div><a href="http://www.inc-space.com/" title="I.N.C Space">I.N.C Space</a></div>
+								<div>I.N.C Space</div>
 								<div>9-13 Grape Street</div>
 								<div>London</div>
 								<div>WC2H 8ED</div>
+								<div><a href="http://www.inc-space.com/" title="I.N.C Space website">http://www.inc-space.com/</a></div>
 							</div>
 						</li>
-						<li>Notting Hill
+						<li><h2>Notting Hill</h2>
 							<div class="adr">
-								<div><a href="http://www.markanthonysuk.com/" title="Mark Anthony's Studio">Mark Anthony's Studio</a></div>
+								<div>Mark Anthony's Studio</div>
 								<div>57 Ossington Street</div>
 								<div>London</div>
 								<div>W2 4LY</div>
+								<div><a href="http://www.markanthonysuk.com/" title="Mark Anthony's Studio website">http://www.markanthonysuk.com/</a></div>
 							</div>
 						</li>
-						<li>Shoreditch
+						<li><h2>Shoreditch</h2>
 							<div class="adr">
-								<div><a href="http://www.moveyourframe.com" title="Frame website">Frame</a></div>
+								<div>Frame</div>
 								<div>29 New Inn Yard</div>
 								<div>London</div>
 								<div>EC2A 3EY</div>
+								<div><a href="http://www.moveyourframe.com" title="Frame website">http://www.moveyourframe.com</a></div>
 							</div>
 						</li>
 					</ul>
