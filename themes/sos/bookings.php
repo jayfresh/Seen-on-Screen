@@ -12,8 +12,8 @@ get_header();
 								<li>One to One <strong>&pound;90</strong></li>
 								<li>Get fit with a friend - <strong>from &pound;150</strong></li>
 								<li>Choice of 3 studio locations</li>
-								<li>Lorem ipsum</li>
-								<li>Lorem ipsum</li>
+								<li><strong>Free</strong> consultation</li>
+								<li>Personally tailored sessions</li>
 							</ul>
 							<a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=1-2-1" class="bookbutton">Book now</a>
 						</div>
