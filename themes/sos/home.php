@@ -19,8 +19,8 @@
 					<div>
 						<img class="fullwidth" id="home_dancers" class="grid6col" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/rihanna_performance.jpg" alt="dancers" />
 					</div>
-					<h2 class="margintop">Dance yourself fit with TV's top dancers</h2>
-					<p>Have you ever watched your favourite stars on television or stage and thought, wow, I would love to dance like that? Or have you ever noticed the professional dancers bringing the production to life around them?</p>
+					<h3 class="margintop">Dance yourself fit with TV's top dancers</h3>
+					<!--<p>Have you ever watched your favourite stars on television or stage and thought, wow, I would love to dance like that? Or have you ever noticed the professional dancers bringing the production to life around them?</p>-->
 					<p>Now, for the first time, you can book the professionals who dance beside the biggest artists in the world to teach you how it's done! Whether it's a major event, party, or a one to one class, Seen on Screen Fitness will provide a service that caters especially to you.</p>
 				</div>
 <?php get_footer(); ?>

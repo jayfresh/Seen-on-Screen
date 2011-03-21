@@ -35,9 +35,11 @@ $(document).ready(function() {
 				.text()
 				.replace(' - ','')
 				.split(','),
-			artistsList = "";
+			artistsList = "",
+			artistCount = artists.length-1;
+			divider = ", ";
 		$.each(artists, function(i, artist) {
-			artistsList += "<li><a href='"+window.location.pathname+"dancers/"+$.trim(artist).toLowerCase()+"'>"+$.trim(artist)+"</a></li>";
+			artistsList += "<li><a href='"+window.location.pathname+"dancers/"+$.trim(artist).toLowerCase()+"'>"+$.trim(artist)+"</a>"+(i===artistCount ? "" : divider)+"</li>";
 		});
 		$('<ul>'+artistsList+'</ul>')
 			.css('display','none')
