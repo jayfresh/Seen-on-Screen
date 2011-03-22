@@ -17,9 +17,11 @@ get_header();
 							</ul>
 							<a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=1-2-1" class="bookbutton">Book now</a>
 						</div>
-						<h4>What to expect from a One To One Class</h4>
-						<p>You will receive a personalised training session with your chosen member of our elite dance team. Not only are they fantastic dance professionals and teachers, they have danced for your favourite stars.</p>
-						<p>Whether you want to get fit or perfect your dance skills, our one to one sessions are perfect for you. Getting the body of your dreams doesn't have to be a chore. Dancing is addictive and releases endorphins that make you feel great, so you'll look forward to your next session. You will burn up to 400 calories an hour, working muscles you never knew you had while loving every minute of it. Want to try it out? Book a Seen On Screen session now.</p>
+						<h4>What to expect from a One to One Class</h4>
+						<p>You will receive a personalised training session with our elite dance team. Not only are they fantastic dance professionals and teachers, they have danced for your favourite stars.</p>
+						<p>One to One sessions are great because they are all about you. Whether you want to get fit or perfect your dance skills, we will cater the class especially to your needs. Getting the body of your dreams doesn't have to be a chore. Dancing is great fun and effective.</p>
+						<blockquote>"Dance is a great way to tighten and tone your core area and have a lot of fun when doing exercise. It will help to massively improve your coordination, flexibility and muscular strength"<br/>Mark Anthony - celebrity trainer.</blockquote>
+						<p>Want to try for yourself? <a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=1-2-1">Book a Seen On Screen session now</a>.</p>
 					</div>
 					<div class="grid4col left">
 						<div class="box">
@@ -35,7 +37,7 @@ get_header();
 						</div>
 						<h4>Do you want to do something different for a special event or private party?</h4>
 						<p>We could provide a themed boy band party with the Take That and JLS dancers or a Rihanna workshop for just you and your friends. An exclusive performance from our Seen on Screen dancers at your event, or corporate team building days followed by drinks at the fantastic Crazy Bear members bar in Covent Garden.</p>
-						<p>Whatever your event, Seen on Screen will cater an unforgettable experience for you and your guests. For more information, please contact us directly.</p>
+						<p>Whatever your event, Seen on Screen will cater an unforgettable experience for you and your guests. For more information, please <a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=group">contact us directly</a>.</p>
 					</div>
 </div>
 <?php get_footer(); ?>

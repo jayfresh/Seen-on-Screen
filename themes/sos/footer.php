@@ -8,7 +8,7 @@
 	new TWTR.Widget({
 	  version: 2,
 	  type: 'profile',
-	  rpp: 4,
+	  rpp: 5,
 	  interval: 6000,
 	  width: 160,
 	  height: 500,
