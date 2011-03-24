@@ -162,6 +162,7 @@ p, blockquote {
 
 .fullwidth {
 	width: 100%;
+	overflow: hidden;
 }
 
 .hidden {

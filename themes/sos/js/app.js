@@ -83,16 +83,16 @@ function mapParamsToFormFields(params) {
 		id: "si_contact_subject1",
 		text: ""
 	},
-	class = params.class;
+	theClass = params['class'];
 	switch(params.page) {
 		case "dancer":
-			fields.text = "Enquiry for class with "+class;
+			fields.text = "Enquiry for class with "+theClass;
 			break;
 		case "bookings":
-			fields.text = "Enquiry for "+class+" class";
+			fields.text = "Enquiry for "+theClass+" class";
 			break;
 		case "packages":
-			fields.text = "Enquiry for "+class+" package";
+			fields.text = "Enquiry for "+theClass+" package";
 			break;
 	}
 	return fields;
