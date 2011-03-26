@@ -27,7 +27,7 @@ get_header();
 <div class="grid10col" id="contactForm">
 	<div class="grid3col left">
 		<h2>Contact</h2>
-		<img class="bottomline" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/sliced/contact-dancer.gif" alt="dancer image" />
+		<!--<img class="bottomline" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/sliced/contact-dancer.gif" alt="dancer image" />-->
 	</div>
 	<div class="grid7col left">
 		<?php if (have_posts()) : while (have_posts()) : the_post();
