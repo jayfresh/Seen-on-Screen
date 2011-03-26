@@ -35,8 +35,8 @@ get_header();
 							</ul>
 							<a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=group" class="bookbutton">Book now</a>
 						</div>
-						<h4>Do you want to do something different for a special event or private party?</h4>
-						<p>We could provide a themed boy band party with the Take That and JLS dancers or a Rihanna workshop for just you and your friends. An exclusive performance from our Seen on Screen dancers at your event, or corporate team building days followed by drinks at the fantastic Crazy Bear members bar in Covent Garden.</p>
+						<h4>Do something different and special for your event</h4>
+						<p>Want some ideas? Seen on Screen could provide a themed boy band party with the Take That dancers or a Rihanna workshop, with Rihanna's dancers, just for you and your friends. Seen on Screen dancers can do an exclusive performance choreographed especially for your event. We also offer corporate team building days followed by drinks at the fantastic Crazy Bear members bar in Covent Garden.</p> 
 						<p>Whatever your event, Seen on Screen will cater an unforgettable experience for you and your guests. For more information, please <a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=group">contact us directly</a>.</p>
 					</div>
 </div>
