@@ -30,6 +30,9 @@
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/grid.css" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/stickyfooter.css" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+		<!--[if lt IE 7]>
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/ie6.css" />
+		<![endif]-->
 		
 		<script type="text/javascript" src="http://use.typekit.com/tfp0jyu.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>

@@ -491,6 +491,11 @@ p.huge {
 	position: relative;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
+	min-height: 400px;
+}
+
+#contactForm p {
+	margin-top: 1em;
 }
 
 #contactForm h2 {

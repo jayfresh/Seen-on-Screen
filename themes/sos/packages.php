@@ -17,7 +17,7 @@ get_header();
 						</ul>
 						<a href="<?php bloginfo('url'); ?>/contact?page=packages&class=softcore" class="bookbutton">Book now</a>
 					</div>
-					<img id="grey_shadow" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/sliced/grey_shadow.jpg" alt="dancer" class="bottomline" />
+					<!--<img id="grey_shadow" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/sliced/grey_shadow.jpg" alt="dancer" class="bottomline" />-->
 				</div>
 				<div class="threebox doublemarginright left">
 					<div class="box">
