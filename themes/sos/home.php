@@ -5,7 +5,8 @@
 						<ul class="boxed" id="artists">
 							<li>Rihanna<span class="hidden"> - Keeley, Shaun</span></li>
 							<li>Take That<span class="hidden"> - Dean</span></li>
-							<li>Kelly Rowland<span class="hidden"> - Abby, Nicole</span></li>
+							<li>Michael Jackson<span class="hidden"> - Dean, Nicole</span></li>
+							<!--<li>Kelly Rowland<span class="hidden"> - Abby, Nicole</span></li>-->
 							<li>Kylie<span class="hidden"> - Abby</span></li>
 							<li>Janet Jackson<span class="hidden"> - Abby, Dean, Shaun</span></li>
 							<li>Pussy Cat Dolls<span class="hidden"> - Dean</span></li>
