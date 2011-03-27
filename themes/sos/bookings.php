@@ -27,7 +27,7 @@ get_header();
 						<div class="box">
 							<h3 id="group_booking">Group Booking</h3>
 							<ul>
-								<li>10-person Workshops - <strong>&pound;300</strong></li>
+								<li>10+ Workshops - <strong>&pound;30</strong> a head</li>
 								<li>Private parties</li>
 								<li>Events</li>
 								<li>Seen on Screen experience days</li>
