@@ -19,7 +19,7 @@ get_header();
 						</div>
 						<h4>What to expect from a One to One Class</h4>
 						<p>You will receive a personalised training session with our elite dance team. Not only are they fantastic dance professionals and teachers, they have danced for your favourite stars.</p>
-						<p>One to One sessions are great because they are all about you. Whether you want to get fit or perfect your dance skills, we will cater the class especially to your needs. Getting the body of your dreams doesn't have to be a chore. Dancing is great fun and effective.</p>
+						<p>One to One sessions are great because they are all about you. Whether you want to get fit or perfect your dance skills, we will cater the class especially to your needs. We also offer 'get fit with a friend' sessions from 2-5 people, so you can get the one to one attention you require. For anything over, why not consider one of our group workshops. Getting the body of your dreams doesn't have to be a chore. Dancing is great fun and effective.</p>
 						<blockquote>"Dance is a great way to tighten and tone your core area and have a lot of fun when doing exercise. It will help to massively improve your coordination, flexibility and muscular strength"<br/>Mark Anthony - celebrity trainer.</blockquote>
 						<p>Want to try for yourself? <a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=1-2-1">Book a Seen On Screen session now</a>.</p>
 					</div>
@@ -27,16 +27,18 @@ get_header();
 						<div class="box">
 							<h3 id="group_booking">Group Booking</h3>
 							<ul>
+								<li>10-person Workshops - <strong>&pound;300</strong></li>
 								<li>Private parties</li>
 								<li>Events</li>
-								<li>Workshops</li>
 								<li>Seen on Screen experience days</li>
-								<li>Price determined by your needs</li>
+								<li>Please enquire for a quote</li>
 							</ul>
 							<a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=group" class="bookbutton">Book now</a>
 						</div>
 						<h4>Do something different and special for your event</h4>
-						<p>Want some ideas? Seen on Screen could provide a themed boy band party with the Take That dancers or a Rihanna workshop, with Rihanna's dancers, just for you and your friends. Seen on Screen dancers can do an exclusive performance choreographed especially for your event. We also offer corporate team building days followed by drinks at the fantastic Crazy Bear members bar in Covent Garden.</p> 
+						<p><strong>Events &amp; Parties:</strong> If you're a big JLS fan, why not have the JLS dancers from their sell out 'Outta This World' tour come to your party and do an exclusive performance especially for you? Seen on Screen can provide themed parties which are great for Hen's and birhtday's.</p>
+						<p><strong>Workshops:</strong> If you've ever watched Rihanna and thought you'd love to learn her moves, learn them from her dancers themselves with a Rihanna workshop.</p>
+						<p><strong>Experience days</strong> include one to one sessions followed by live concerts to see your instructors dance with your favourite stars, or corporate team building and themed workshops followed by drinks at the fantastic Crazy Bear members bar in Covent Garden.</p> 
 						<p>Whatever your event, Seen on Screen will cater an unforgettable experience for you and your guests. For more information, please <a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=group">contact us directly</a>.</p>
 					</div>
 </div>
