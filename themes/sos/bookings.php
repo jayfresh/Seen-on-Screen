@@ -7,7 +7,7 @@ get_header();
 <div class="fullwidth dancerbg">
 	<div class="grid4col doublemarginright left">
 						<div class="box">
-							<h3>One To One</h3>
+							<h3 id="one_to_one">One To One</h3>
 							<ul>
 								<li>One to One <strong>&pound;90</strong></li>
 								<li>Get fit with a friend - <strong>from &pound;150</strong></li>
@@ -25,7 +25,7 @@ get_header();
 					</div>
 					<div class="grid4col left">
 						<div class="box">
-							<h3>Group Booking</h3>
+							<h3 id="group_booking">Group Booking</h3>
 							<ul>
 								<li>Private parties</li>
 								<li>Events</li>

@@ -398,6 +398,22 @@ ul.starred div.adr {
 }
 
 /* bookings page-specific */
+#one_to_one, #group_booking {
+	overflow: hidden;
+	text-indent: -9999px;
+	display: block;
+	height: 30px;
+	width: 254px;
+}
+
+#one_to_one {
+	background: url('images/sliced/one-one-booking.png') top left no-repeat;
+}
+
+#group_booking {
+	background: url('images/sliced/group-booking.png') top left no-repeat;
+}
+
 .dancerbg {
 	background-image: url('images/sliced/dancer-silhouette.gif');
 	background-position: 95% bottom;
