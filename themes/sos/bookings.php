@@ -36,7 +36,7 @@ get_header();
 							<a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=group" class="bookbutton">Book now</a>
 						</div>
 						<h4>Do something different and special for your event</h4>
-						<p><strong>Events &amp; Parties:</strong> If you're a big JLS fan, why not have the JLS dancers from their sell out 'Outta This World' tour come to your party and do an exclusive performance especially for you? Seen on Screen can provide themed parties which are great for Hen's and birhtday's.</p>
+						<p><strong>Events &amp; Parties:</strong> If you're a big JLS fan, why not have the JLS dancers from their sell out 'Outta This World' tour come to your party and do an exclusive performance especially for you? Seen on Screen can provide themed parties which are great for Hen's and birthdays.</p>
 						<p><strong>Workshops:</strong> If you've ever watched Rihanna and thought you'd love to learn her moves, learn them from her dancers themselves with a Rihanna workshop.</p>
 						<p><strong>Experience days</strong> include one to one sessions followed by live concerts to see your instructors dance with your favourite stars, or corporate team building and themed workshops followed by drinks at the fantastic Crazy Bear members bar in Covent Garden.</p> 
 						<p>Whatever your event, Seen on Screen will cater an unforgettable experience for you and your guests. For more information, please <a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=group">contact us directly</a>.</p>
