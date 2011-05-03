@@ -13,7 +13,7 @@ get_header();
 							<li>One to One tuition</li>
 							<li>Choice of 3 studio locations</li>
 							<li><strong>Save 10%</strong></li>
-							<li><strong>&pound;570</strong></li>
+							<li><strong>&pound;750</strong></li>
 						</ul>
 						<a href="<?php bloginfo('url'); ?>/contact?page=packages&class=softcore" class="bookbutton">Book now</a>
 					</div>
@@ -27,7 +27,7 @@ get_header();
 							<li>One to One tuition</li>
 							<li>Choice of 3 studio locations</li>
 							<li><strong>Save 15%</strong></li>
-							<li><strong>&pound;1150</strong></li>
+							<li><strong>&pound;1530</strong></li>
 						</ul>
 						<a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=mediumcore" class="bookbutton">Book now</a>
 					</div>
@@ -42,7 +42,7 @@ get_header();
 							<li>One to One tuition</li>
 							<li>Choice of 3 studio locations</li>
 							<li><strong>Save 25%</strong></li>
-							<li><strong>&pound;1690</strong></li>
+							<li><strong>&pound;2250</strong></li>
 						</ul>
 						<a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=hardcore" class="bookbutton">Book now</a>
 					</div>
