@@ -9,7 +9,7 @@ get_header();
 						<div class="box">
 							<h3 id="one_to_one">One To One</h3>
 							<ul>
-								<li>One to One - <strong>&pound;120</strong> (75 minutes)</li>
+								<li>One to One (75 minutes) - <strong>&pound;120</strong></li>
 								<li>Get fit with a friend - <strong>from &pound;195</strong></li>
 								<li>Choice of 3 studio locations</li>
 								<li><strong>Free</strong> consultation</li>
@@ -27,9 +27,9 @@ get_header();
 						<div class="box">
 							<h3 id="group_booking">Group Booking</h3>
 							<ul>
-								<li>10+ Workshops - <strong>&pound;35</strong> per person</li>
-								<li>Private parties</li>
-								<li>Events</li>
+								<li>Workshops - <strong>&pound;35</strong> per person</li>
+								<li>For 10+ people, lasting 90 minutes</li>
+								<li>Events &amp; Parties</li>
 								<li>Seen on Screen experience days</li>
 								<li>Please enquire for a quote</li>
 							</ul>
