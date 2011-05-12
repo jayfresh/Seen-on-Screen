@@ -45,7 +45,7 @@
 				<div id="gallery">
 					<ul class="inline">
 						<li><a href="<?php bloginfo('url'); ?>/dancers/abby" id="abby">Abby</a></li>
-						<li><a href="<?php bloginfo('url'); ?>/dancers/dean" id="dean">Dean</a></li>
+						<li><a href="<?php bloginfo('url'); ?>/dancers/dean-lee" id="dean">Dean Lee</a></li>
 						<li><a href="<?php bloginfo('url'); ?>/dancers/keeley" id="keeley">Keeley</a></li>
 						<li><a href="<?php bloginfo('url'); ?>/dancers/lianne" id="lianne">Lianne</a></li>
 						<li><a href="<?php bloginfo('url'); ?>/dancers/nicole" id="nicole">Nicole</a></li>
@@ -54,7 +54,8 @@
 				</div>
 				<?php $postname = $post->post_name; ?>
 				<ul id="nav" class="inline">
-					<li class="first"><a href="<?php bloginfo('url'); ?>/locations"<?php if($postname=="locations") { echo ' class="active"'; } ?>>Studio Locations</a></li>
+					<li class="first"><a href="<?php bloginfo('url'); ?>/blog/" target="_blank">News</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/locations"<?php if($postname=="locations") { echo ' class="active"'; } ?>>Studio Locations</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/bookings"<?php if($postname=="bookings") { echo ' class="active"'; } ?>>One to One | Group Booking</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/packages"<?php if($postname=="packages") { echo ' class="active"'; } ?>>Packages</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/contact"<?php if($postname=="contact") { echo ' class="active"'; } ?>>Contact</a></li>
