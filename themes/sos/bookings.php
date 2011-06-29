@@ -9,8 +9,8 @@ get_header();
 						<div class="box">
 							<h3 id="one_to_one">One To One</h3>
 							<ul>
-								<li>One to One (75 minutes) - <strong>&pound;120</strong></li>
-								<li>Get fit with a friend - <strong>from &pound;195</strong></li>
+								<li>One to One (90 minutes) - <strong>&pound;120</strong></li>
+								<li>Get fit with a friend - <strong>from &pound;180</strong></li>
 								<li>Choice of 3 studio locations</li>
 								<li><strong>Free</strong> consultation</li>
 								<li>Personally tailored sessions</li>
@@ -19,7 +19,7 @@ get_header();
 						</div>
 						<h4>What to expect from a One to One Class</h4>
 						<p><strong>The ultimate VIP treatment</strong>. You will receive a personalised training session with our elite dance team.</p>
-						<p>One to One sessions are great because they are all about you. Whether you want to get fit or perfect your dance skills, we will cater the class especially to your needs. We also offer 'get fit with a friend' sessions from 2-5 people, so you can get the one to one attention you require. For anything over, why not consider one of our group workshops. Getting the body of your dreams doesn't have to be a chore. Dancing is great fun and effective.</p>
+						<p>One to One sessions are great because they are all about you. Whether you want to get fit or perfect your dance skills, we will cater the class especially to your needs. We also offer 'get fit with a friend' sessions from 2-5 people, so you can still get the individual attention you require. For anything over, why not consider one of our group workshops. Getting the body of your dreams doesn't have to be a chore. Dancing is great fun and effective.</p>
 						<blockquote>"Dance is a great way to tighten and tone your core area and have a lot of fun when doing exercise. It will help to massively improve your coordination, flexibility and muscular strength"<br/>Mark Anthony - celebrity trainer.</blockquote>
 						<p>Want to try for yourself? <a href="<?php bloginfo('url'); ?>/contact?page=bookings&class=1-2-1">Book a Seen On Screen session now</a>.</p>
 					</div>
