@@ -136,7 +136,7 @@ small {
 }
 
 #home_dancers {
-	padding-top: 10px;
+	padding-top: 25px;
 }
 
 /*** generic classes ***/
@@ -195,6 +195,10 @@ ul.inline {
 }
 	
 /*** more styles ***/
+
+.grey {
+	color: #666;
+}
 
 #gallery ul.inline li {
 	/* doesn't work with display: inline; width: 135px; */
