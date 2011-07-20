@@ -57,7 +57,7 @@
 					<li class="first"><a href="<?php bloginfo('url'); ?>/blog/" target="_blank">News</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/workshops"<?php if($postname=="workshops") { echo ' class="active"'; } ?>>Workshops</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/locations"<?php if($postname=="locations") { echo ' class="active"'; } ?>>Studio Locations</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/bookings"<?php if($postname=="bookings") { echo ' class="active"'; } ?>>One to One | Group Booking</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/bookings"<?php if($postname=="bookings") { echo ' class="active"'; } ?>>1:1 | Group Booking</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/packages"<?php if($postname=="packages") { echo ' class="active"'; } ?>>Packages</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/contact"<?php if($postname=="contact") { echo ' class="active"'; } ?>>Contact</a></li>
 				</ul>
