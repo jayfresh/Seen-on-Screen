@@ -17,11 +17,13 @@
 						</ul>
 					</div>
 					<p class="grey"><strong>Sisco Gomez - Choreographer & Judge on BBC's So You Think You Can Dance:</strong></p>
-					<blockquote class="marginright">"Seen on Screen Fitness is the perfect way to keep fit and learn how to dance with some of the UK's finest teachers. I have had the pleasure of working with all of the instructors on jobs such as Janet Jackson, Kylie Minogue, Alexandra Burke & X Factor, to name a few. Definitely something that should not be missed - whether dance is a profession or a hobby, the benefits are endless!"</blockquote>
+					<!--<blockquote class="marginright">"Seen on Screen Fitness is the perfect way to keep fit and learn how to dance with some of the UK's finest teachers. I have had the pleasure of working with all of the instructors on jobs such as Janet Jackson, Kylie Minogue, Alexandra Burke & X Factor, to name a few. Definitely something that should not be missed - whether dance is a profession or a hobby, the benefits are endless!"</blockquote>-->
+					<blockquote class="marginright">"Seen on Screen Fitness is the perfect way to keep fit and learn how to dance with some of the UK's finest teachers"</blockquote>
 				</div>
 				<div class="rightpane left marginright">
-					<div>
-						<img class="fullwidth" id="home_dancers" class="grid6col" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/sliced/Sos-Montage-web.jpg" alt="dancers" />
+					<div class="sos_video">
+						<iframe width="426" height="269" src="http://www.youtube.com/embed/Ckz3lfPFe00" frameborder="0" allowfullscreen></iframe>
+						<!--<img class="fullwidth" id="home_dancers" class="grid6col" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/sliced/Sos-Montage-web.jpg" alt="dancers" />--><!-- this is 426x320 -->
 					</div>
 					<h3 class="margintop">Dance yourself fit with TV's top dancers</h3>
 					<!--<p>Have you ever watched your favourite stars on television or stage and thought, wow, I would love to dance like that? Or have you ever noticed the professional dancers bringing the production to life around them?</p>-->
