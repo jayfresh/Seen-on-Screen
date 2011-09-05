@@ -22,7 +22,7 @@
 				</div>
 				<div class="rightpane left marginright">
 					<div class="sos_video">
-						<iframe width="426" height="269" src="http://www.youtube.com/embed/Ckz3lfPFe00" frameborder="0" allowfullscreen></iframe>
+						<iframe width="426" height="269" src="http://www.youtube.com/embed/3IsrMPFXYDs" frameborder="0" allowfullscreen></iframe>
 						<!--<img class="fullwidth" id="home_dancers" class="grid6col" src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/sliced/Sos-Montage-web.jpg" alt="dancers" />--><!-- this is 426x320 -->
 					</div>
 					<h3 class="margintop">Dance yourself fit with TV's top dancers</h3>
