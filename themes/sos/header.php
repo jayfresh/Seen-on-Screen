@@ -45,7 +45,7 @@
 				<div id="gallery">
 					<ul class="inline">
 						<li><a href="<?php bloginfo('url'); ?>/dancers/abby" id="abby">Abby</a></li>
-						<li><a href="<?php bloginfo('url'); ?>/dancers/dean-lee" id="dean">Dean Lee</a></li>
+						<li><a href="<?php bloginfo('url'); ?>/dancers/dean" id="dean">Dean</a></li>
 						<li><a href="<?php bloginfo('url'); ?>/dancers/keeley" id="keeley">Keeley</a></li>
 						<li><a href="<?php bloginfo('url'); ?>/dancers/lianne" id="lianne">Lianne</a></li>
 						<li><a href="<?php bloginfo('url'); ?>/dancers/nicole" id="nicole">Nicole</a></li>
