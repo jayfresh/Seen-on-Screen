@@ -393,6 +393,10 @@ ul.starred div.adr {
 	display: none;
 }
 
+#social {
+	margin-top: 10px;
+}
+
 #footer {
 	font-size: 2em;
 }

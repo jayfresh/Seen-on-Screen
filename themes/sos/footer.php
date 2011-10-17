@@ -54,6 +54,11 @@
 					</ul>-->
 					<a href="http://twitter.com/seen_on_screen" id="moreTweets">more &raquo;</a>
 				</div>
+				<div id="social" class="clearboth">
+					<a href="http://twitter.com/SEEN_ON_SCREEN" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/social/Twitter_32x32.png" /></a>
+					<a href="http://www.facebook.com/pages/Seen-on-Screen-Fitness-Events/216657898358706" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/social/FaceBook_32x32.png" /></a>
+					<a href="http://www.youtube.com/sosdancelife" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/social/Youtube_32x32.png" /></a>
+				</div>
 			</div>
             <div class="push clearboth"></div>
 		</div>
