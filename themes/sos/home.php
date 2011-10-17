@@ -22,7 +22,7 @@
 					<div class="pressLogos">
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/press/company_mag.png" height="30" />
 						<a href="http://www.thisislondon.co.uk/health/article-23989277-learn-to-dance-like-your-favourite-diva.do"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard.png" height="40" /></a>
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/press/dailycandy.png" height="40" />
+						<a href="http://www.dailycandy.com/london/article/106087/Seen-on-Screen-Fitness-Dance-Classes"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/press/dailycandy.png" height="40" /></a>
 						<a href="http://now-here-this.timeout.com/2011/05/19/dance-like-lady-gaga-seeon-on-screen-fitness/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/press/timeout.png" height="50" /></a>
 					</div>
 				</div>
