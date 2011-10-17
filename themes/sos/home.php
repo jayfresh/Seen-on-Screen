@@ -19,6 +19,12 @@
 					<p class="grey"><strong>Sisco Gomez - Choreographer & Judge on BBC's So You Think You Can Dance:</strong></p>
 					<!--<blockquote class="marginright">"Seen on Screen Fitness is the perfect way to keep fit and learn how to dance with some of the UK's finest teachers. I have had the pleasure of working with all of the instructors on jobs such as Janet Jackson, Kylie Minogue, Alexandra Burke & X Factor, to name a few. Definitely something that should not be missed - whether dance is a profession or a hobby, the benefits are endless!"</blockquote>-->
 					<blockquote class="marginright">"Seen on Screen Fitness is the perfect way to keep fit and learn how to dance with some of the UK's finest teachers"</blockquote>
+					<div class="pressLogos">
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/press/company_mag.png" height="30" />
+						<a href="http://www.thisislondon.co.uk/health/article-23989277-learn-to-dance-like-your-favourite-diva.do"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard.png" height="40" /></a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/press/dailycandy.png" height="40" />
+						<a href="http://now-here-this.timeout.com/2011/05/19/dance-like-lady-gaga-seeon-on-screen-fitness/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/press/timeout.png" height="50" /></a>
+					</div>
 				</div>
 				<div class="rightpane left marginright">
 					<div class="sos_video">

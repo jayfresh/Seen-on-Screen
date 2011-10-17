@@ -22,7 +22,7 @@
 				echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
 		?></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="description" content="Dance yourself fit with TV's top dancers - classes held at Mark Anthony's, Frame and IncSpace" />
+		<meta name="description" content="Seen on Screen Fitness - Dance yourself fit with TV's top dancers - classes held at Mark Anthony's, Frame, IncSpace and the Notting Hill Harbour Club" />
 		<!--<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>-->
 		<!--<link href='http://fonts.googleapis.com/css?family=Puritan' rel='stylesheet' type='text/css'>-->
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/reset.css" />
@@ -41,7 +41,7 @@
 	<body>
 		<div id="wrapper" class="jbasewrap">
 			<div id="header">
-				<a href="<?php bloginfo('url'); ?>"><h1 id="logo">Seen On Screen</h1></a>
+				<a href="<?php bloginfo('url'); ?>"><h1 id="logo">Seen On Screen Fitness</h1></a>
 				<div id="gallery">
 					<ul class="inline">
 						<li><a href="<?php bloginfo('url'); ?>/dancers/abby" id="abby">Abby</a></li>

@@ -131,6 +131,10 @@ small {
 	display: block;
 }
 
+.pressLogos img {
+	vertical-align: middle;
+}
+
 .padleft {
 	padding-left: 20px;
 }
