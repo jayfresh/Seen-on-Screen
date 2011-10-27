@@ -139,6 +139,10 @@ small {
 	padding-left: 20px;
 }
 
+.padright {
+	padding-right: 20px;
+}
+
 #home_dancers {
 	padding-top: 25px;
 }
@@ -467,24 +471,28 @@ ul.starred div.adr {
 
 /* packages page-specific */
 #softcore, #mediumcore, #hardcore, #book_assessment {
-	overflow: hidden;
-	text-indent: -9999px;
+	/*overflow: hidden;
+	text-indent: -9999px;*/
 	display: block;
 	height: 34px;
 	width: 190px;
 }
 
 #softcore {
-	background: url(images/sliced/softcore.gif) left top no-repeat;
+	/*background: url(images/sliced/softcore.gif) left top no-repeat;*/
 }
 
 #mediumcore {
-	background: url(images/sliced/mediumcore.gif) left top no-repeat;
+	/*background: url(images/sliced/mediumcore.gif) left top no-repeat;*/
 	width: 215px;
 }
 
 #hardcore {
-	background: url(images/sliced/hardcore.gif) left top no-repeat;
+	/*background: url(images/sliced/hardcore.gif) left top no-repeat;*/
+}
+
+#packages h2 {
+	font-size: 1.8em;
 }
 
 p.huge {

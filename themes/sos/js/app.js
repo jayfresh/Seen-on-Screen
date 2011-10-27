@@ -83,7 +83,7 @@ function mapParamsToFormFields(params) {
 		id: "si_contact_subject1",
 		text: ""
 	},
-	theClass = params['class'];
+	theClass = decodeURIComponent(params['class']);
 	switch(params.page) {
 		case "dancer":
 			fields.text = "Enquiry for class with "+theClass;
