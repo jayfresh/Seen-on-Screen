@@ -35,7 +35,7 @@
 					<!--<p>Have you ever watched your favourite stars on television or stage and thought, wow, I would love to dance like that? Or have you ever noticed the professional dancers bringing the production to life around them?</p>-->
 					<p>Now, for the first time, you can book the professionals who dance beside the biggest artists in the world to teach you how it's done! Whether it's a major event, party, or a one to one class, Seen on Screen Fitness will provide a service that caters especially to you.</p>
 					<h3>Workshops</h3>
-					<p><strong>Book our next workshop happening Saturday, December 10th <a href="<?php bloginfo('url'); ?>/workshops">now</a>!</strong> You can also book into our next weekly class this Tuesday by clicking <a href="<?php bloginfo('url'); ?>/packages">here</a>!</p>
+					<p><strong>Book our next workshop happening Saturday, December 10th <a href="<?php bloginfo('url'); ?>/workshops">now</a>! You can also book into our next weekly class this Tuesday by clicking <a href="<?php bloginfo('url'); ?>/packages">here</a>!</strong></p>
 					<p>We run monthly workshops and weekly classes in addition to our private 1:1 and group classes. The workshops are taught by the Seen On Screen Fitness faculty as well as special guest instructors. They are suitable for all levels and are priced at &pound;20 for 90 minutes.</p>
 					<p>For more information or to book, see the <a href="<?php bloginfo('url'); ?>/workshops">Workshops</a> page. Details of upcoming workshops can be found on the <a href="<?php bloginfo('url'); ?>/blog/">blog</a>.</p>
 				</div>
