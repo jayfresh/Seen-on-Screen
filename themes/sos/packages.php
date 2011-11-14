@@ -35,7 +35,7 @@ get_header();
 					<div class="box">
 						<h3 id="hardcore">SPECIAL OFFER</h3>
 						<ul>
-							<li><strong>Ending Nov 8th!</strong></li>
+							<li><strong>Offer extended!</strong></li>
 							<li>6 week course every Tuesday</li>
 							<li>Notting Hill, Harbour Club</li>
 							<li><strong>7 &ndash; 8:30pm</strong></li>
