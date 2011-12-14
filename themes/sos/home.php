@@ -36,7 +36,7 @@
 					<p>Now, for the first time, you can book the professionals who dance beside the biggest artists in the world to teach you how it's done! Whether it's a major event, party, or a one to one class, Seen on Screen Fitness will provide a service that caters especially to you.</p>
 					<h3>Workshops</h3>
 					<p><strong>Book our next workshop happening Saturday, January 7th @ The Notting Hill Harbour Club <a href="<?php bloginfo('url'); ?>/workshops">now</a>!</strong></p>
-					<p>We run monthly workshops and weekly classes in addition to our private 1:1 and group classes. The workshops are taught by the Seen On Screen Fitness faculty as well as special guest instructors. They are suitable for all levels and are priced at &pound;20 for 90 minutes.</p>
+					<p>We run monthly workshops in addition to our private 1:1 and group classes. The workshops are taught by the Seen On Screen Fitness faculty as well as special guest instructors. They are suitable for all levels and are priced at &pound;20 for 90 minutes.</p>
 					<p>For more information or to book, see the <a href="<?php bloginfo('url'); ?>/workshops">Workshops</a> page. Details of upcoming workshops can be found on the <a href="<?php bloginfo('url'); ?>/blog/">blog</a>.</p>
 				</div>
 <?php get_footer(); ?>
