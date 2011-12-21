@@ -29,7 +29,14 @@
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/j-base.css" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/grid.css" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/stickyfooter.css" />
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+		<?php
+			function stylesheet_cache_buster() {
+				$stylesheet_url = get_bloginfo('stylesheet_url');
+				$pieces = explode("wp-content", $stylesheet_url);
+				return $stylesheet_url . "?" . filemtime(ABSPATH . "/wp-content" . $pieces[1]);
+			}
+		?>
+		<link rel="stylesheet" type="text/css" href="<?php echo stylesheet_cache_buster(); ?>" />
 		<!--[if lt IE 7]>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/ie6.css" />
 		<![endif]-->
