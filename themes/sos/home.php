@@ -35,7 +35,7 @@
 					<!--<p>Have you ever watched your favourite stars on television or stage and thought, wow, I would love to dance like that? Or have you ever noticed the professional dancers bringing the production to life around them?</p>-->
 					<p>Now, for the first time, you can book the professionals who dance beside the biggest artists in the world to teach you how it's done! Whether it's a major event, party, or a one to one class, Seen on Screen Fitness will provide a service that caters especially to you.</p>
 					<h3 class="nowrap">Workshops as seen in the <img id="stylist_logo" alt="Stylist" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/stylist_120.png" /></h3>
-					<p><strong>Book our next workshop happening Saturday, January 7th @ The Notting Hill Harbour Club <a href="<?php bloginfo('url'); ?>/workshops">now</a>!</strong></p>
+					<p><strong>January Workshops are SOLD OUT. Book in for February's Brit Awards workshop on Saturday, February 25th @ The Notting Hill Harbour Club <a href="<?php bloginfo('url'); ?>/workshops">now</a>!</strong></p>
 					<p>We run monthly workshops in addition to our private 1:1 and group classes. Our open workshops are popular and sell out quickly so make sure you get in early to reserve you place! They are suitable for all levels and are priced at &pound;20 for 90 minutes or &pound;18 when you book online.</p>
 					<p>For more information and to book, see the <a href="<?php bloginfo('url'); ?>/workshops">Workshops</a> page.</p>
 				</div>
