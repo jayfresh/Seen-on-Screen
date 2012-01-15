@@ -1,10 +1,5 @@
 			</div>
 			<div id="sidebar" class="grid2col left">
-				<div id="social" class="clearboth">
-					<a href="http://twitter.com/SEEN_ON_SCREEN" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/social/Twitter_32x32.png" /></a>
-					<a href="http://www.facebook.com/pages/Seen-on-Screen-Fitness-Events/216657898358706" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/social/FaceBook_32x32.png" /></a>
-					<a href="http://www.youtube.com/sosdancelife" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/social/Youtube_32x32.png" /></a>
-				</div>
 <div id="tweets">
 	<!--<h3>We're tweeting</h3>-->
 	<!--<script src="http://widgets.twimg.com/j/2/widget.js"></script>-->
@@ -59,22 +54,21 @@
 					</ul>-->
 					<a href="http://twitter.com/seen_on_screen" id="moreTweets">more &raquo;</a>
 				</div>
+				<div id="social" class="clearboth">
+					<a href="http://twitter.com/SEEN_ON_SCREEN" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/social/Twitter_32x32.png" /></a>
+					<a href="http://www.facebook.com/pages/Seen-on-Screen-Fitness-Events/216657898358706" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/social/FaceBook_32x32.png" /></a>
+					<a href="http://www.youtube.com/sosdancelife" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/social/Youtube_32x32.png" /></a>
+				</div>
 			</div>
             <div class="push clearboth"></div>
 		</div>
 		<div id="footerContainer">
 			<div id="footer" class="footer jbasewrap">
-		        <div class="right padtopsmall">
-		        	<a href="<?php bloginfo('url'); ?>/privacy">Privacy</a>
-		        	<a href="<?php bloginfo('url'); ?>/terms-and-conditions">T&C's</a>
-		        	<a class="padleft" href="mailto:info@seenonscreenfitness.com">info@seenonscreenfitness.com</a>
-		        	<span class="padleft">Tel: 07525 003 465</span>
-		        </div>
+		        <div class="right padtopsmall"><a href="mailto:info@seenonscreenfitness.com">info@seenonscreenfitness.com</a><span class="padleft">Tel: 07525 003 465</span></div>
 	            <a id="contact_us_now_footer" class="padtopsmall" href="<?php bloginfo('url'); ?>/contact">contact us now</a>
 	        </div>
 		</div>
 		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.4.1.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.cycle.all.js"></script>
 		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/app.js"></script>
 		<?php wp_footer(); ?>
 	</body>

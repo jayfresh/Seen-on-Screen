@@ -48,9 +48,7 @@
 	<body>
 		<div id="wrapper" class="jbasewrap">
 			<div id="header">
-				<?php //if(!is_home()): ?>
 				<a href="<?php bloginfo('url'); ?>"><h1 id="logo">Seen On Screen Fitness</h1></a>
-				<?php //endif; ?>
 				<div id="gallery">
 					<ul class="inline">
 						<li><a href="<?php bloginfo('url'); ?>/dancers/abby" id="abby">Abby</a></li>

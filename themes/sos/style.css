@@ -18,16 +18,26 @@ body {
 }
 
 h1 {
-	width: 291px;
-	height: 50px;
-	background: url(images/sliced/logo.png) right bottom no-repeat;
+	width: 400px;
+	height: 68px;
+	background: url(images/sos_logo_400.jpg) right bottom no-repeat;
 	overflow: hidden;
 	text-indent: -9999px;
 	margin-bottom: 0;
 }
 
+#header h1 {
+	background-image: url(images/sliced/logo.png);
+	width: 291px;
+	height: 50px;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 200;
+}
+
+.strapline {
+	font-size: 1.2em;
 }
 
 #header, #footer {
@@ -42,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 1041px; /* to fit in all the dancer photos; for some reason, 1040px is too small with ordinary browser fonts */
 }
 
-#logo {
+#header #logo {
 	position: absolute;
 	bottom: 5px;
 	right: 15px;
@@ -101,6 +111,10 @@ small {
 	width: 263px;
 }
 
+.margintopbig {
+	margin-top: 42px;
+}
+
 .marginright {
 	margin-right: 21px;
 }
@@ -109,6 +123,13 @@ small {
 	margin-right: 42px;
 }
 
+ul.nobull {
+	margin-left: 0;
+}
+
+ul.nobull li {
+	list-style: none;
+}
 
 #footerContainer {
 	background-color: #a4a49a;
@@ -131,8 +152,52 @@ small {
 	display: block;
 }
 
+#pressBox {
+	height: 142px;
+	overflow: hidden;
+}
+
+#pressBox li {
+	clear: both;
+}
+
+#pressBox img {
+	width: 127px;
+}
+
+#pressBox blockquote {
+	margin: 0;
+	width: 273px;
+}
+
 .pressLogos img {
 	vertical-align: middle;
+}
+
+#artistsBoxContainer {
+	position: relative;
+	height: 450px;
+	width: 400px;
+	overflow: hidden;
+}
+
+#artistsBoxContainer img {
+	width: 100%;
+}
+
+#artistsBoxContainer #artistsCaption {
+	z-index: 50; /* has to be bigger than the number of images in the carousel */
+	position: absolute;
+	top: 50px;
+	right: 0;
+	padding: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-radius: 10px 0px 0px 10px;
+	border-radius: 10px 0px 0px 10px;
+	background-color: white;
 }
 
 .padleft {
@@ -408,7 +473,7 @@ ul.starred div.adr {
 }
 
 #social {
-	margin-top: 10px;
+	text-align: center;
 }
 
 #footer {

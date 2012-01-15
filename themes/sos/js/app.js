@@ -118,3 +118,25 @@ $(document).ready(function() {
 		$('#'+window.highlightDancer.toLowerCase()).addClass('hoverClass');
 	}
 });
+
+/* start homepage press and artists slideshows */
+$(document).ready(function() {
+	$('#pressBox').cycle({
+
+	});
+
+	/*$('#artistsCaption').html($('#artistsBox li:first img').attr('alt'));
+	$('#artistsBox').cycle({
+		fit: 1,
+        before:    function() {
+        	$('#artistsCaption').stop().fadeOut(function() {
+        		$(this).html("");
+        	});
+        },
+        after:     function() {
+            $('#artistsCaption')
+            	.html($(this).children('img').attr('alt'))
+            	.stop().fadeIn();
+        }
+    });*/
+});
