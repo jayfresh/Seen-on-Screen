@@ -47,7 +47,7 @@
 							<a href="http://www.bridesmagazine.co.uk/planning/general/hen-parties/2011/11/seen-on-screen-dance" title="Brides - Dance like a diva">
 								<img class="left" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/brides_127.png" />
 							</a>
-							<blockquote class="left">"Grab your hens, choose and artist and prepare to dance like a star!"</blockquote>
+							<blockquote class="left">"Grab your hens, choose an artist and prepare to dance like a star!"</blockquote>
 						</li>
 						<li>
 							<a href="http://www.zest.co.uk/zest-blog/learn-rihannas-dance-moves/2469.html" title="Zest - Learn Rihanna's dance moves">
