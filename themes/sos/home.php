@@ -53,7 +53,7 @@
 							<a href="http://www.zest.co.uk/zest-blog/learn-rihannas-dance-moves/2469.html" title="Zest - Learn Rihanna's dance moves">
 								<img class="left" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/zest_127.png" />
 							</a>
-							<blockquote class="left">"Before I know it my abs are on fire and my legs are reeeally feeling the burn! Keeley teaches me the Rihanna routine in short, manageable sections and soon I'm striking poses, strutting my stuff and even body rolling<!--(something I never thought I was capable of!)-->."</blockquote>
+							<blockquote class="left">"Before I know it my abs are on fire and my legs are reeeally feeling the burn! Keeley teaches me the Rihanna routine in short, manageable sections and soon I'm striking poses, strutting my stuff and even body rolling (something I never thought I was capable of!)."</blockquote>
 						</li>
 					</ul>
 				</div>

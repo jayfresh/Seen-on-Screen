@@ -65,8 +65,8 @@
 		<div id="footerContainer">
 			<div id="footer" class="footer jbasewrap">
 		        <div class="right padtopsmall">
-		        	<a href="<?php bloginfo('url'); ?>/privacy">Privacy</a>
-		        	<a href="<?php bloginfo('url'); ?>/terms-and-conditions">T&C's</a>
+		        	<!--<a href="<?php bloginfo('url'); ?>/privacy">Privacy</a>
+		        	<a href="<?php bloginfo('url'); ?>/terms-and-conditions">T&C's</a>-->
 		        	<a class="padleft" href="mailto:info@seenonscreenfitness.com">info@seenonscreenfitness.com</a>
 		        	<span class="padleft">Tel: 07525 003 465</span>
 		        </div>
