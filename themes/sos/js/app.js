@@ -122,7 +122,7 @@ $(document).ready(function() {
 /* start homepage press and artists slideshows */
 $(document).ready(function() {
 	$('#pressBox').cycle({
-
+		timeout: 5000
 	});
 
 	/*$('#artistsCaption').html($('#artistsBox li:first img').attr('alt'));

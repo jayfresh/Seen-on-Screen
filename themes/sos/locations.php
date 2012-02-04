@@ -19,11 +19,11 @@ get_header();
 							</li>
 							<li><h2>Notting Hill</h2>
 								<div class="adr">
-									<div>Mark Anthony's Studio</div>
-									<div>57 Ossington Street</div>
+									<div>The Harbour Club</div>
+									<div>1 Alfred Road</div>
 									<div>London</div>
-									<div>W2 4LY</div>
-									<div><a href="http://www.markanthonysuk.com/" title="Mark Anthony's Studio website">http://www.markanthonysuk.com/</a></div>
+									<div>W2 5EU</div>
+									<div><a href="http://www.harbourclubnottinghill.com/" title="The Harbour Club website">http://www.harbourclubnottinghill.com/</a></div>
 								</div>
 							</li>
 							<li><h2>Shoreditch</h2>

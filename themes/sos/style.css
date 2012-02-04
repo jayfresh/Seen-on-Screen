@@ -24,6 +24,7 @@ h1 {
 	overflow: hidden;
 	text-indent: -9999px;
 	margin-bottom: 0;
+	margin-top: -12px;
 }
 
 #header h1 {
@@ -38,6 +39,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .strapline {
 	font-size: 1.2em;
+}
+
+.inlinebig {
+	font-size: 1.75em;
 }
 
 #header, #footer {
@@ -218,7 +223,7 @@ ul.nobull li {
 }
 
 h2 {
-	font-size: 3.5em;
+	font-size: 2.5em;
 }
 
 blockquote {
@@ -242,17 +247,22 @@ p, blockquote {
 	display: none;
 }
 
+.alignleft {
+	float: left;
+}
+
 ul.inline {
 	margin-left: 0;
 	padding-left: 0;
 	display: inline;
-} 
+}
 
 	ul.inline li {
 		margin-left: 0;
 		/*border-left: 1px solid #000;*/
 		list-style: none;
 		display: inline;
+		float: left;
 	}
 	
 		
@@ -718,4 +728,9 @@ a.book {
 .paddingtopsmall {
 	padding-top: 10px;
 	overflow: hidden;
+}
+
+/* celebrations page-specific */
+h2#celebrations {
+	margin-bottom: 24px;
 }
