@@ -40,6 +40,9 @@
 		<!--[if lt IE 7]>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/ie6.css" />
 		<![endif]-->
+		<!--[if !IE]>-->
+		<link type="text/css" rel="stylesheet" media="only screen and (max-device-width: 480px)" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/iphone.css">
+		<!--<![endif]-->
 		
 		<script type="text/javascript" src="http://use.typekit.com/tfp0jyu.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
