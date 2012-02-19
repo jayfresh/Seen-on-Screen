@@ -3,6 +3,7 @@
 					<h2>Who do you want to dance like?</h2>
 					<div id="artistsBox" class="margintop">
 						<ul class="boxed" id="artists">
+							<li>Beyonc&eacute;<span class="hidden"> - Keeley, Shaun</span></li>
 							<li>Rihanna<span class="hidden"> - Keeley, Shaun</span></li>
 							<li>Take That<span class="hidden"> - Dean</span></li>
 							<li>Michael Jackson<span class="hidden"> - Dean, Nicole</span></li>
