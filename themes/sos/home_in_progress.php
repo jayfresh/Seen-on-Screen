@@ -43,7 +43,7 @@
 						</li>
 					</ul>
 					<h3 class="nowrap">Workshops</h3>
-					<p><strong>Book in for February's Brit Awards workshop on Saturday, February 25th @ The Notting Hill Harbour Club <a href="<?php bloginfo('url'); ?>/workshops">now</a>!</strong></p>
+					<p><strong>You can book in for March's Saturday workshop, March 17th @ The Notting Hill Harbour Club <a href="<?php bloginfo('url'); ?>/workshops">here</a>!</strong></p>
 					<p>We run monthly workshops in addition to our private 1:1 and group classes. Our open workshops are popular and sell out quickly so make sure you get in early to reserve you place! They are suitable for all levels and are priced at &pound;20 for 90 minutes or &pound;18 when you book online.</p>
 					<p>For more information and to book, see the <a href="<?php bloginfo('url'); ?>/workshops">Workshops</a> page.</p>
 					<!--<h3>A few of the artists our dancers have recently worked with</h3>-->
