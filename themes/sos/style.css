@@ -17,7 +17,7 @@ body {
 	color: #333;
 }
 
-h1 {
+h1#logo {
 	width: 400px;
 	height: 68px;
 	background: url(images/sos_logo_400.jpg) right bottom no-repeat;
