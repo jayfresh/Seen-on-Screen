@@ -67,8 +67,8 @@
 					<!--<p>Have you ever watched your favourite stars on television or stage and thought, wow, I would love to dance like that? Or have you ever noticed the professional dancers bringing the production to life around them?</p>-->
 					<p class="margintop">Now, for the first time, you can book the professionals who dance beside the biggest stars in the world to teach you how it's done!</p>
 					<p>Whatever the occasion, you'll come out of a Seen On Screen experience feeling fitter, slimmer, de-stressed, and more confident to strut your new moves on the dance floor. Have a look at our group <a href="<?php bloginfo('url'); ?>/workshops">Workshops</a>, <a href="<?php bloginfo('url'); ?>/celebrations">Celebrations</a> and <a href="<?php bloginfo('url'); ?>/corporate-inspiration">Corporate</a> pages to see what Seen On Screen can do for you.</p>
-					<h3 class="nowrap">Workshops</h3>
-					<p><strong>You can book in for March's Saturday workshop, March 17th @ The Notting Hill Harbour Club <a href="<?php bloginfo('url'); ?>/workshops">here</a>!</strong></p>
+					<h3 class="nowrap">Open Classes</h3>
+					<p><strong>You can book in for this month's Saturday Workshops on 21st & 28th April <a href="<?php bloginfo('url'); ?>/workshops">here</a>! For our weekly Wednesday classes & the 6-week course book <a href="<?php bloginfo('url'); ?>/regular-classes">here</a></strong></p>
 					<p>We run monthly workshops in addition to our private 1:1 and group classes. Our open workshops are popular and sell out quickly so make sure you get in early to reserve you place! They are suitable for all levels and are priced at &pound;20 for 90 minutes or &pound;18 when you book online.</p>
 					<p>For more information and to book, see the <a href="<?php bloginfo('url'); ?>/workshops">Workshops</a> page.</p>
 				</div>
