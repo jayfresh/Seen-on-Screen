@@ -232,7 +232,19 @@ a.opposite {
 	color: #fff;
 	padding-top: 12px;
 }
-#footer {
+.footer {
+	background-color: #000;
+	color: #fff;
+	padding: 12px;
+	
+	background: rgb(114,114,114); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(114,114,114,1) 1%, rgba(127,127,127,1) 1%, rgba(0,0,0,1) 11%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(114,114,114,1)), color-stop(1%,rgba(127,127,127,1)), color-stop(11%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(114,114,114,1) 1%,rgba(127,127,127,1) 1%,rgba(0,0,0,1) 11%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(114,114,114,1) 1%,rgba(127,127,127,1) 1%,rgba(0,0,0,1) 11%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(114,114,114,1) 1%,rgba(127,127,127,1) 1%,rgba(0,0,0,1) 11%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(114,114,114,1) 1%,rgba(127,127,127,1) 1%,rgba(0,0,0,1) 11%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#727272', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
 }
 /* stylebook only */
