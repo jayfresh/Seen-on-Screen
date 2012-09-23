@@ -119,8 +119,14 @@ ul.nav {
 				#wrapper ul.nav li ul li a:hover {
 					padding: 4px 10px;
 				}
+ul.membernav {
+	margin: 0;
+}
 	ul.membernav li {
-	
+		list-style: none;
+		border-bottom: 2px solid #fff;
+		font-size: larger;
+		font-family: "futura-pt", sans-serif;
 	}
 	ul.eventdetail li {
 	
@@ -169,17 +175,52 @@ a.opposite {
 
 }
 /* structure */
-.boxout {
-
+.boxout, .boxoutplain {
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	width: 250px;
+	height: 250px;
+	background: #000;
+	color: #fff;
+	padding: 6px;
 }
-.boxoutplain {
+.boxout {
+	background: rgb(0,0,0); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(0,0,0,1) 1%, rgba(68,68,68,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(0,0,0,1)), color-stop(100%,rgba(68,68,68,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 1%,rgba(68,68,68,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,1) 1%,rgba(68,68,68,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,1) 1%,rgba(68,68,68,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,1) 1%,rgba(68,68,68,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#444444',GradientType=0 ); /* IE6-9 */
 
 }
 .carousel {
-
+	width: 100%;
+	background: #ccc;
+	height: 250px;
 }
 .infobox {
 
+}
+.membernavcontainer, .memberavatarcontainer {
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	width: 200px;
+	min-height: 250px;
+	background: #eee;
+	padding-left: 20px;
+	padding-top: 24px;
+}
+.memberavatarcontainer {
+	background: #666;
+}
+.eventbox {
+	width: 650px;
+	height: 400px;
+	background: #ccc;
 }
 #footer {
 
