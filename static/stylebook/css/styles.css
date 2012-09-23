@@ -128,8 +128,16 @@ ul.membernav {
 		font-size: larger;
 		font-family: "futura-pt", sans-serif;
 	}
+ul.eventdetail {
+	float: right;
+	margin-right: 12px;
+}
 	ul.eventdetail li {
-	
+		list-style: none;
+		border-bottom: 2px solid #666;
+	}
+	ul.eventdetail li:last-child {
+		border: none;
 	}
 	ul.credits li {
 		font-family: "futura-pt", sans-serif;
@@ -219,8 +227,10 @@ a.opposite {
 }
 .eventbox {
 	width: 650px;
-	height: 400px;
-	background: #ccc;
+	min-height: 100px;
+	background: #222;
+	color: #fff;
+	padding-top: 12px;
 }
 #footer {
 
