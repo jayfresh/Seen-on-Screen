@@ -30,19 +30,28 @@
 }
 /* headers */
 h2 {
-
+	font-family: "future-pt", sans-serif;
+	text-transform: uppercase;
+	font-size: x-large;
 }
 h2.boxout {
+	color: #fff;
+	font-size: large;
+}
+h2.teammember {
 
 }
-h2.title {
-
+.memberavatarcontainer h2 {
+	color: #fff;
 }
-h2.membername {
-	
+	.memberavatarcontainer h2 span {
+		font-size: xx-large;
+	}
+.membernavcontainer h2 {
+	font-size: large;
 }
-	h2.membername span {
-		font-size: larger;
+	.membernavcontainer h2 span {
+		font-size: x-large;
 	}
 /* lists */
 ul {
