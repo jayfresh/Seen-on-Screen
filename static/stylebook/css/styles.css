@@ -209,18 +209,20 @@ a.opposite {
 	background: #ccc;
 	height: 250px;
 }
-.infobox {
-
-}
-.membernavcontainer, .memberavatarcontainer {
+.infobox, .membernavcontainer, .memberavatarcontainer {
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
 	border-radius: 12px;
 	width: 200px;
 	min-height: 250px;
-	background: #eee;
 	padding-left: 20px;
 	padding-top: 24px;
+}
+.infobox {
+	font-size: smaller;	
+}
+.membernavcontainer {
+	background: #eee;
 }
 .memberavatarcontainer {
 	background: #666;
