@@ -23,8 +23,9 @@
 			<h2>Typography</h2>
 			<h3>Headers</h3>
 			<h2>body</h2>
-			<h2 class="boxout">box-out</h2>
-			
+			<div class="boxout">
+				<h2>box-out</h2>
+			</div>
 			<h2 class="teammember">team member name (white)</h2>
 			<div class="memberavatarcontainer">
 				<h2><span>m</span>ember <span>a</span>vatar</h2>
@@ -33,14 +34,14 @@
 				<h2><span>m</span>ember <span>n</span>av</h2>
 			</div>			
 			<h3>Body text</h3>
-			<p class="condensedcaps">small caps</p>
+			<p class="condensedcaps">small caps - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, a</p>
 			<p class="larger">larger e.g. telephone numbers in header</p>
-			<p class="condensed">small body text</p>
-			<p class="condensed"><strong>small bold body text</strong></p>
-			<p>normal body text</p>
-			<p><strong>bold normal body text</strong></p>
-			<p>white normal body text</p>
-			<p><strong>white bold normal body text</strong></p>
+			<p class="condensed">small body text - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, a</p>
+			<p class="condensed"><strong>small bold body text - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, a</strong></p>
+			<p>normal body text - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, a</p>
+			<p><strong>bold normal body text - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, a</strong></p>
+			<p>white normal body text - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, a</p>
+			<p><strong>white bold normal body text - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, a</strong></p>
 			<h2 class="membername"><span class="capital">m</span>ember name</h2>
 				normal
 			<h3>lists</h3>
@@ -116,11 +117,46 @@
 			<hr />
 
 			<h2>Structure</h2>
+			
+			<h3>Header</h3>
+			
+			<div id="header" class="blackContainer">
+				<div itemscope itemtype="http://schema.org/LocalBusiness">
+					<span class="right larger" id="phoneNumber" itemprop="telephone"><a href="tel:08006440588">0800 644 0588</a></span>
+					<h1 itemprop="name" id="logo">Seen On Screen Events</h1>
+				</div>
+				<ul class="nav">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Press</a></li>
+					<li><a href="#">Events</a></li>
+					<li><a href="#">Celebrations</a></li>
+					<li><a href="#">Studios</a></li>
+					<li><a href="#">Contact</a></li>
+					<li class="plain socialButtons">
+						<a href="#"><img src="images/roughs/twitter_small.png" /></a>
+						<a href="#"><img src="images/roughs/facebook_small.png" /></a>
+					</li>
+				</ul>
+				<div class="carousel">
+					<img src="images/roughs/beyonce-header.png">
+				</div>
+			</div>
+
 			<p>Boxout row</p>
 			<div class="boxoutRow">
 				<div class="boxout left">boxout with gradient</div>
 				<div class="boxoutplain left">boxout without gradient</div>
 				<h2 class="boxout left">box-out</h2>
+			</div>
+			<div class="boxoutRow">
+				<div class="boxout left" id="teamBoxout"></div>
+				<div class="boxout left" id="eventsBoxout"></div>
+				<div class="boxoutplain left">
+					<h2>SOS Press</h2>
+					<p>"Almost 90 minutes has passed without me realising and I can definitely feel the burn in my arms and torso... I'll be able to step more"</p>
+					<img class="right" src="images/press/evening_standard_127_inverted.png">
+				</div>
 			</div>
 			<div class="carousel">carousel</div>
 			<div class="teamCarousel">team carousel</div>
@@ -139,30 +175,24 @@
 			<div class="memberavatarcontainer">member avatar container</div>
 			<div class="membernavcontainer">member nav container</div>
 			<div class="eventbox">event / page boxout</div>
-			
-			<div id="header">
-				<ul class="nav">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Press</a></li>
-					<li><a href="#">Events</a></li>
-					<li><a href="#">Celebrations</a></li>
-					<li><a href="#">Studios</a></li>
-					<li><a href="#">Contact</a></li>
-					<li class="plain">
-						<a href="#"><img src="images/roughs/twitter_small.png" /></a>
-						<a href="#"><img src="images/roughs/facebook_small.png" /></a>
-					</li>
-				</ul>
-			</div>
+						
 			<hr />
 
 			<h2>3rd-party Widgets</h2>
-			YouTube video wall
 			facebook friends facewall
-			twitter tweets
-			YouTube video
 			Google map
+			<div class="col left">
+				<h2><img src="images/roughs/twitter_large.png">Follow Us On Twitter</h2>
+				<ul class="twitter condensed">
+					<li class="marginbottomsmall"><a href="#">SEEN_ON_SCREEN</a> "@turkey_north: @SEEN_ON_SCREEN what's the song for the 14 July workshop?" not sure yet, once it's decided we'll let u know. Any suggestions!?<br><a href="#">3 days ago</a>&nbsp;&middot;&nbsp;<a href="#">reply</a></li>
+					<li class="marginbottomsmall"><a href="#">SEEN_ON_SCREEN</a> If you missed y'days Beyonce workshop (if you did missed out!) don't worry as we are teaching it again on Wednesday night, 7-8pm!<br><a href="#">3 days ago</a>&nbsp;&middot;&nbsp;<a href="#">reply</a></li>
+					<li class="marginbottomsmall"><a href="#">MFParsons</a> MEGA,MEGA,MEGA! Hands down, the best dance class I have ever done,"@SEEN_ON_SCREEN: Ooo come on babaay, you put ma love on top, top, top..."<br><a href="#">3 days ago</a>&nbsp;&middot;&nbsp;<a href="#">reply</a></li>
+				</ul>
+			</div>
+			<div class="col left">
+				<h2><img src="images/roughs/youtube.png" height="27">Watch Our Latest Videos</h2>
+			</div>
+			<br class="clearboth">
             <div class="push"></div>
 		</div>
 		<div class="footer">

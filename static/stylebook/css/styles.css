@@ -29,12 +29,26 @@
 
 }
 /* headers */
+h1#logo {
+	background: transparent url("../images/roughs/sos_logo.png") top left no-repeat;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 340px;
+	height: 79px;
+}
+#phoneNumber {
+	margin-top: 50px;
+}
+	#phoneNumber a {
+		color: #fff;
+	}
 h2 {
 	font-family: "futura-pt", sans-serif;
+	font-weight: 300;
 	text-transform: uppercase;
 	font-size: x-large;
 }
-h2.boxout {
+.boxout h2 {
 	color: #fff;
 	font-size: large;
 }
@@ -62,6 +76,7 @@ li {
 }
 ul.nav {
 	margin-left: 0;
+	margin-bottom: 0;
 	overflow: hidden;
 	width: 100%;
 }
@@ -78,6 +93,12 @@ ul.nav {
 	ul.nav li.plain {
 		border-right: none;
 	}
+	ul.nav li:first-child {
+		border-left: none;
+	}
+		ul.nav li.plain a:link, ul.nav li.plain a:hover, ul.nav li.plain a:visited, ul.nav li.plain a:active {
+			background: transparent;
+		}
 	ul.nav,
 		ul.nav li ul li.active a:link, ul.nav li ul li.active a:visited, ul.nav li ul li.active a:active, #wrapper ul.nav li ul li a:hover {
 		background: rgb(255,255,255); /* Old browsers */
@@ -138,11 +159,16 @@ ul.nav {
 				#wrapper ul.nav li ul li a:hover {
 					padding: 0px 10px;
 				}
+ul.starredList, ul.credits, ul.membernav, ul.twitter {
+	margin-left: 0;
+}
+	ul.starredList li, ul.credits li, ul.membernav li, ul.twitter li {
+		list-style: none;
+	}
 ul.membernav {
 	margin: 0;
 }
 	ul.membernav li {
-		list-style: none;
 		border-bottom: 2px solid #fff;
 		font-size: larger;
 		font-family: "futura-pt", sans-serif;
@@ -158,21 +184,13 @@ ul.eventdetail {
 	ul.eventdetail li:last-child {
 		border: none;
 	}
-ul.credits {
-	margin-left: 0;
-}
 	ul.credits li {
 		font-family: "futura-pt", sans-serif;
 		background: transparent url(../images/roughs/white-star-small.png) top left no-repeat;
-		list-style: none;
 		padding-left: 24px;
 	}
-ul.starredList {
-	margin-left: 0;
-}
 	ul.starredList li {
 		background: #fff url(../images/roughs/black-star-small.png) top left no-repeat;
-		list-style: none;
 		padding-left: 24px;
 	}
 /* body text */
@@ -183,13 +201,14 @@ body {
 	font-family: Arial, sans-serif;
 }
 p {
-
+	line-height: 22px;
 }
 .condensedcaps {
 	font-variant: small-caps;
 }
 .condensed, .condensedcaps {
 	font-size: smaller;
+	line-height: 18px;
 }
 .larger {
 	font-size: larger;
@@ -229,13 +248,16 @@ a.opposite {
 	background-image: url('../images/roughs/right-arrow.png');
 }
 /* structure */
+.col, .boxout, .boxoutplain {
+	width: 290px;
+	margin-right: 30px;
+}
 .boxout, .boxoutplain {
+	width: 278px; /* 290 inc. padding */
+	height: 238px; /* 250 inc. padding */
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
 	border-radius: 12px;
-	width: 278px; /* 290 inc. padding */
-	height: 250px;
-	margin-right: 30px;
 	background: #000;
 	color: #fff;
 	padding: 6px;
@@ -258,6 +280,7 @@ a.opposite {
 	width: 100%;
 	background: #ccc;
 	height: 236px;
+	overflow: hidden;
 }
 .teamCarousel {
 	width: 100%;
@@ -318,6 +341,20 @@ a.opposite {
 	background: linear-gradient(to bottom,  rgba(114,114,114,1) 1%,rgba(127,127,127,1) 1%,rgba(0,0,0,1) 11%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#727272', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
+}
+
+/* boxout backgrounds */
+#teamBoxout {
+	background: #000 url(../images/roughs/team_small.png) top left no-repeat;
+}
+#eventsBoxout {
+	background: #fff url(../images/roughs/events_image.png) top left no-repeat;
+}
+
+/* misc */
+.socialButtons {
+	top: 3px;
+	position: relative;
 }
 
 /* stylebook only */
