@@ -62,7 +62,7 @@ h2 {
 	font-size: 21px;
 }
 h2.teammember {
-
+	font-size: 40px;
 }
 .memberavatarcontainer h2 {
 	color: #fff;
@@ -196,10 +196,14 @@ ul.eventdetail {
 	ul.eventdetail li:last-child {
 		border: none;
 	}
+ul.credits {
+	margin-bottom: 20px;
+}
 	ul.credits li {
 		font-family: "futura-pt", sans-serif;
-		background: transparent url(../images/roughs/white-star-small.png) top left no-repeat;
+		background: transparent url(../images/roughs/white-star-small.png) center left no-repeat;
 		padding-left: 24px;
+		line-height: 32px;
 	}
 	ul.starredList li {
 		background: #fff url(../images/roughs/black-star-small.png) top left no-repeat;
@@ -314,7 +318,26 @@ a.opposite {
 		color-stop(0.5, #000000),
 		color-stop(1, #E6E6E6)
 	);
+	padding-top: 24px;
 }
+	.teamCarouselStrip {
+		width: 930px;
+		margin: auto;
+		margin-bottom: 22px;
+		overflow: hidden;
+	}
+	.teamCarousel div.teammember {
+		width: 310px;
+		height: 275px;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		overflow: hidden;
+		float: left;		
+	}
+		.teamCarousel img {
+			width: 310px;
+		}
 .membernavcontainer, .memberavatarcontainer {
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
@@ -385,7 +408,4 @@ a.opposite {
 .blackContainer {
 	background-color: #000;
 	overflow: hidden;
-}
-.teamCarousel {
-	height: 350px; /* in real page, this would be set to fill the page */
 }
