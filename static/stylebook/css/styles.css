@@ -1,3 +1,9 @@
+/* jbase overrides */
+.jbasewrap {
+	width: 990px;
+	padding: 0;
+}
+
 /* colours */
 .limegreen {
 	background-color: #aace38;
@@ -51,6 +57,9 @@ h2 {
 .boxout h2 {
 	color: #fff;
 	font-size: large;
+}
+.col h2 {
+	font-size: 21px;
 }
 h2.teammember {
 
@@ -165,6 +174,9 @@ ul.starredList, ul.credits, ul.membernav, ul.twitter {
 	ul.starredList li, ul.credits li, ul.membernav li, ul.twitter li {
 		list-style: none;
 	}
+	ul.twitter li {
+		line-height: 16px;
+	}
 ul.membernav {
 	margin: 0;
 }
@@ -249,11 +261,11 @@ a.opposite {
 }
 /* structure */
 .col, .boxout, .boxoutplain {
-	width: 290px;
-	margin-right: 30px;
+	width: 312px;
+	margin-right: 25px;
 }
 .boxout, .boxoutplain {
-	width: 278px; /* 290 inc. padding */
+	width: 300px; /* 312 inc. padding */
 	height: 238px; /* 250 inc. padding */
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
@@ -275,6 +287,9 @@ a.opposite {
 }
 .boxoutRow {
 	overflow: hidden;
+}
+.last {
+	margin-right: 0;
 }
 .carousel {
 	width: 100%;
@@ -311,6 +326,7 @@ a.opposite {
 }
 .infobox {
 	width: 310px;
+	margin: auto;
 	background: transparent;
 	color: #fff;
 }
@@ -326,6 +342,9 @@ a.opposite {
 	background: #222;
 	color: #fff;
 	padding-top: 12px;
+}
+.marginrightsmall {
+	margin-right: 12px;
 }
 .footer {
 	background-color: #000;
