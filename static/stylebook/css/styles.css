@@ -48,10 +48,15 @@ h1#logo {
 	#phoneNumber a {
 		color: #fff;
 	}
-h2 {
+h1, h2.teammember {
+	font-size: 40px;
+}
+h1, h2 {
 	font-family: "futura-pt", sans-serif;
 	font-weight: 300;
 	text-transform: uppercase;
+}
+h2 {
 	font-size: x-large;
 }
 .boxout h2 {
@@ -60,9 +65,6 @@ h2 {
 }
 .col h2 {
 	font-size: 21px;
-}
-h2.teammember {
-	font-size: 40px;
 }
 .memberavatarcontainer h2 {
 	color: #fff;
@@ -185,15 +187,16 @@ ul.membernav {
 		font-size: larger;
 		font-family: "futura-pt", sans-serif;
 	}
-ul.eventdetail {
+.eventdetail ul {
 	float: right;
 	margin-right: 12px;
+	width: 226px;
 }
-	ul.eventdetail li {
+	.eventdetail ul li {
 		list-style: none;
 		border-bottom: 2px solid #666;
 	}
-	ul.eventdetail li:last-child {
+	.eventdetail ul li:last-child {
 		border: none;
 	}
 ul.credits {
@@ -217,7 +220,7 @@ body {
 	font-family: Arial, sans-serif;
 }
 p {
-	line-height: 22px;
+	line-height: 21px;
 }
 .condensedcaps {
 	font-variant: small-caps;
@@ -359,13 +362,26 @@ a.opposite {
 .memberavatarcontainer {
 	background: #666;
 }
+.contentPage {
+	overflow: hidden;
+}
+.contentColumn {
+	width: 296px;
+	margin-right: 28px;
+}
 .eventbox {
-	width: 650px;
-	min-height: 100px;
+	width: 610px;
 	background: #222;
 	color: #fff;
-	padding-top: 12px;
 }
+	.eventbox .eventdetail {
+		padding-top: 12px;
+	}
+		.eventbox .eventdetail p {
+			float: left;
+			margin-left: 28px;
+			width: 280px;
+		}
 .marginrightsmall {
 	margin-right: 12px;
 }
@@ -408,4 +424,7 @@ a.opposite {
 .blackContainer {
 	background-color: #000;
 	overflow: hidden;
+}
+.eventbox {
+	min-height: 100px;
 }
