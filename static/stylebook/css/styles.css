@@ -4,6 +4,13 @@
 	padding: 0;
 }
 
+a {
+	color: #000;
+}
+a:hover {
+	border-bottom: 1px solid #323232;
+}
+
 /* colours */
 .limegreen {
 	background-color: #aace38;
