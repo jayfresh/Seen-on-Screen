@@ -74,6 +74,7 @@ ul.nav {
 		ul.nav li ul li.active a:link, ul.nav li ul li.active a:visited, ul.nav li ul li.active a:active, #wrapper ul.nav li ul li a:hover {
 			color: #000;
 			padding: 8px 12px;
+			line-height: 35px;
 	
 			background: rgb(255,255,255); /* Old browsers */
 			background: -moz-linear-gradient(top,  rgba(255,255,255,1) 39%, rgba(237,237,237,1) 83%, rgba(188,188,188,1) 100%); /* FF3.6+ */
@@ -121,12 +122,12 @@ ul.nav {
 					color: #fff;
 					display: block;
 					border-bottom: 1px solid #999;
-					padding: 4px 10px;
+					padding: 0px 10px;
 					background: none;
 				}
 				ul.nav li ul li.active a:link, ul.nav li ul li.active a:visited, ul.nav li ul li.active a:active,
 				#wrapper ul.nav li ul li a:hover {
-					padding: 4px 10px;
+					padding: 0px 10px;
 				}
 ul.membernav {
 	margin: 0;
@@ -196,8 +197,9 @@ a.opposite {
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
 	border-radius: 12px;
-	width: 250px;
+	width: 278px; /* 290 inc. padding */
 	height: 250px;
+	margin-right: 30px;
 	background: #000;
 	color: #fff;
 	padding: 6px;
@@ -212,6 +214,9 @@ a.opposite {
 	background: linear-gradient(to bottom,  rgba(0,0,0,1) 1%,rgba(68,68,68,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#444444',GradientType=0 ); /* IE6-9 */
 
+}
+.boxoutRow {
+	overflow: hidden;
 }
 .carousel {
 	width: 100%;
@@ -258,6 +263,10 @@ a.opposite {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#727272', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
 }
+
+/* specific backgrounds */
+#
+
 /* stylebook only */
 .swatch {
 	height: 25px;
