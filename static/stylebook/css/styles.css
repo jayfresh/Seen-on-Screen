@@ -30,7 +30,7 @@
 }
 /* headers */
 h2 {
-	font-family: "future-pt", sans-serif;
+	font-family: "futura-pt", sans-serif;
 	text-transform: uppercase;
 	font-size: x-large;
 }
@@ -149,9 +149,23 @@ ul.eventdetail {
 	ul.eventdetail li:last-child {
 		border: none;
 	}
+ul.credits {
+	margin-left: 0;
+}
 	ul.credits li {
 		font-family: "futura-pt", sans-serif;
-	} 
+		background: transparent url(../images/roughs/white-star-small.png) top left no-repeat;
+		list-style: none;
+		padding-left: 24px;
+	}
+ul.starredList {
+	margin-left: 0;
+}
+	ul.starredList li {
+		background: #fff url(../images/roughs/black-star-small.png) top left no-repeat;
+		list-style: none;
+		padding-left: 24px;
+	}
 /* body text */
 a {
 	text-decoration: none;
@@ -173,24 +187,37 @@ p {
 }
 /* buttons */
 a.button {
-	width: 50px;
-	height: 50px;
+	width: 85px;
+	height: 65px; /* 87 inc. padding */
+	padding-top: 22px;
+	text-align: center;
 	color: #fff;
 	display: block;
-	background-image: url('');
+	background: #fff url('../images/roughs/small-green-button.png') top left no-repeat;
+	text-transform: uppercase;
+	font-family: "futura-pt", sans-serif;
+	font-weight: 300;
+	font-size: x-large;
 }
 a.largebutton {
-	width: 65px;
-	height: 65px;
+	width: 148px;
+	height: 145px; /* 148 inc. padding */
+	padding-top: 43px;
+	background: #fff url('../images/roughs/big-green-button.png') top left no-repeat;
+	font-size: 45px;
+	line-height: 35px;
 }
 a.bluebutton {
 	background-image: url('');
 }
 a.arrow {
-
+	width: 16px;
+	height: 23px;
+	display: inline-block;
+	background-image: url('../images/roughs/left-arrow.png');
 }
 a.opposite {
-
+	background-image: url('../images/roughs/right-arrow.png');
 }
 /* structure */
 .boxout, .boxoutplain {
@@ -221,9 +248,27 @@ a.opposite {
 .carousel {
 	width: 100%;
 	background: #ccc;
-	height: 250px;
+	height: 236px;
 }
-.infobox, .membernavcontainer, .memberavatarcontainer {
+.teamCarousel {
+	width: 100%;
+	background-color: #000;
+	background-image: linear-gradient(left , #E6E6E6 0%, #000000 50%, #E6E6E6 100%);
+	background-image: -o-linear-gradient(left , #E6E6E6 0%, #000000 50%, #E6E6E6 100%);
+	background-image: -moz-linear-gradient(left , #E6E6E6 0%, #000000 50%, #E6E6E6 100%);
+	background-image: -webkit-linear-gradient(left , #E6E6E6 0%, #000000 50%, #E6E6E6 100%);
+	background-image: -ms-linear-gradient(left , #E6E6E6 0%, #000000 50%, #E6E6E6 100%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		right bottom,
+		color-stop(0, #E6E6E6),
+		color-stop(0.5, #000000),
+		color-stop(1, #E6E6E6)
+	);
+}
+.membernavcontainer, .memberavatarcontainer {
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
 	border-radius: 12px;
@@ -233,7 +278,9 @@ a.opposite {
 	padding-top: 24px;
 }
 .infobox {
-	font-size: smaller;	
+	width: 310px;
+	background: transparent;
+	color: #fff;
 }
 .membernavcontainer {
 	background: #eee;
@@ -264,12 +311,16 @@ a.opposite {
 
 }
 
-/* specific backgrounds */
-#
-
 /* stylebook only */
 .swatch {
 	height: 25px;
 	width: 25px;
 	display: inline-block;
+}
+.blackContainer {
+	background-color: #000;
+	overflow: hidden;
+}
+.teamCarousel {
+	height: 350px; /* in real page, this would be set to fill the page */
 }
