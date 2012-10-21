@@ -187,13 +187,13 @@ ul.nav {
 				#wrapper ul.nav li ul li a:hover {
 					padding: 0px 10px;
 				}
-ul.starredList, ul.credits, ul.membernav, ul.twitter {
+ul.starredList, ul.credits, ul.membernav, #tweetblender-t1 ul, .contentColumn ul {
 	margin-left: 0;
 }
-	ul.starredList li, ul.credits li, ul.membernav li, ul.twitter li {
+	ul.starredList li, ul.credits li, ul.membernav li, #tweetblender-t1 ul li, .contentColumn ul li {
 		list-style: none;
 	}
-	ul.twitter li {
+	#tweetblender-t1 ul li {
 		line-height: 16px;
 	}
 ul.membernav {
@@ -225,7 +225,7 @@ ul.credits {
 		padding-left: 24px;
 		line-height: 32px;
 	}
-	ul.starredList li {
+	ul.starredList li, .contentColumn ul li {
 		background: #fff url(images/roughs/black-star-small.png) top left no-repeat;
 		padding-left: 24px;
 	}

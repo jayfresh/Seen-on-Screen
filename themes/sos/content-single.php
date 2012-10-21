@@ -2,7 +2,7 @@
 	Sub-template for single posts
 */ ?>
 				<?php if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'carousel' ); ?>
+						the_post_thumbnail( '' ); // TO-DO: add this size ?>
 				<div class="articleBody">
 					<?php } ?>
 					<div class="grid8col left">

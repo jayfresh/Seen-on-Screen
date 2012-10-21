@@ -1,7 +1,7 @@
 <?php
 /* for single blog posts */
 get_header(); ?>
-			<div class="blogArticle">
+			<div class="contentPage">
 				<?php if ( have_posts() ) :
 					while ( have_posts() ) : the_post();
 						get_template_part('content', 'single');
