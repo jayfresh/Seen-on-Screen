@@ -67,8 +67,8 @@
 					<!--<p>Have you ever watched your favourite stars on television or stage and thought, wow, I would love to dance like that? Or have you ever noticed the professional dancers bringing the production to life around them?</p>-->
 					<p class="margintop">Now, for the first time, you can book the professionals who dance beside the biggest stars in the world to teach you how it's done!</p>
 					<p>Whatever the occasion, you'll come out of a Seen On Screen experience feeling fitter, slimmer, de-stressed, and more confident to strut your new moves on the dance floor. Have a look at our group <a href="<?php bloginfo('url'); ?>/workshops">Workshops</a>, <a href="<?php bloginfo('url'); ?>/celebrations">Celebrations</a> and <a href="<?php bloginfo('url'); ?>/corporate-inspiration">Corporate</a> pages to see what Seen On Screen can do for you.</p>
-					<h3 class="nowrap">Open Classes</h3>
-					<p><strong>Beyonc&eacute; video series coming soon &mdash; stay tuned!</strong></p>
+					<!--<h3 class="nowrap">Open Classes</h3>-->
+					<p><strong>If you're looking for a unique and memorable seasonal party, check out our <a href="<?php bloginfo('url'); ?>/corporate-inspiration">Christmas</a> page for inspiration</strong></p>
 					<p>For updates, check our <a href="http://www.facebook.com/seenonscreenfitness">Facebook page</a>.</p>
 					<!--<p>We run monthly workshops in addition to our private 1:1 and group classes. Our open workshops are popular and sell out quickly so make sure you get in early to reserve you place! They are suitable for all levels and are priced at &pound;20 for 90 minutes or &pound;18 when you book online.</p>
 					<p>For more information and to book, see the <a href="<?php bloginfo('url'); ?>/workshops">Workshops</a> page.</p>-->
