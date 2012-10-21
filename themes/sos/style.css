@@ -382,6 +382,8 @@ a.opposite {
 }
 .contentPage {
 	overflow: hidden;
+	background-color: #fff;
+	padding: 48px 28px;
 }
 .contentColumn {
 	width: 296px;

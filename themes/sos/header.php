@@ -52,7 +52,9 @@
 						<a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/facebook_small.png" /></a>
 					</li>
 				</ul>
+				<?php if(is_front_page()) : ?>
 				<div class="carousel">
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/beyonce-header.png">
 				</div>
+				<?php endif; ?>
 			</div>

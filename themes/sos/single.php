@@ -1,10 +1,12 @@
 <?php
 /* for single blog posts */
-get_header();
-?>
-
-single.php
-
-<?php
-get_footer();
-?>
+get_header(); ?>
+			<div class="blogArticle">
+				<?php if ( have_posts() ) :
+					while ( have_posts() ) : the_post();
+						get_template_part('content', 'single');
+					endwhile;
+				endif; ?>
+			</div>
+			<hr>
+<?php get_footer(); ?>
