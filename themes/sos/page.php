@@ -15,7 +15,7 @@ get_header();
 					<p>Donec sodales, augue at fermentum vulputate, enim metus posuere nisi, in pulvinar neque mauris vitae lorem. Donec risus dolor, adipiscing sit amet consectetur sit amet, adipiscing in dolor. In faucibus, orci ac malesuada mollis, lacus sapien aliquet dui, ut cursus turpis lorem vel diam.</p>
 				</div>
 				<div class="eventbox left">
-					<img src="images/roughs/rihanna-event.png">
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/rihanna-event.png">
 					<div class="eventdetail">
 						<ul>
 							<li>Notting Hill Harbour Club</li>

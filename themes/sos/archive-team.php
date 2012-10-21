@@ -5,9 +5,9 @@ get_header();
 
 			<div class="teamCarousel">
 				<div class="teamCarouselStrip">
-					<div class="teammember"><img src="images/team/anthony_profile.jpg"></div>
-					<div class="teammember"><img src="images/team/nicole_profile.jpg"></div>
-					<div class="teammember"><img src="images/team/pam_profile.jpg"></div>
+					<div class="teammember"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/team/anthony_profile.jpg"></div>
+					<div class="teammember"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/team/nicole_profile.jpg"></div>
+					<div class="teammember"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/team/pam_profile.jpg"></div>
 				</div>
 				<div class="infobox">
 					<h2 class="teammember">Team member</h2>

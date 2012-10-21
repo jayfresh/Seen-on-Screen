@@ -40,14 +40,19 @@
 					<span class="right larger" id="phoneNumber" itemprop="telephone"><a href="tel:08006440588">0800 644 0588</a></span>
 					<h1 itemprop="name" id="logo">Seen On Screen Events</h1>
 				</div>
-				<?php wp_nav_menu( array( 'theme_location' => 'nav-menu', 'container' => false, 'menu_class' => 'nav' )); ?>
+				<?php wp_nav_menu( array(
+					'theme_location' => 'nav-menu',
+					'container' => false,
+					'menu_class' => 'nav',
+					'menu_id' => 'nav'
+				)); ?>
 				<ul class="nav">
 					<li class="plain socialButtons">
-						<a href="#"><img src="images/roughs/twitter_small.png" /></a>
-						<a href="#"><img src="images/roughs/facebook_small.png" /></a>
+						<a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/twitter_small.png" /></a>
+						<a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/facebook_small.png" /></a>
 					</li>
 				</ul>
 				<div class="carousel">
-					<img src="images/roughs/beyonce-header.png">
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/beyonce-header.png">
 				</div>
 			</div>

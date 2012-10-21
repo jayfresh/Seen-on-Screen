@@ -10,7 +10,7 @@ get_header();
 					here</p>
 				</div>
 				<div class="eventbox left">
-					<img src="images/roughs/map.png">
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/map.png">
 				</div>
 			</div>
 
