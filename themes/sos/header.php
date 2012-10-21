@@ -69,7 +69,7 @@
 					<li class="first"><a href="<?php bloginfo('url'); ?>/blog/" target="_blank">News</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/workshops"<?php if($postname=="workshops") { echo ' class="active"'; } ?>>Workshops</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/locations"<?php if($postname=="locations") { echo ' class="active"'; } ?>>Studio Locations</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/corporate-inspiration"<?php if($postname=="corporate-inspiration") { echo ' class="active"'; } ?>>Corporate</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/corporate-inspiration"<?php if($postname=="corporate-inspiration") { echo ' class="active"'; } ?>>Christmas</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/celebrations"<?php if($postname=="celebrations") { echo ' class="active"'; } ?>>Celebrations</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/regular-classes"<?php if($postname=="regular-classes") { echo ' class="active"'; } ?>>Regular Classes</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/contact"<?php if($postname=="contact") { echo ' class="active"'; } ?>>Contact</a></li>
