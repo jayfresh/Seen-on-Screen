@@ -8,7 +8,7 @@
 <div id="tweets">
 	<!--<h3>We're tweeting</h3>-->
 	<!--<script src="http://widgets.twimg.com/j/2/widget.js"></script>-->
-	<script type="text/javascript" src="/sos/wp-content/themes/sos/js/widget.js"></script>
+	<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 	<script>
 	new TWTR.Widget({
 	  version: 2,
