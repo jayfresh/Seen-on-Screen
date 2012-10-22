@@ -38,7 +38,7 @@
 	    avatars: true,
 	    behavior: 'all'
 	  }
-	}).render().setUser('seen_on_screen').start();
+	}).render().setUser('sosfdance').start();
 	</script>
 					<!--<ul>
 						<li>
