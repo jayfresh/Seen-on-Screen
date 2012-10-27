@@ -187,6 +187,11 @@ ul.nav {
 				#wrapper ul.nav li ul li a:hover {
 					padding: 0px 10px;
 				}
+
+.js ul.sub-menu {
+	display: none;
+}
+
 ul.starredList, ul.credits, ul.membernav, #tweetblender-t1 ul, .contentColumn ul {
 	margin-left: 0;
 }
