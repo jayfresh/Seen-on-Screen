@@ -341,21 +341,24 @@ a.opposite {
 	);
 	padding-top: 24px;
 }
-	.teamCarouselStrip {
+	.teamCarouselStripContainer {
 		width: 930px;
 		margin: auto;
 		margin-bottom: 22px;
 		overflow: hidden;
 	}
-	.teamCarousel div.teammember {
-		width: 310px;
-		height: 275px;
-		-webkit-border-radius: 12px;
-		-moz-border-radius: 12px;
-		border-radius: 12px;
-		overflow: hidden;
-		float: left;		
-	}
+		.teamCarouselStrip {
+			width: 3100px; /* enough for 10 images */
+		}
+		.teamCarousel div.teammember {
+			width: 310px;
+			height: 275px;
+			-webkit-border-radius: 12px;
+			-moz-border-radius: 12px;
+			border-radius: 12px;
+			overflow: hidden;
+			float: left;		
+		}
 		.teamCarousel img {
 			width: 310px;
 		}
