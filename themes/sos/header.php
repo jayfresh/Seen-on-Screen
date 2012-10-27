@@ -52,7 +52,7 @@
 				<ul class="nav">
 					<li class="plain socialButtons">
 						<a href="http://twitter.com/sosfdance" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/twitter_small.png" /></a>
-						<a href="https://twitter.com/sosfdance" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @sosfdance</a>
+						<a href="https://twitter.com/sosfdance" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a>
 						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 						<a href="http://facebook.com/seenonscreenfitnessandevents" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/facebook_small.png" /></a>
 						<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.seenonscreenevents.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=377320652348203" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>
