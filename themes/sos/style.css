@@ -57,12 +57,16 @@ h1#logo {
 	text-indent: -9999px;
 	width: 340px;
 	height: 79px;
+	margin-bottom: 0;
 }
 #phoneNumber {
 	margin-top: 50px;
+	font-family: "futura-pt", sans-serif;
+	font-size: 24px;
+	font-weight: 300;
 }
 	#phoneNumber a {
-		color: #fff;
+		color: #eee;
 	}
 h1, h2.teammember {
 	font-size: 40px;
@@ -108,6 +112,8 @@ ul.nav {
 	margin-left: 0;
 	margin-bottom: 0;
 	overflow: hidden;
+	font-family: "futura-pt", sans-serif;
+	font-size: 17px;
 }
 	ul.nav li {
 		list-style: none;
@@ -140,7 +146,7 @@ ul.nav {
 	}
 		ul.nav li a:link, ul.nav li a:visited, ul.nav li a:active,
 		ul.nav li ul li.active a:link, ul.nav li ul li.active a:visited, ul.nav li ul li.active a:active, #wrapper ul.nav li ul li a:hover {
-			color: #000;
+			color: #333;
 			padding: 8px 12px;
 			line-height: 35px;
 			
