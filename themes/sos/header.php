@@ -58,9 +58,7 @@
 						<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.seenonscreenevents.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=377320652348203" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>
 					</li>
 				</ul>
-				<?php if(is_front_page()) : ?>
-				<div class="carousel">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/beyonce-header.png">
-				</div>
-				<?php endif; ?>
+				<?php if(is_front_page()) :
+					attachment_toolbox('homepage-banner', 'carousel');
+				endif; ?>
 			</div>

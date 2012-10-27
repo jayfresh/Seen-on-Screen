@@ -4,7 +4,7 @@
 add_theme_support( 'post-thumbnails' );
 
 // Thumbnail sizes
-add_image_size( 'homepage-banner', 990, 236 );
+add_image_size( 'homepage-banner', 990, 236, true );
 add_image_size( 'team-member', 310, 275 );
 add_image_size( 'content-page', 400, 610 );
 
@@ -118,6 +118,45 @@ function sos_register_menus() {
   register_nav_menus(
     array( 'nav-menu' => __( 'Nav Menu' ) )
   );
+}
+
+function attachment_toolbox($size = 'thumbnail', $ulClass = '', $liClass = '') {
+
+	if($images = get_children(array(
+		'post_parent'    => get_the_ID(),
+		'post_type'      => 'attachment',
+		'numberposts'    => -1, // show all
+		'post_status'    => null,
+		'post_mime_type' => 'image',
+		'order'          => 'ASC',
+		'orderby'        => 'menu_order',
+	))) {			
+
+		if($ulClass) {
+			echo "<ul class=\"$ulClass\">";
+		} else {
+			echo "<ul>";
+		}
+
+		$i=0;
+		foreach($images as $image) {
+			$attsrc  = wp_get_attachment_image_src($image->ID,$size);
+			$atttitle = apply_filters('the_title',$image->post_title);
+
+			if($liClass) {
+				echo '<li class="'.$liClass.'">';
+			} else {
+				echo "<li>";
+			}
+			echo '<img alt="'.$atttitle.'" src="'.$attsrc[0].'" />';
+			$i++;
+
+			echo "</li>";
+		}
+
+		echo "</ul>";
+	}
+	return count($images);
 }
 
 ?>
