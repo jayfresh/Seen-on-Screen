@@ -294,6 +294,7 @@ a.opposite {
 	margin-right: 25px;
 }
 .boxout, .boxoutplain {
+	display: block;
 	width: 300px; /* 312 inc. padding */
 	height: 238px; /* 250 inc. padding */
 	-webkit-border-radius: 12px;
@@ -314,6 +315,9 @@ a.opposite {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#444444',GradientType=0 ); /* IE6-9 */
 
 }
+	.boxout a, .boxoutplain a {
+		color: #fff;
+	}
 .boxoutRow {
 	overflow: hidden;
 	margin-top: 16px;
@@ -327,6 +331,20 @@ a.opposite {
 	height: 236px;
 	overflow: hidden;
 }
+
+.pressQuotesContainer {
+	height: 180px;
+	overflow: hidden;
+}
+	.pressQuotesContainer .pressQuotesStrip {
+		width: 3000px; /* to fit 10 quotes */
+	}
+	.pressQuotesContainer .pressQuote {
+		float: left;
+		height: 180px;
+		width: 300px;
+	}
+
 .teamCarousel {
 	width: 100%;
 	background-color: #000;

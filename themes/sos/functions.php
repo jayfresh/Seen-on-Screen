@@ -44,6 +44,7 @@ function sos_register_custom_post_types() {
                 ),
             'public' => false, // to hide these from the public website
             'show_ui' => true, // so we can edit these from wp-admin
+            'exclude_from_search' => false, // to allow WP_Query to find these
             'has_archive' => false,
             'supports' => array('title','editor','thumbnail')
         )

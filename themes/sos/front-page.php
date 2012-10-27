@@ -4,12 +4,28 @@ get_header();
 ?>
 
 			<div class="boxoutRow">
-				<div class="boxout left" id="teamBoxout"></div>
-				<div class="boxout left" id="eventsBoxout"></div>
+				<a class="boxout left" id="teamBoxout"></a>
+				<a class="boxout left" id="eventsBoxout"></a>
 				<div class="boxoutplain left last">
-					<h2>SOS Press</h2>
-					<p>"Almost 90 minutes has passed without me realising and I can definitely feel the burn in my arms and torso... I'll be able to step more"</p>
-					<img class="right" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard_127_inverted.png">
+					<h2><a href="<?php echo home_url('/press/'); ?>">SOS Press</a></h2>
+					<div class="pressQuotesContainer">
+						<div class="pressQuotesStrip">
+							<?php
+							$quotes_query = new WP_Query(array(
+								'sos_quotes' => 'press'
+							));
+							if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post(); ?>
+							<div class="pressQuote">
+								<?php the_content();
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail();
+								} else { ?>
+								<img class="right" title="no thumbnail" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard_127_inverted.png">
+								<?php } ?>
+							</div>
+							<?php endwhile; endif; ?>
+						</div>
+					</div>
 				</div>
 			</div>
 			<br class="clearboth">
