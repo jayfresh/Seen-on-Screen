@@ -9,6 +9,6 @@
 					<?php if ( has_post_thumbnail() ) {
 						the_post_thumbnail( 'content-page' );
 					} else { ?>
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/rihanna-event.png">
+					<img title="no featured image" src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/rihanna-event.png">
 					<?php } ?>
 				</div>
