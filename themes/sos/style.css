@@ -366,16 +366,13 @@ a.opposite {
 			height: 400px;
 		}
 .pressQuotesContainer {
-	height: 180px;
-	overflow: hidden;
+	background-color: #000;
 }
-	.pressQuotesContainer .pressQuotesStrip {
-		width: 3000px; /* to fit 10 quotes */
+	.pressQuotesContainer li.pressQuote {
+		height: auto;
 	}
-	.pressQuotesContainer .pressQuote {
-		float: left;
-		height: 180px;
-		width: 300px;
+	.pressQuotesContainer li.pressQuote img.right {
+		margin-right: 28px;
 	}
 
 .teamCarousel {
