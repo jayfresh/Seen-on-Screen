@@ -114,6 +114,7 @@ ul.nav {
 	overflow: hidden;
 	font-family: "futura-pt", sans-serif;
 	font-size: 17px;
+	height: 35px;
 }
 	ul.nav li {
 		list-style: none;
@@ -362,16 +363,22 @@ a.opposite {
 	.carouselContainer .disabled {
 		
 	}
+.homepageBanner {
+	height: 236px;
+}
+	.eventbox .eventImageContainer img {
+		height: 400px;
+	}
 		.eventbox .carousel li {
 			height: 400px;
 		}
-.pressQuotesContainer {
+.pressQuotesContainer, .eventQuotesContainer {
 	background-color: #000;
 }
-	.pressQuotesContainer li.pressQuote {
+	.eventQuotesContainer li.eventQuote {
 		height: auto;
 	}
-	.pressQuotesContainer li.pressQuote img.right {
+	.eventQuotesContainer li.eventQuote img.right {
 		margin-right: 28px;
 	}
 

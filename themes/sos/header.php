@@ -59,7 +59,7 @@
 					</li>
 				</ul>
 				<?php if(is_front_page()) : ?>
-					<div class="carouselContainer">
+					<div class="carouselContainer homepageBanner">
 					<?php attachment_toolbox('homepage-banner', 'carousel'); ?>
 					</div>					
 				<?php endif; ?>

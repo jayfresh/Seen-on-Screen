@@ -8,23 +8,23 @@ get_header();
 				<a class="boxout left" id="eventsBoxout"></a>
 				<div class="boxoutplain left last">
 					<h2><a href="<?php echo home_url('/press/'); ?>">SOS Press</a></h2>
-					<div class="pressQuotesContainer">
-						<div class="pressQuotesStrip">
+					<div class="pressQuotesContainer carouselContainer">
+						<ul class="carousel">
 							<?php
 							$quotes_query = new WP_Query(array(
 								'sos_quotes' => 'press'
 							));
 							if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post(); ?>
-							<div class="pressQuote">
+							<li class="pressQuote">
 								<?php the_content();
 								if ( has_post_thumbnail() ) {
 									the_post_thumbnail();
 								} else { ?>
 								<img class="right" title="no thumbnail" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard_127_inverted.png">
 								<?php } ?>
-							</div>
+							</li>
 							<?php endwhile; endif; ?>
-						</div>
+						</ul>
 					</div>
 				</div>
 			</div>
