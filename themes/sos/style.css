@@ -366,9 +366,12 @@ a.opposite {
 .homepageBanner {
 	height: 236px;
 }
-	.eventbox .eventImageContainer img {
+	.eventbox .eventImageContainer {
 		height: 400px;
 	}
+		.eventbox .eventImageContainer img {
+
+		}
 		.eventbox .carousel li {
 			height: 400px;
 		}
