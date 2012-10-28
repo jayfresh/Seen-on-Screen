@@ -349,19 +349,16 @@ a.opposite {
 			height: 236px;
 			width: auto;
 		}
-	.carouselContainer .arrow {
+	.carouselContainer .arrow, .teamCarouselContainer .arrow {
 		position: absolute;
 		left: 12px;
 		top: 50%;
 		overflow: hidden;
 		text-indent: -9999px;
 	}
-	.carouselContainer .opposite {
+	.carouselContainer .opposite, .teamCarouselContainer .opposite {
 		right: 12px;
 		left: auto;
-	}
-	.carouselContainer .disabled {
-		
 	}
 .homepageBanner {
 	height: 236px;
@@ -385,8 +382,9 @@ a.opposite {
 		margin-right: 28px;
 	}
 
-.teamCarousel {
+.teamCarouselContainer {
 	width: 100%;
+	position: relative;
 	background-color: #000;
 	background-image: linear-gradient(left , #E6E6E6 0%, #000000 50%, #E6E6E6 100%);
 	background-image: -o-linear-gradient(left , #E6E6E6 0%, #000000 50%, #E6E6E6 100%);
@@ -404,27 +402,28 @@ a.opposite {
 	);
 	padding-top: 24px;
 }
-	.teamCarouselStripContainer {
+	.teamCarouselContainer .carouselStrip {
 		width: 930px;
 		margin: auto;
 		margin-bottom: 22px;
 		overflow: hidden;
 	}
-		.teamCarouselStrip {
-			width: 3100px; /* enough for 10 images */
+		.teamCarouselContainer .carouselStrip ul {
+			margin: 0;
+			position: relative;
 		}
-		.teamCarousel div.teammember {
+		.teamCarouselContainer .carouselStrip .teammember {
 			width: 310px;
 			height: 275px;
+			overflow: hidden;
+			float: left;
 			-webkit-border-radius: 12px;
 			-moz-border-radius: 12px;
 			border-radius: 12px;
-			overflow: hidden;
-			float: left;		
 		}
-		.teamCarousel img {
-			width: 310px;
-		}
+			.teamCarouselContainer img {
+				width: 100%;
+			}
 .membernavcontainer, .memberavatarcontainer {
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;

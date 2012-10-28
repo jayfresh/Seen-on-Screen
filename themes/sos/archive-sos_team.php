@@ -3,12 +3,12 @@
 get_header();
 ?>
 
-			<div class="teamCarousel">
-				<div class="teamCarouselStripContainer">
-					<div class="teamCarouselStrip">
+			<div class="teamCarouselContainer">
+				<div class="carouselStrip">
+					<ul>
 						<?php if ( have_posts() ) :
 							while ( have_posts() ) : the_post(); ?>
-						<div class="teammember">
+						<li class="teammember">
 							<?php if ( has_post_thumbnail() ) {
 								the_post_thumbnail();
 							} else { ?>
@@ -26,10 +26,10 @@ get_header();
 								</ul>
 								<?php the_content(); ?>
 							</div>
-						</div>
+						</li>
 							<?php endwhile;
 						endif; ?>
-					</div>
+					</ul>
 				</div>
 				<div class="infobox">
 					<!--<h2 class="teammember">Team member</h2>
