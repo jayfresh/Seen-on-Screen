@@ -6,7 +6,7 @@ add_theme_support( 'post-thumbnails' );
 // Thumbnail sizes
 add_image_size( 'homepage-banner', 990, 236, true );
 add_image_size( 'team-member', 310, 275 );
-add_image_size( 'content-page', 400, 610 );
+add_image_size( 'content-page', 610, 400 );
 
 // Register the 'Team' custom post type
 add_action( 'init', 'sos_register_custom_post_types');
@@ -169,6 +169,6 @@ function sos_load_scripts() {
 	wp_register_script('sos', $stylesheet_directory.'/js/app.js', array('jquery'), false, true);
 	wp_enqueue_script('sos');
 }
-add_action('wp_print_scripts', 'sos_load_scripts');
+add_action('wp_enqueue_scripts', 'sos_load_scripts');
 
 ?>
