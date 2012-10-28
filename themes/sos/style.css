@@ -331,18 +331,37 @@ a.opposite {
 .last {
 	margin-right: 0;
 }
-.carousel {
+.carouselContainer {
 	width: 100%;
 	background: #ccc;
 	height: 236px;
 	overflow: hidden;
-	margin: 0;
+	position: relative;
 }
-	.carousel li {
-		list-style: none;
-		float: left;
-		height: 236px;
-		width: inherit;
+	.carousel {
+		width: 100%;
+		margin: 0;
+		position: relative;
+	}
+		.carousel li {
+			list-style: none;
+			float: left;
+			height: 236px;
+			width: auto;
+		}
+	.carouselContainer .arrow {
+		position: absolute;
+		left: 12px;
+		top: 50%;
+		overflow: hidden;
+		text-indent: -9999px;
+	}
+	.carouselContainer .opposite {
+		right: 12px;
+		left: auto;
+	}
+	.carouselContainer .disabled {
+		
 	}
 
 .pressQuotesContainer {
