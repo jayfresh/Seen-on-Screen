@@ -159,4 +159,14 @@ function attachment_toolbox($size = 'thumbnail', $ulClass = '', $liClass = '') {
 	return count($images);
 }
 
+// add scripts
+function sos_load_scripts() {
+	$stylesheet_directory = get_stylesheet_directory_uri();
+	$wp_url = get_bloginfo('wpurl');
+	wp_enqueue_script('jquery',$wp_url.'/wp-includes/js/jquery/jquery.js','','',true);
+	wp_register_script('sos', $stylesheet_directory.'/js/app.js', array('jquery'), false, true);
+	wp_enqueue_script('sos');
+}
+add_action('wp_print_scripts', 'sos_load_scripts');
+
 ?>
