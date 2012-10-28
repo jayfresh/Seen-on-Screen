@@ -421,9 +421,16 @@ a.opposite {
 			-moz-border-radius: 12px;
 			border-radius: 12px;
 		}
+		.teamCarouselContainer .carouselStrip .teammember .infobox {
+			display: none;
+		}
 			.teamCarouselContainer img {
 				width: 100%;
 			}
+		/* give it some time to load */
+		.js .teamCarouselContainer li.teammember {
+			visibility: hidden;
+		}
 .membernavcontainer, .memberavatarcontainer {
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;

@@ -7,15 +7,20 @@ get_header();
 				<div class="carouselStrip">
 					<ul>
 						<?php if ( have_posts() ) :
-							while ( have_posts() ) : the_post(); ?>
+							while ( have_posts() ) : the_post();
+								$name = get_the_title();
+							?>
 						<li class="teammember">
 							<?php if ( has_post_thumbnail() ) {
-								the_post_thumbnail();
-							} else { ?>
+								global $post;
+								$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'team-member' );
+								$url = $thumb['0']; ?>
+							<img src="<?php echo $url; ?>" alt="<?php echo $name; ?>">
+							<?php } else { ?>
 							<img src="<?php bloginfo('stylesheet_directory'); ?>/images/team/shaun_profile.jpg" title="no profile">
 							<?php } ?>
 							<div class="infobox">
-								<h2 class="teammember"><?php the_title(); ?></h2>
+								<h2 class="teammember"><?php echo $name; ?></h2>
 								<ul class="credits">
 								<?php
 								$creditsList = get_post_meta($post->ID,'_credits',true);

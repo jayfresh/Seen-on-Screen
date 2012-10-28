@@ -106,6 +106,9 @@ jQuery(document).ready(function($) {
 					});
 				$carousel.width(width)
 					.css('left', -200); // TO-DO: this needs to be not hard-coded
+				$slides.css({
+					visibility: 'visible'
+				});
 			},
 			growToMax = function(i) {
 				var film_spacing = 0,
