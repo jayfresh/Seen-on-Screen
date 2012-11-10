@@ -26,6 +26,7 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/jbase.css" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/stickyfooter.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.youtubeChannel.css" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<script type="text/javascript">
@@ -36,6 +37,14 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=377320652348203";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 		<div class="bggradient"></div>
 		<div id="wrapper" class="jbasewrap">
 			<div id="header" class="blackContainer">
@@ -51,7 +60,7 @@
 				)); ?>
 				<ul class="nav">
 					<li class="plain socialButtons">
-						<a href="http://twitter.com/sosfdance" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/twitter_small.png" /></a>
+						<a href="http://twitter.com/sosfdance" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter_21-21.gif" /></a>
 						<a href="https://twitter.com/sosfdance" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a>
 						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 						<a href="http://facebook.com/seenonscreenfitnessandevents" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/facebook_small.png" /></a>

@@ -52,7 +52,7 @@ a:hover {
 }
 /* headers */
 h1#logo {
-	background: transparent url(images/roughs/sos_logo.png) top left no-repeat;
+	background: transparent url(images/sos_logo_trans.gif) top left no-repeat;
 	overflow: hidden;
 	text-indent: -9999px;
 	width: 340px;
@@ -288,12 +288,12 @@ a.bluebutton {
 }
 a.arrow {
 	width: 16px;
-	height: 23px;
+	height: 24px;
 	display: inline-block;
-	background-image: url(images/roughs/left-arrow.png);
+	background-image: url(images/arrow_l.gif);
 }
 a.opposite {
-	background-image: url(images/roughs/right-arrow.png);
+	background-image: url(images/arrow_r.gif);
 }
 /* structure */
 .col, .boxout, .boxoutplain {
@@ -499,6 +499,23 @@ a.opposite {
 }
 #eventsBoxout {
 	background: #fff url(images/roughs/events_image.png) top left no-repeat;
+}
+
+/* YouTube video wall */
+#youtubeChannel ul {
+	margin: 0;
+}
+#youtubeChannel li {
+	float: left;
+	list-style: none;
+	margin-right: 3px;
+}
+#youtubeChannel a:hover {
+	border: none;
+}
+#youtubeChannel a img.vid-thumb {
+	width: 50px;
+	border: 2px solid #eee;
 }
 
 /* misc */

@@ -173,4 +173,9 @@ jQuery(document).ready(function($) {
 		});
 		$container.children('.infobox').html($slides.eq(activeSlide).find('.infobox').html());
 	});
+	
+	/* set up the YouTube video wall on home page */
+	$('#youtubeChannel div').youtubeUploadsAndFavorites({
+        username: 'SoSdancelife'
+    });
 });

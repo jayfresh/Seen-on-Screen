@@ -30,8 +30,8 @@ get_header();
 			</div>
 			<br class="clearboth">
 			<div class="col left">
-				<h2><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/twitter_large.png" class="marginrightsmall"><a href="https://twitter.com/sosfdance" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @sosfdance</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><a href="http://twitter.com/sosfdance" target="_blank">Follow Us On Twitter - @sosfdance</a></h2>
+				<h2><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter_28-28.gif" class="marginrightsmall"><a href="https://twitter.com/sosfdance" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @sosfdance</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><a href="http://twitter.com/sosfdance" target="_blank">@sosfdance</a></h2>
                 <?php tweet_blender_widget(array(
                     'unique_div_id' => 'tweetblender-t1',
                     'sources' => '@sosfdance',
@@ -46,12 +46,13 @@ get_header();
 				</ul>-->
 			</div>
 			<div class="col left">
-				<h2><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/facebook_large.png" class="marginrightsmall"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.seenonscreenevents.com&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=377320652348203" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>4,325 people like SOS</h2>
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/facewall.png">
+				<h2><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/facebook_large.png" class="marginrightsmall">Like SOS on Facebook</h2>
+				<div class="fb-like-box" data-href="http://www.facebook.com/seenonscreenfitness" data-width="292" data-show-faces="true" data-stream="false" data-header="false"></div>
 			</div>
-			<div class="col left last">
-				<h2><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/youtube.png" height="28" class="marginrightsmall">Watch Our Latest Videos</h2>
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/video_wall.png">
+			<div class="col left last" id="youtubeChannel">
+				<h2><img src="<?php bloginfo('stylesheet_directory'); ?>/images/youtube_28-28.gif" class="marginrightsmall">Watch Our Latest Videos</h2>
+				<div></div>
+				<!--<img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/video_wall.png">-->
 			</div>
 			<br class="clearboth">
 
