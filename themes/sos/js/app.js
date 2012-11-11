@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
 				height = $container.height(),
 				stripWidth = slideCount*width,
 				carouselWidth = stripWidth*3,
-				endTrigger = -(carouselWidth-2*width),
+				endTrigger = -(carouselWidth-3*width),
 				$arrows,
 				targetPos = -stripWidth,
 				containerHalfHeight;
