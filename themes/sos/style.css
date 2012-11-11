@@ -513,6 +513,9 @@ a.boxout:hover {
 	width: 296px;
 	margin-right: 28px;
 }
+	.contentColumn img {
+		margin-right: 5px;
+	}
 .eventbox {
 	width: 610px;
 	background: #222;
