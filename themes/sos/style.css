@@ -385,16 +385,19 @@ a.boxout:hover {
 	height: 300px;
 }
 	.eventbox .eventImageContainer {
-		height: 400px;
+		height: 500px;
+		background-color: #000;
 	}
 		.eventbox .eventImageContainer img {
 
 		}
 		.eventbox .carousel li {
-			height: 400px;
+			height: 500px;
 		}
 .pressQuotesContainer, .eventQuotesContainer {
 	background-color: #000;
+	overflow: hidden;
+	padding-top: 8px;
 }
 	.eventQuotesContainer li.eventQuote {
 		height: auto;
@@ -488,7 +491,7 @@ a.boxout:hover {
 	color: #fff;
 }
 	.eventbox .eventdetail {
-		padding-top: 12px;
+
 	}
 		.eventbox .eventdetail p {
 			float: left;

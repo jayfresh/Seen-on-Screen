@@ -27,7 +27,8 @@ jQuery(document).ready(function($) {
 				endTrigger = -(carouselWidth-2*width),
 				$arrows,
 				targetPos = -stripWidth,
-				containerHalfHeight;
+				containerHalfHeight,
+				$allCarousels = $('.carouselContainer .carousel');
 			$slides.width(width);
 			$carousel.append($slides.clone())
 				.append($slides.clone())
@@ -47,13 +48,13 @@ jQuery(document).ready(function($) {
 				var $arrow = $(this),
 					direction = $arrow.hasClass('opposite') ? 1 : -1;
 				targetPos -= width*direction;
-				$carousel.animate({
+				$allCarousels.animate({
 					'left': targetPos
 				}, ANIMATE_TIME, 'easeInOutQuad', function() {
 					// if we've reached either end, move back to centre
 					if(targetPos>=0 || targetPos<=endTrigger) {
 						targetPos = -stripWidth;
-						$carousel.css('left', targetPos);
+						$allCarousels.css('left', targetPos);
 					}
 				});
 			});

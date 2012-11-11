@@ -12,31 +12,21 @@ get_header();
 				</div>
 				<?php endwhile; endif; ?>
 				<div class="eventbox left">
-					<?php if ( has_post_thumbnail() ) { ?>
+				<?php
+					$quotes_query = new WP_Query(array(
+						'sos_quotes' => 'corporate'
+					)); ?>
 					<div class="carouselContainer eventImageContainer">
-						<?php attachment_toolbox($size = 'content-page', 'carousel'); ?>
-					</div>
-					<?php } else { ?>
-					<div class="eventImageContainer">
-						<img title="no featured image" src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/rihanna-event.png">
-					</div>
-					<?php } ?>
-					<div class="eventQuotesContainer carouselContainer">
 						<ul class="eventdetail carousel">
-							<?php
-								$quotes_query = new WP_Query(array(
-									'sos_quotes' => 'event'
-								));
-								if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post(); ?>
-								<li class="eventQuote">
-									<?php the_content();
-									if ( has_post_thumbnail() ) {
-										the_post_thumbnail();
-									} else { ?>
+						<?php if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post(); ?>
+							<li class="eventQuote">
+								<?php the_post_thumbnail('content-page'); ?>
+								<div class="eventQuotesContainer">
+									<?php the_content(); ?>
 									<img class="right" title="no thumbnail" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard_127_inverted.png">
-									<?php } ?>
-								</li>						
-							<?php endwhile; endif; ?>
+								</div>
+							</li>
+						<?php endwhile; endif; ?>
 						</ul>
 					</div>
 				</div>
