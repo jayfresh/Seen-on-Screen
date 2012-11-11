@@ -20,7 +20,9 @@ get_header();
 						<ul class="eventdetail carousel">
 						<?php if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post(); ?>
 							<li class="eventQuote">
-								<?php the_post_thumbnail('content-page'); ?>
+								<div class="imageHolder">
+									<?php the_post_thumbnail('content-page'); ?>
+								</div>
 								<div class="eventQuotesContainer">
 									<?php the_content(); ?>
 									<img class="right" title="no thumbnail" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard_127_inverted.png">

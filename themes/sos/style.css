@@ -358,6 +358,7 @@ a.boxout:hover {
 	background: #ccc;
 	overflow: hidden;
 	position: relative;
+	height: 500px;
 }
 	.carousel {
 		width: 100%;
@@ -385,15 +386,17 @@ a.boxout:hover {
 	height: 300px;
 }
 	.eventbox .eventImageContainer {
-		height: 500px;
 		background-color: #000;
 	}
 		.eventbox .eventImageContainer img {
 
 		}
 		.eventbox .carousel li {
-			height: 500px;
+
 		}
+.eventQuote .imageHolder {
+	height: 400px;
+}
 .pressQuotesContainer, .eventQuotesContainer {
 	background-color: #000;
 	overflow: hidden;
@@ -402,9 +405,9 @@ a.boxout:hover {
 	.eventQuotesContainer li.eventQuote {
 		height: auto;
 	}
-	.eventQuotesContainer li.eventQuote img.right {
-		margin-right: 28px;
-	}
+		.eventQuotesContainer li.eventQuote img.right {
+			margin-right: 28px;
+		}
 
 .teamCarouselContainer {
 	width: 100%;
