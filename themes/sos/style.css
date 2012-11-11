@@ -156,7 +156,9 @@ ul.nav {
 			color: #333;
 			padding: 8px 12px;
 			line-height: 35px;
-			
+		}
+		ul.nav li.socialButtons a:link, ul.nav li.socialButtons a:visited, ul.nav li.socialButtons a:active, ul.nav li.socialButtons a:hover {
+			padding: 4px 12px;
 		}
 		ul.nav li a:hover, ul.nav li.active a {
 			background: rgb(229,229,229); /* Old browsers */
