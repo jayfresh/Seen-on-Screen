@@ -367,6 +367,9 @@ a.boxout:hover {
 	position: relative;
 	height: 500px;
 }
+	.carouselContainer iframe {
+		margin-top: 28px;
+	}
 .pressQuotesContainer {
 	height: 300px;
 }
@@ -417,9 +420,6 @@ a.boxout:hover {
 .eventQuote .imageHolder {
 	height: 400px;
 }
-	.eventQuote .imageHolder iframe {
-		margin-top: 32px;
-	}
 .pressQuotesContainer, .eventQuotesContainer {
 	background-color: #000;
 	overflow: hidden;
