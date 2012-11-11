@@ -48,11 +48,10 @@ body a:hover {
 	z-index: -1;
 }
 #wrapper {
-
 }
 /* headers */
 h1#logo {
-	background: transparent url(images/sos_logo_trans.gif) top left no-repeat;
+	background: transparent url(images/sos_logo_black.gif) top left no-repeat;
 	overflow: hidden;
 	text-indent: -9999px;
 	width: 340px;
@@ -237,7 +236,11 @@ ul.credits {
 		background: transparent url(images/roughs/white-star-small.png) center left no-repeat;
 		padding-left: 24px;
 		line-height: 32px;
+		font-size: 18px;
 	}
+		ul.credits li p {
+			font-size: 14px;
+		}
 	ul.starredList li, .contentColumn ul li {
 		background: #fff url(images/roughs/black-star-small.png) top left no-repeat;
 		padding-left: 24px;
