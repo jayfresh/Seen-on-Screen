@@ -564,8 +564,14 @@ a.boxout:hover {
 	overflow: hidden;
 }
 	#pressBoxout .carousel li {
-		height: 190px;
+		height: 180px;
+		position: relative;
 	}
+		#pressBoxout .carousel li img {
+			position: absolute;
+			right: 0;
+			bottom: 12px;
+		}
 /* YouTube video wall */
 #youtubeChannel ul {
 	margin: 0;

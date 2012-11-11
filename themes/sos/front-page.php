@@ -21,12 +21,7 @@ get_header();
 							));
 							if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post(); ?>
 							<li class="pressQuote">
-								<?php the_content();
-								if ( has_post_thumbnail() ) {
-									the_post_thumbnail();
-								} else { ?>
-								<img class="right" title="no thumbnail" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard_127_inverted.png">
-								<?php } ?>
+								<?php the_content(); ?>
 							</li>
 							<?php endwhile; endif; ?>
 						</ul>
