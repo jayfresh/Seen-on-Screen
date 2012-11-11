@@ -596,6 +596,17 @@ a.boxout:hover {
 	border: 2px solid #eee;
 }
 
+/* classes booking form */
+form button {
+	border: none;
+	background: none;
+	font-family: futura-pt, 'sans';
+	padding: 0;
+	font-size: 24px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
 /* misc */
 .socialButtons {
 	top: 3px;
