@@ -14,7 +14,7 @@ get_header();
 						$address_lines = str_replace(',', '<br>', $address); ?>
 						<p class="studio_address"><?php echo $address_lines; ?></p>
 						<?php if(isset($website)) { ?>
-						<a href="<?php echo $website; ?>">Visit website</a></p>					
+						<!--<a href="<?php echo $website; ?>">Visit website</a></p>-->
 						<?php } ?>
 					</div>
 						<?php endwhile;
