@@ -20,7 +20,7 @@ get_header();
 						<ul class="eventdetail carousel">
 							<li class="eventQuote">
 								<div class="imageHolder">
-									<iframe width="610" height="343" src="http://www.youtube.com/embed/gIRXDi7BrYY" frameborder="0" allowfullscreen></iframe>
+									<iframe width="610" height="343" src="http://www.youtube.com/embed/gIRXDi7BrYY?rel=0" frameborder="0" allowfullscreen></iframe>
 								</div>
 								<div class="eventQuotesContainer">
 									<p>With Seen on Screen's advice, contacts, attention to detail and organisation skills our team had the most amazing, fantastic experience! &mdash; Jillian Maclean, Founder and Managing Director of Drake &amp; Morgan</p>
@@ -29,7 +29,7 @@ get_header();
 							</li>
 							<li class="eventQuote">
 								<div class="imageHolder">
-									<iframe width="610" height="343" src="http://www.youtube.com/embed/yRFxbrLNJ7Q" frameborder="0" allowfullscreen></iframe>
+									<iframe width="610" height="343" src="http://www.youtube.com/embed/yRFxbrLNJ7Q?rel=0" frameborder="0" allowfullscreen></iframe>
 								</div>
 								<div class="eventQuotesContainer">
 									<p>SoS knew exactly what these girls would enjoy &mdash; Mary Gentilhomme, Drake &amp; Morgan Ltd</p>
