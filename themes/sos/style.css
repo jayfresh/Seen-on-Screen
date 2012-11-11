@@ -79,10 +79,10 @@ h1, h2 {
 h2 {
 	font-size: x-large;
 }
-.boxout h2 {
+/*.boxout h2 {
 	color: #fff;
 	font-size: large;
-}
+}*/
 .col h2 {
 	font-size: 21px;
 }
@@ -295,11 +295,18 @@ a.arrow {
 	height: 24px;
 	display: inline-block;
 	background-image: url(images/arrow_l.gif);
+	border: none;
+}
+a.arrow:hover {
+	border: none;
 }
 a.opposite {
 	background-image: url(images/arrow_r.gif);
 }
 /* structure */
+.cols {
+	margin-top: 24px;
+}
 .col, .boxout, .boxoutplain {
 	width: 312px;
 	margin-right: 25px;
@@ -333,8 +340,8 @@ a.boxout:hover {
 	border: none;
 }
 .boxoutRow {
-	overflow: hidden;
 	margin-top: 16px;
+	margin-bottom: 24px;
 }
 .last {
 	margin-right: 0;
@@ -353,7 +360,7 @@ a.boxout:hover {
 		.carousel li {
 			list-style: none;
 			float: left;
-			height: 236px;
+			height: 300px;
 			width: auto;
 		}
 	.carouselContainer .arrow, .teamCarouselContainer .arrow {
@@ -368,7 +375,7 @@ a.boxout:hover {
 		left: auto;
 	}
 .homepageBanner {
-	height: 236px;
+	height: 300px;
 }
 	.eventbox .eventImageContainer {
 		height: 400px;
@@ -505,12 +512,26 @@ a.boxout:hover {
 
 /* boxout backgrounds */
 #teamBoxout {
-	background: #000 url(images/roughs/team_small.png) top left no-repeat;
+	background: transparent url(images/roughs/team_small.png) top left no-repeat;
 }
 #eventsBoxout {
-	background: #fff url(images/roughs/events_image.png) top left no-repeat;
+	position: relative;
+	background-color: transparent;
 }
-
+	#eventsBoxout img {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	#eventsBoxout h2 {
+		position: relative;
+	}
+#pressBoxout {
+	overflow: hidden;
+}
+	#pressBoxout .carousel li {
+		height: 190px;
+	}
 /* YouTube video wall */
 #youtubeChannel ul {
 	margin: 0;

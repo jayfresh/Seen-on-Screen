@@ -1,10 +1,11 @@
 <?php
 /* for blog post index page */
-get_header();
-	if ( have_posts() ) :
+get_header(); ?>
+	<div class="contentPage">
+		<h1>SoS Backstage</h1>
+	<?php if ( have_posts() ) :
 		$count = 0;
 		while ( have_posts() ) : the_post(); ?>
-		<div class="contentPage">
 			<?php if($count==0) :
 				$wrapperClass = 'grid8col';
 				$internalClass = 'grid4col';
@@ -33,8 +34,8 @@ get_header();
 					<a class="cta" href="<?php echo $post_url; ?>">Read more</a>
 				</div>
 			</div>
-		</div>
 		<?php $count++;
 		endwhile;
-	endif;
-get_footer(); ?>
+	endif; ?>
+	</div>
+<?php get_footer(); ?>
