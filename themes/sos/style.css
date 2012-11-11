@@ -410,6 +410,9 @@ a.boxout:hover {
 .eventQuote .imageHolder {
 	height: 400px;
 }
+	.eventQuote .imageHolder iframe {
+		margin-top: 32px;
+	}
 .pressQuotesContainer, .eventQuotesContainer {
 	background-color: #000;
 	overflow: hidden;

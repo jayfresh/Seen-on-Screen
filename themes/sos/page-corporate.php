@@ -18,6 +18,24 @@ get_header();
 					)); ?>
 					<div class="carouselContainer eventImageContainer">
 						<ul class="eventdetail carousel">
+							<li class="eventQuote">
+								<div class="imageHolder">
+									<iframe width="610" height="343" src="http://www.youtube.com/embed/gIRXDi7BrYY" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div class="eventQuotesContainer">
+									<p>With Seen on Screen's advice, contacts, attention to detail and organisation skills our team had the most amazing, fantastic experience! &mdash; Jillian Maclean, Founder and Managing Director of Drake &amp; Morgan</p>
+									<img class="right" title="no thumbnail" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard_127_inverted.png">
+								</div>
+							</li>
+							<li class="eventQuote">
+								<div class="imageHolder">
+									<iframe width="610" height="343" src="http://www.youtube.com/embed/yRFxbrLNJ7Q" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div class="eventQuotesContainer">
+									<p>SoS knew exactly what these girls would enjoy &mdash; Mary Gentilhomme, Drake &amp; Morgan Ltd</p>
+									<img class="right" title="no thumbnail" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard_127_inverted.png">
+								</div>
+							</li>
 						<?php if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post(); ?>
 							<li class="eventQuote">
 								<div class="imageHolder">
