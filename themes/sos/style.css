@@ -244,8 +244,8 @@ ul.credits {
 }
 	ul.credits li {
 		font-family: "futura-pt", sans-serif;
-		background: transparent url(images/roughs/white-star-small.png) center left no-repeat;
-		padding-left: 24px;
+		background: transparent url(images/roughs/white-star-med.png) top left no-repeat;
+		padding-left: 28px;
 		line-height: 32px;
 		font-size: 18px;
 	}
