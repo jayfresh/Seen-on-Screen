@@ -28,6 +28,9 @@ jQuery(document).ready(function($) {
 				$arrows,
 				targetPos = -stripWidth,
 				containerHalfHeight;
+			if(slideCount===1) {
+				return false;
+			}
 			$slides.width(width);
 			$carousel.append($slides.clone())
 				.append($slides.clone())
