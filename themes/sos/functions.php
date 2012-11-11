@@ -169,6 +169,32 @@ function sos_team_save_credits_meta($post_id, $post) {
  
 add_action('save_post', 'sos_team_save_credits_meta', 1, 2);
 
+/* Add 'link' field to images */
+function attachment_sos_fields($form_fields, $post) {
+
+	// get the current value of our custom field
+	$current_value = get_post_meta($post->ID, "_bannerlink", true);
+
+	// build the html for our input
+	$mySelectBoxHtml = "<input value='{$value}' name='attachments[{$post->ID}][bannerlink]' id='attachments[{$post->ID}][bannerlink]'>";
+
+	// add our custom select box to the form_fields
+	$form_fields["mySelectBox"]["label"] = __("Link for banner");
+	$form_fields["mySelectBox"]["input"] = "html";
+	$form_fields["mySelectBox"]["html"] = $mySelectBoxHtml;
+
+	return $form_fields;
+}
+add_filter("attachment_fields_to_edit", "attachment_sos_fields", null, 2);
+
+function attachment_sos_save($post, $attachment) {
+	if( isset($attachment['bannerlink']) ){
+		update_post_meta($post['ID'], '_bannerlink', $attachment['bannerlink']);
+	}
+	return $post;
+}
+add_filter("attachment_fields_to_save", "attachment_sos_save", null, 2);
+
 // Add menus
 add_action( 'init', 'sos_register_menus' );
 function sos_register_menus() {
@@ -197,7 +223,6 @@ function attachment_toolbox($size = 'thumbnail', $ulClass = '', $liClass = '') {
 
 		$i=0;
 		foreach($images as $image) {
-			print_r($image);
 			$attsrc  = wp_get_attachment_image_src($image->ID,$size);
 			$atttitle = apply_filters('the_title',$image->post_title);
 
