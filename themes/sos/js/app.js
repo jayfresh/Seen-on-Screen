@@ -178,4 +178,57 @@ jQuery(document).ready(function($) {
 	$('#youtubeChannel div').youtubeUploadsAndFavorites({
         username: 'SoSdancelife'
     });
+    
+    /* set up studio map */
+    $('#map').each(function() {
+		var map,
+			geocoder,
+			script = document.createElement('script'),
+			initialize = function() {
+				var mapOptions = {
+					zoom: 14,
+					center: new google.maps.LatLng(51.509597, -0.127398),
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					},
+					bounds,
+					$studios = $('.studio'),
+					studioCount = $studios.length-1;
+				map = new google.maps.Map(document.getElementById('map'), mapOptions);
+				geocoder = new google.maps.Geocoder();
+				$studios.each(function(i) {
+		    		var address = $(this).find('.studio_address').html().replace(/<br>|<br\/>/g, ','),
+		    			title = $(this).find('h1').text();
+				    address = address + ", UK";
+				    geocoder.geocode( { 'address': address}, function(results, status) {
+				        if (status == google.maps.GeocoderStatus.OK) {
+							var latLng = results[0].geometry.location,
+								marker = new google.maps.Marker({
+									position: latLng,
+									title: title
+								});
+							marker.setMap(map);
+							if(!bounds) {
+								bounds = new google.maps.LatLngBounds(latLng, latLng);
+							} else {
+								bounds.extend(latLng);
+							}
+				        } else {
+				            //alert("Geocode was not successful for the following reason: " + status);
+				        }
+				        if(i===studioCount) {
+				        	if(studioCount) { // there is more than one
+					        	map.fitBounds(bounds);
+				        	} else {
+				        		map.setCenter(latLng)
+				        	}
+				        }        		    	
+				    });
+		    	});
+			};
+		window.initialize = initialize;
+		script.type = 'text/javascript';
+		script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize';
+		$("head").append(script);
+    	return false;
+    });
 });

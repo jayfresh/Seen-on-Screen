@@ -5,10 +5,11 @@ get_header();
 
 			<div class="contentPage">
 				<div class="contentColumn left">
+					<h1>Studios</h1>
 					<?php if ( have_posts() ) :
 						while ( have_posts() ) : the_post(); ?>
 					<div class="studio">
-						<h1><?php the_title(); ?></h1>
+						<h2><?php the_title(); ?></h2>
 						<?php $address = get_post_meta(get_the_ID(), '_address', true);
 						$website = get_post_meta(get_the_ID(), '_website', true);
 						$address_lines = str_replace(',', '<br>', $address); ?>

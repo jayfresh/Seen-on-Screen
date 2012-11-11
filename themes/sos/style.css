@@ -16,7 +16,7 @@ License: BSD
 a {
 	color: #000;
 }
-a:hover {
+body a:hover {
 	border-bottom: 1px solid #323232;
 }
 
@@ -197,6 +197,7 @@ ul.nav {
 
 .js ul.sub-menu {
 	display: none;
+	z-index: 1;
 }
 
 ul.starredList, ul.credits, ul.membernav, #tweetblender-t1 ul, .contentColumn ul {
@@ -244,6 +245,9 @@ ul.credits {
 /* body text */
 a {
 	text-decoration: none;
+}
+a:link, a:visited, a:active {
+	border-bottom: 1px dotted #999;
 }
 body {
 	font-family: Arial, sans-serif;
@@ -325,6 +329,9 @@ a.opposite {
 	.boxout a, .boxoutplain a {
 		color: #fff;
 	}
+a.boxout:hover {
+	border: none;
+}
 .boxoutRow {
 	overflow: hidden;
 	margin-top: 16px;
@@ -476,6 +483,9 @@ a.opposite {
 		}
 .marginrightsmall {
 	margin-right: 12px;
+}
+#map {
+	height: 400px;	
 }
 .footer {
 	background-color: #000;
