@@ -176,12 +176,12 @@ function attachment_sos_fields($form_fields, $post) {
 	$current_value = get_post_meta($post->ID, "_bannerlink", true);
 
 	// build the html for our input
-	$mySelectBoxHtml = "<input value='{$value}' name='attachments[{$post->ID}][bannerlink]' id='attachments[{$post->ID}][bannerlink]'>";
+	$mySelectBoxHtml = "<input type='text' value='{$current_value}' name='attachments[{$post->ID}][bannerlink]' id='attachments[{$post->ID}][bannerlink]'>";
 
 	// add our custom select box to the form_fields
-	$form_fields["mySelectBox"]["label"] = __("Link for banner");
-	$form_fields["mySelectBox"]["input"] = "html";
-	$form_fields["mySelectBox"]["html"] = $mySelectBoxHtml;
+	$form_fields["bannerlink"]["label"] = __("Link for banner");
+	$form_fields["bannerlink"]["input"] = "html";
+	$form_fields["bannerlink"]["html"] = $mySelectBoxHtml;
 
 	return $form_fields;
 }
@@ -225,13 +225,19 @@ function attachment_toolbox($size = 'thumbnail', $ulClass = '', $liClass = '') {
 		foreach($images as $image) {
 			$attsrc  = wp_get_attachment_image_src($image->ID,$size);
 			$atttitle = apply_filters('the_title',$image->post_title);
-
+			$bannerlink = get_post_meta($image->ID, "_bannerlink", true);
 			if($liClass) {
 				echo '<li class="'.$liClass.'">';
 			} else {
 				echo "<li>";
 			}
+			if($bannerlink) {
+				echo "<a href='$bannerlink'>";
+			}
 			echo '<img alt="'.$atttitle.'" src="'.$attsrc[0].'" />';
+			if($bannerlink) {
+				echo "</a>";
+			}
 			$i++;
 
 			echo "</li>";
