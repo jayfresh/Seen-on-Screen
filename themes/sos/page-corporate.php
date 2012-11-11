@@ -43,7 +43,6 @@ get_header();
 								</div>
 								<div class="eventQuotesContainer">
 									<?php the_content(); ?>
-									<img class="right" title="no thumbnail" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard_127_inverted.png">
 								</div>
 							</li>
 						<?php endwhile; endif; ?>

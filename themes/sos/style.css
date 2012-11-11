@@ -418,12 +418,14 @@ a.boxout:hover {
 	overflow: hidden;
 	padding-top: 8px;
 }
-	.eventQuotesContainer li.eventQuote {
-		height: auto;
+.eventQuotesContainer {
+	position: relative;
+}
+	.eventQuotesContainer img {
+		position: absolute;
+		right: 28px;
+		top: 12px;
 	}
-		.eventQuotesContainer li.eventQuote img.right {
-			margin-right: 28px;
-		}
 
 .teamCarouselContainer {
 	width: 100%;
