@@ -308,14 +308,14 @@ a.arrow {
 	width: 16px;
 	height: 24px;
 	display: inline-block;
-	background-image: url(images/arrow_l.gif);
+	background-image: url(images/roughs/left-arrow.png);
 	border: none;
 }
 a.arrow:hover, a.at300b:link, body a.at300b:hover {
 	border: none;
 }
 a.opposite {
-	background-image: url(images/arrow_r.gif);
+	background-image: url(images/roughs/right-arrow.png);
 }
 /* structure */
 .cols {
