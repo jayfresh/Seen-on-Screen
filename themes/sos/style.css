@@ -367,6 +367,9 @@ a.boxout:hover {
 	position: relative;
 	height: 500px;
 }
+.pressQuotesContainer {
+	height: 300px;
+}
 .plainbox .carouselContainer {
 	height: 400px;
 }
@@ -394,6 +397,10 @@ a.boxout:hover {
 	.carouselContainer .opposite, .teamCarouselContainer .opposite {
 		right: 12px;
 		left: auto;
+	}
+	.pressQuotesContainer .opposite {
+		right: auto;
+		left: 50px;
 	}
 .homepageBanner {
 	height: 300px;
