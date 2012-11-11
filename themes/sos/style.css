@@ -360,6 +360,9 @@ a.boxout:hover {
 	position: relative;
 	height: 500px;
 }
+.plainbox .carouselContainer {
+	height: 400px;
+}
 	.carousel {
 		width: 100%;
 		margin: 0;

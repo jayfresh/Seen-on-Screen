@@ -5,7 +5,7 @@
 					<h1><?php the_title(); ?></h1>
 					<?php the_content(); ?>
 				</div>
-				<div class="eventbox left">
+				<div class="eventbox plainbox left">
 					<?php if ( has_post_thumbnail() ) { ?>
 					<div class="carouselContainer eventImageContainer">
 						<?php attachment_toolbox($size = 'content-page', 'carousel'); ?>
