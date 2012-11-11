@@ -7,6 +7,8 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'homepage-banner', 990, 300, true );
 add_image_size( 'team-member', 310, 275 );
 add_image_size( 'content-page', 610, 400 );
+add_image_size( 'blog', 700, 370, true );
+add_image_size( 'blog-sub', 430, 300, true );
 
 // Register the 'Team' custom post type
 add_action( 'init', 'sos_register_custom_post_types');

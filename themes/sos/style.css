@@ -304,7 +304,7 @@ a.arrow {
 	background-image: url(images/arrow_l.gif);
 	border: none;
 }
-a.arrow:hover {
+a.arrow:hover, a.at300b:link, body a.at300b:hover {
 	border: none;
 }
 a.opposite {
@@ -495,6 +495,9 @@ a.boxout:hover {
 			margin-left: 28px;
 			width: 280px;
 		}
+.articleBody {
+	padding-top: 24px;
+}
 .marginrightsmall {
 	margin-right: 12px;
 }
