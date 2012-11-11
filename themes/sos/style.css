@@ -208,6 +208,10 @@ ul.starredList, ul.credits, ul.membernav, #tweetblender-t1 ul, .contentColumn ul
 	#tweetblender-t1 ul li {
 		line-height: 16px;
 	}
+	#tweetblender-t1 tb_msg {
+		line-height: 20px;
+		font-size: 14px;
+	}
 ul.membernav {
 	margin: 0;
 }
