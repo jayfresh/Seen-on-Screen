@@ -49,7 +49,7 @@
 			<div id="header" class="blackContainer">
 				<div itemscope itemtype="http://schema.org/LocalBusiness">
 					<span class="right larger" id="phoneNumber" itemprop="telephone"><a href="tel:08006440588">0800 644 0588</a></span>
-					<h1 itemprop="name" id="logo"><a href="<?php echo home_url(); ?>">Seen On Screen Events</a></h1>
+					<h1 itemprop="name" id="logo"><a href="<?php echo home_url('/'); ?>">Seen On Screen Events</a></h1>
 				</div>
 				<?php wp_nav_menu( array(
 					'theme_location' => 'nav-menu',

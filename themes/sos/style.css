@@ -50,22 +50,29 @@ body a:hover {
 #wrapper {
 }
 /* headers */
+#header {
+	padding-top: 12px;
+}
 h1#logo {
 	background: transparent url(images/sos_logo_black.gif) top left no-repeat;
-	overflow: hidden;
-	text-indent: -9999px;
-	width: 340px;
-	height: 79px;
 	margin-bottom: 0;
 }
+#logo a {
+	text-indent: -9999px;
+	width: 340px;
+	height: 65px;
+	overflow: hidden;
+	display: inline-block;
+}
 #phoneNumber {
-	margin-top: 50px;
+	margin-top: 35px;
 	font-family: "futura-pt", sans-serif;
 	font-size: 24px;
 	font-weight: 300;
 }
 	#phoneNumber a {
 		color: #eee;
+		border: none;
 	}
 h1, h2.teammember {
 	font-size: 40px;
@@ -363,6 +370,9 @@ a.boxout:hover {
 .plainbox .carouselContainer {
 	height: 400px;
 }
+	.plainbox .carouselContainer .carousel li {
+		height: 400px;
+	}
 	.carousel {
 		width: 100%;
 		margin: 0;
@@ -395,7 +405,7 @@ a.boxout:hover {
 
 		}
 		.eventbox .carousel li {
-
+			height: 500px;
 		}
 .eventQuote .imageHolder {
 	height: 400px;
