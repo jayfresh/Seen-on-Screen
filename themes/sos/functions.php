@@ -6,7 +6,7 @@ add_theme_support( 'post-thumbnails' );
 // Thumbnail sizes
 add_image_size( 'homepage-banner', 990, 300, true );
 add_image_size( 'team-member', 310, 275 );
-add_image_size( 'content-page', 610, 400 );
+add_image_size( 'content-page', 610, 400, true );
 add_image_size( 'blog', 700, 370, true );
 add_image_size( 'blog-sub', 430, 300, true );
 
@@ -197,6 +197,7 @@ function attachment_toolbox($size = 'thumbnail', $ulClass = '', $liClass = '') {
 
 		$i=0;
 		foreach($images as $image) {
+			print_r($image);
 			$attsrc  = wp_get_attachment_image_src($image->ID,$size);
 			$atttitle = apply_filters('the_title',$image->post_title);
 
