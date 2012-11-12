@@ -10,7 +10,7 @@ if ( have_posts() ) :
 				</div>
 				<div class="eventbox left">
 					<?php if ( has_post_thumbnail() ) {
-						the_post_thumbnail(); 
+						the_post_thumbnail('content-page'); 
 					} else { ?>
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/map.png" title="no featured image">
 					<?php } ?>
