@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-			<div class="contentPage">
+			<div class="contentPage" id="pressPage">
 				<?php if ( have_posts() ) :
 					while ( have_posts() ) : the_post(); ?>
 				<div class="contentColumn left">
