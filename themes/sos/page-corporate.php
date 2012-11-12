@@ -24,7 +24,6 @@ get_header();
 								</div>
 								<div class="eventQuotesContainer">
 									<p>With Seen on Screen's advice, contacts, attention to detail and organisation skills our team had the most amazing, fantastic experience! &mdash; Jillian Maclean, Founder and Managing Director of Drake &amp; Morgan</p>
-									<img class="right" title="no thumbnail" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard_127_inverted.png">
 								</div>
 							</li>
 							<li class="eventQuote">
