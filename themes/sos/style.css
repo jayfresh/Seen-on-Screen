@@ -624,6 +624,10 @@ form button {
 	position: relative;
 }
 
+#FSContact1 a {
+	border: none;
+}
+
 /* stylebook only */
 .swatch {
 	height: 25px;
