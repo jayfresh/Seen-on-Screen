@@ -111,7 +111,6 @@ jQuery(document).ready(function($) {
 				$carousel.width(width);
 				carouselOffset = ($carousel.width()-$container.children('.carouselStrip').width())/2;
 				$carousel.css('left', -carouselOffset);
-				console.log(carouselOffset);
 				$slides.css({
 					visibility: 'visible'
 				});
