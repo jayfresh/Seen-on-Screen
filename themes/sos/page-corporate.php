@@ -33,7 +33,6 @@ get_header();
 								</div>
 								<div class="eventQuotesContainer">
 									<p>SoS knew exactly what these girls would enjoy &mdash; Mary Gentilhomme, Drake &amp; Morgan Ltd</p>
-									<img class="right" title="no thumbnail" src="<?php bloginfo('stylesheet_directory'); ?>/images/press/evening_standard_127_inverted.png">
 								</div>
 							</li>
 						<?php if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post(); ?>
