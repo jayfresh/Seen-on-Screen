@@ -83,6 +83,7 @@ jQuery(document).ready(function($) {
 			min_height = 155,
 			min_margin = 60,
 			min_opacity = 0.5,
+			carouselStripWidth = $container.children('.carouselStrip').width(),
 			setupStrip = function() {
 				var width = max_width+mid_width*2+min_width*(slideCount-3),
 					carouselOffset;
@@ -108,9 +109,8 @@ jQuery(document).ready(function($) {
 						marginBottom: mid_margin,
 						opacity: mid_opacity
 					});
-				$carousel.width(width);
-				carouselOffset = ($carousel.width()-$container.children('.carouselStrip').width())/2;
-				$carousel.css('left', -carouselOffset);
+				$carousel.width(width)
+					.css('left', -(width-carouselStripWidth)/2);
 				$slides.css({
 					visibility: 'visible'
 				});
