@@ -265,6 +265,9 @@ a {
 a:link, a:visited, a:active {
 	border-bottom: 1px dotted #999;
 }
+	h2 a:link, h2 a:visited, h2 a:active {
+		border: none;
+	}
 body {
 	font-family: Arial, sans-serif;
 }
