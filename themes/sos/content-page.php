@@ -8,7 +8,7 @@
 				<div class="eventbox plainbox left">
 					<?php if ( has_post_thumbnail() ) { ?>
 					<div class="carouselContainer eventImageContainer">
-						<?php attachment_toolbox($size = 'content-page', 'carousel'); ?>
+						<?php attachment_toolbox('content-page', 'carousel'); ?>
 					</div>
 					<?php } else { ?>
 					<div class="eventImageContainer">
