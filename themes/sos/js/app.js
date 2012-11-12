@@ -83,6 +83,7 @@ jQuery(document).ready(function($) {
 			min_height = 155,
 			min_margin = 60,
 			min_opacity = 0.5,
+			carouselOffset = ($carousel.width()-$container.children('.carouselStrip').width())/2,
 			setupStrip = function() {
 				var width = max_width+mid_width*2+min_width*(slideCount-3);
 				$slides.css({
@@ -108,7 +109,7 @@ jQuery(document).ready(function($) {
 						opacity: mid_opacity
 					});
 				$carousel.width(width)
-					.css('left', -200); // TO-DO: this needs to be not hard-coded
+					.css('left', -carouselOffset);
 				$slides.css({
 					visibility: 'visible'
 				});
