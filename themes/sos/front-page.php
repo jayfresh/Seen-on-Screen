@@ -9,7 +9,7 @@ get_header();
 				</div>
 				<div class="boxoutplain left" id="eventsBoxout">
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/events.png">
-					<h2><a href="<?php echo home_url('/news/'); ?>">SoS backstage</a></h2>
+					<h2><a href="<?php echo home_url('/blog/'); ?>">SoS backstage</a></h2>
 				</div>
 				<div class="boxoutplain left last" id="pressBoxout">
 					<h2><a href="<?php echo home_url('/press/'); ?>">SOS Press</a></h2>
