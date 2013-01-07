@@ -63,6 +63,7 @@ h1#logo {
 	height: 65px;
 	overflow: hidden;
 	display: inline-block;
+	border: none;
 }
 #phoneNumber {
 	margin-top: 35px;
