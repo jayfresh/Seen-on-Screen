@@ -525,6 +525,9 @@ a.boxout:hover {
 	#pressPage .contentColumn img {
 		float: left;
 	}
+.contentColumnWide {
+	width: 620px; /* like .grid8col */
+}
 .eventbox {
 	width: 610px;
 	background: #222;
