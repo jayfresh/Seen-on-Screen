@@ -27,9 +27,6 @@ get_header();
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/gFDdHJUY53M?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/VBmMU_iwe6U?rel=0" frameborder="0" allowfullscreen></iframe>
-							</li>
-							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/ArDXxTsJJoo?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
@@ -37,6 +34,9 @@ get_header();
 							</li>
 							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/ViwtNLUqkMY?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/VBmMU_iwe6U?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/rNM5HW13_O8?rel=0" frameborder="0" allowfullscreen></iframe>
