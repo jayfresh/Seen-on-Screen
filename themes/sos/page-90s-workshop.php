@@ -1,5 +1,5 @@
 <?php
-/* for Beyonce page */
+/* for 90s workshop page */
 get_header();
 ?>
 			<div class="contentPage">
@@ -24,28 +24,25 @@ get_header();
 					))) { ?>
 						<ul class="carousel">
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/gFDdHJUY53M?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/F2AitTPI5U0?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/ArDXxTsJJoo?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/LlZydtG3xqI?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/4m1EFMoRFvY?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/2cIOeM0IgG0?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/ViwtNLUqkMY?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/FPoKiGQzbSQ?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/VBmMU_iwe6U?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/oCwlZgIQN1c?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/rNM5HW13_O8?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/3KL9mRus19o?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/hbnPkK76Ask?rel=0" frameborder="0" allowfullscreen></iframe>
-							</li>
-							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/2XY3AvVgDns?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/JWsRz3TJDEY?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<?php foreach($images as $image) {
 								$attsrc  = wp_get_attachment_image_src($image->ID, $size);
