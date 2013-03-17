@@ -1,5 +1,8 @@
 <?php
 
+require_once( '_inc/activity-log.php' );
+require_once( '_inc/email-manager.php' );
+
 // support featured images etc.
 add_theme_support( 'post-thumbnails' );
 
@@ -10,7 +13,7 @@ add_image_size( 'content-page', 610, 400, true );
 add_image_size( 'blog', 700, 370, true );
 add_image_size( 'blog-sub', 430, 300, true );
 
-// Register the 'Team' custom post type
+// Register the custom post types
 add_action( 'init', 'sos_register_custom_post_types');
 function sos_register_custom_post_types() { 
     register_post_type( 'sos_team',
@@ -64,6 +67,8 @@ function sos_register_custom_post_types() {
 	);
 }
 
+/* add metaboxes to studio post type */
+
 function sos_add_studio_metabox() {
 	add_meta_box('studio_metabox', 'Studio details', 'studio_metabox', 'sos_studio', 'normal', 'default');
 }
@@ -116,6 +121,8 @@ function sos_studio_save_meta($post_id, $post) {
 }
  
 add_action('save_post', 'sos_studio_save_meta', 1, 2);
+
+/* add meta boxes to team post type */
 
 function sos_add_team_credits_metabox() {
 	add_meta_box('team_credits_box', 'Team member credits', 'team_credits_box', 'sos_team', 'normal', 'default');
@@ -246,6 +253,106 @@ function attachment_toolbox($size = 'thumbnail', $ulClass = '', $liClass = '') {
 		echo "</ul>";
 	}
 	return count($images);
+}
+
+/* handle PayPal IPNs */
+
+/*
+ *  Query vars allow us to use rewrites without upsetting WordPress
+ *  see the rewrite rules and template redirect for their actual use
+ */
+function sos_add_query_vars( $qvars ) {
+	$qvars[] = 'handle-ipn';
+	return $qvars;
+}
+add_action('query_vars', 'sos_add_query_vars');
+
+/* Generally triggered on a "save permalinks", this adds new rules at the top of the pile */
+function sos_add_rewrite_rules( $wp_rewrite )	{
+	$newrules = array();
+
+	$new_rules['^analytics'] = 'index.php?analytics=true';
+	$new_rules['^supermum'] = 'index.php?supermum=true';
+	$new_rules['^account-details'] = 'index.php?account-details=true';
+
+	$wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+}
+add_action('generate_rewrite_rules', 'sos_add_rewrite_rules');
+
+/* Allows us to point WordPress in a different direction if desired. */
+function sos_template_redirect() {
+	if( get_query_var('handle-ipn') ) {
+		handle_ipn($_POST);
+		exit();
+	}
+}
+add_action('template_redirect','sos_template_redirect');
+
+/*
+	Variables we need to pull from the IPN:
+	
+	- product name e.g. "End of Time Workshop"
+		- sent as item_name
+	- series name e.g. "Beyonce Dance Series" or "Jazz Funk"
+		- could be sent in "custom"
+	- date e.g. "Saturday 16th March"
+		- perhaps this needs to be part of the item_name
+	- time e.g. 1:30-3pm
+		- perhaps this needs to be part of the item_name
+	
+	Variables we want to calculate:
+	
+	- studio address e.g.
+		Central YMCA
+		112 Great Russell Street
+		London
+		WC1B 3NQ
+		- this can come from knowing the series name and looking up the studio attached to that page
+	- nearest tube e.g. "Tottenham Court Road"
+		- as above
+	- link to studio e.g. "http://seenonscreenfitness.com/studios/central-ymca"
+		- as above
+
+*/
+
+function handle_ipn($vars) {
+	$IPN_all = implode($vars,"~~");
+	$IPN_payment_status = $vars['payment_status'];	// Completed/Refunded
+	$IPN_item_name = $vars['item_name']; 			// e.g. "End of Time workshop"
+	$IPN_txn_id = $vars['txn_id']; 					// Reference/"cash"
+	$IPN_item_number = $vars['item_number']; 		// TBC
+	$IPN_custom = $vars['custom'];					// TBC
+	$IPN_payer_email = $vars['payer_email'];		// email of the payer
+	if($IPN_payment_status and $IPN_item_name and $IPN_txn_id and $IPN_payer_email) {
+		$meta = array(
+			'ipn_txn_id' 		=> $IPN_txn_id,
+			'ipn_payer_email'	=> $IPN_payer_email,
+			'ipn_all'			=> $IPN_all,
+			'ipn_datetime'		=>	time()
+		);
+		$extraVars = array(
+			'user_email' => $IPN_payer_email,
+			'address'   => $IPN_address,
+		);
+		$post_id = 0; // TO-DO: where is this going to come from? Do we need it?
+		if($IPN_payment_status=="Completed") {
+			email_manager('', $post_id, $extraVars); // TO-DO: which first and second arguments to use?
+			echo "Payment acknowledged";
+		} else if ($payment_status=="Refunded") {
+			email_manager('', $post_id, $extraVars); // TO-DO: which first and second arguments to use?
+			echo "Refund processed";
+		}
+		do_action('activity_log', array(
+			'type' => 'IPN',
+			'entry'=> $vars
+		), $post_id); // TO-DO: which post_id to use?
+	} else {
+		do_action('activity_log', array(
+			'type' => 'invalid_IPN',
+			'entry'=> $vars
+		), 0);
+		echo "error: send at least 'payment_status', 'item_name', 'txn_id' and 'payer_email'";
+	}
 }
 
 // add scripts
