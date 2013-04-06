@@ -5,11 +5,11 @@ get_header();
 
 			<div class="boxoutRow">
 				<div class="boxout left" id="teamBoxout">
-					<h2><a href="<?php echo home_url('/team/'); ?>">SoS team</a></h2>
+					<h2><a href="<?php echo home_url('/team/'); ?>">SOS Team</a></h2>
 				</div>
 				<div class="boxoutplain left" id="eventsBoxout">
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/events.png">
-					<h2><a href="<?php echo home_url('/blog/'); ?>">SoS backstage</a></h2>
+					<h2><a href="<?php echo home_url('/blog/'); ?>">Backstage Blog</a></h2>
 				</div>
 				<div class="boxoutplain left last" id="pressBoxout">
 					<h2><a href="<?php echo home_url('/press/'); ?>">SOS Press</a></h2>
@@ -45,7 +45,7 @@ get_header();
 					<div class="fb-like-box" data-href="http://www.facebook.com/seenonscreenfitness" data-width="292" data-show-faces="true" data-stream="false" data-header="false"></div>
 				</div>
 				<div class="col left last" id="youtubeChannel">
-					<h2><img src="<?php bloginfo('stylesheet_directory'); ?>/images/youtube_28-28.gif" class="marginrightsmall">Watch Our Latest Videos</h2>
+					<h2><img src="<?php bloginfo('stylesheet_directory'); ?>/images/youtube_28-28.gif" class="marginrightsmall">Watch Workshop Videos</h2>
 					<div></div>
 					<!--<img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/video_wall.png">-->
 				</div>
