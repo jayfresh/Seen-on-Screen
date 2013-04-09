@@ -1,7 +1,8 @@
 jQuery(document).ready(function($) {
 
 	var ANIMATE_TIME = 500,
-		SLIDESHOW_PAUSE = 4000;
+		SLIDESHOW_PAUSE = 4000,
+		SLIDESHOW_FIRST_PAUSE = 3000; // different on load as it takes a little while to load pictures
 
 	// set up sub-menus
 	$('#nav > li').on('mouseenter', function() {
@@ -70,7 +71,7 @@ jQuery(document).ready(function($) {
 				// set up auto-scroll
 				scrollTimeout = window.setInterval(function() {
 					scrollCarousel(1);
-				}, SLIDESHOW_PAUSE);
+				}, SLIDESHOW_FIRST_PAUSE);
 			}
 			
 		});
