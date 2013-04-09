@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
 
-	var ANIMATE_TIME = 500;
+	var ANIMATE_TIME = 500,
+		SLIDESHOW_PAUSE = 4000;
 
 	// set up sub-menus
 	$('#nav > li').on('mouseenter', function() {
@@ -27,7 +28,20 @@ jQuery(document).ready(function($) {
 				endTrigger = -(carouselWidth-stripWidth),
 				$arrows,
 				targetPos = -stripWidth,
-				containerHalfHeight;
+				containerHalfHeight,
+				scrollTimeout,
+				scrollCarousel = function(direction) {					
+					targetPos -= width*direction;
+					$carousel.animate({
+						'left': targetPos
+					}, ANIMATE_TIME, 'easeInOutQuad', function() {
+						// if we've reached either end, move back to centre
+						if(targetPos>=0 || targetPos<=endTrigger) {
+							targetPos = -stripWidth;
+							$carousel.css('left', targetPos);
+						}
+					});
+				};
 			if(slideCount===1) {
 				return false;
 			}
@@ -47,19 +61,18 @@ jQuery(document).ready(function($) {
 				if($carousel.is(':animated')) {
 					return false;
 				}
+				window.clearInterval(scrollTimeout);
 				var $arrow = $(this),
 					direction = $arrow.hasClass('opposite') ? 1 : -1;
-				targetPos -= width*direction;
-				$carousel.animate({
-					'left': targetPos
-				}, ANIMATE_TIME, 'easeInOutQuad', function() {
-					// if we've reached either end, move back to centre
-					if(targetPos>=0 || targetPos<=endTrigger) {
-						targetPos = -stripWidth;
-						$carousel.css('left', targetPos);
-					}
-				});
+				scrollCarousel(direction);
 			});
+			if($container.hasClass('homepageBanner')) {
+				// set up auto-scroll
+				scrollTimeout = window.setInterval(function() {
+					scrollCarousel(1);
+				}, SLIDESHOW_PAUSE);
+			}
+			
 		});
 	});
 	
