@@ -204,8 +204,7 @@ jQuery(document).ready(function($) {
 						break;
 					default:
 						break;
-				}
-				$(this).text("You swiped " + direction );  
+				}  
 			}
 		});
 		// add the description for the first profile
