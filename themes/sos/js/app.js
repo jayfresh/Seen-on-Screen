@@ -1,8 +1,7 @@
 jQuery(document).ready(function($) {
 
 	var ANIMATE_TIME = 500,
-		SLIDESHOW_PAUSE = 4000,
-		SLIDESHOW_FIRST_PAUSE = 3000; // different on load as it takes a little while to load pictures
+		SLIDESHOW_PAUSE = 3000;
 
 	// set up sub-menus
 	$('#nav > li').on('mouseenter', function() {
@@ -71,7 +70,7 @@ jQuery(document).ready(function($) {
 				// set up auto-scroll
 				scrollTimeout = window.setInterval(function() {
 					scrollCarousel(1);
-				}, SLIDESHOW_FIRST_PAUSE);
+				}, SLIDESHOW_PAUSE);
 			}
 			
 		});
@@ -165,6 +164,17 @@ jQuery(document).ready(function($) {
 					marginBottom: min_margin,
 					opacity: min_opacity
 				}, ANIMATE_TIME, "linear");
+			},
+			scrollStrip = function(direction) {
+				if(direction===1) {
+					if(activeSlide+1<slideCount) {
+						growToMax(activeSlide+1);
+					}
+				} else {
+					if(activeSlide-1>=0) {
+						growToMax(activeSlide-1);
+					}
+				}
 			};
 		setupStrip();
 		containerHalfHeight = $container.height()/2;
@@ -180,16 +190,25 @@ jQuery(document).ready(function($) {
 			}
 			var $arrow = $(this),
 				direction = $arrow.hasClass('opposite') ? 1 : -1;
-			if(direction===1) {
-				if(activeSlide+1<slideCount) {
-					growToMax(activeSlide+1);
+			scrollStrip(direction);
+		});
+		// enable swiping
+		$container.swipe({
+			swipe: function(event, direction, distance, duration, fingerCount) {
+				switch(direction) {
+					case "left":
+						scrollStrip(1);
+						break;
+					case "right":
+						scrollStrip(-1);
+						break;
+					default:
+						break;
 				}
-			} else {
-				if(activeSlide-1>=0) {
-					growToMax(activeSlide-1);
-				}
+				$(this).text("You swiped " + direction );  
 			}
 		});
+		// add the description for the first profile
 		$container.children('.infobox').html($slides.eq(activeSlide).find('.infobox').html());
 	});
 	
