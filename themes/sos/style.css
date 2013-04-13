@@ -114,7 +114,6 @@ li {
 }
 ul#nav {
 	float: left;
-	width: 100%; /* addition to accommodate adding Tour button */
 }
 ul.nav {
 	margin-left: 0;
@@ -132,16 +131,12 @@ ul.nav {
 		border-left: 1px solid #fff;
 		border-right: 1px solid #666;
 		text-align: center;
-		min-width: 83px; /* Tour-related addition */
 	}
 	ul.nav li.plain {
 		border-right: none;
 	}
 	ul.nav li:first-child {
 		border-left: none;
-	}
-	ul.nav li:last-child {
-		border-right: none; /* Tour-related addition */
 	}
 		ul.nav li.plain a:link, ul.nav li.plain a:hover, ul.nav li.plain a:visited, ul.nav li.plain a:active {
 			background: transparent;
@@ -164,7 +159,8 @@ ul.nav {
 			line-height: 35px;
 		}
 		ul.nav li.socialButtons a:link, ul.nav li.socialButtons a:visited, ul.nav li.socialButtons a:active, ul.nav li.socialButtons a:hover {
-			padding: 4px 12px;
+			/*padding: 4px 12px;*/
+			padding: 4px 4px; /* change to accommodate Tour link on nav */
 		}
 		ul.nav li a:hover, ul.nav li.active a {
 			background: rgb(229,229,229); /* Old browsers */
