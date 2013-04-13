@@ -271,9 +271,7 @@ add_action('query_vars', 'sos_add_query_vars');
 function sos_add_rewrite_rules( $wp_rewrite )	{
 	$newrules = array();
 
-	$new_rules['^analytics'] = 'index.php?analytics=true';
-	$new_rules['^supermum'] = 'index.php?supermum=true';
-	$new_rules['^account-details'] = 'index.php?account-details=true';
+	$new_rules['^handle-ipn'] = 'index.php?handle-ipn=true';
 
 	$wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
 }
@@ -289,69 +287,208 @@ function sos_template_redirect() {
 add_action('template_redirect','sos_template_redirect');
 
 /*
+	Navigating the cart:
+		- no. of items: e.g. num_cart_items=2
+	Getting the dance series page:
+		- e.g. custom=beyonce-dance-series (we could also use the title of the button i.e. item_name, although I wonder how that works with accented characters)
+		- an alternative is just to hard-code item_name to page mappings for now?
+
 	Variables we need to pull from the IPN:
 	
-	- product name e.g. "End of Time Workshop"
-		- sent as item_name
 	- series name e.g. "Beyonce Dance Series" or "Jazz Funk"
-		- could be sent in "custom"
-	- date e.g. "Saturday 16th March"
-		- perhaps this needs to be part of the item_name
-	- time e.g. 1:30-3pm
-		- perhaps this needs to be part of the item_name
-	
-	Variables we want to calculate:
-	
-	- studio address e.g.
-		Central YMCA
-		112 Great Russell Street
-		London
-		WC1B 3NQ
-		- this can come from knowing the series name and looking up the studio attached to that page
-	- nearest tube e.g. "Tottenham Court Road"
-		- as above
-	- link to studio e.g. "http://seenonscreenfitness.com/studios/central-ymca"
-		- as above
+		- e.g. item_name1=Beyonce dance class
+	- date and workshop name
+		- e.g. option_selection1_1=20th April: Single Ladies part 2
+		- (and there is e.g. option_name1_1=Workshop date)
+		- we'll need to turn this into pieces like "Saturday 16th March"
+	- number of classes booked:
+		- e.g. quantity1=4
+
+	Send one email per series booked.
 
 */
 
 function handle_ipn($vars) {
 	$IPN_all = implode($vars,"~~");
-	$IPN_payment_status = $vars['payment_status'];	// Completed/Refunded
-	$IPN_item_name = $vars['item_name']; 			// e.g. "End of Time workshop"
-	$IPN_txn_id = $vars['txn_id']; 					// Reference/"cash"
-	$IPN_item_number = $vars['item_number']; 		// TBC
-	$IPN_custom = $vars['custom'];					// TBC
-	$IPN_payer_email = $vars['payer_email'];		// email of the payer
-	if($IPN_payment_status and $IPN_item_name and $IPN_txn_id and $IPN_payer_email) {
-		$meta = array(
-			'ipn_txn_id' 		=> $IPN_txn_id,
-			'ipn_payer_email'	=> $IPN_payer_email,
-			'ipn_all'			=> $IPN_all,
-			'ipn_datetime'		=>	time()
-		);
-		$extraVars = array(
-			'user_email' => $IPN_payer_email,
-			'address'   => $IPN_address,
-		);
-		$post_id = 0; // TO-DO: where is this going to come from? Do we need it?
-		if($IPN_payment_status=="Completed") {
-			email_manager('', $post_id, $extraVars); // TO-DO: which first and second arguments to use?
+	$payment_status = $vars['payment_status'];	// Completed/Refunded
+	$email_id = $vars['custom'];				// ID of the email post to use as confirmation
+	$payer_email = $vars['payer_email'];		// email of the payer
+	$first_name = $vars['first_name'];
+	$last_name = $vars['last_name'];
+	$payment_date = $vars['payment_date'];
+	$txn_id = $vars['txn_id'];					// Reference
+	$num_cart_items = $vars['num_cart_items'];	// number of items in the cart
+		
+	if($payment_status and $txn_id and $payer_email and $first_name and $last_name) {
+
+		if($payment_status=="Completed") {
+
+			for($i=1;$i<=$num_cart_items;$i++) {
+	
+				// collect all the items from the cart
+				// send a confirmation email and register the booking for each
+				$item_name = $vars['item_name'.$i]; // e.g. "End of Time workshop"
+				$option_selection = $vars['option_selection1_'.$i]; // e.g. "February 25th"
+				$quantity = $vars['quantity'.$i]; // e.g. 2
+
+				$booking = array(
+					'payer_email'	=> $payer_email,
+					'item_name'		=> $item_name,
+					'option_selection' => $option_selection,
+					'quantity'		=> $quantity,
+					'first_name'	=> $first_name,
+					'last_name'		=> $last_name,
+					'datetime'		=>	$payment_date
+				);
+				do_action('activity_log', array(
+					'type' => 'booking',
+					'entry' => $booking
+				));
+				if($email_id) {
+					email_manager($email_id, $payer_email, $booking);
+				}
+			}
 			echo "Payment acknowledged";
 		} else if ($payment_status=="Refunded") {
-			email_manager('', $post_id, $extraVars); // TO-DO: which first and second arguments to use?
-			echo "Refund processed";
+			// TO-DO: do something for refunds
 		}
 		do_action('activity_log', array(
 			'type' => 'IPN',
 			'entry'=> $vars
-		), $post_id); // TO-DO: which post_id to use?
+		), 0);
 	} else {
 		do_action('activity_log', array(
 			'type' => 'invalid_IPN',
 			'entry'=> $vars
 		), 0);
-		echo "error: send at least 'payment_status', 'item_name', 'txn_id' and 'payer_email'";
+		echo "error: send at least 'payment_status', 'txn_id', 'payer_email', 'first_name' and 'last_name'";
+	}
+}
+
+// add a 'Bookings' sub-menu to activity log
+function bookings_menu() {
+	add_submenu_page( 'activity-log-admin', 'Bookings', 'Bookings', 'manage_options', 'bookings-menu', 'bookings_menu_handler');
+}
+add_action('admin_menu', 'bookings_menu', 26 );
+
+function bookings_menu_handler() {
+	if (!current_user_can('manage_options'))  {
+		wp_die( __('You do not have sufficient permissions to access this page.') );
+	}
+	echo '<div class="wrap"><h1>Bookings</h1>';
+	$wp_list_table = new Bookings_Table();
+	$wp_list_table->prepare_items();
+	$wp_list_table->display();
+	echo '</div>';
+}
+
+class Bookings_Table extends WP_List_Table {
+	function __construct( ){
+		parent::__construct( array(
+			 'singular'  => 'bookings',
+			 'plural'    => 'bookings',
+			 'ajax'      => false
+		));
+	}
+
+	function no_items() {
+		_e( 'No bookings have been found.', 'sos' );
+	}
+
+	function column_default($item, $column_name){
+		return $item[ $column_name ];
+	}
+
+	function column_timestamp( $item ) {
+		return date( 'Y-m-d H:i:s', strtotime( $item['time'] ) );
+	}
+
+/*
+	function column_type( $item ) {
+		return $item['type'];
+	}
+
+	function column_entry( $item ) {
+		$entry = unserialize( $item['entry'] );
+		if( is_array($entry) ) {
+			return $entry['entry'];
+		} else {
+			return $entry;
+		}
+	}
+*/
+
+	function column_name( $item ) {
+		$entry = unserialize( $item['entry'] );
+		return $entry['first_name'].$entry['last_name'];
+	}
+	
+	function column_email( $item ) {
+		$entry = unserialize( $item['entry'] );
+		return $entry['payer_email'];
+	}
+
+	function column_series( $item ) {
+		$entry = unserialize( $item['entry'] );
+		return $entry['item_name'];
+	}
+	
+	function column_class( $item ) {
+		$entry = unserialize( $item['entry'] );
+		return $entry['option_selection'];
+	}
+	
+	function column_quantity( $item ) {
+		$entry = unserialize( $item['entry'] );
+		return $entry['quantity'];
+	}
+
+	/*
+function column_extended( $item ) {
+		$html = '';
+		$entry = unserialize( $item['entry'] );
+		if( is_array( $entry ) ) {
+			unset( $entry['entry'] );
+			foreach( $entry as $key => $value ) {
+				$html  .= sprintf( '<strong>%s: </strong>%s<br/>', $key, $value );
+			}
+		} else {
+			$html = 'n/a';
+		}
+		return $html;
+	}
+*/
+
+	function get_columns(){
+		$columns = array();
+		$columns['timestamp'] = __('Timestamp', 'bookings' );
+		$columns['name'] = __('Name', 'bookings' );
+		$columns['email'] = __('Email', 'bookings' );
+		$columns['series'] = __('Dance Series', 'bookings' );
+		$columns['class'] = __('Class', 'bookings' );
+		$columns['quantity'] = __('Places booked', 'bookings' );
+//		$columns['extended'] = __('Extended Data', 'bookings' );
+		return $columns;
+	}
+
+	function get_sortable_columns() {
+		return null;
+	}
+
+	function prepare_items() {
+		global $wpdb;
+		$per_page = $this->get_items_per_page('posts_per_page');
+		$columns = $this->get_columns();
+		$hidden = array();
+		$sortable = $this->get_sortable_columns();
+		$this->_column_headers = array($columns, $hidden, $sortable);
+		$this->items = $wpdb->get_results( "SELECT SQL_CALC_FOUND_ROWS * FROM $wpdb->activity_log WHERE type = 'booking' ORDER BY time DESC", ARRAY_A );
+		$total_items = $wpdb->get_var( 'SELECT FOUND_ROWS()' );
+		$this->set_pagination_args( array(
+			 'total_items' => $total_items,
+			 'per_page'    => $per_page,
+			 'total_pages' => ceil($total_items / $per_page)
+		) );
 	}
 }
 

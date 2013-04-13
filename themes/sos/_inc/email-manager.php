@@ -1,51 +1,28 @@
 <?php
 
-	/* function for sending templated emails, with text of email making use of shortcodes */
-	function email_manager( $event_type, $post_id, $extraVars ) {
+	/* function for sending templated emails */
+	function email_manager( $email_id, $toAddresses, $shortcodeVars ) {
 
 		global $email_types;
-		if( !$event_type || !isset( $email_types[$event_type] ) ) return false;
+		if( !$email_id ) return false;
 
 		$email_template = new WP_Query( array(
-			'post_type'  => 'emails',
-			'meta_key' 	 => '_email_event_type',
-			'meta_value' => $event_type
+			'post_type'  => 'emails', // this defaults to 'post' if you don't provide it
+			'p'	=> $email_id
 		));
-
-		$extraVars['post_id'] = $post_id;
 
 		if ( $email_template->posts ) {
 			$post = $email_template->posts[0];
 
 			$meta = get_post_custom( $post->ID );
 
-			// Transitional version
-			if( $meta['_email_template'] ) {
-				$url = get_permalink($post->ID) .'?'.	http_build_query($extraVars);
-
-				// create curl resource
-				$ch = curl_init();
-				curl_setopt($ch, CURLOPT_URL, $url);
-				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-				$body = curl_exec($ch);
-				curl_close($ch);
-
-				add_filter( 'wp_mail_content_type', 'set_html_email' );
-			} else {
-				$body = email_shortcodes( $meta['_email_text'][0], $extraVars );
-			}
-
-			$subject = email_shortcodes( $meta['_email_subject'][0], $extraVars );
+			$body = email_shortcodes($post->post_content, $shortcodeVars);
+			
+			$subject = $meta['_email_subject'][0] != '' ? $meta['_email_subject'][0] : $post->post_title;
+			$subject = email_shortcodes($subject, $shortcodeVars);
 
 			// If this template has a 'FROM' email address use that, else use the admin email address
 			$fromAddress =  $meta['_email_from'][0] != '' ? $meta['_email_from'][0] : get_option( 'admin_email');
-			$toAddresses = '';
-			$toFunc = $event_type."_to";
-			if( function_exists($toFunc) ) {
-				$toAddresses = $toFunc($extraVars);
-			}
-			// This allows to-addresses to be added to the email manager arguments directly
-			$toAddresses = array_merge( (array) $extraVars['to_addresses'], (array) $toAddresses );
 
 			$headers = '';
 			if( $fromAddress ) {
@@ -53,31 +30,26 @@
 				$headers .= "From: Seen On Screen Fitness <$fromAddress>\r\n"; // TO-DO: make the "Seen On Screen Fitness" set from an admin panel
 			}
 
-			send_email_and_log( $post_id, $toAddresses, $subject, $body, $headers );
+			send_email_and_log( $toAddresses, $subject, $body, $headers );
 		}
 		return (bool)$email_template->posts;
 	}
-	
-	/* support custom location for email templates, used when requesting email with HTML template */
-	function filter_email_template( $template ) {
-		global $wp_query;
 
-		if( $wp_query->post->post_type == 'emails' ) {
-			if( $filename = get_post_meta( $wp_query->post->ID, '_email_template', true ) ) {
-
-				if ( file_exists( get_stylesheet_directory() . '/' . $filename ) ) {
-					$template = get_stylesheet_directory() . '/' . $filename;
-				}
-			}
+	function email_shortcodes($body, $shortcodeVars) {
+		// replace all the shortcodes that match variables passed in ext
+		foreach($shortcodeVars as $key => $value) {
+		       $shortcode = strtoupper($key);
+		       $body = str_ireplace( '['.$key.']', $value, $body );
 		}
-
-		return $template;
+		
+		$message = sprintf(__('%s'), $body) . "\r\n";
+		return $message;
 	}
-	add_filter( 'single_template', 'filter_email_template' );
 
 	function set_html_email( $content_type ) {
 		return 'text/html';
 	}
+	add_filter( 'wp_mail_content_type', 'set_html_email' );
 
 	/* create post type: Emails */
 
@@ -106,7 +78,7 @@
 	/* add metaboxes to email post type */
 	
 	function init_email_metaboxes() {
-		add_meta_box('email_metaboxes', 'Email Content', 'email_metaboxes', 'emails', 'normal', 'default');
+		add_meta_box('email_metaboxes', 'Extra Email Information', 'email_metaboxes', 'emails', 'normal', 'high');
 	}
 	
 	function email_metaboxes() {
@@ -131,11 +103,11 @@
 			<p style="clear:both"><em>Subject line for the email</em></p></div>
 		</div>
 	    
-	    <div style="overflow:hidden; margin-top:10px; ">
+	    <!--<div style="overflow:hidden; margin-top:10px; ">
 			<div style="width:100px; float:left; padding-top:7px;"><label for="_email_text"><strong>Email text</strong></label></div>
 			<div style="width:500px; float:left;"><textarea style="width: 90%%; height:200px;" name="_email_text"><?php echo $email_text; ?></textarea>
 			<p style="clear:both"><em>Body of the email</em></p></div>
-		</div>
+		</div>-->
 	
 	    <div style="overflow:hidden;  margin-top:10px;">
 			<div style="width:100px; float:left; padding-top:7px;"><label for="_email_from"><strong>Email From Address</strong></label></div>
@@ -143,7 +115,7 @@
 			<p style="clear:both"><em>Enter the address this email is from</em></p></div>
 		</div>
 	
-		<div style="overflow:hidden; margin-top:10px; ">
+		<!--<div style="overflow:hidden; margin-top:10px; ">
 			<div style="width:100px; float:left;"><label for="_email_template"><strong>Email Template</strong></label></div>
 			<div style="width:500px; float:left;">
 				<select name="_email_template" id="_email_template">
@@ -163,7 +135,7 @@
 				</select>
 				<p><em>Select an HTML template to render the email</em></p>
 			</div>
-		</div>
+		</div>-->
 	
 	    <?php
 	}
@@ -205,19 +177,7 @@
 	
 	add_action('save_post', 'email_save_meta', 1, 2);
 
-	function email_shortcodes( $body, $extraVars ) {
-
-		// replace all the shortcodes that match variables passed in extraVars
-		foreach($extraVars as $key => $value) {
-			$shortcode = $key; // TO-DO: make $key uppercase
-			$body = str_ireplace( '%'.$key.'%', $value, $body );
-		}
-
-		$message = sprintf(__('%s'), $body) . "\r\n";
-		return $message;
-	}
-
-	function send_email_and_log($post_id, $to_address, $subject, $body, $headers='', $no_reply=FALSE) {
+	function send_email_and_log($to_address, $subject, $body, $headers='', $no_reply=FALSE) {
 
 		if($headers=='') {
 			if($no_reply) {
@@ -239,7 +199,7 @@
 				'body'=>$body,
 				'headers'=>$headers
 			)
-		), $post_id);
+		), 0);
 		if(!TEST_MODE) {
 			wp_mail($to_address, $subject, $body, $headers);
 		}
