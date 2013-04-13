@@ -57,7 +57,8 @@
 					'menu_class' => 'nav',
 					'menu_id' => 'nav'
 				)); ?>
-				<ul class="nav">
+				<!-- There are some style.css changes to accommodate hiding the socialButtons -->
+				<!--<ul class="nav">
 					<li class="plain socialButtons">
 						<a href="http://twitter.com/sosfdance" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter_21-21.gif" /></a>
 						<a href="https://twitter.com/sosfdance" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a>
@@ -65,7 +66,7 @@
 						<a href="http://facebook.com/seenonscreenfitness" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/facebook_small.png" /></a>
 						<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fseenonscreenfitness&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=377320652348203" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
 					</li>
-				</ul>
+				</ul>-->
 				<?php if(is_front_page()) : ?>
 					<div class="carouselContainer homepageBanner">
 					<?php attachment_toolbox('homepage-banner', 'carousel'); ?>
