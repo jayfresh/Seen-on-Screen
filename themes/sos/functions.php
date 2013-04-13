@@ -420,7 +420,7 @@ class Bookings_Table extends WP_List_Table {
 
 	function column_name( $item ) {
 		$entry = unserialize( $item['entry'] );
-		return $entry['first_name'].$entry['last_name'];
+		return $entry['first_name'].' '.$entry['last_name'];
 	}
 	
 	function column_email( $item ) {

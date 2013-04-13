@@ -17,6 +17,7 @@
 			$meta = get_post_custom( $post->ID );
 
 			$body = email_shortcodes($post->post_content, $shortcodeVars);
+			$body = apply_filters( 'the_content', $body );
 			
 			$subject = $meta['_email_subject'][0] != '' ? $meta['_email_subject'][0] : $post->post_title;
 			$subject = email_shortcodes($subject, $shortcodeVars);
