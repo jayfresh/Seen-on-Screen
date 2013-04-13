@@ -38,8 +38,8 @@
 	function email_shortcodes($body, $shortcodeVars) {
 		// replace all the shortcodes that match variables passed in ext
 		foreach($shortcodeVars as $key => $value) {
-		       $shortcode = strtoupper($key);
-		       $body = str_ireplace( '['.$key.']', $value, $body );
+	       $shortcode = strtoupper($key);
+	       $body = str_ireplace( '['.$key.']', $value, $body );
 		}
 		
 		$message = sprintf(__('%s'), $body) . "\r\n";
@@ -201,6 +201,19 @@
 			)
 		), 0);
 		if(!TEST_MODE) {
-			wp_mail($to_address, $subject, $body, $headers);
+			$result = wp_mail($to_address, $subject, $body, $headers);
+			if (!$result) {
+				global $ts_mail_errors;
+				global $phpmailer;
+				if (isset($phpmailer)) {
+					$ts_mail_errors = $phpmailer->ErrorInfo;
+					do_action('activity_log', array(
+						'type'=>'email_error',
+						'entry'=> array(
+							'errors' => $ts_mail_errors
+						)
+					));
+				}
+			}
 		}
 	}
