@@ -201,7 +201,7 @@
 				'headers'=>$headers
 			)
 		), 0);
-		if(!TEST_MODE) {
+		if(!defined('TEST_MODE') or !TEST_MODE) {
 			$result = wp_mail($to_address, $subject, $body, $headers);
 			if (!$result) {
 				global $ts_mail_errors;
@@ -216,5 +216,7 @@
 					));
 				}
 			}
+		} else {
+			echo "TEST_MODE is on";
 		}
 	}
