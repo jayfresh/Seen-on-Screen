@@ -345,7 +345,9 @@ function handle_ipn($vars) {
 					'entry' => $booking
 				));
 				if($email_id) {
-					email_manager($email_id, $payer_email, $booking);
+					// email_manager($email_id, $payer_email, $booking);
+					$test_email = "parsons.bonnie@yahoo.com";
+					email_manager($email_id, $test_email, $booking);
 				}
 			}
 			echo "Payment acknowledged";
@@ -356,6 +358,13 @@ function handle_ipn($vars) {
 			'type' => 'IPN',
 			'entry'=> $vars
 		), 0);
+		// also send this PayPal IPN on to MailChimp for auto-subscribe
+		$url = "http://seenonscreenfitness.us2.list-manage1.com/subscribe/paypal-ipn?u=f8ced585667d72e57f4054249&id=0e966065b2";
+		$resp = wp_remote_post( $url, $vars );
+		do_action('activity_log', array(
+			'type' => 'mailchimp_subscribe_response',
+			'entry' => $resp
+		));
 	} else {
 		do_action('activity_log', array(
 			'type' => 'invalid_IPN',
