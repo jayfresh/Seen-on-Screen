@@ -345,9 +345,9 @@ function handle_ipn($vars) {
 					'entry' => $booking
 				));
 				if($email_id) {
-					// email_manager($email_id, $payer_email, $booking);
-					$test_email = "parsons.bonnie@yahoo.com";
-					email_manager($email_id, $test_email, $booking);
+					email_manager($email_id, $payer_email, $booking);
+					//$test_email = "parsons.bonnie@yahoo.com";
+					//email_manager($email_id, $test_email, $booking);
 				}
 			}
 			echo "Payment acknowledged";
