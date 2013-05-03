@@ -360,13 +360,19 @@ function handle_ipn($vars) {
 		), 0);
 		// also send this PayPal IPN on to MailChimp for auto-subscribe
 		$url = "http://seenonscreenfitness.us2.list-manage1.com/subscribe/paypal-ipn?u=f8ced585667d72e57f4054249&id=0e966065b2";
-		$resp = wp_remote_post( $url, $vars );
+		$resp = wp_remote_post( $url, array(
+			'method' => 'POST',
+			'body' => $vars
+		) );
 		do_action('activity_log', array(
 			'type' => 'mailchimp_subscribe_response',
 			'entry' => $resp
 		));
 		$url = "http://requestb.in/133ysja1";
-		wp_remote_post( $url, $vars );
+		wp_remote_post( $url, array(
+			'method' => 'POST',
+			'body' => $vars
+		) );
 	} else {
 		do_action('activity_log', array(
 			'type' => 'invalid_IPN',
