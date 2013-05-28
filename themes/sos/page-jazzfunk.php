@@ -33,7 +33,7 @@ get_header();
 								$attsrc  = wp_get_attachment_image_src($image->ID, $size);
 								$atttitle = apply_filters('the_title',$image->post_title); ?>
 							<li><img alt="<?php echo $atttitle; ?>" src="<?php echo $attsrc[0]; ?>"></li>
-							<?php } ?>
+							<?php }  ?>
 						</ul>
 					<?php } ?>
 					</div>
