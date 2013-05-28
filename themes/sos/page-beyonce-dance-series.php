@@ -27,9 +27,6 @@ get_header();
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/gFDdHJUY53M?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/ArDXxTsJJoo?rel=0" frameborder="0" allowfullscreen></iframe>
-							</li>
-							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/4m1EFMoRFvY?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
@@ -42,10 +39,10 @@ get_header();
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/rNM5HW13_O8?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/hbnPkK76Ask?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/oAmnkPUFMHg?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/2XY3AvVgDns?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/VyL73k5AMbQ?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<?php foreach($images as $image) {
 								$attsrc  = wp_get_attachment_image_src($image->ID, $size);
