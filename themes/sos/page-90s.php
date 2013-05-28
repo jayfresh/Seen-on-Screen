@@ -48,9 +48,6 @@ get_header();
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/gJLIiF15wjQ?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/vMftKbsKHWg?rel=0" frameborder="0" allowfullscreen></iframe>
-							</li>
-							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/is6gtilerPk?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<?php foreach($images as $image) {
