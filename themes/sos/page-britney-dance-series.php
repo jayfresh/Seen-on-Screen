@@ -35,6 +35,18 @@ get_header();
 							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/CduA0TULnow?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
+							<li>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/clwLKJ294u4?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/s25OMP4Ww6Y?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/PZYSiWHW8V0?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/AJWtLf4-WWs?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
 							<?php foreach($images as $image) {
 								$attsrc  = wp_get_attachment_image_src($image->ID, $size);
 								$atttitle = apply_filters('the_title',$image->post_title); ?>
