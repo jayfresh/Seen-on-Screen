@@ -1,5 +1,5 @@
 <?php
-/* for Michael Jackson dance series page */
+/* for Pop Legends dance series page */
 get_header();
 ?>
     	<div class="contentPage">
@@ -24,9 +24,12 @@ get_header();
 					))) { ?>
 						<ul class="carousel">
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/sOnqjkJTMaA?rel=0" frameborder="0" allowfullscreen></iframe>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/Zi_XLOBDo_Y?rel=0" frameborder="0" allowfullscreen></iframe>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/ntgq6qy1hyA?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/4Rg3sAb8Id8?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/GWHjw7Cu8o4?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/FQ3slUz7Jo8?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/c18441Eh_WE?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/dly6p4Fu5TE?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/bbqVg_23otg?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<?php foreach($images as $image) {
 								$attsrc  = wp_get_attachment_image_src($image->ID, $size);
