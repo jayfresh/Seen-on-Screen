@@ -25,10 +25,20 @@ get_header();
 						<ul class="carousel">
 							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/4Rg3sAb8Id8?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/GWHjw7Cu8o4?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/FQ3slUz7Jo8?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/c18441Eh_WE?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/dly6p4Fu5TE?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/bbqVg_23otg?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<?php foreach($images as $image) {

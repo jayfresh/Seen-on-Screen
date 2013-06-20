@@ -25,7 +25,11 @@ get_header();
 						<ul class="carousel">
 							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/sOnqjkJTMaA?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/Zi_XLOBDo_Y?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/ntgq6qy1hyA?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<?php foreach($images as $image) {

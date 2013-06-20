@@ -25,14 +25,32 @@ get_header();
 						<ul class="carousel">
 							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/0lPQZni7I18?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/8WEtxJ4-sh4?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/IyYnnUcgeMc?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/LlZydtG3xqI?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/Wmc8bQoL-J0?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/gJLIiF15wjQ?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/Vjw92oUduEM?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/pKV8uSX2nEQ?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/AqeIiF0DlTg?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/9ro0FW9Qt-4?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<?php foreach($images as $image) {
