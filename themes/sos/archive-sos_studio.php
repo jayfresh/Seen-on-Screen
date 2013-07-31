@@ -14,6 +14,7 @@ get_header();
 						$website = get_post_meta(get_the_ID(), '_website', true);
 						$address_lines = str_replace(',', '<br>', $address); ?>
 						<p class="studio_address"><?php echo $address_lines; ?></p>
+						<p><?php the_content(); ?></p>
 						<?php if(isset($website)) { ?>
 						<!--<a href="<?php echo $website; ?>">Visit website</a></p>-->
 						<?php } ?>
