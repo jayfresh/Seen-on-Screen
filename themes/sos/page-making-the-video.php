@@ -24,13 +24,13 @@ get_header();
 					))) { ?>
 						<ul class="carousel">
 							<li>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/ViwtNLUqkMY?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/EVBsypHzF3U?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/FPoKiGQzbSQ?rel=0" frameborder="0" allowfullscreen></iframe>
-							</li>
-							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/ViwtNLUqkMY?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/Mzybwwf2HoQ?rel=0" frameborder="0" allowfullscreen></iframe>
