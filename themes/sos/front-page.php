@@ -39,7 +39,7 @@ get_header();
 	                    'refresh_rate' => 60,
 	                    'tweets_num' => 3
 	                )); */ ?>
-          <a class="twitter-timeline" href="https://twitter.com/sosfdance" data-widget-id="385529318010396672">Tweets by @sosfdance</a>
+          <a class="twitter-timeline" href="https://twitter.com/sosfdance" height="300" data-widget-id="385529318010396672">Tweets by @sosfdance</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				</div>
 				<div class="col left">
