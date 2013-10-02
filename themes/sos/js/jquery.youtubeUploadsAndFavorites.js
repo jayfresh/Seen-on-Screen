@@ -47,7 +47,7 @@
 			getCallback = function(data) {
 				parseResult(data);
 				urlCount++;
-				if(urlCount==2) {
+				if(urlCount==1) {
 					finalCallback();
 				}
 			},
@@ -60,10 +60,10 @@
 				});
 			},
 			urlBase = 'http://gdata.youtube.com/feeds/api/users/'+settings.username,
-			urlQuery = '?alt=json&v=2&orderby=published&max-results=20',
+			urlQuery = '?alt=json&v=2&orderby=published&max-results=25',
 			uploadsURL = urlBase+'/uploads/'+urlQuery,
-			favoritesURL = urlBase+'/favorites/'+urlQuery;
+			//favoritesURL = urlBase+'/favorites/'+urlQuery;
 		$.getJSON(uploadsURL, getCallback);
-		$.getJSON(favoritesURL, getCallback);
+		//$.getJSON(favoritesURL, getCallback);
 	};
 })(jQuery);
