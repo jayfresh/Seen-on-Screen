@@ -31,14 +31,16 @@ get_header();
 			<br class="clearboth">
 			<div class="cols">
 				<div class="col left">
-					<h2><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter_28-28.gif" class="marginrightsmall"><a href="https://twitter.com/sosfdance" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @sosfdance</a>
-						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><a href="http://twitter.com/sosfdance" target="_blank">@sosfdance</a></h2>
-	                <?php tweet_blender_widget(array(
+					<!--<h2><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter_28-28.gif" class="marginrightsmall"><a href="https://twitter.com/sosfdance" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @sosfdance</a>-->
+						<!--<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><a href="http://twitter.com/sosfdance" target="_blank">@sosfdance</a></h2>-->
+	                <?php /*tweet_blender_widget(array(
 	                    'unique_div_id' => 'tweetblender-t1',
 	                    'sources' => '@sosfdance',
 	                    'refresh_rate' => 60,
 	                    'tweets_num' => 3
-	                )); ?>
+	                )); */ ?>
+          <a class="twitter-timeline" href="https://twitter.com/sosfdance" data-widget-id="385529318010396672">Tweets by @sosfdance</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				</div>
 				<div class="col left">
 					<h2><img src="<?php bloginfo('stylesheet_directory'); ?>/images/roughs/facebook_large.png" class="marginrightsmall">Like SOS on Facebook</h2>
