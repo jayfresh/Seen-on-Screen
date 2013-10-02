@@ -61,7 +61,7 @@
 			},
 			urlBase = 'http://gdata.youtube.com/feeds/api/users/'+settings.username,
 			urlQuery = '?alt=json&v=2&orderby=published&max-results=25',
-			uploadsURL = urlBase+'/uploads/'+urlQuery,
+			uploadsURL = urlBase+'/uploads/'+urlQuery;
 			//favoritesURL = urlBase+'/favorites/'+urlQuery;
 		$.getJSON(uploadsURL, getCallback);
 		//$.getJSON(favoritesURL, getCallback);
