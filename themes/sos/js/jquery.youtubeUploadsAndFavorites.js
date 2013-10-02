@@ -55,12 +55,15 @@
 				videos.sort(function(a, b) {
 					return a.published < b.published ? 1 : -1;
 				});
-				$.each(videos, function() {
+				$.each(videos, function(i) {
+					if(i===25) {
+  					return false; // time to stop
+					}
 					addVideo(this);
 				});
 			},
 			urlBase = 'http://gdata.youtube.com/feeds/api/users/'+settings.username,
-			urlQuery = '?alt=json&v=2&orderby=published&max-results=25',
+			urlQuery = '?alt=json&v=2&orderby=published&max-results=30',
 			uploadsURL = urlBase+'/uploads/'+urlQuery;
 			//favoritesURL = urlBase+'/favorites/'+urlQuery;
 		$.getJSON(uploadsURL, getCallback);
