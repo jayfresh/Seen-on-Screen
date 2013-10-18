@@ -24,22 +24,13 @@ get_header();
 					))) { ?>
 						<ul class="carousel">
 							<li>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/pt8VYOfr8To?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/rMqayQ-U74s?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/Mzybwwf2HoQ?rel=0" frameborder="0" allowfullscreen></iframe>
-							</li>
-							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/clwLKJ294u4?rel=0" frameborder="0" allowfullscreen></iframe>
-							</li>
-							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/s25OMP4Ww6Y?rel=0" frameborder="0" allowfullscreen></iframe>
-							</li>
-							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/PZYSiWHW8V0?rel=0" frameborder="0" allowfullscreen></iframe>
-							</li>
-							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/AJWtLf4-WWs?rel=0" frameborder="0" allowfullscreen></iframe>
-							</li>
-							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/cQ1DTHkM24Y?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<?php foreach($images as $image) {
 								$attsrc  = wp_get_attachment_image_src($image->ID, $size);
