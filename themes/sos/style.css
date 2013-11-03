@@ -267,6 +267,9 @@ a {
 a:link, a:visited, a:active {
 	border-bottom: 1px dotted #999;
 }
+a.noborder:link, a.noborder:visited, a.noborder:active {
+  border-bottom: none;
+}
 	h2 a:link, h2 a:visited, h2 a:active {
 		border: none;
 	}
