@@ -1,5 +1,5 @@
 <?php
-/* for Pussy Cat Dolls dance series page */
+/* for Sexy dance series page */
 get_header();
 ?>
     	<div class="contentPage">
