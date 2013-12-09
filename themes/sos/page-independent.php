@@ -24,6 +24,9 @@ get_header();
 					))) { ?>
 						<ul class="carousel">
 							<li>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/qe-o7PDp8ck?rel=0" frameborder="0" allowfullscreen></iframe>
+							</li>
+							<li>
 								<iframe width="610" height="343" src="http://www.youtube.com/embed/0lPQZni7I18?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>

@@ -13,19 +13,19 @@ get_header();
 					<div class="carouselContainer eventImageContainer">
 						<ul class="carousel">
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/QczgvUDskk0?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/ViwtNLUqkMY?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/RioOJ7dZxuw?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/4m1EFMoRFvY?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/PDABTqhvWds?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/VBmMU_iwe6U?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/AqeIiF0DlTg?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/0lPQZni7I18?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/PGc9n6BiWXA?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="http://www.youtube.com/embed/PQLySgRW6y8?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<?php
 							$size = 'content-page';
