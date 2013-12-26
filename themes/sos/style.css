@@ -155,7 +155,7 @@ ul.nav {
 		ul.nav li a:link, ul.nav li a:visited, ul.nav li a:active,
 		ul.nav li ul li.active a:link, ul.nav li ul li.active a:visited, ul.nav li ul li.active a:active, #wrapper ul.nav li ul li a:hover {
 			color: #333;
-			padding: 8px 12px;
+			padding: 8px 11px;
 			line-height: 35px;
 		}
 		ul.nav li.socialButtons a:link, ul.nav li.socialButtons a:visited, ul.nav li.socialButtons a:active, ul.nav li.socialButtons a:hover {
