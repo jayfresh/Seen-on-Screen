@@ -220,7 +220,7 @@ function sos_inner_custom_box( $post ) {
   echo '<label for="sos_new_field">';
        _e( "Add PayPal form HTML here", 'sos_textdomain' );
   echo '</label> ';
-  echo '<textarea class="wp-editor-area" id="sos_new_field" name="sos_new_field" rows="5">' . esc_attr( $value ) . '</textarea>';
+  echo '<textarea class="wp-editor-area" id="sos_new_field" name="sos_new_field" rows="5">' . $value . '</textarea>';
   echo '</div>';
 }
 function sos_inner_custom_box2( $post ) {
@@ -238,7 +238,7 @@ function sos_inner_custom_box2( $post ) {
   echo '<label for="sos_new_field2">';
        _e( "Add PayPal form HTML here", 'sos_textdomain' );
   echo '</label> ';
-  echo '<textarea class="wp-editor-area" id="sos_new_field2" name="sos_new_field2" rows="5">' . esc_attr( $value ) . '</textarea>';
+  echo '<textarea class="wp-editor-area" id="sos_new_field2" name="sos_new_field2" rows="5">' . $value . '</textarea>';
   echo '</div>';
 }
 
