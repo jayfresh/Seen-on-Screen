@@ -626,6 +626,18 @@ form button {
 	cursor: pointer;
 }
 
+/* membership page */
+#membership div.badge {
+  margin-bottom: 80px;
+}
+#membership span.large {
+  font-size: 72px;
+	font-family: futura-pt, 'sans';
+}
+#membership .aaa {
+  color: #bdb069;
+}
+
 /* misc */
 .socialButtons {
 	top: 3px;
