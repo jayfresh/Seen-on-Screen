@@ -630,7 +630,7 @@ form button {
 #membership, #membership a {
   color: #cfcfcf;
 }
-#membership div.badge {
+#membership div.badge:first-of-type {
   margin-bottom: 80px;
 }
 #membership div.badge img {
