@@ -216,11 +216,12 @@ function sos_inner_custom_box( $post ) {
    */
   $value = get_post_meta( $post->ID, '_custom_form', true );
 
+  echo '<div class="wp-editor-container">';
   echo '<label for="sos_new_field">';
        _e( "Add PayPal form HTML here", 'sos_textdomain' );
   echo '</label> ';
-  echo '<textarea id="sos_new_field" name="sos_new_field" rows="5">' . esc_attr( $value ) . '</textarea>';
-
+  echo '<textarea class="wp-editor-area" id="sos_new_field" name="sos_new_field" rows="5">' . esc_attr( $value ) . '</textarea>';
+  echo '</div>';
 }
 function sos_inner_custom_box2( $post ) {
 
@@ -233,11 +234,12 @@ function sos_inner_custom_box2( $post ) {
    */
   $value = get_post_meta( $post->ID, '_custom_form2', true );
 
+  echo '<div class="wp-editor-container">';
   echo '<label for="sos_new_field2">';
        _e( "Add PayPal form HTML here", 'sos_textdomain' );
   echo '</label> ';
-  echo '<textarea id="sos_new_field2" name="sos_new_field2" rows="5">' . esc_attr( $value ) . '</textarea>';
-
+  echo '<textarea class="wp-editor-area" id="sos_new_field2" name="sos_new_field2" rows="5">' . esc_attr( $value ) . '</textarea>';
+  echo '</div>';
 }
 
 /**
@@ -273,10 +275,10 @@ function sos_save_postdata( $post_id ) {
   /* OK, its safe for us to save the data now. */
 
   // Sanitize user input.
-  $mydata = sanitize_text_field( $_POST['sos_new_field'] );
+  $mydata = wp_kses( $_POST['sos_new_field'] );
 
   // Update the meta field in the database.
-  update_post_meta( $post_id, '_custom_form2', $mydata );
+  update_post_meta( $post_id, '_custom_form', $mydata );
 }
 add_action( 'save_post', 'sos_save_postdata' );
 
@@ -308,7 +310,7 @@ function sos_save_postdata2( $post_id ) {
   /* OK, its safe for us to save the data now. */
 
   // Sanitize user input.
-  $mydata = sanitize_text_field( $_POST['sos_new_field2'] );
+  $mydata = wp_kses( $_POST['sos_new_field2'] );
 
   // Update the meta field in the database.
   update_post_meta( $post_id, '_custom_form2', $mydata );
