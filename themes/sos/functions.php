@@ -183,7 +183,7 @@ add_action('save_post', 'sos_team_save_credits_meta', 1, 2);
  */
 function sos_add_custom_boxes($post_type, $post) {
 
-  if($post->post_name=="membership-two") {
+  if($post->post_name=="membership" || $post->post_name=="membership-two") {
     add_meta_box(
         'sos_sectionid',
         __( 'Access All Areas', 'sos_textdomain' ),
