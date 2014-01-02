@@ -1,5 +1,5 @@
 <?php
-/* for Membership page */
+/* for the Membership page */
 get_header(); ?>
 	<div class="contentPage blackContainer" id="membership">	
 	<?php if ( have_posts() ) :
