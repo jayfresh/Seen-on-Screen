@@ -181,18 +181,24 @@ add_action('save_post', 'sos_team_save_credits_meta', 1, 2);
 /**
  * Adds a box to the main column on the Post and Page edit screens.
  */
-function sos_add_custom_box($post_type, $post) {
+function sos_add_custom_boxes($post_type, $post) {
 
   if($post->post_name=="membership-two") {
     add_meta_box(
         'sos_sectionid',
-        __( 'My Post Section Title', 'sos_textdomain' ),
+        __( 'Access All Areas', 'sos_textdomain' ),
         'sos_inner_custom_box',
+        'page'
+    );
+    add_meta_box(
+        'sos_sectionid2',
+        __( 'VIP Membership', 'sos_textdomain' ),
+        'sos_inner_custom_box2',
         'page'
     );
   }
 }
-add_action( 'add_meta_boxes', 'sos_add_custom_box', 10, 2 );
+add_action( 'add_meta_boxes', 'sos_add_custom_boxes', 10, 2 );
 
 /**
  * Prints the box content.
@@ -208,12 +214,29 @@ function sos_inner_custom_box( $post ) {
    * Use get_post_meta() to retrieve an existing value
    * from the database and use the value for the form.
    */
-  $value = get_post_meta( $post->ID, '_my_meta_value_key', true );
+  $value = get_post_meta( $post->ID, '_custom_form', true );
 
   echo '<label for="sos_new_field">';
-       _e( "Description for this field", 'sos_textdomain' );
+       _e( "Add PayPal form HTML here", 'sos_textdomain' );
   echo '</label> ';
-  echo '<input type="text" id="sos_new_field" name="sos_new_field" value="' . esc_attr( $value ) . '" size="25" />';
+  echo '<textarea id="sos_new_field" name="sos_new_field" rows="5">' . esc_attr( $value ) . '</textarea>';
+
+}
+function sos_inner_custom_box2( $post ) {
+
+  // Add an nonce field so we can check for it later.
+  wp_nonce_field( 'sos_inner_custom_box2', 'sos_inner_custom_box_nonce2' );
+
+  /*
+   * Use get_post_meta() to retrieve an existing value
+   * from the database and use the value for the form.
+   */
+  $value = get_post_meta( $post->ID, '_custom_form2', true );
+
+  echo '<label for="sos_new_field2">';
+       _e( "Add PayPal form HTML here", 'sos_textdomain' );
+  echo '</label> ';
+  echo '<textarea id="sos_new_field2" name="sos_new_field2" rows="5">' . esc_attr( $value ) . '</textarea>';
 
 }
 
@@ -244,16 +267,8 @@ function sos_save_postdata( $post_id ) {
       return $post_id;
 
   // Check the user's permissions.
-  if ( 'page' == $_POST['post_type'] ) {
-
-    if ( ! current_user_can( 'edit_page', $post_id ) )
-        return $post_id;
-  
-  } else {
-
-    if ( ! current_user_can( 'edit_post', $post_id ) )
-        return $post_id;
-  }
+  if ( ! current_user_can( 'edit_page', $post_id ) )
+      return $post_id;
 
   /* OK, its safe for us to save the data now. */
 
@@ -261,10 +276,44 @@ function sos_save_postdata( $post_id ) {
   $mydata = sanitize_text_field( $_POST['sos_new_field'] );
 
   // Update the meta field in the database.
-  update_post_meta( $post_id, '_my_meta_value_key', $mydata );
+  update_post_meta( $post_id, '_custom_form2', $mydata );
 }
 add_action( 'save_post', 'sos_save_postdata' );
 
+function sos_save_postdata2( $post_id ) {
+
+  /*
+   * We need to verify this came from the our screen and with proper authorization,
+   * because save_post can be triggered at other times.
+   */
+
+  // Check if our nonce is set.
+  if ( ! isset( $_POST['sos_inner_custom_box_nonce2'] ) )
+    return $post_id;
+
+  $nonce = $_POST['sos_inner_custom_box_nonce2'];
+
+  // Verify that the nonce is valid.
+  if ( ! wp_verify_nonce( $nonce, 'sos_inner_custom_box2' ) )
+      return $post_id;
+
+  // If this is an autosave, our form has not been submitted, so we don't want to do anything.
+  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+      return $post_id;
+
+  // Check the user's permissions.
+  if ( ! current_user_can( 'edit_page', $post_id ) )
+        return $post_id;
+
+  /* OK, its safe for us to save the data now. */
+
+  // Sanitize user input.
+  $mydata = sanitize_text_field( $_POST['sos_new_field2'] );
+
+  // Update the meta field in the database.
+  update_post_meta( $post_id, '_custom_form2', $mydata );
+}
+add_action( 'save_post', 'sos_save_postdata2' );
 
 /* Add 'link' field to images */
 function attachment_sos_fields($form_fields, $post) {
