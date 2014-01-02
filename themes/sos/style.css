@@ -627,21 +627,30 @@ form button {
 }
 
 /* membership page */
-#membership .blackContainer {
+#membership {
   color: #cfcfcf;
 }
 #membership div.badge {
   margin-bottom: 80px;
 }
+#membership div.badge img {
+  margin-bottom: 12px;
+}
 #membership span.large {
   font-size: 72px;
 	font-family: futura-pt, 'sans';
+	font-weight: 300;
 }
 #membership .aaa {
   color: #bdb069;
 }
+#membership ul {
+  margin-left: 0;
+}
 #membership ul li {
- background: transparent url(images/roughs/white-star-med.png) top left no-repeat; 
+  padding-left: 28px;
+  list-style: none;
+  background: transparent url(images/roughs/white-star-med.png) top left no-repeat; 
 }
 
 /* misc */
