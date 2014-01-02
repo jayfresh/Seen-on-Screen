@@ -627,7 +627,7 @@ form button {
 }
 
 /* membership page */
-#membership {
+#membership, #membership a {
   color: #cfcfcf;
 }
 #membership div.badge {
