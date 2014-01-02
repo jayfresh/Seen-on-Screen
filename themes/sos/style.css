@@ -641,7 +641,7 @@ form button {
 	font-family: futura-pt, 'sans';
 	font-weight: 300;
 }
-#membership .aaa {
+#membership .aaa, #membership .offer {
   color: #bdb069;
 }
 #membership p.aaa {
