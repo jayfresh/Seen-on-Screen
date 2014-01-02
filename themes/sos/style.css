@@ -647,6 +647,9 @@ form button {
 #membership p.aaa {
   margin-bottom: 8px;
 }
+#membership p.offer {
+  text-transform: uppercase;
+}
 #membership ul {
   margin-left: 0;
 }
