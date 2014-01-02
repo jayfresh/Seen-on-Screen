@@ -627,6 +627,9 @@ form button {
 }
 
 /* membership page */
+#membership .blackContainer {
+  color: #cfcfcf;
+}
 #membership div.badge {
   margin-bottom: 80px;
 }
@@ -636,6 +639,9 @@ form button {
 }
 #membership .aaa {
   color: #bdb069;
+}
+#membership ul li {
+ background: transparent url(images/roughs/white-star-med.png) top left no-repeat; 
 }
 
 /* misc */
