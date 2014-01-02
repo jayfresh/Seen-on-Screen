@@ -644,6 +644,9 @@ form button {
 #membership .aaa {
   color: #bdb069;
 }
+#membership p.aaa {
+  margin-bottom: 8px;
+}
 #membership ul {
   margin-left: 0;
 }
