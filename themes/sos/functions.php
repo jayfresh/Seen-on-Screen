@@ -275,7 +275,7 @@ function sos_save_postdata( $post_id ) {
   /* OK, its safe for us to save the data now. */
 
   // Sanitize user input.
-  $mydata = wp_kses( $_POST['sos_new_field'] );
+  $mydata = wp_kses_post( $_POST['sos_new_field'] );
 
   // Update the meta field in the database.
   update_post_meta( $post_id, '_custom_form', $mydata );
@@ -310,7 +310,7 @@ function sos_save_postdata2( $post_id ) {
   /* OK, its safe for us to save the data now. */
 
   // Sanitize user input.
-  $mydata = wp_kses( $_POST['sos_new_field2'] );
+  $mydata = wp_kses_post( $_POST['sos_new_field2'] );
 
   // Update the meta field in the database.
   update_post_meta( $post_id, '_custom_form2', $mydata );
