@@ -452,7 +452,9 @@ add_action('template_redirect','sos_template_redirect');
 function handle_ipn($vars) {
 	$IPN_all = implode($vars,"~~");
 	$payment_status = $vars['payment_status'];	// Completed/Refunded
-	$email_id = $vars['custom'];				// ID of the email post to use as confirmation
+	// $email_id = $vars['custom'];				// ID of the email post to use as confirmation
+	// Email ID set manually to a generic booking confirmation
+	$email_id = 2231;
 	$payer_email = $vars['payer_email'];		// email of the payer
 	$first_name = $vars['first_name'];
 	$last_name = $vars['last_name'];
