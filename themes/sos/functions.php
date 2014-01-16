@@ -455,6 +455,9 @@ function handle_ipn($vars) {
 	// $email_id = $vars['custom'];				// ID of the email post to use as confirmation
 	// Email ID set manually to a generic booking confirmation
 	$email_id = 2231;
+	if($vars['custom']==2255) {
+  	$email_id = 2255;
+	}
 	$payer_email = $vars['payer_email'];		// email of the payer
 	$first_name = $vars['first_name'];
 	$last_name = $vars['last_name'];
