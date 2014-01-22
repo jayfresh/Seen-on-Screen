@@ -463,39 +463,44 @@ function handle_ipn($vars) {
 	$last_name = $vars['last_name'];
 	$payment_date = $vars['payment_date'];
 	$txn_id = $vars['txn_id'];					// Reference
+	$txn_type = $vars['txn_type'];
 	$num_cart_items = $vars['num_cart_items'];	// number of items in the cart
-		
+
 	if($payment_status and $txn_id and $payer_email and $first_name and $last_name) {
+
+    if($txn_type=='subscr_payment') {
+      return "subscriber payment acknowledged";
+    }
 
 		if($payment_status=="Completed") {
 
       if($num_cart_items) {
-  			for($i=1;$i<=$num_cart_items;$i++) {
-  				// collect all the items from the cart
-  				// send a confirmation email and register the booking for each
-  				$item_name = $vars['item_name'.$i]; // e.g. "End of Time workshop"
-  				$option_selection = $vars['option_selection1_'.$i]; // e.g. "February 25th"
-  				$quantity = $vars['quantity'.$i]; // e.g. 2
+  			//for($i=1;$i<=$num_cart_items;$i++) { // making this only happen once per cart now the confirmation email is generic
+				// collect all the items from the cart
+				// send a confirmation email and register the booking for each
+				$item_name = $vars['item_name'.$i]; // e.g. "End of Time workshop"
+				$option_selection = $vars['option_selection1_'.$i]; // e.g. "February 25th"
+				$quantity = $vars['quantity'.$i]; // e.g. 2
 
-  				$booking = array(
-  					'payer_email'	=> $payer_email,
-  					'item_name'		=> $item_name,
-  					'option_selection' => $option_selection,
-  					'quantity'		=> $quantity,
-  					'first_name'	=> $first_name,
-  					'last_name'		=> $last_name,
-  					'datetime'		=>	$payment_date
-  				);
-  				do_action('activity_log', array(
-  					'type' => 'booking',
-  					'entry' => $booking
-  				));
-  				if($email_id) {
-  					email_manager($email_id, $payer_email, $booking);
-  					$test_email = "parsons.bonnie@yahoo.com";
-  					email_manager($email_id, $test_email, $booking);
-  				}
-  			}
+				$booking = array(
+					'payer_email'	=> $payer_email,
+					'item_name'		=> $item_name,
+					'option_selection' => $option_selection,
+					'quantity'		=> $quantity,
+					'first_name'	=> $first_name,
+					'last_name'		=> $last_name,
+					'datetime'		=>	$payment_date
+				);
+				do_action('activity_log', array(
+					'type' => 'booking',
+					'entry' => $booking
+				));
+				if($email_id) {
+					email_manager($email_id, $payer_email, $booking);
+					$test_email = "parsons.bonnie@yahoo.com";
+					email_manager($email_id, $test_email, $booking);
+				}
+  			//}
   			echo "Payment acknowledged";
       } else {
         // no num_cart_items so this is a single item payment
