@@ -469,7 +469,8 @@ function handle_ipn($vars) {
 	if($payment_status and $txn_id and $payer_email and $first_name and $last_name) {
 
     if($txn_type=='subscr_payment') {
-      return "subscriber payment acknowledged";
+      echo "subscriber payment acknowledged";
+      return false;
     }
 
 		if($payment_status=="Completed") {
