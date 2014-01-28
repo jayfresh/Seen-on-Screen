@@ -456,7 +456,7 @@ function handle_ipn($vars) {
 	// Email ID set manually to a generic booking confirmation
 	$email_id = 2231;
 	if($vars['custom']=="2255") {
-  	$email_id = 2255;
+  	$email_id = 2255; // this is for the membership confirmation
 	}
 	$payer_email = $vars['payer_email'];		// email of the payer
 	$first_name = $vars['first_name'];
@@ -470,62 +470,77 @@ function handle_ipn($vars) {
 
     if($txn_type=='subscr_payment') {
       echo "subscriber payment acknowledged";
-      return false;
-    }
-
-		if($payment_status=="Completed") {
-
-      if($num_cart_items) {
-  			//for($i=1;$i<=$num_cart_items;$i++) { // making this only happen once per cart now the confirmation email is generic
-				// collect all the items from the cart
-				// send a confirmation email and register the booking for each
-				$item_name = $vars['item_name'.$i]; // e.g. "End of Time workshop"
-				$option_selection = $vars['option_selection1_'.$i]; // e.g. "February 25th"
-				$quantity = $vars['quantity'.$i]; // e.g. 2
-
-				$booking = array(
-					'payer_email'	=> $payer_email,
-					'item_name'		=> $item_name,
-					'option_selection' => $option_selection,
-					'quantity'		=> $quantity,
-					'first_name'	=> $first_name,
-					'last_name'		=> $last_name,
-					'datetime'		=>	$payment_date
-				);
-				do_action('activity_log', array(
-					'type' => 'booking',
-					'entry' => $booking
-				));
-				if($email_id) {
-					email_manager($email_id, $payer_email, $booking);
-					$test_email = "parsons.bonnie@yahoo.com";
-					email_manager($email_id, $test_email, $booking);
-				}
-  			//}
-  			echo "Payment acknowledged";
-      } else {
-        // no num_cart_items so this is a single item payment
-				$item_name = $vars['item_name']; // e.g. probably some sort of membership				
-				$booking = array(
-					'payer_email'	=> $payer_email,
-					'item_name'		=> $item_name,
-					'first_name'	=> $first_name,
-					'last_name'		=> $last_name,
-					'datetime'		=>	$payment_date
-				);
-				do_action('activity_log', array(
-					'type' => 'booking',
-					'entry' => $booking
-				));
-				if($email_id) {
-					email_manager($email_id, $payer_email, $booking);
-					$test_email = "parsons.bonnie@yahoo.com";
-					email_manager($email_id, $test_email, $booking);
-				}
-      }
-
-		} else if ($payment_status=="Refunded") {
-			// TO-DO: do something for refunds
+      $item_name = $vars['item_name'];
+      $booking = array(
+				'payer_email'	=> $payer_email,
+				'item_name'		=> $item_name,
+				'first_name'	=> $first_name,
+				'last_name'		=> $last_name,
+				'datetime'		=>	$payment_date
+			);
+			do_action('activity_log', array(
+				'type' => 'booking',
+				'entry' => $booking
+			));
+			if($email_id) {
+				email_manager($email_id, $payer_email, $booking);
+				$test_email = "parsons.bonnie@yahoo.com";
+				email_manager($email_id, $test_email, $booking);
+			}
+    } else {
+      // assume a non-subscription payment
+  		if($payment_status=="Completed") {
+        if($num_cart_items) {
+    			//for($i=1;$i<=$num_cart_items;$i++) { // making this only happen once per cart now the confirmation email is generic
+  				// collect all the items from the cart
+  				// send a confirmation email and register the booking for each
+  				$item_name = $vars['item_name'.$i]; // e.g. "End of Time workshop"
+  				$option_selection = $vars['option_selection1_'.$i]; // e.g. "February 25th"
+  				$quantity = $vars['quantity'.$i]; // e.g. 2
+  
+  				$booking = array(
+  					'payer_email'	=> $payer_email,
+  					'item_name'		=> $item_name,
+  					'option_selection' => $option_selection,
+  					'quantity'		=> $quantity,
+  					'first_name'	=> $first_name,
+  					'last_name'		=> $last_name,
+  					'datetime'		=>	$payment_date
+  				);
+  				do_action('activity_log', array(
+  					'type' => 'booking',
+  					'entry' => $booking
+  				));
+  				if($email_id) {
+  					email_manager($email_id, $payer_email, $booking);
+  					$test_email = "parsons.bonnie@yahoo.com";
+  					email_manager($email_id, $test_email, $booking);
+  				}
+    			//}
+    			echo "Payment acknowledged";
+        } else {
+          // no num_cart_items so this is a single item payment
+  				$item_name = $vars['item_name']; // e.g. probably some sort of membership				
+  				$booking = array(
+  					'payer_email'	=> $payer_email,
+  					'item_name'		=> $item_name,
+  					'first_name'	=> $first_name,
+  					'last_name'		=> $last_name,
+  					'datetime'		=>	$payment_date
+  				);
+  				do_action('activity_log', array(
+  					'type' => 'booking',
+  					'entry' => $booking
+  				));
+  				if($email_id) {
+  					email_manager($email_id, $payer_email, $booking);
+  					$test_email = "parsons.bonnie@yahoo.com";
+  					email_manager($email_id, $test_email, $booking);
+  				}
+        }
+  		} else if ($payment_status=="Refunded") {
+  			// TO-DO: do something for refunds
+  		}
 		}
 		do_action('activity_log', array(
 			'type' => 'IPN',
