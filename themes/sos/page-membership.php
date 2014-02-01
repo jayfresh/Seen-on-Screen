@@ -15,7 +15,7 @@ get_header(); ?>
 					  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/aaa-membership.png" alt="Access All Areas membership">
 					  <p>Unlimited Access to all SOS Classes and Workshops</p>
 					  <p class="aaa"><span class="large">&pound;75</span> per month</p>
-					  <p class="offer">Special offer: &pound;60 for 3 months</p>
+					  <!--<p class="offer">Special offer: &pound;60 for 3 months</p>-->
 					  <?php $form_code = get_post_meta($post_id, '_custom_form', true);
 					    echo $form_code; ?>
 				  </div>
