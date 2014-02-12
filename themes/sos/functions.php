@@ -452,12 +452,13 @@ add_action('template_redirect','sos_template_redirect');
 function handle_ipn($vars) {
 	$IPN_all = implode($vars,"~~");
 	$payment_status = $vars['payment_status'];	// Completed/Refunded
+	if(!$payment_status) {
+  	$payment_status = 'Not set';
+	}
 	// $email_id = $vars['custom'];				// ID of the email post to use as confirmation
 	// Email ID set manually to a generic booking confirmation
 	$email_id = 2231;
-	if($vars['custom']=="2255") {
-  	$email_id = 2255; // this is for the membership confirmation
-	}
+	
 	$payer_email = $vars['payer_email'];		// email of the payer
 	$first_name = $vars['first_name'];
 	$last_name = $vars['last_name'];
@@ -467,9 +468,7 @@ function handle_ipn($vars) {
 	$num_cart_items = $vars['num_cart_items'];	// number of items in the cart
 
 	if($payment_status and $txn_id and $payer_email and $first_name and $last_name) {
-
-    if($txn_type=='subscr_payment') {
-      echo "subscriber payment acknowledged";
+    if($txn_type=='subscr_signup' || $txn_type=='subscr_payment') {
       $item_name = $vars['item_name'];
       $booking = array(
 				'payer_email'	=> $payer_email,
@@ -482,10 +481,14 @@ function handle_ipn($vars) {
 				'type' => 'booking',
 				'entry' => $booking
 			));
-			if($email_id) {
+      if($txn_type=='subscr_signup') {
+      	$email_id = 2255; // this is for the membership confirmation
 				email_manager($email_id, $payer_email, $booking);
 				$test_email = "parsons.bonnie@yahoo.com";
 				email_manager($email_id, $test_email, $booking);
+  			echo "subscriber signup acknowledged";
+			} else {
+    		echo "subscriber payment acknowledged";	
 			}
     } else {
       // assume a non-subscription payment
