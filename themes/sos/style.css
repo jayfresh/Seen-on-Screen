@@ -519,6 +519,21 @@ a.boxout:hover {
 	background-color: #fff;
 	padding: 48px 28px;
 }
+
+/* special treatment for "centered" post template */
+.centered {
+  text-align: center;
+}
+.centered .articleBody .left {
+    float: none;
+}
+.centered .articleBody .grid8col {
+  width: 100%;
+}
+.centered .articleBody .grid7col {
+  margin: auto;
+}
+
 .contentColumn {
 	width: 296px;
 	margin-right: 28px;
