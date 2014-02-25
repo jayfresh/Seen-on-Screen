@@ -533,6 +533,13 @@ a.boxout:hover {
 .centered .articleBody .grid7col {
   margin: auto;
 }
+.centered .articleBody table {
+  margin-left: auto;
+  margin-right: auto;
+}
+.centered .articleBody table td {
+  text-align: center;
+}
 
 .contentColumn {
 	width: 296px;
