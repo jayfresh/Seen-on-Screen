@@ -24,7 +24,7 @@ get_header();
 					))) { ?>
 						<ul class="carousel">
 							<li>
-								<iframe width="610" height="343" src="<?php echo 'http://www.youtube.com/embed/'; ?>IXmF4GbA86E?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="<?php echo 'http://www.youtube.com/embed/'; ?>XKKeixPoC0o?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<?php foreach($images as $image) {
 								$attsrc  = wp_get_attachment_image_src($image->ID, $size);

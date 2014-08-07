@@ -1,5 +1,5 @@
 <?php
-/* for Michael Jackson dance series page */
+/* for Making the Video dance series page */
 get_header();
 ?>
     	<div class="contentPage">
@@ -24,13 +24,7 @@ get_header();
 					))) { ?>
 						<ul class="carousel">
 							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/sOnqjkJTMaA?rel=0" frameborder="0" allowfullscreen></iframe>
-							</li>
-							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/Zi_XLOBDo_Y?rel=0" frameborder="0" allowfullscreen></iframe>
-							</li>
-							<li>
-								<iframe width="610" height="343" src="http://www.youtube.com/embed/ntgq6qy1hyA?rel=0" frameborder="0" allowfullscreen></iframe>
+								<iframe width="610" height="343" src="<?php echo 'http://www.youtube.com/embed/'; ?>4qLY0vbrT8Q?rel=0" frameborder="0" allowfullscreen></iframe>
 							</li>
 							<?php foreach($images as $image) {
 								$attsrc  = wp_get_attachment_image_src($image->ID, $size);
