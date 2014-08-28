@@ -591,6 +591,9 @@ a.boxout:hover {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#727272', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
 }
+.footer a, .footer a:link, .footer a:active, .footer a:visited {
+    color: #fff;
+}
 
 /* boxout backgrounds */
 #teamBoxout {
