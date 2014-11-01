@@ -15,7 +15,7 @@ add_image_size( 'blog-sub', 430, 300, true );
 
 // Register the custom post types
 add_action( 'init', 'sos_register_custom_post_types');
-function sos_register_custom_post_types() { 
+function sos_register_custom_post_types() {
     register_post_type( 'sos_team',
         array(
             'labels' => array(
@@ -55,7 +55,7 @@ function sos_register_custom_post_types() {
             'supports' => array('title','editor','thumbnail')
         )
     );
-    
+
     register_taxonomy(
 		'sos_quotes',
 		'sos_quote',
@@ -75,11 +75,11 @@ function sos_add_studio_metabox() {
 
 function studio_metabox() {
     global $post;
- 
+
     // Noncename needed to verify where the data originated
     echo '<input type="hidden" name="studiometa_noncename" id="studiometa_noncename" value="' .
     wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
- 
+
     $address = get_post_meta($post->ID, '_address', true);
     $website = get_post_meta($post->ID, '_website', true);
 
@@ -88,25 +88,25 @@ function studio_metabox() {
 }
 
 function sos_studio_save_meta($post_id, $post) {
- 
+
     // verify this came from the our screen and with proper authorization,
     // because save_post can be triggered at other times
     if ( !wp_verify_nonce( $_POST['studiometa_noncename'], plugin_basename(__FILE__) )) {
     return $post->ID;
     }
- 
+
     // Is the user allowed to edit the post or page?
     if ( !current_user_can( 'edit_post', $post->ID ))
         return $post->ID;
- 
+
     // OK, we're authenticated: we need to find and save the data
     // We'll put it into an array to make it easier to loop though.
- 
+
     $studio_meta['_address'] = $_POST['_address'];
     $studio_meta['_website'] = $_POST['_website'];
- 
+
     // Add values of $events_meta as custom fields
- 
+
     foreach ($studio_meta as $key => $value) { // Cycle through the $events_meta array!
         if( $post->post_type == 'revision' ) return; // Don't store custom data twice
         $value = implode(',', (array)$value); // If $value is an array, make it a CSV (unlikely)
@@ -117,9 +117,9 @@ function sos_studio_save_meta($post_id, $post) {
         }
         if(!$value) delete_post_meta($post->ID, $key); // Delete if blank
     }
- 
+
 }
- 
+
 add_action('save_post', 'sos_studio_save_meta', 1, 2);
 
 /* add meta boxes to team post type */
@@ -130,37 +130,37 @@ function sos_add_team_credits_metabox() {
 
 function team_credits_box() {
     global $post;
- 
+
     // Noncename needed to verify where the data originated
     echo '<input type="hidden" name="creditsmeta_noncename" id="creditsmeta_noncename" value="' .
     wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
- 
+
     // Get the location data if its already been entered
     $credits = get_post_meta($post->ID, '_credits', true);
- 
+
     // Echo out the field
     echo '<input type="text" name="_credits" value="' . $credits  . '" class="widefat" />';
 }
 
 function sos_team_save_credits_meta($post_id, $post) {
- 
+
     // verify this came from the our screen and with proper authorization,
     // because save_post can be triggered at other times
     if ( !wp_verify_nonce( $_POST['creditsmeta_noncename'], plugin_basename(__FILE__) )) {
     return $post->ID;
     }
- 
+
     // Is the user allowed to edit the post or page?
     if ( !current_user_can( 'edit_post', $post->ID ))
         return $post->ID;
- 
+
     // OK, we're authenticated: we need to find and save the data
     // We'll put it into an array to make it easier to loop though.
- 
+
     $team_meta['_credits'] = $_POST['_credits'];
- 
+
     // Add values of $events_meta as custom fields
- 
+
     foreach ($team_meta as $key => $value) { // Cycle through the $events_meta array!
         if( $post->post_type == 'revision' ) return; // Don't store custom data twice
         $value = implode(',', (array)$value); // If $value is an array, make it a CSV (unlikely)
@@ -171,10 +171,60 @@ function sos_team_save_credits_meta($post_id, $post) {
         }
         if(!$value) delete_post_meta($post->ID, $key); // Delete if blank
     }
- 
+
 }
- 
+
 add_action('save_post', 'sos_team_save_credits_meta', 1, 2);
+
+/* add metabox to pages for storing lists of videos to embed */
+
+function sos_add_video_metabox() {
+  add_meta_box('sos_video_metabox', 'Videos to embed', 'sos_video_metabox', 'page', 'normal', 'default');
+}
+
+function sos_video_metabox() {
+    global $post;
+
+    // Noncename needed to verify where the data originated
+    echo '<input type="hidden" name="videometa_noncename" id="videometa_noncename" value="' .
+    wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+
+    $videolist = get_post_meta($post->ID, '_videolist', true);
+
+    echo '<label for="_videolist">Video list</label><input type="text" id="_videolist" name="_videolist" value="' . $videolist  . '" class="widefat" placeholder="Enter a list of comma-separated YouTube video URLs e.g. http://www.youtube.com/watch?v=4m1EFMoRFvY,http://www.youtube.com/watch?v=C-u5WLJ9Yk4" />';
+}
+
+function sos_video_save_meta($post_id, $post) {
+
+    // verify this came from the our screen and with proper authorization,
+    // because save_post can be triggered at other times
+    if ( !wp_verify_nonce( $_POST['videometa_noncename'], plugin_basename(__FILE__) )) {
+      return $post->ID;
+    }
+
+    // Is the user allowed to edit the post or page?
+    if ( !current_user_can( 'edit_post', $post->ID ))
+      return $post->ID;
+
+    // OK, we're authenticated: we need to find and save the data
+    // We'll put it into an array to make it easier to loop though.
+    $key = '_videolist';
+    $videolist = $_POST[$key];
+
+    // remove spaces
+    $videolist = str_replace(' ', '', $videolist);
+
+    // Add value of $videolist as custom field
+    if( $post->post_type == 'revision' ) return; // Don't store custom data twice
+    if(get_post_meta($post->ID, $key, FALSE)) { // If the custom field already has a value
+      update_post_meta($post->ID, $key, $value);
+    } else { // If the custom field doesn't have a value
+      add_post_meta($post->ID, $key, $value);
+    }
+    if(!$value) delete_post_meta($post->ID, $key); // Delete if blank
+}
+
+add_action('save_post', 'sos_video_save_meta', 1, 2);
 
 /* add custom meta box to membership page so we can store custom HTML */
 
@@ -202,7 +252,7 @@ add_action( 'add_meta_boxes', 'sos_add_custom_boxes', 10, 2 );
 
 /**
  * Prints the box content.
- * 
+ *
  * @param WP_Post $post The object for the current post/page.
  */
 function sos_inner_custom_box( $post ) {
@@ -265,7 +315,7 @@ function sos_save_postdata( $post_id ) {
       return $post_id;
 
   // If this is an autosave, our form has not been submitted, so we don't want to do anything.
-  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
       return $post_id;
 
   // Check the user's permissions.
@@ -300,7 +350,7 @@ function sos_save_postdata2( $post_id ) {
       return $post_id;
 
   // If this is an autosave, our form has not been submitted, so we don't want to do anything.
-  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
       return $post_id;
 
   // Check the user's permissions.
@@ -361,7 +411,7 @@ function attachment_toolbox($size = 'thumbnail', $ulClass = '', $liClass = '') {
 		'post_mime_type' => 'image',
 		'order'          => 'ASC',
 		'orderby'        => 'menu_order',
-	))) {			
+	))) {
 
 		if($ulClass) {
 			echo "<ul class=\"$ulClass\">";
@@ -435,7 +485,7 @@ add_action('template_redirect','sos_template_redirect');
 		- an alternative is just to hard-code item_name to page mappings for now?
 
 	Variables we need to pull from the IPN:
-	
+
 	- series name e.g. "Beyonce Dance Series" or "Jazz Funk"
 		- e.g. item_name1=Beyonce dance class
 	- date and workshop name
@@ -458,7 +508,7 @@ function handle_ipn($vars) {
 	// $email_id = $vars['custom'];				// ID of the email post to use as confirmation
 	// Email ID set manually to a generic booking confirmation
 	$email_id = 2231;
-	
+
 	$payer_email = $vars['payer_email'];		// email of the payer
 	$first_name = $vars['first_name'];
 	$last_name = $vars['last_name'];
@@ -488,7 +538,7 @@ function handle_ipn($vars) {
 				email_manager($email_id, $test_email, $booking);
   			echo "subscriber signup acknowledged";
 			} else {
-    		echo "subscriber payment acknowledged";	
+    		echo "subscriber payment acknowledged";
 			}
     } else {
       // assume a non-subscription payment
@@ -500,7 +550,7 @@ function handle_ipn($vars) {
   				$item_name = $vars['item_name'.$i]; // e.g. "End of Time workshop"
   				$option_selection = $vars['option_selection1_'.$i]; // e.g. "February 25th"
   				$quantity = $vars['quantity'.$i]; // e.g. 2
-  
+
   				$booking = array(
   					'payer_email'	=> $payer_email,
   					'item_name'		=> $item_name,
@@ -523,7 +573,7 @@ function handle_ipn($vars) {
     			echo "Payment acknowledged";
         } else {
           // no num_cart_items so this is a single item payment
-  				$item_name = $vars['item_name']; // e.g. probably some sort of membership				
+  				$item_name = $vars['item_name']; // e.g. probably some sort of membership
   				$booking = array(
   					'payer_email'	=> $payer_email,
   					'item_name'		=> $item_name,
@@ -630,7 +680,7 @@ class Bookings_Table extends WP_List_Table {
 		$entry = unserialize( $item['entry'] );
 		return $entry['first_name'].' '.$entry['last_name'];
 	}
-	
+
 	function column_email( $item ) {
 		$entry = unserialize( $item['entry'] );
 		return $entry['payer_email'];
@@ -640,12 +690,12 @@ class Bookings_Table extends WP_List_Table {
 		$entry = unserialize( $item['entry'] );
 		return $entry['item_name'];
 	}
-	
+
 	function column_class( $item ) {
 		$entry = unserialize( $item['entry'] );
 		return $entry['option_selection'];
 	}
-	
+
 	function column_quantity( $item ) {
 		$entry = unserialize( $item['entry'] );
 		return $entry['quantity'];
