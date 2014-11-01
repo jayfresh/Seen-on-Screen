@@ -13,6 +13,9 @@ add_image_size( 'content-page', 610, 400, true );
 add_image_size( 'blog', 700, 370, true );
 add_image_size( 'blog-sub', 430, 300, true );
 
+// make the HTML editor the default
+add_filter( 'wp_default_editor', create_function('', 'return "html";') );
+
 // Register the custom post types
 add_action( 'init', 'sos_register_custom_post_types');
 function sos_register_custom_post_types() {
