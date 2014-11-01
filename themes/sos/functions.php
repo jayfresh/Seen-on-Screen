@@ -179,8 +179,10 @@ add_action('save_post', 'sos_team_save_credits_meta', 1, 2);
 /* add metabox to pages for storing lists of videos to embed */
 
 function sos_add_video_metabox() {
-  add_meta_box('sos_video_metabox', 'Videos to embed', 'sos_video_metabox', 'page', 'normal', 'default');
+  add_meta_box('sos_video_metabox', 'Videos to embed (this only works for pages using the "Workshop page" template)', 'sos_video_metabox', 'page', 'normal', 'default');
 }
+
+add_action( 'add_meta_boxes', 'sos_add_video_metabox' );
 
 function sos_video_metabox() {
     global $post;
@@ -191,7 +193,7 @@ function sos_video_metabox() {
 
     $videolist = get_post_meta($post->ID, '_videolist', true);
 
-    echo '<label for="_videolist">Video list</label><input type="text" id="_videolist" name="_videolist" value="' . $videolist  . '" class="widefat" placeholder="Enter a list of comma-separated YouTube video URLs e.g. http://www.youtube.com/watch?v=4m1EFMoRFvY,http://www.youtube.com/watch?v=C-u5WLJ9Yk4" />';
+    echo '<label for="_videolist">Enter a list of comma-separated YouTube video URLs</label><input type="text" id="_videolist" name="_videolist" value="' . $videolist  . '" class="widefat" placeholder="e.g. http://www.youtube.com/watch?v=4m1EFMoRFvY,http://www.youtube.com/watch?v=C-u5WLJ9Yk4" />';
 }
 
 function sos_video_save_meta($post_id, $post) {
@@ -216,12 +218,12 @@ function sos_video_save_meta($post_id, $post) {
 
     // Add value of $videolist as custom field
     if( $post->post_type == 'revision' ) return; // Don't store custom data twice
-    if(get_post_meta($post->ID, $key, FALSE)) { // If the custom field already has a value
-      update_post_meta($post->ID, $key, $value);
+    if(get_post_meta($post->ID, $key, true)) { // If the custom field already has a value
+      update_post_meta($post->ID, $key, $videolist);
     } else { // If the custom field doesn't have a value
-      add_post_meta($post->ID, $key, $value);
+      add_post_meta($post->ID, $key, $videolist);
     }
-    if(!$value) delete_post_meta($post->ID, $key); // Delete if blank
+    if(!$videolist) delete_post_meta($post->ID, $key); // Delete if blank
 }
 
 add_action('save_post', 'sos_video_save_meta', 1, 2);

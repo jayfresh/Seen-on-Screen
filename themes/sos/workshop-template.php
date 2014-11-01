@@ -1,6 +1,6 @@
 <?php
 /* for Workshop pages
-Template: Workshop page
+Template Name: Workshop page
  */
 get_header();
 ?>
@@ -15,7 +15,7 @@ get_header();
           <div class="carouselContainer eventImageContainer">
           <?php
           $size = 'content-page';
-          if($images = get_children(array(
+          $images = get_children(array(
             'post_parent'    => get_the_ID(),
             'post_type'      => 'attachment',
             'numberposts'    => -1, // show all
@@ -23,15 +23,18 @@ get_header();
             'post_mime_type' => 'image',
             'order'          => 'ASC',
             'orderby'        => 'menu_order',
-          ))) { ?>
+          ));
+          global $post;
+          $videolist = get_post_meta($post->ID, '_videolist', true);
+          if($images || $videolist) { ?>
             <ul class="carousel">
-              <?php global $post;
-              $videolist = get_post_meta($post->ID, '_videolist', true);
+              <?php
               if($videolist) {
-                $video_links = $videolist.explode(',');
+                $video_links = explode(',', $videolist);
+                print_r($video_links);
                 foreach($video_links as $video_link) {
-                  // http://www.youtube.com/watch?v=C-u5WLJ9Yk4
-                  $video_id = preg_replace("/\?v=(.+?)$/", "$0 --> $2 $1", $video_link);
+                  // $video_link is like http://www.youtube.com/watch?v=C-u5WLJ9Yk4
+                  $video_id = preg_replace("/.+?\?v=(.+?)$/", "$1", $video_link);
                   if($video_id) {
                 ?>
                   <li>
