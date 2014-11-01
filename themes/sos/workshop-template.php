@@ -31,7 +31,6 @@ get_header();
               <?php
               if($videolist) {
                 $video_links = explode(',', $videolist);
-                print_r($video_links);
                 foreach($video_links as $video_link) {
                   // $video_link is like http://www.youtube.com/watch?v=C-u5WLJ9Yk4
                   $video_id = preg_replace("/.+?\?v=(.+?)$/", "$1", $video_link);
