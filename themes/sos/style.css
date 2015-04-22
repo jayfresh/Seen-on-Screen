@@ -554,6 +554,9 @@ a.boxout:hover {
 .contentColumnWide {
 	width: 620px; /* like .grid8col */
 }
+.contentColumnSuperWide {
+	width: 100%; /* like .grid8col */
+}
 .eventbox {
 	width: 610px;
 	background: #222;
