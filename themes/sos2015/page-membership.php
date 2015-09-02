@@ -26,7 +26,7 @@ get_header(); ?>
 				<div class="text-holder">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit</p>
 					<strong class="title">ACCESS ALL AREAS</strong>
-					<span class="rate">&pound;75 PER MONTH</span>
+					<span class="rate">&pound;100 PER MONTH</span>
 					<a href="#" class="btn-signup">Sign Up Now</a>
 				</div>
 			</div>
@@ -37,7 +37,7 @@ get_header(); ?>
 				<div class="text-holder">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit</p>
 					<strong class="title">V.I.P</strong>
-					<span class="rate">&pound;50 PER MONTH</span>
+					<span class="rate">&pound;75 PER MONTH</span>
 					<a href="#" class="btn-signup">Sign Up Now</a>
 				</div>
 			</div>

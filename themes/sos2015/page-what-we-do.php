@@ -77,7 +77,11 @@ get_header();
 					</div>
 					<div class="blocks-holder">
 						<div class="level-block">
-							<h2>Begginer</h2>
+							<h2>Beginner</h2>
+							<p>Lorem ipsum dolor sit amet, consec- tetur adipisicing elit, sed do eius- mod tempor incid- idunt ut labore et dolore magna aliqua. Ut enim</p>
+						</div>
+						<div class="level-block">
+							<h2>All Levels</h2>
 							<p>Lorem ipsum dolor sit amet, consec- tetur adipisicing elit, sed do eius- mod tempor incid- idunt ut labore et dolore magna aliqua. Ut enim</p>
 						</div>
 						<div class="level-block">
@@ -86,10 +90,6 @@ get_header();
 						</div>
 						<div class="level-block">
 							<h2>Advanced</h2>
-							<p>Lorem ipsum dolor sit amet, consec- tetur adipisicing elit, sed do eius- mod tempor incid- idunt ut labore et dolore magna aliqua. Ut enim</p>
-						</div>
-						<div class="level-block">
-							<h2>All Levels</h2>
 							<p>Lorem ipsum dolor sit amet, consec- tetur adipisicing elit, sed do eius- mod tempor incid- idunt ut labore et dolore magna aliqua. Ut enim</p>
 						</div>
 					</div>
