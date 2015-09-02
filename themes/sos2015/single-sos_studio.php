@@ -3,29 +3,27 @@
 get_header();
 ?>
 
-			<div class="contentPage">
-				<div class="contentColumn left">
-					<?php if ( have_posts() ) :
-						while ( have_posts() ) : the_post(); ?>
-					<div class="studio">
-						<h1><?php the_title(); ?></h1>
-						<?php $address = get_post_meta(get_the_ID(), '_address', true);
-						$website = get_post_meta(get_the_ID(), '_website', true);
-						$address_lines = str_replace(',', '<br>', $address); ?>
-						<p class="studio_address"><?php echo $address_lines; ?></p>
-						<p><?php the_content(); ?></p>
-						<?php if(isset($website)) { ?>
-						<!--<a href="<?php echo $website; ?>">Visit website</a></p>-->
-						<?php } ?>
-					</div>
-						<?php endwhile;
-					endif; ?>
-				</div>
-				<div class="eventbox left">
-					<div id="map">
-					</div>
-				</div>
-			</div>
+<section class="address-block">
+	<div class="container-holder">
+		<div class="map-holder">
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/placeholder-map.jpg" alt="image description" width="1295" height="796">
+		</div>
+		<div id="map">
+		</div>
+		<div class="address-holder">
+		<?php if ( have_posts() ) :
+			while ( have_posts() ) : the_post();
+				$address = get_post_meta(get_the_ID(), '_address', true);
+				$address_lines = str_replace(',', '<br>', $address); ?>
+			<address>
+				<strong class="title"><?php the_title(); ?></strong>
+				<?php echo $address_lines; ?>
+			</address>
+			<?php endwhile;
+		endif; ?>
+		</div>
+	</div>
+</section>
 
 <?php
 get_footer();
