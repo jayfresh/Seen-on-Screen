@@ -10,8 +10,11 @@ get_header();
         <div class="profile-holder">
           <div class="pictures-block">
             <div class="img-block">
-              <div class="img-holder bonnie">
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/images/img20.png" alt="image description" width="288" height="396">
+              <div class="img-holder <?php echo strtolower(get_the_title()); ?>">
+                <?php $id = get_the_ID();
+                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($id), 'team-member' );
+    						$url = $thumb['0']; ?>
+                <img src="<?php echo $url; ?>" alt="<?php the_title(); ?>">
               </div>
             </div>
           </div>
