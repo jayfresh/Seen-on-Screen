@@ -4,14 +4,31 @@ get_header(); ?>
 
 <aside class="contact-block">
 	<div class="container-holder">
-		<form action="#" class="contact-form validate-form">
-			<fieldset>
-				<h2>Contact</h2>
+		<div class="contact-form validate-form">
+				<?php if ( have_posts() ) :
+					while ( have_posts() ) : the_post(); ?>
+				<h2><?php the_title(); ?></h2>
 				<div class="text-wrap validate-row">
-					<p>We’d love to hear from you, whether it’s about bookings, questions or anything else.</p>
+					<?php the_content(); ?>
 					<a href="mailto:&#105;&#110;&#102;&#111;&#064;&#115;&#101;&#101;&#110;&#111;&#110;&#115;&#099;&#114;&#101;&#101;&#110;&#102;&#105;&#116;&#110;&#101;&#115;&#115;&#046;&#099;&#111;&#109;" class="mail">&#105;&#110;&#102;&#111;&#064;&#115;&#101;&#101;&#110;&#111;&#110;&#115;&#099;&#114;&#101;&#101;&#110;&#102;&#105;&#116;&#110;&#101;&#115;&#115;&#046;&#099;&#111;&#109;</a>
 					<p>or leave us a message</p>
-					<span class="txt-wrap">Comments or questions are welcome. <br> *(denotes required field)</span>
+					<span class="txt-wrap">Comments or questions are welcome.</span>
+				</div>
+					<?php endwhile;
+				endif; ?>
+				<?php $page = get_page_by_title('Contact Page Contact Form'); ?>
+				<?php $content = wpautop($page->post_content);
+				$content = do_shortcode($content);
+				echo $content; ?>
+		</div>
+		<!-- <form action="#" class="contact-form validate-form">
+			<fieldset>
+				<h2><?php the_title(); ?></h2>
+				<div class="text-wrap validate-row">
+					<?php the_content(); ?>
+					<a href="mailto:&#105;&#110;&#102;&#111;&#064;&#115;&#101;&#101;&#110;&#111;&#110;&#115;&#099;&#114;&#101;&#101;&#110;&#102;&#105;&#116;&#110;&#101;&#115;&#115;&#046;&#099;&#111;&#109;" class="mail">&#105;&#110;&#102;&#111;&#064;&#115;&#101;&#101;&#110;&#111;&#110;&#115;&#099;&#114;&#101;&#101;&#110;&#102;&#105;&#116;&#110;&#101;&#115;&#115;&#046;&#099;&#111;&#109;</a>
+					<p>or leave us a message</p>
+					<span class="txt-wrap">Comments or questions are welcome.</span>
 				</div>
 				<div class="form-input validate-row">
 					<input class="required" type="text" placeholder="Name">
@@ -24,7 +41,7 @@ get_header(); ?>
 				</div>
 				<input type="submit" value="Enter">
 			</fieldset>
-		</form>
+		</form> -->
 		<div class="social-block">
 			<div class="social-holder">
 				<h2>Join Us on Social</h2>
@@ -74,11 +91,6 @@ get_header(); ?>
 	</div>
 </aside>
 
-<?php if ( have_posts() ) :
-	while ( have_posts() ) : the_post(); ?>
-		<h1><?php the_title(); ?></h1>
-		<?php the_content(); ?>
-	<?php endwhile;
-endif;
+<?php
 get_footer();
 ?>
