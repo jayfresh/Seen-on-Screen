@@ -235,7 +235,7 @@ add_action('save_post', 'sos_team_save_credits_meta', 1, 2);
 /* add metabox to pages for storing lists of videos to embed */
 
 function sos_add_video_metabox() {
-  add_meta_box('sos_video_metabox', 'Videos to embed (this only works for pages using the "Workshop page" template)', 'sos_video_metabox', 'page', 'normal', 'default');
+  add_meta_box('sos_video_metabox', 'Videos to embed', 'sos_video_metabox', 'page', 'normal', 'default');
 }
 
 add_action( 'add_meta_boxes', 'sos_add_video_metabox' );
@@ -809,5 +809,11 @@ function column_extended( $item ) {
 		) );
 	}
 }
+
+// add scripts
+function sos_load_scripts() {
+	wp_deregister_script( 'jquery' ); // this is already being loaded
+}
+add_action('wp_enqueue_scripts', 'sos_load_scripts');
 
 ?>

@@ -94,13 +94,14 @@ function initValidation() {
 	var regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 	var regPhone = /^[0-9]+$/;
 
-	jQuery('form.validate-form').each(function() {
+	jQuery('form.validate-form, .validate-form form').each(function() {
 		var form = jQuery(this).attr('novalidate', 'novalidate');
 		var successFlag = true;
 		var inputs = form.find('input, textarea, select');
 
 		// form validation function
 		function validateForm(e) {
+
 			successFlag = true;
 
 			inputs.each(checkField);
@@ -116,23 +117,23 @@ function initValidation() {
 			var currentParent = currentObject.closest('.validate-row');
 
 			// not empty fields
-			if (currentObject.hasClass('required')) {
+			if (currentObject.hasClass('required') || currentParent.hasClass('required')) {
 				setState(currentParent, currentObject, !currentObject.val().length || currentObject.val() === currentObject.prop('defaultValue'));
 			}
 			// correct email fields
-			if (currentObject.hasClass('required-email')) {
+			if (currentObject.hasClass('required-email') || currentParent.hasClass('required-email')) {
 				setState(currentParent, currentObject, !regEmail.test(currentObject.val()));
 			}
 			// correct number fields
-			if (currentObject.hasClass('required-number')) {
+			if (currentObject.hasClass('required-number') || currentParent.hasClass('required-number')) {
 				setState(currentParent, currentObject, !regPhone.test(currentObject.val()));
 			}
 			// something selected
-			if (currentObject.hasClass('required-select')) {
+			if (currentObject.hasClass('required-select') || currentParent.hasClass('required-select')) {
 				setState(currentParent, currentObject, currentObject.get(0).selectedIndex === 0);
 			}
 			// checkbox field
-			if (currentObject.hasClass('required-checkbox')) {
+			if (currentObject.hasClass('required-checkbox') || currentParent.hasClass('required-checkbox')) {
 				setState(currentParent, currentObject, !currentObject.is(':checked'));
 			}
 		}
