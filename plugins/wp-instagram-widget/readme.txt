@@ -1,4 +1,4 @@
-=== WP Instagram Widget ===
+=== WP Instagram Widget (modified) ===
 Contributors: scottsweb, codeforthepeople
 Tags: instagram, widget, photos, photography, hipster, sidebar, widgets, simple
 Requires at least: 3.0

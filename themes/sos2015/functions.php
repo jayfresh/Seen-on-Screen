@@ -827,6 +827,12 @@ function sos_widgets_init() {
 		'before_widget' => '<div class="images-wrap">',
 		'after_widget'  => '</div>'
 	) );
+  register_sidebar( array(
+		'name'          => '#SOSBackstage Widget',
+		'id'            => 'sos_backstage_widget',
+		'before_widget' => '<div class="pictures-block">',
+		'after_widget'  => '</div>'
+	) );
 }
 add_action( 'widgets_init', 'sos_widgets_init' );
 

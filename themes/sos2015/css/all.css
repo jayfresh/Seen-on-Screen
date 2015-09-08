@@ -3872,3 +3872,13 @@ main {
 	list-style: none;
 	width: 6.25%;
 }
+.content-section .pictures-block ul.instagram-pics {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.content-section .pictures-block ul.instagram-pics .image {
+	list-style: none;
+	float: left;
+	width: 25%;
+}

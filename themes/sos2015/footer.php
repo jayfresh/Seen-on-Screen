@@ -56,6 +56,8 @@
 	<?php // TODO: move script loading into functions.php for wp_footer ?>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.11.2.min.js"><\/script>')</script>
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/masonry.pkgd.min.js"></script>
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/imagesloaded.pkgd.min.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.main.js"></script>
 	<?php wp_footer(); ?>
 </body>

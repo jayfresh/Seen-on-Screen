@@ -18,6 +18,17 @@ get_header();
 						<li><a href="#" class="rss">rss</a></li>
 					</ul>
 				</div>
+				<?php /* NB: you need to make sure this is using this structure:
+				<div class="pictures-block">
+					<div class="image">
+						<a href="#">
+							<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img6.jpg" alt="" width="180" height="158">
+						</a>
+					</div>
+					...
+				</div>
+				*/ ?>
+				<?php if ( dynamic_sidebar('sos_backstage_widget') ) : else : endif; ?>
 				<div class="pictures-block">
 					<div class="col">
 						<div class="image">

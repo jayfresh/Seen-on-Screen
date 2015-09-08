@@ -1,13 +1,31 @@
 // page init
 jQuery(function() {
 	initTabs();
+	initMasonry();
 	initLightbox();
 	initMobileNav();
 	initSameHeight();
 	initFitVids();
-	initValidation()
+	initValidation();
 	jQuery('input, textarea').placeholder();
 });
+
+function initMasonry() {
+	var elem = document.querySelector('.pictures-block .instagram-pics');
+	if(elem) {
+		var msnry = new Masonry( elem, {
+		  // options
+		  itemSelector: '.image',
+		  columnWidth: '.image',
+			percentPosition: true
+		});
+		// layout Masonry after each image loads
+		var imgLoad = imagesLoaded( elem );
+		imgLoad.on('progress', function() {
+		  msnry.layout();
+		});
+	}
+}
 
 // content tabs init
 function initTabs() {

@@ -159,7 +159,9 @@ class null_instagram_widget extends WP_Widget {
 				return new WP_Error( 'invalid_response', __( 'Instagram did not return a 200.', 'wpiw' ) );
 
 			$shards = explode( 'window._sharedData = ', $remote['body'] );
+
 			$insta_json = explode( ';</script>', $shards[1] );
+
 			$insta_array = json_decode( $insta_json[0], TRUE );
 
 			if ( !$insta_array )
@@ -172,6 +174,10 @@ class null_instagram_widget extends WP_Widget {
 			// new style
 			} else if ( isset( $insta_array['entry_data']['ProfilePage'][0]['user']['media']['nodes'] ) ) {
 				$images = $insta_array['entry_data']['ProfilePage'][0]['user']['media']['nodes'];
+				$type = 'new';
+			// hashtag page
+			} else if( isset( $insta_array['entry_data']['TagPage'][0]['tag']['media']['nodes'] ) ) {
+				$images = $insta_array['entry_data']['TagPage'][0]['tag']['media']['nodes'];
 				$type = 'new';
 			} else {
 				return new WP_Error( 'bad_json_2', __( 'Instagram has returned invalid data.', 'wpiw' ) );
