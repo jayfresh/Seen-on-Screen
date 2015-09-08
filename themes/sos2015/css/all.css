@@ -22,6 +22,10 @@
 	clear: both;
 }
 
+#header .container-holder {
+	position: relative;
+}
+
 .container-holder {
 	max-width: 1350px;
 	padding: 0 10px;
@@ -55,8 +59,9 @@ html {
 body {
 	margin: 0;
 	color: #000;
-	background: #fff url(../images/bg1.jpg) no-repeat 50% 100%;
+	background: #fff url(../images/sosbg1280.jpeg) 0 -80px;
 	background-size: 100% auto;
+	background-attachment: fixed;
 	font: 21px/1.476 "Trebuchet MS", "Helvetica", sans-serif;
 	min-width: 320px;
 	-webkit-text-size-adjust: 100%;
@@ -251,21 +256,25 @@ table {
 }
 
 #header {
-	background: url(../images/bg1.jpg) no-repeat;
-	background-size: cover;
 	padding: 65px 0 0;
 }
 
 #header .logo {
+	/*
 	float: left;
 	width: 14%;
 	margin: -3.3% 0 -6.2% -9px;
 	position: relative;
+	*/
+	position: absolute;
+	top: -70px;
+	left: 0;
 	z-index: 9999;
 }
 
 #header .logo img {
 	display: block;
+	max-width: 250px;
 }
 
 #nav {
@@ -328,8 +337,6 @@ main {
 .banner-block {
 	width: 100%;
 	padding: 0 0 10px;
-	background: url(../images/bg1.jpg) no-repeat;
-	background-size: cover;
 }
 
 .banner-block .banner-image {
@@ -453,8 +460,6 @@ main {
 }
 
 .team-block {
-	background: url(../images/bg1.jpg) no-repeat;
-	background-size: cover;
 	padding: 103px 0 165px;
 }
 
@@ -614,8 +619,6 @@ main {
 
 .profile-block {
 	width: 100%;
-	background: url(../images/bg1.jpg) no-repeat;
-	background-size: cover;
 }
 
 .profile-block .container-holder {
@@ -705,8 +708,6 @@ main {
 }
 
 .address-block {
-	background: url(../images/bg1.jpg) no-repeat;
-	background-size: cover;
 }
 
 .address-block .container-holder {
@@ -752,8 +753,6 @@ main {
 }
 
 .classes-block {
-	background: url(../images/bg1.jpg) no-repeat;
-	background-size: cover;
 	color: #fff;
 }
 
@@ -923,8 +922,6 @@ main {
 }
 
 .logos-block {
-	background: url(../images/bg1.jpg) no-repeat;
-	background-size: cover;
 }
 
 .logos-block .container-holder {
@@ -961,8 +958,6 @@ main {
 }
 
 .membership-block {
-	background: url(../images/bg1.jpg) no-repeat;
-	background-size: cover;
 }
 
 .membership-block .container-holder {
@@ -1094,8 +1089,6 @@ main {
 }
 
 .contact-block {
-	background: url(../images/bg1.jpg) no-repeat;
-	background-size: cover;
 	width: 100%;
 }
 
@@ -1323,8 +1316,6 @@ main {
 }
 
 .tutorial-block {
-	background: url(../images/bg1.jpg) no-repeat;
-	background-size: cover;
 	color: #fff;
 }
 
@@ -1398,8 +1389,6 @@ main {
 }
 
 .content-block {
-	background: url(../images/bg1.jpg) no-repeat;
-	background-size: cover;
 }
 
 .content-block .container-holder {
@@ -1632,8 +1621,6 @@ main {
 }
 
 .content-section {
-	background: url(../images/bg1.jpg) no-repeat 50% 0;
-	background-size: cover;
 }
 
 .content-section .container-holder {
@@ -2411,12 +2398,12 @@ main {
 
 @media only screen and (max-width: 1399px) {
 	#header .logo {
-		width: 10%;
-		margin: -2.3% 0 -4.2%;
+		width: 20%;
+		/*margin: -2.3% 0 -4.2%;*/
 	}
 
 	#nav {
-		width: 89%;
+		width: 82%;
 		padding: 0;
 	}
 
@@ -2438,6 +2425,11 @@ main {
 
 	#nav .nav-drop a {
 		padding: 11px 8px 15px;
+	}
+
+	/* TODO: display sub-menus properly */
+	#nav .nav-drop ul li ul {
+		display: none;
 	}
 
 	.banner-block .images-container .image.style-black .text-wrap .text-sos {
@@ -3867,4 +3859,16 @@ main {
 		margin: 0 0 10px;
 	}
 }
-
+
+/* JRL additions */
+.images-wrap ul.instagram-pics {
+	margin: 0;
+	padding: 0;
+	height: 170px;
+	width: 200%;
+	overflow: hidden;
+}
+.banner-block .visual-container .images-wrap ul.instagram-pics .image {
+	list-style: none;
+	width: 6.25%;
+}

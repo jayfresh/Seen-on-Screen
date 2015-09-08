@@ -42,48 +42,17 @@ get_header();
 	</div>
 	<div class="visual-container">
 		<h1><mark>Join Us On Social</mark></h1>
+		<?php /* NB: you need to make sure this is using this structure:
 		<div class="images-wrap">
 			<div class="image">
 				<a href="#">
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img6.jpg" alt="" width="180" height="158">
 				</a>
 			</div>
-			<div class="image">
-				<a href="#">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img7.jpg" alt="" width="180" height="158">
-				</a>
-			</div>
-			<div class="image">
-				<a href="#">
-					<img src="/<?php bloginfo('stylesheet_directory'); ?>images/img8.jpg" alt="" width="180" height="159">
-				</a>
-			</div>
-			<div class="image">
-				<a href="#">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img9.jpg" alt="" width="179" height="158">
-				</a>
-			</div>
-			<div class="image">
-				<a href="#">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img10.jpg" alt="" width="179" height="158">
-				</a>
-			</div>
-			<div class="image">
-				<a href="#">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img11.jpg" alt="" width="176" height="158">
-				</a>
-			</div>
-			<div class="image">
-				<a href="#">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img10.jpg" alt="" width="179" height="158">
-				</a>
-			</div>
-			<div class="image">
-				<a href="#">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img11.jpg" alt="" width="176" height="158">
-				</a>
-			</div>
+			...
 		</div>
+		*/ ?>
+		<?php if ( dynamic_sidebar('home_social_widget') ) : else : endif; ?>
 	</div>
 </section>
 <?php

@@ -816,4 +816,29 @@ function sos_load_scripts() {
 }
 add_action('wp_enqueue_scripts', 'sos_load_scripts');
 
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function sos_widgets_init() {
+	register_sidebar( array(
+		'name'          => 'Home Social Widget',
+		'id'            => 'home_social_widget',
+		'before_widget' => '<div class="images-wrap">',
+		'after_widget'  => '</div>'
+	) );
+}
+add_action( 'widgets_init', 'sos_widgets_init' );
+
+// customise the Instagram widget
+add_filter( 'wpiw_item_class', 'my_instagram_class' );
+//add_filter( 'wpiw_a_class', 'my_instagram_class' );
+//add_filter( 'wpiw_img_class', 'my_instagram_class' );
+
+function my_instagram_class( $classes ) {
+	$classes = "image";
+	return $classes;
+}
+
+
 ?>

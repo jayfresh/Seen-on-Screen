@@ -54,7 +54,7 @@ get_header();
 				<div class="img-holder">
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img32.jpg" alt="image description" width="631" height="332">
 				</div>
-				<?php $page =  get_page_by_title('Events Contact Form'); ?>
+				<?php $page = get_page_by_title('Events Contact Form'); ?>
 				<?php $content = wpautop($page->post_content);
 				$content = do_shortcode($content); ?>
 				<div class="booking-form validate-form">

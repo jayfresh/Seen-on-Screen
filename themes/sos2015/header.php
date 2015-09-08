@@ -43,8 +43,8 @@
 		<header id="header">
 			<div class="container-holder">
 				<div class="logo">
-					<a href="#">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="SOS Seen On Screen" width="185" height="186">
+					<a href="<?php bloginfo('url'); ?>">
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/soslogo300.png" alt="SOS Seen On Screen" width="300" height="300">
 					</a>
 				</div>
 				<nav id="nav">
