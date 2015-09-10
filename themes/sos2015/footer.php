@@ -36,23 +36,9 @@
 			</div>
 		</div>
 	</div><!-- end .wrapper -->
-	<?php // TODO: move the popup holder into functions.php ?>
-	<section class="popup-holder">
-		<div id="popup1" class="lightbox">
-			<div class="popup-content">
-				<a href="#" class="close">Close</a>
-				<div class="video-holder">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/video-placeholder.jpg" alt="image description" width="1114" height="659">
-				</div>
-				<div class="text-holder">
-					<h2>The Beyoncé Dance Tutorial</h2>
-					<p>This is week are focusing the Beyoncé booty shake and strut! </p>
-					<p>Practice this routine at home, with friends or at the office when your boss isn't looking and then come and learn the real thing in January when we teach this is class as part of the January Yoncé workout.</p>
-					<p>We do not own copyright of this music, it is purely for entertainment and inspirational value, we are not profiting from this video</p>
-				</div>
-			</div>
-		</div>
-	</section>
+	<?php
+	// this only outputs content for the Video Turorials page(s)
+	the_lightbox(); ?>
 	<?php // TODO: move script loading into functions.php for wp_footer ?>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.11.2.min.js"><\/script>')</script>

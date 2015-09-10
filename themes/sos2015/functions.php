@@ -59,16 +59,39 @@ function sos_register_custom_post_types() {
             'register_meta_box_cb' => 'sos_add_quote_metabox'
         )
     );
+    register_post_type( 'sos_video_tutorial',
+        array(
+            'labels' => array(
+                'name' => __('Video Tutorials'),
+                'singular_name' => __('Video Tutorial'),
+                ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title','editor','thumbnail', 'excerpt'),
+            'rewrite' => array('slug' => 'tutorials'), // So URL is /tutorials
+            // 'register_meta_box_cb' => 'sos_add_video_tutorials_metabox'
+        )
+    );
 
     register_taxonomy(
-		'sos_quotes',
-		'sos_quote',
-		array(
-			'label' => __( 'Quote types' ),
-			'hierarchical' => true,
-			'rewrite' => false
-		)
-	);
+  		'sos_quotes',
+  		'sos_quote',
+  		array(
+  			'label' => __( 'Quote types' ),
+  			'hierarchical' => true,
+  			'rewrite' => false
+  		)
+  	);
+    
+    register_taxonomy(
+  		'sos_video_tutorial_levels',
+  		'sos_video_tutorial',
+  		array(
+  			'label' => __( 'Tutorial level' ),
+  			'hierarchical' => true,
+  			'rewrite' => false
+  		)
+  	);
 }
 
 /* add metaboxes to studio post type */
@@ -236,6 +259,7 @@ add_action('save_post', 'sos_team_save_credits_meta', 1, 2);
 
 function sos_add_video_metabox() {
   add_meta_box('sos_video_metabox', 'Videos to embed', 'sos_video_metabox', 'page', 'normal', 'default');
+  add_meta_box('sos_video_metabox', 'Videos to use for tutorial', 'sos_video_metabox', 'sos_video_tutorial', 'normal', 'default');
 }
 
 add_action( 'add_meta_boxes', 'sos_add_video_metabox' );
@@ -846,5 +870,32 @@ function my_instagram_class( $classes ) {
 	return $classes;
 }
 
-
+function the_lightbox() {
+  global $post;
+  $posttype = $post->post_type;
+  if($posttype == sos_video_tutorial) {
+    if ( have_posts() ) :
+      $i = 1;
+      while ( have_posts() ) : the_post();
+        $video_url = get_post_meta($post->ID, '_videolist', true);
+        ?>
+        <section class="popup-holder">
+      		<div id="popup<?php echo $i;?>" class="lightbox">
+      			<div class="popup-content">
+      				<a href="#" class="close">Close</a>
+      				<div class="video-holder">
+                <iframe width="853" height="480" src="<?php echo $video_url; ?>" frameborder="0" allowfullscreen></iframe>
+      				</div>
+      				<div class="text-holder">
+      					<h2><?php the_title(); ?></h2>
+      					<?php the_content(); ?>
+      				</div>
+      			</div>
+      		</div>
+      	</section>
+      <?php $i++;
+      endwhile;
+    endif;
+  }
+}
 ?>

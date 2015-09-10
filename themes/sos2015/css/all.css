@@ -3859,26 +3859,3 @@ main {
 		margin: 0 0 10px;
 	}
 }
-
-/* JRL additions */
-.images-wrap ul.instagram-pics {
-	margin: 0;
-	padding: 0;
-	height: 170px;
-	width: 200%;
-	overflow: hidden;
-}
-.banner-block .visual-container .images-wrap ul.instagram-pics .image {
-	list-style: none;
-	width: 6.25%;
-}
-.content-section .pictures-block ul.instagram-pics {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-.content-section .pictures-block ul.instagram-pics .image {
-	list-style: none;
-	float: left;
-	width: 25%;
-}
