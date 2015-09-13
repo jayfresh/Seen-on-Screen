@@ -7,4 +7,39 @@ Version: 1
 License: BSD
 */
 @import 'css/all.css';
-@import 'css/additions.css';
+
+/* JRL additions */
+
+/* adjustments for instagram strip */
+.images-wrap ul.instagram-pics {
+	margin: 0;
+	padding: 0;
+	height: 170px;
+	width: 200%;
+	overflow: hidden;
+}
+.banner-block .visual-container .images-wrap ul.instagram-pics .image {
+	list-style: none;
+	width: 6.25%;
+}
+
+/* adjustments for instagram masonry block */
+.content-section .pictures-block ul.instagram-pics {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.content-section .pictures-block ul.instagram-pics .image {
+	list-style: none;
+	float: left;
+	width: 25%;
+}
+
+/* less space between blocks on tutorial page */
+.tutorial-block .container-holder {
+  padding-bottom: 50px;
+}
+/* default margin back on paragraphs in popup */
+.popup-content .text-holder p {
+  margin: 0 0 1.2em;
+}
