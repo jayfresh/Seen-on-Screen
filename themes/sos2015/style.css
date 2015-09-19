@@ -43,3 +43,23 @@ License: BSD
 .popup-content .text-holder p {
   margin: 0 0 1.2em;
 }
+
+/* nav menu drop-downs */
+#nav .nav-drop ul li {
+	position: relative;
+}
+#nav .nav-drop ul li:hover a + ul.sub-menu {
+	display: block;
+	position: absolute;
+	top: 44px;
+	left: 10px;
+	background-color: #fff;
+	width: 150px;
+	font-weight: normal;
+}
+#nav .nav-drop ul li ul.sub-menu li {
+	display: block;
+}
+#nav .nav-drop ul li ul.sub-menu li a {
+	padding: 8px;
+}
