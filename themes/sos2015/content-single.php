@@ -7,7 +7,9 @@
 					<?php } ?>
 					<div class="grid8col left">
 						<div class="grid7col left">
-							<h1><?php the_title(); ?></h1>
+							<div class="title-container">
+								<h1><?php the_title(); ?></h1>
+							</div>
 							<?php if(is_single()) { ?>
 								<span class="meta">Posted - <?php the_date(); ?><!-- &nbsp;/ &nbsp;Category - <?php the_category(); ?>--></span>
 							<?php } ?>

@@ -63,3 +63,47 @@ License: BSD
 #nav .nav-drop ul li ul.sub-menu li a {
 	padding: 8px;
 }
+
+/* page margins */
+@media only screen and (max-width: 1399px) {
+	.classes-block .container-holder {
+		padding-left: 40px;
+		padding-right: 40px;	
+	}
+}
+
+/* h1 headings and adjustments */
+main {
+	margin-top: 80px;
+}
+.title-container {
+	text-align: center;
+}
+.title-container h1, .team-block h1 mark {
+	display: inline;
+	font: bold 50px/50px "bebas-neue", "Trebuchet MS", "Helvetica", sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	width: auto;
+	padding: 10px 50px;
+	background-color: #fff;
+	color: #000;
+}
+.team-block h1 mark {
+	background-color: #000;
+	color: #fff;
+}
+.logos-block .container-holder { /* press page header */
+	padding-top: 80px;
+}
+.content-section .container-holder {
+	padding-top: 50px;
+}
+.tutorial-block .container-holder {
+	padding-top: 50px;
+}
+@media only screen and (max-width: 1399px) {
+	.team-block {
+		padding-top: 0;
+	}
+}

@@ -9,6 +9,9 @@ get_header(); ?>
 	$form_code = get_post_meta($post_id, '_custom_form2', true);
 	endwhile;
 endif; ?>
+<div class="title-container">
+	<h1>Membership</h1>
+</div>
 <section class="membership-block">
 	<div class="container-holder">
 		<div class="col-container">

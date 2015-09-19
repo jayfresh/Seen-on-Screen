@@ -2,8 +2,9 @@
 /* for the studio archive page */
 get_header();
 ?>
-<h1>Studios</h1>
-
+<div class="title-container">
+	<h1>Studios</h1>
+</div>
 <section class="address-block">
 	<div class="container-holder">
 		<div class="map-holder">

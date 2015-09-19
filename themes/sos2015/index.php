@@ -2,7 +2,9 @@
 /* for blog post index page */
 get_header(); ?>
 	<div class="contentPage">	
-		<h1>SoS Backstage</h1>
+		<div class="title-container">
+			<h1>SoS Backstage</h1>
+		</div>
 	<?php if ( have_posts() ) :
 		$count = 0;
 		while ( have_posts() ) : the_post(); ?>

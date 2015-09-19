@@ -2,7 +2,9 @@
 /* for the Video Tutorials pages */
 get_header();
 ?>
-	<h1>Video Tutorials</h1>
+	<div class="title-container">
+		<h1>Video Tutorials</h1>
+	</div>
 	<section class="tutorial-block">
 	<?php if ( have_posts() ) :
 		$i = 1;

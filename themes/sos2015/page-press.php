@@ -2,7 +2,9 @@
 /* for the Press page */
 get_header();
 ?>
-
+<div class="title-container">
+	<h1>Press</h1>
+</div>
 <aside class="logos-block">
 	<div class="container-holder">
 		<h2>As Seen In</h2>
