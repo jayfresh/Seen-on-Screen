@@ -107,3 +107,12 @@ main {
 		padding-top: 0;
 	}
 }
+
+/* press page */
+.logos-block .logo-list {
+	margin: auto;
+	max-width: 900px;
+}
+.logos-block .logo-list img {
+	max-width: 250px;
+}
