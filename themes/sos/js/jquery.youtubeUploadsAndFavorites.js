@@ -21,7 +21,6 @@
 			videos = [],
 			videoTitles = {},
 			parseResult = function(data) {
-        console.log(data);
 				var vid, e, length;
                 $.each(data.items, function() {
                 	var vid = this,
