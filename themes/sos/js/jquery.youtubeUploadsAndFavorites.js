@@ -21,21 +21,22 @@
 			videos = [],
 			videoTitles = {},
 			parseResult = function(data) {
+        console.log(data);
 				var vid, e, length;
-                $.each(data.feed.entry, function() {
+                $.each(data.items, function() {
                 	var vid = this,
-                		thumbnailGroup = vid.media$group.media$thumbnail,
-                		title = vid.title.$t;
+                		thumbnailGroup = vid.snippet.thumbnails,
+                		title = vid.snippet.title;
                 	if(!thumbnailGroup) { // sometimes this seems to fail
                 		return true;
                 	}
                 	if(!videoTitles[title]) {
                 		videoTitles[title] = vid;
 		                videos.push({
-							published: new Date(vid.published.$t),
-		                	link: vid.link[0].href,
+        							published: new Date(vid.snippet.publishedAt),
+                      link: 'https://www.youtube.com/watch?v=' + vid.contentDetails.videoId,
 			                title: title,
-		                	thumb: thumbnailGroup[3].url
+		                	thumb: thumbnailGroup.default.url
 						});
 					}
                 });
@@ -62,9 +63,10 @@
 					addVideo(this);
 				});
 			},
-			urlBase = 'http://gdata.youtube.com/feeds/api/users/'+settings.username,
-			urlQuery = '?alt=json&v=2&orderby=published&max-results=30',
-			uploadsURL = urlBase+'/uploads/'+urlQuery;
+      playlistId = 'UUpy_izfufrE4eXyCWQk4g6A',
+			urlBase = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cstatus&maxResults=50&playlistId=',
+			urlQuery = '&key=AIzaSyAYDgLN6uNYCSeCvMXROLCvFYGkigEwIh4',
+			uploadsURL = urlBase + playlistId + urlQuery;
 			//favoritesURL = urlBase+'/favorites/'+urlQuery;
 		$.getJSON(uploadsURL, getCallback);
 		//$.getJSON(favoritesURL, getCallback);
