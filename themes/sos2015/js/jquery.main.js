@@ -28,12 +28,12 @@ function initMasonry() {
 }
 
 // content tabs init
-function initTabs() {
-	jQuery('ul.tabset').contentTabs({
-		addToParent: true,
-		tabLinks: 'a'
-	});
-}
+// function initTabs() {
+// 	jQuery('ul.tabset').contentTabs({
+// 		addToParent: true,
+// 		tabLinks: 'a'
+// 	});
+// }
 
 // fancybox modal popup init
 function initLightbox() {

@@ -218,10 +218,42 @@ body.home main {
 	max-width: 250px;
 }
 
+/* content pages */
+@media (min-width: 1026px) {
+	.tabset-section {
+		display: flex;
+	}
+	.tabset-section .tabset {
+		margin-right: 25px;
+	}
+}
+.tabset-section .tabset li.current-menu-item::before {
+	content: ' ';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12px 0 12px 18px;
+	border-color: transparent transparent transparent #1d1d1b;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin: -12px 0 0;
+}
+
 /* footer social links */
 .social-block .social-networks a.instagram {
 	background: url("./images/instagram-logo-59.png") no-repeat top left;
 }
 #footer .social-block .social-networks a.instagram {
 	background: url("./images/instagram-logo-35.png") no-repeat top left;
+}
+@media (min-width: 767px) {
+	#footer .social-block .social-networks a.instagram {
+		background: url("./images/instagram-logo-59.png") no-repeat top left;
+	}
+}
+@media (min-width: 1026px) {
+	#footer .social-block .social-networks a.instagram {
+		background: url("./images/instagram-logo-35.png") no-repeat top left;
+	}
 }

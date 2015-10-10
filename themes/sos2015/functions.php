@@ -479,8 +479,10 @@ add_filter("attachment_fields_to_save", "attachment_sos_save", null, 2);
 add_action( 'init', 'sos_register_menus' );
 function sos_register_menus() {
   register_nav_menus(
-    array( 'nav-menu' => __( 'Nav Menu' ),
-      'footer-menu' => __( 'Footer Menu' )
+    array(
+      'nav-menu' => __( 'Nav Menu' ),
+      'footer-menu' => __( 'Footer Menu' ),
+      'content-menu' => __( 'Content Menu' )
     )
   );
 }
