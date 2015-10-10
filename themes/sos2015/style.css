@@ -96,7 +96,7 @@ License: BSD
 
 /* page margins */
 @media only screen and (max-width: 1399px) {
-	.classes-block .container-holder {
+	.classes-block .container-holder, .events-block .container-holder {
 		padding-left: 40px;
 		padding-right: 40px;	
 	}
@@ -220,6 +220,18 @@ body.home main {
 }
 .logos-block .logo-list img {
 	max-width: 250px;
+}
+
+/* events page */
+.content-block .secondary-box {
+	background: rgba(255, 255, 255, 0.59);
+}
+.content-block .primary-box {
+	background: #fff;
+	text-align: left;
+}
+.content-block .primary-box h2 {
+	color: #000;
 }
 
 /* healcode widget */

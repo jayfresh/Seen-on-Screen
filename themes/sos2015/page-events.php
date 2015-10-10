@@ -12,10 +12,10 @@ get_header();
 		$video_url = get_post_meta(get_the_id(), '_videolist', true); ?>
 	<?php endwhile; endif; ?>
 
-	<section class="content-block">
+	<section class="content-block events-block">
 		<div class="container-holder">
 			<div class="column">
-				<div class="text-block">
+				<div class="text-block secondary-box">
 					<?php $page =  get_page_by_title('I just came here to party'); ?>
 					<h2><?php echo ($page->post_title); ?></h2>
 					<?php echo wpautop($page->post_content); ?>
@@ -33,9 +33,8 @@ get_header();
 					<h2><?php echo ($page->post_title); ?></h2>
 					<?php echo wpautop($page->post_content); ?>
 				</div>
-				<div class="video-holder">
-					<iframe width="420" height="315" src="<?php echo $video_url; ?>" allowfullscreen></iframe>
-				</div>
+				<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+				<div class='embed-container video-holder'><iframe src='<?php echo $video_url; ?>' frameborder='0' allowfullscreen></iframe></div>
 			</div>
 			<div class="column">
 				<!-- <?php $quotes_query = new WP_Query(array(
@@ -48,7 +47,7 @@ get_header();
 					<q>&ldquo;Grab your hens, choose an  artist and prepare to dance like a star&rdquo;</q>
 					<cite>brides magazine</cite>
 				</blockquote>
-				<div class="text-wrap">
+				<div class="text-wrap primary-box">
 					<?php $page =  get_page_by_title('Music Video Package'); ?>
 					<h2><?php echo ($page->post_title); ?></h2>
 					<?php echo wpautop($page->post_content); ?>
