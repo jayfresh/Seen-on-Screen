@@ -10,6 +10,28 @@ License: BSD
 
 /* JRL additions */
 
+/* logo adjustments */
+@media (max-width: 1025px) {
+	#header {
+		padding-top: 0;
+	}
+	#header .logo {
+		top: 0;
+		left: 0;
+		width: 20%;
+	}
+	#header .logo img {
+		max-width: 100%;
+	}
+}
+@media (max-width: 767px) {
+	#header .logo {
+		top: 0;
+		left: 0;
+		width: 120px;
+	}
+}
+
 /* adjustments for instagram strip */
 .images-wrap ul.instagram-pics {
 	margin: 0;
@@ -20,14 +42,14 @@ License: BSD
 }
 .banner-block .visual-container .images-wrap ul.instagram-pics .image {
 	list-style: none;
-	width: 6.25%;
+	width: 170px;
 	display: flex;
 	justify-content: center; /* this puts landscape images in the center of li */
 	overflow: hidden;
 }
 .banner-block .visual-container .images-wrap .image img {
 	width: auto;
-	height: 170px;
+	height: 168px;
 	max-width: none;
 }
 
@@ -120,15 +142,19 @@ main {
 body.home main {
 	margin-top: 0;
 }
-.banner-image {
-	position: relative;
-	overflow: hidden;
-	height: 460px;
-}
 .banner-image img {
 	opacity: 0.8;
-	position: relative;
-	top: -50px; /* this is for the particular image chosen */
+}
+@media (min-width: 1026px) {
+	.banner-image {
+		position: relative;
+		overflow: hidden;
+		height: 460px;
+	}
+	.banner-image img {
+		position: relative;
+		top: -50px; /* this is for the particular image chosen */
+	}	
 }
 .hero-text-container {
 	position: absolute;
@@ -154,6 +180,14 @@ body.home main {
 	display: inline;
 	padding: 0 20px;
 	font-family: bebas-neue;
+}
+@media (max-width: 767px) {
+	.hero-text-container h1 {
+		font-size: 4rem;
+	}
+	.hero-text-container p {
+		font-size: 2.5rem;
+	}	
 }
 
 /* home page blocks */
