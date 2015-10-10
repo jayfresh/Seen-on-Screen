@@ -101,6 +101,10 @@ License: BSD
 		padding-right: 40px;	
 	}
 }
+.page-content-container {
+	max-width: 1024px;
+	margin: auto;
+}
 
 /* h1 headings and adjustments */
 main {
@@ -216,6 +220,11 @@ body.home main {
 }
 .logos-block .logo-list img {
 	max-width: 250px;
+}
+
+/* healcode widget */
+.healcode .header, .healcode > table {
+	padding: 10px;
 }
 
 /* content pages */
