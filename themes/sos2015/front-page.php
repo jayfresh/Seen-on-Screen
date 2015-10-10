@@ -13,23 +13,23 @@ get_header();
 	</div>
 	<div class="images-container">
 		<div class="image no-border">
-			<a href="#">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img2.jpg" alt="#SOSBackstage" width="343" height="344">
+			<a href="<?php echo get_permalink( get_page_by_path( 'sosbackstage' ) ); ?>">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sosbackstage-343.png" alt="#SOSBackstage" width="343" height="344">
 				<span class="text-wrap">
-					#SOSBackstage
+					<u>#SOSBackstage</u>
 				</span>
 			</a>
 		</div>
 		<div class="image">
-			<a href="#">
+			<a href="<?php echo get_permalink( get_page_by_path( 'timetable' ) ); ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/timetable-343.jpg" alt="SOS class" width="343" height="342">
 				<span class="text-wrap">
-					<u>TimeTable</u>
+					<u>Timetable</u>
 				</span>
 			</a>
 		</div>
 		<div class="image">
-			<a href="#">
+			<a href="<?php echo get_permalink( get_page_by_path( 'team' ) ); ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/team-343.png" alt="The SOS team" width="343" height="343">
 				<span class="text-wrap">
 					<u>Crew</u>
@@ -37,7 +37,7 @@ get_header();
 			</a>
 		</div>
 		<div class="image style-black mobile-only">
-			<a href="#">
+			<a href="<?php echo $class_schedule_url; ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img5.jpg" alt="Book a class" width="343" height="343">
 				<span class="text-wrap">
 					Book a <strong>Class</strong>
