@@ -21,6 +21,14 @@ License: BSD
 .banner-block .visual-container .images-wrap ul.instagram-pics .image {
 	list-style: none;
 	width: 6.25%;
+	display: flex;
+	justify-content: center; /* this puts landscape images in the center of li */
+	overflow: hidden;
+}
+.banner-block .visual-container .images-wrap .image img {
+	width: auto;
+	height: 170px;
+	max-width: none;
 }
 
 /* adjustments for instagram masonry block */
