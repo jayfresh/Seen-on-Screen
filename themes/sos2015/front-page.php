@@ -14,7 +14,7 @@ get_header();
 	<div class="images-container">
 		<div class="image no-border">
 			<a href="#">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img2.jpg" alt="image description" width="343" height="344">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img2.jpg" alt="#SOSBackstage" width="343" height="344">
 				<span class="text-wrap">
 					#SOSBackstage
 				</span>
@@ -22,7 +22,7 @@ get_header();
 		</div>
 		<div class="image">
 			<a href="#">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img3.jpg" alt="image description" width="343" height="342">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/timetable-343.jpg" alt="SOS class" width="343" height="342">
 				<span class="text-wrap">
 					<u>TimeTable</u>
 				</span>
@@ -30,7 +30,7 @@ get_header();
 		</div>
 		<div class="image">
 			<a href="#">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img4.jpg" alt="image description" width="343" height="343">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/team-343.png" alt="The SOS team" width="343" height="343">
 				<span class="text-wrap">
 					<u>Crew</u>
 				</span>
@@ -38,7 +38,7 @@ get_header();
 		</div>
 		<div class="image style-black mobile-only">
 			<a href="#">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img5.jpg" alt="image description" width="343" height="343">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img5.jpg" alt="Book a class" width="343" height="343">
 				<span class="text-wrap">
 					Book a <strong>Class</strong>
 				</span>
