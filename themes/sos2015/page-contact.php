@@ -10,9 +10,6 @@ get_header(); ?>
 				<h2><?php the_title(); ?></h2>
 				<div class="text-wrap validate-row">
 					<?php the_content(); ?>
-					<a href="mailto:&#105;&#110;&#102;&#111;&#064;&#115;&#101;&#101;&#110;&#111;&#110;&#115;&#099;&#114;&#101;&#101;&#110;&#102;&#105;&#116;&#110;&#101;&#115;&#115;&#046;&#099;&#111;&#109;" class="mail">&#105;&#110;&#102;&#111;&#064;&#115;&#101;&#101;&#110;&#111;&#110;&#115;&#099;&#114;&#101;&#101;&#110;&#102;&#105;&#116;&#110;&#101;&#115;&#115;&#046;&#099;&#111;&#109;</a>
-					<p>or leave us a message</p>
-					<span class="txt-wrap">Comments or questions are welcome.</span>
 				</div>
 					<?php endwhile;
 				endif; ?>
@@ -77,15 +74,7 @@ get_header(); ?>
 						</a>
 					</div>
 				</div>
-				<ul class="social-networks">
-					<li><a href="#" class="tumblr">tumblr</a></li>
-					<li><a href="#" class="facebook">facebook</a></li>
-					<li><a href="#" class="twitter">twitter</a></li>
-					<li><a href="#" class="google-plus">google-plus</a></li>
-					<li><a href="#" class="pinterest">pinterest</a></li>
-					<li><a href="#" class="youtube">youtube</a></li>
-					<li><a href="#" class="rss">rss</a></li>
-				</ul>
+				<?php include_once('_social-links.php'); ?>
 			</div>
 		</div>
 	</div>

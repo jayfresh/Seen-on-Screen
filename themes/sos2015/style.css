@@ -181,6 +181,9 @@ body.home main {
 	padding: 0 20px;
 	font-family: bebas-neue;
 }
+.hero-text-container a {
+	color: #000;
+}
 @media (max-width: 767px) {
 	.hero-text-container h1 {
 		font-size: 4rem;
@@ -213,4 +216,12 @@ body.home main {
 }
 .logos-block .logo-list img {
 	max-width: 250px;
+}
+
+/* footer social links */
+.social-block .social-networks a.instagram {
+	background: url("./images/instagram-logo-59.png") no-repeat top left;
+}
+#footer .social-block .social-networks a.instagram {
+	background: url("./images/instagram-logo-35.png") no-repeat top left;
 }

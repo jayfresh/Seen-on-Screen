@@ -16,7 +16,7 @@ get_header();
 						</div>
 						<div class="text-block">
 							<h2>Classes</h2>
-							<span class="cost">Classes: &pound;15</span>
+							<span class="cost">Classes: &pound;12</span>
 							<div class="text-holder">
 								<?php $page =  get_page_by_title('Classes'); ?>
 								<?php echo wpautop($page->post_content); ?>
@@ -32,7 +32,7 @@ get_header();
 						</div>
 						<div class="text-block">
 							<h2>Workshops</h2>
-							<span class="cost">Workshops: &pound;15</span>
+							<span class="cost">Workshops: &pound;20</span>
 							<div class="text-holder">
 								<?php $page =  get_page_by_title('Workshops'); ?>
 								<?php echo wpautop($page->post_content); ?>
@@ -48,7 +48,7 @@ get_header();
 						</div>
 						<div class="text-block">
 							<h2>Master Classes</h2>
-							<span class="cost">Master Classes: &pound;15</span>
+							<span class="cost">Master Classes: &pound;25</span>
 							<div class="text-holder">
 								<?php $page =  get_page_by_title('Master Classes'); ?>
 								<?php echo wpautop($page->post_content); ?>
@@ -64,7 +64,7 @@ get_header();
 						</div>
 						<div class="text-block">
 							<h2>Super Classes</h2>
-							<span class="cost">Super Classes: &pound;15</span>
+							<span class="cost">Super Classes: &pound;30</span>
 							<div class="text-holder">
 								<?php $page =  get_page_by_title('Super Classes'); ?>
 								<?php echo wpautop($page->post_content); ?>
@@ -78,8 +78,8 @@ get_header();
 				<div class="levels-block">
 					<div class="quote-holder">
 						<blockquote>
-							<q>&ldquo;You don’t have to be a member to do our classes or workshop&rdquo;</q>
-							<cite>Elle Magazine</cite>
+							<q>&ldquo;London's sassiest exercise option&rdquo;</q>
+							<cite>BuzzFeed</cite>
 						</blockquote>
 					</div>
 					<div class="blocks-holder">

@@ -3,15 +3,7 @@
 			<div class="container-holder">
 				<aside class="footer-block">
 					<div class="social-block">
-						<ul class="social-networks">
-							<li><a href="#" class="tumblr">tumblr</a></li>
-							<li><a href="#" class="facebook">facebook</a></li>
-							<li><a href="#" class="twitter">twitter</a></li>
-							<li><a href="#" class="google-plus">google-plus</a></li>
-							<li><a href="#" class="pinterest">pinterest</a></li>
-							<li><a href="#" class="youtube">youtube</a></li>
-							<li><a href="#" class="rss">rss</a></li>
-						</ul>
+						<?php include_once('_social-links.php'); ?>
 						<div class="card">
 							<a href="#">
 								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/card.jpg" alt="NETBANX by OPTIMAL PAYMENTS VISA" width="106" height="67">
