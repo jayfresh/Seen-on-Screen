@@ -28,7 +28,7 @@ get_header();
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img30.jpg" alt="image description" width="314" height="315">
 					</div>
 				</div>
-				<div class="text-wrap">
+				<div class="text-wrap primary-box">
 					<?php $page =  get_page_by_title('Dance Package'); ?>
 					<h2><?php echo ($page->post_title); ?></h2>
 					<?php echo wpautop($page->post_content); ?>

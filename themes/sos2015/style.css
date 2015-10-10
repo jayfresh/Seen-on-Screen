@@ -226,12 +226,27 @@ body.home main {
 .content-block .secondary-box {
 	background: rgba(255, 255, 255, 0.59);
 }
+.content-block .secondary-box p {
+	line-height: 1.5;
+}
 .content-block .primary-box {
 	background: #fff;
 	text-align: left;
 }
+.content-block .primary-box ul {
+	padding-left: 20px;
+}
+.content-block .primary-box li {
+	list-style: disc;
+}
+.content-block .primary-box li::before {
+	display: none;
+}
 .content-block .primary-box h2 {
 	color: #000;
+}
+.content-block .booking-form {
+	color: #fff;
 }
 
 /* healcode widget */
