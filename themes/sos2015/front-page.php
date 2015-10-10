@@ -16,7 +16,7 @@ get_header();
 			<a href="<?php echo get_permalink( get_page_by_path( 'sosbackstage' ) ); ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sosbackstage-343.png" alt="#SOSBackstage" width="343" height="344">
 				<span class="text-wrap">
-					<u>#SOSBackstage</u>
+					#SOSBackstage
 				</span>
 			</a>
 		</div>
@@ -24,7 +24,7 @@ get_header();
 			<a href="<?php echo get_permalink( get_page_by_path( 'timetable' ) ); ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/timetable-343.jpg" alt="SOS class" width="343" height="342">
 				<span class="text-wrap">
-					<u>Timetable</u>
+					Timetable
 				</span>
 			</a>
 		</div>
@@ -32,7 +32,7 @@ get_header();
 			<a href="<?php echo get_permalink( get_page_by_path( 'team' ) ); ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/team-343.png" alt="The SOS team" width="343" height="343">
 				<span class="text-wrap">
-					<u>Crew</u>
+					Crew
 				</span>
 			</a>
 		</div>
