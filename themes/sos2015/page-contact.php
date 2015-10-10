@@ -13,10 +13,10 @@ get_header(); ?>
 				</div>
 					<?php endwhile;
 				endif; ?>
-				<?php $page = get_page_by_title('Contact Page Contact Form'); ?>
-				<?php $content = wpautop($page->post_content);
-				$content = do_shortcode($content);
-				echo $content; ?>
+				<?php //$page = get_page_by_title('Contact Page Contact Form'); ?>
+				<?php //$content = wpautop($page->post_content);
+				//$content = do_shortcode($content);
+				//echo $content; ?>
 		</div>
 		<!-- <form action="#" class="contact-form validate-form">
 			<fieldset>
