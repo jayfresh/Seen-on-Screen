@@ -108,6 +108,56 @@ main {
 	}
 }
 
+/* hero text styles */
+body.home main {
+	margin-top: 0;
+}
+.banner-image {
+	position: relative;
+	overflow: hidden;
+	height: 460px;
+}
+.banner-image img {
+	opacity: 0.8;
+	position: relative;
+	top: -50px; /* this is for the particular image chosen */
+}
+.hero-text-container {
+	position: absolute;
+	top: 160px;
+	left: 0;
+	width: 100%;
+	margin-left: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+}
+.hero-text-container h1 {
+	font-size: 6rem;
+	margin-bottom: 0;
+	font-family: bebas-neue;
+}
+.hero-text-container p {
+	font-size: 3rem;
+	font-weight: 600;
+	color: black;
+	background-color: white;
+	display: inline;
+	padding: 0 20px;
+	font-family: bebas-neue;
+}
+
+/* home page blocks */
+@media (min-width: 1026px) {
+	.mobile-only {
+		display: none;
+	}
+	.banner-block .images-container {
+		margin-left: 12.5%;
+	}
+}
+
 /* press page */
 .logos-block .logo-list {
 	margin: auto;

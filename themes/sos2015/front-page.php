@@ -5,6 +5,11 @@ get_header();
 <section class="banner-block">
 	<div class="banner-image">
 		<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img1.jpg" alt="SOS crew" width="1400" height="705">
+		<div class="hero-text-container">
+			<h1>Dance like a star</h1>
+			<?php $class_schedule_url = get_permalink( get_page_by_path( 'book-classes' ) ); ?>
+			<p><a href="<?php echo $class_schedule_url; ?>">Book your class now</a></p>
+		</div>
 	</div>
 	<div class="images-container">
 		<div class="image no-border">
@@ -31,11 +36,11 @@ get_header();
 				</span>
 			</a>
 		</div>
-		<div class="image style-black">
+		<div class="image style-black mobile-only">
 			<a href="#">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img5.jpg" alt="image description" width="343" height="343">
 				<span class="text-wrap">
-					Become A <span class="text-sos">Seen On Screen</span> <strong>Member</strong>
+					Book a <strong>Class</strong>
 				</span>
 			</a>
 		</div>
