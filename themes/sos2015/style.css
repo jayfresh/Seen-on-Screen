@@ -80,6 +80,13 @@ License: BSD
 	list-style: none;
 	float: left;
 	width: 25%;
+	padding: 6px;
+}
+.content-section .pictures-block ul.instagram-pics .image a {
+	display: block;
+}
+.content-section .pictures-block ul.instagram-pics .image a:hover {
+	opacity: 0.8;
 }
 
 /* less space between blocks on tutorial page */

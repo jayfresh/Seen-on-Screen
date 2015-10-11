@@ -11,15 +11,7 @@ get_header();
 			<div class="container-holder">
 				<div class="social-block">
 					<p>follow what the sos crew are upto , onstage,backstage and classes</p>
-					<ul class="social-networks">
-						<li><a href="#" class="tumblr">tumblr</a></li>
-						<li><a href="#" class="facebook">facebook</a></li>
-						<li><a href="#" class="twitter">twitter</a></li>
-						<li><a href="#" class="google-plus">google-plus</a></li>
-						<li><a href="#" class="pinterest">pinterest</a></li>
-						<li><a href="#" class="youtube">youtube</a></li>
-						<li><a href="#" class="rss">rss</a></li>
-					</ul>
+					<?php include_once('_social-links.php'); ?>
 				</div>
 				<?php /* NB: you need to make sure this is using this structure:
 				<div class="pictures-block">
@@ -32,7 +24,7 @@ get_header();
 				</div>
 				*/ ?>
 				<?php if ( dynamic_sidebar('sos_backstage_widget') ) : else : endif; ?>
-				<div class="pictures-block">
+				<!-- <div class="pictures-block">
 					<div class="col">
 						<div class="image">
 							<a href="#">
@@ -71,7 +63,7 @@ get_header();
 							</a>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div><!-- end .container-holder -->
 			<form action="#" class="subscribe-form validate-form">
 				<fieldset>
