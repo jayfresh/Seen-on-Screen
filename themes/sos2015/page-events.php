@@ -20,14 +20,6 @@ get_header();
 					<h2><?php echo ($page->post_title); ?></h2>
 					<?php echo wpautop($page->post_content); ?>
 				</div>
-				<div class="images-block">
-					<div class="image">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img29.jpg" alt="image description" width="314" height="315">
-					</div>
-					<div class="image">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img30.jpg" alt="image description" width="314" height="315">
-					</div>
-				</div>
 				<div class="text-wrap primary-box">
 					<?php $page =  get_page_by_title('Dance Package'); ?>
 					<h2><?php echo ($page->post_title); ?></h2>
@@ -52,8 +44,13 @@ get_header();
 					<h2><?php echo ($page->post_title); ?></h2>
 					<?php echo wpautop($page->post_content); ?>
 				</div>
-				<div class="img-holder">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img32.jpg" alt="image description" width="631" height="332">
+				<div class="images-block">
+					<div class="image">
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img29.jpg" alt="image description" width="314" height="315">
+					</div>
+					<div class="image">
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img30.jpg" alt="image description" width="314" height="315">
+					</div>
 				</div>
 				<?php $page = get_page_by_title('Events Contact Form'); ?>
 				<?php $content = wpautop($page->post_content);
