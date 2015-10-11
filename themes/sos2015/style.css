@@ -300,6 +300,9 @@ body.home .subscribe-form input[type="submit"] {
 .address-block .map-holder ul.locations a {
 	background-color: #fff;
 	padding: 5px 10px;
+	font-family: 'bebas-neue';
+	text-transform: uppercase;
+	color: #000;
 }
 .address-block .map-holder .placeholder {
 	width: 100%;
@@ -356,6 +359,9 @@ body.home .subscribe-form input[type="submit"] {
 }
 .contact-page-banner-block .banner-image img {
 	opacity: 1;
+}
+.contact-block a {
+	color: #000;
 }
 .contact-block .container-holder {
 	padding-top: 0;
