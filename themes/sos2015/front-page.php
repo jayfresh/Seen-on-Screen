@@ -21,10 +21,10 @@ get_header();
 			</a>
 		</div>
 		<div class="image">
-			<a href="<?php echo get_permalink( get_page_by_path( 'timetable' ) ); ?>">
+			<a href="<?php echo $class_schedule_url; ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/timetable-343.jpg" alt="SOS class" width="343" height="342">
 				<span class="text-wrap">
-					Timetable
+					Book a class
 				</span>
 			</a>
 		</div>
@@ -36,13 +36,22 @@ get_header();
 				</span>
 			</a>
 		</div>
-		<div class="image style-black mobile-only">
-			<a href="<?php echo $class_schedule_url; ?>">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img5.jpg" alt="Book a class" width="343" height="343">
-				<span class="text-wrap">
-					Book a <strong>Class</strong>
-				</span>
-			</a>
+		<div class="image style-black">
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img5.jpg" alt="Book a class" width="343" height="343">
+			<form action="#" class="subscribe-form validate-form">
+				<fieldset>
+					<h2>Keep in touch! Join our mailing list</h2>
+					<div class="input-holder">
+						<div class="form-input validate-row">
+							<input class="required" type="text" name="name" placeholder="name">
+						</div>
+						<div class="form-input validate-row">
+							<input class="required-email" type="email" name="email" placeholder="email">
+						</div>
+						<input type="submit" value="Enter">
+					</div>
+				</fieldset>
+			</form>
 		</div>
 	</div>
 	<div class="visual-container">

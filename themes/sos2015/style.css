@@ -222,19 +222,57 @@ body.home main {
 }
 
 /* home page blocks */
-@media (min-width: 1026px) {
-	.mobile-only {
-		display: none;
-	}
-	.banner-block .images-container {
-		margin-left: 12.5%;
-	}
-}
 .banner-block .images-container .image .text-wrap {
 	background-color: #000;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+/* home page mailing list form */
+body.home .subscribe-form h2 {
+	font: bold 3.5vw/4vw "bebas-neue", "Trebuchet MS", "Helvetica", sans-serif;
+	color: #fff;
+	margin-bottom: 10px;
+}
+@media (max-width: 1024px) {
+	body.home .subscribe-form h2 {
+		font-size: 5vw;
+		line-height: 6vw;
+	}
+}
+body.home .subscribe-form {
+	position: absolute;
+	top: 10px;
+	left: 0;
+}
+body.home .subscribe-form .form-input input[type="text"], body.home .subscribe-form .form-input input[type="email"] {
+	border: 2px solid #fff;
+  background: #fff;
+  width: 90%;
+  height: 50px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font: bold 3.5vw "bebas-neue", "Trebuchet MS", "Helvetica", sans-serif;
+	line-height: 50px;
+  display: block;
+  color: #000;
+  outline: none;
+	margin-left: auto;
+	margin-right: auto;
+  margin-bottom: 5px;
+}
+body.home .subscribe-form input[type="submit"] {
+	width: 90%;
+  border: 0;
+  height: 50px;
+  display: block;
+  padding: 0px 20px;
+  text-transform: uppercase;
+  font: bold 3.5vw/4vw "bebas-neue", "Trebuchet MS", "Helvetica", sans-serif;
+  color: #000;
+  text-align: center;
+  margin: auto;
 }
 
 /* press page */

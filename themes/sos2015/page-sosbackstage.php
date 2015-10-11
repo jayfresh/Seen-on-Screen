@@ -65,7 +65,7 @@ get_header();
 					</div>
 				</div> -->
 			</div><!-- end .container-holder -->
-			<form action="#" class="subscribe-form validate-form">
+			<!-- <form action="#" class="subscribe-form validate-form">
 				<fieldset>
 					<h2>Keep In touch! Sign Up to our Mailinglist</h2>
 					<div class="input-holder">
@@ -78,7 +78,7 @@ get_header();
 						<input type="submit" value="Enter">
 					</div>
 				</fieldset>
-			</form>
+			</form> -->
 		</section><!-- end .content-block -->
 		<?php endwhile;
 	endif; ?>
