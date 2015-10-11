@@ -2,15 +2,18 @@
 /* for the studio archive page */
 get_header();
 ?>
+<script>
+window.STYLESHEET_DIRECTORY = "<?php echo bloginfo('stylesheet_directory'); ?>";
+</script>
 <div class="title-container">
-	<h1>Studios</h1>
+	<h1>Locations</h1>
 </div>
 <section class="address-block">
 	<div class="container-holder">
 		<div class="map-holder">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/placeholder-map.jpg" alt="image description" width="1295" height="796">
-		</div>
-		<div id="map">
+			<div id="map">
+			</div>
 		</div>
 		<div class="address-holder">
 		<?php if ( have_posts() ) :
@@ -19,7 +22,7 @@ get_header();
 				$address_lines = str_replace(',', '<br>', $address); ?>
 			<address>
 				<strong class="title"><?php the_title(); ?></strong>
-				<?php echo $address_lines; ?>
+				<div class="studio_address"><?php echo $address_lines; ?></div>
 			</address>
 			<?php endwhile;
 		endif; ?>

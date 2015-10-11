@@ -33,8 +33,8 @@ License: BSD
 }
 
 /* form errors */
-.error input {
-	border-color: red !important;
+.error input, .error textarea {
+	border-color: #f00 !important;
 }
 
 /* adjustments for instagram strip on home page */
@@ -279,6 +279,19 @@ body.home .subscribe-form input[type="submit"] {
   color: #000;
   text-align: center;
   margin: auto;
+}
+
+/* locations page map */
+.address-block .map-holder {
+	overflow: hidden;
+}
+.address-block .map-holder > img {
+	width: 100%;
+	height: auto;
+	opacity: 0.5;
+}
+#map {
+	height: 100%;
 }
 
 /* press page */
