@@ -178,71 +178,91 @@ function initValidation() {
 
 function initMap() {
 	$('#map').each(function() {
-	var map,
-		geocoder,
-		script = document.createElement('script'),
-		initialize = function() {
-			$('.map-holder > img').remove();
-			var mapOptions = {
-					zoom: 14,
-					center: new google.maps.LatLng(51.509597, -0.127398),
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				},
-				bounds,
-				$studios = $('address'),
-				studioCount = $studios.length - 1,
-				geocoder = new google.maps.Geocoder(),
-				infoWindow = new google.maps.InfoWindow(),
-				sosIcon = {
-			    size: new google.maps.Size(35, 35),
-					url: STYLESHEET_DIRECTORY + '/images/logo-35.png',
-					scaledSize: new google.maps.Size(35, 35)
-				};
-			map = new google.maps.Map(document.getElementById('map'), mapOptions);
-			$studios.each(function(i) {
-					var address = $(this).find('.studio_address').html().replace(/<br>|<br\/>/g, ','),
-						title = $(this).find('h1').text();
-					address = address + ", UK";
-					geocoder.geocode( {'address': address}, function(results, status) {
-							var latLng,
-								marker;
-							if (status === google.maps.GeocoderStatus.OK) {
-								latLng = results[0].geometry.location;
-								marker = new google.maps.Marker({
-									position: latLng,
-									title: title,
-									icon: sosIcon,
-									animation: google.maps.Animation.DROP
-								});
-								var formattedAddress = results[0].formatted_address;
-								marker.addListener('click', function() {
-									infoWindow.setContent(formattedAddress);
-									infoWindow.open(map, marker);
-							  });
-								marker.setMap(map);
-								if(!bounds) {
-									bounds = new google.maps.LatLngBounds(latLng, latLng);
+		var map,
+			geocoder,
+			script = document.createElement('script'),
+			focusOnLondon = function() {
+				// center on London
+				map.setZoom(12);
+				map.setCenter(new google.maps.LatLng(51.49196173105721, -0.10509915000000092));
+			},
+			focusOnManchester = function() {
+				// center on Manchester
+				map.setZoom(14);
+				map.setCenter(new google.maps.LatLng(53.480795379188926, -2.2417683089355656));
+			},
+			initialize = function() {
+				var mapOptions = {
+						zoom: 12,
+						center: new google.maps.LatLng(51.49196173105721, -0.10509915000000092),
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					},
+					bounds,
+					$studios = $('address'),
+					studioCount = $studios.length - 1,
+					geocoder = new google.maps.Geocoder(),
+					infoWindow = new google.maps.InfoWindow(),
+					sosIcon = {
+				    size: new google.maps.Size(35, 35),
+						url: STYLESHEET_DIRECTORY + '/images/logo-35.png',
+						scaledSize: new google.maps.Size(35, 35)
+					};
+				map = new google.maps.Map(document.getElementById('map'), mapOptions);
+				$studios.each(function(i) {
+						var address = $(this).find('.studio_address').html().replace(/<br>|<br\/>/g, ','),
+							title = $(this).find('h1').text();
+						address = address + ", UK";
+						geocoder.geocode( {'address': address}, function(results, status) {
+								var latLng,
+									marker;
+								if (status === google.maps.GeocoderStatus.OK) {
+									latLng = results[0].geometry.location;
+									marker = new google.maps.Marker({
+										position: latLng,
+										title: title,
+										icon: sosIcon,
+										animation: google.maps.Animation.DROP
+									});
+									var formattedAddress = results[0].formatted_address;
+									marker.addListener('click', function() {
+										infoWindow.setContent(formattedAddress);
+										infoWindow.open(map, marker);
+								  });
+									marker.setMap(map);
+									if(!bounds) {
+										bounds = new google.maps.LatLngBounds(latLng, latLng);
+									} else {
+										bounds.extend(latLng);
+									}
 								} else {
-									bounds.extend(latLng);
+										console.log("Geocode was not successful for the following reason: " + status);
 								}
-							} else {
-									console.log("Geocode was not successful for the following reason: " + status);
-							}
-							if(i === studioCount) {
-								if(studioCount) { // there is more than one
-									map.fitBounds(bounds);
-								} else {
-									map.setCenter(latLng);
-								}
-							}        		    	
+								if(i === studioCount) {
+									// NB: not fitting to bounds now as the centre and zoom is being set manually
+									if(studioCount) { // there is more than one
+										//map.fitBounds(bounds);
+									} else {
+										//map.setCenter(latLng);
+									}
+								}        		    	
+						});
 					});
-				});
-		};
-	window.initialize = initialize;
-	script.type = 'text/javascript';
-	script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAYDgLN6uNYCSeCvMXROLCvFYGkigEwIh4&callback=initialize'
-	//script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize';
-	$("head").append(script);
+			};
+		window.initialize = initialize;
+		script.type = 'text/javascript';
+		script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAYDgLN6uNYCSeCvMXROLCvFYGkigEwIh4&callback=initialize'
+		//script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize';
+		$("head").append(script);
+		// set up location toggle - NB: this is using manually set coordinates for now
+		$('.locations a').click(function(e) {
+			e.preventDefault();
+			var location = $(this).data('location');
+			if(location === 'london') {
+				focusOnLondon();
+			} else {
+				focusOnManchester();
+			}
+		});
 		return false;
 	});
 }

@@ -283,15 +283,32 @@ body.home .subscribe-form input[type="submit"] {
 
 /* locations page map */
 .address-block .map-holder {
-	overflow: hidden;
+	overflow: visible;
+	position: relative;
 }
-.address-block .map-holder > img {
+.address-block .map-holder ul.locations {
+	margin: 0;
+	padding-left: 0;
+	position: absolute;
+	top: -40px;
+	left: 0;
+}
+.address-block .map-holder ul.locations li {
+	list-style: none;
+	display: inline;
+}
+.address-block .map-holder ul.locations a {
+	background-color: #fff;
+	padding: 5px 10px;
+}
+.address-block .map-holder .placeholder {
 	width: 100%;
 	height: auto;
 	opacity: 0.5;
 }
 #map {
 	height: 100%;
+	overflow: hidden;
 }
 
 /* press page */
