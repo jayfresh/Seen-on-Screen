@@ -354,6 +354,9 @@ body.home .subscribe-form input[type="submit"] {
 .contact-page-banner-block .banner-image {
 	overflow: visible; /* allow the hero image to show behind the content */
 }
+.contact-page-banner-block .banner-image img {
+	opacity: 1;
+}
 .contact-block .container-holder {
 	padding-top: 0;
 }
