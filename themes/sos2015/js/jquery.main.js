@@ -1,6 +1,6 @@
 // page init
 jQuery(function() {
-	initTabs();
+	//initTabs();
 	initMasonry();
 	initLightbox();
 	initMobileNav();
