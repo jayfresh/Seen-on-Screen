@@ -192,6 +192,7 @@ function initMap() {
 				$studios = $('address'),
 				studioCount = $studios.length - 1,
 				geocoder = new google.maps.Geocoder(),
+				infoWindow = new google.maps.InfoWindow(),
 				sosIcon = {
 			    size: new google.maps.Size(35, 35),
 					url: STYLESHEET_DIRECTORY + '/images/logo-35.png',
@@ -213,6 +214,11 @@ function initMap() {
 									icon: sosIcon,
 									animation: google.maps.Animation.DROP
 								});
+								var formattedAddress = results[0].formatted_address;
+								marker.addListener('click', function() {
+									infoWindow.setContent(formattedAddress);
+									infoWindow.open(map, marker);
+							  });
 								marker.setMap(map);
 								if(!bounds) {
 									bounds = new google.maps.LatLngBounds(latLng, latLng);
