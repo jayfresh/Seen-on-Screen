@@ -38,17 +38,23 @@ get_header();
 		</div>
 		<div class="image style-black">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img5.jpg" alt="Book a class" width="343" height="343">
-			<form action="#" class="subscribe-form validate-form">
+			<form action="//seenonscreenfitness.us2.list-manage.com/subscribe/post?u=f8ced585667d72e57f4054249&amp;id=0e966065b2" method="post" class="subscribe-form validate-form" target="_blank">
 				<fieldset>
 					<h2>Keep in touch! Join our mailing list</h2>
 					<div class="input-holder">
 						<div class="form-input validate-row">
-							<input class="required" type="text" name="name" placeholder="name">
+							<input type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="First name">
 						</div>
 						<div class="form-input validate-row">
-							<input class="required-email" type="email" name="email" placeholder="email">
+							<input type="text" value="" name="LNAME" class="required" id="mce-LNAME" placeholder="Last name">
 						</div>
-						<input type="submit" value="Enter">
+						<div class="form-input validate-row">
+							<input class="required email" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email">
+						</div>
+						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+				    <div style="position: absolute; left: -5000px;"><input type="text" name="b_f8ced585667d72e57f4054249_0e966065b2" tabindex="-1" value=""></div>
+						<input type="hidden" value="html" name="EMAILTYPE" id="mce-EMAILTYPE-0">
+						<input type="submit" name="subscribe" value="Subscribe">
 					</div>
 				</fieldset>
 			</form>

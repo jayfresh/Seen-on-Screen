@@ -250,11 +250,11 @@ body.home .subscribe-form .form-input input[type="text"], body.home .subscribe-f
 	border: 2px solid #fff;
   background: #fff;
   width: 90%;
-  height: 50px;
+  height: 40px;
   padding: 0 20px;
   text-transform: uppercase;
-  font: bold 3.5vw "bebas-neue", "Trebuchet MS", "Helvetica", sans-serif;
-	line-height: 50px;
+  font: bold 2.5vw "bebas-neue", "Trebuchet MS", "Helvetica", sans-serif;
+	line-height: 40px;
   display: block;
   color: #000;
   outline: none;
@@ -265,11 +265,12 @@ body.home .subscribe-form .form-input input[type="text"], body.home .subscribe-f
 body.home .subscribe-form input[type="submit"] {
 	width: 90%;
   border: 0;
-  height: 50px;
+  height: 40px;
   display: block;
   padding: 0px 20px;
   text-transform: uppercase;
-  font: bold 3.5vw/4vw "bebas-neue", "Trebuchet MS", "Helvetica", sans-serif;
+  font: bold 2.5vw "bebas-neue", "Trebuchet MS", "Helvetica", sans-serif;
+	line-height: 40px;
   color: #000;
   text-align: center;
   margin: auto;
