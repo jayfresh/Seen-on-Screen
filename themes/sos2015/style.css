@@ -32,6 +32,11 @@ License: BSD
 	}
 }
 
+/* form errors */
+.error input {
+	border-color: red !important;
+}
+
 /* adjustments for instagram strip on home page */
 .images-wrap ul.instagram-pics {
 	margin: 0;
