@@ -16,7 +16,6 @@ window.STYLESHEET_DIRECTORY = "<?php echo bloginfo('stylesheet_directory'); ?>";
 				<li><a href="#" data-location="manchester">Manchester</a></li>
 			</ul>
 			<div id="map">
-				<img class="placeholder" src="<?php bloginfo('stylesheet_directory'); ?>/images/placeholder-map.jpg" alt="Placeholder map">
 			</div>
 		</div>
 		<div class="address-holder">

@@ -312,6 +312,7 @@ body.home .subscribe-form input[type="submit"] {
 #map {
 	height: 100%;
 	overflow: hidden;
+	background-color: #ddd;
 }
 
 /* press page */
