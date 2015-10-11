@@ -48,7 +48,8 @@ get_header(); ?>
 		<div class="social-block">
 			<div class="social-holder">
 				<h2>Join Us on Social</h2>
-				<div class="images-holder">
+				<?php if ( dynamic_sidebar('contact_social_widget') ) : else : endif; ?>
+				<!-- <div class="images-holder">
 					<div class="image">
 						<a href="#">
 							<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img22.jpg" alt="40 squats 30 crunches 20 second" width="203" height="178">
@@ -79,7 +80,7 @@ get_header(); ?>
 							<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img27.jpg" alt="image description" width="203" height="178">
 						</a>
 					</div>
-				</div>
+				</div> -->
 				<?php include_once('_social-links.php'); ?>
 			</div>
 		</div>

@@ -32,7 +32,7 @@ License: BSD
 	}
 }
 
-/* adjustments for instagram strip */
+/* adjustments for instagram strip on home page */
 .images-wrap ul.instagram-pics {
 	margin: 0;
 	padding: 0;
@@ -50,6 +50,23 @@ License: BSD
 .banner-block .visual-container .images-wrap .image img {
 	width: auto;
 	height: 168px;
+	max-width: none;
+}
+
+/* adjustments for instragram strip on contact page */
+.contact-block .images-holder ul.instagram-pics {
+	margin: 0;
+	padding: 0;
+}
+.contact-block .images-holder ul.instagram-pics .image {
+	list-style: none;
+	display: flex;
+	justify-content: center; /* this puts landscape images in the center of li */
+	overflow: hidden;
+}
+.contact-block .images-holder .image img {
+	width: 203px;
+	height: 203px;
 	max-width: none;
 }
 

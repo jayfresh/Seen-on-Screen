@@ -854,6 +854,12 @@ function sos_widgets_init() {
 		'after_widget'  => '</div>'
 	) );
   register_sidebar( array(
+		'name'          => 'Contact Social Widget',
+		'id'            => 'contact_social_widget',
+		'before_widget' => '<div class="images-holder">',
+		'after_widget'  => '</div>'
+	) );
+  register_sidebar( array(
 		'name'          => '#SOSBackstage Widget',
 		'id'            => 'sos_backstage_widget',
 		'before_widget' => '<div class="pictures-block">',
