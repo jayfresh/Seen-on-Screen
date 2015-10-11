@@ -70,7 +70,7 @@ License: BSD
 	overflow: hidden;
 }
 .contact-block .images-holder .image img {
-	width: 203px;
+	width: auto;
 	height: 203px;
 	max-width: none;
 }
