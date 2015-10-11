@@ -21,10 +21,10 @@ get_header();
 			</a>
 		</div>
 		<div class="image">
-			<a href="<?php echo $class_schedule_url; ?>">
+			<a href="<?php echo get_permalink( get_page_by_path( 'timetable' ) ); ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/timetable-343.jpg" alt="SOS class" width="343" height="342">
 				<span class="text-wrap">
-					Book a class
+					Timetable
 				</span>
 			</a>
 		</div>
