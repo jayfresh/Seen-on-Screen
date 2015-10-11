@@ -1,7 +1,13 @@
 <?
 /* for the contact page */
 get_header(); ?>
-
+<section class="banner-block contact-page-banner-block">
+	<div class="banner-image">
+		<?php if ( has_post_thumbnail() ) { ?>
+			<?php the_post_thumbnail('full'); ?>
+		<?php } ?>
+	</div>
+</section>
 <aside class="contact-block">
 	<div class="container-holder">
 		<div class="contact-form validate-form">

@@ -249,6 +249,24 @@ body.home main {
 	color: #fff;
 }
 
+/* contact page */
+.contact-page-banner-block {
+	margin-top: -80px; /* close the gap between the header and the hero image */
+}
+.contact-page-banner-block .banner-image {
+	overflow: visible; /* allow the hero image to show behind the content */
+}
+.contact-block .container-holder {
+	padding-top: 0;
+}
+.contact-block .contact-form {
+	margin-top: -180px; /* pull the contact-form up into the hero area */
+	position: relative; /* give it a stacking context so it shows up on top of the hero */
+}
+.contact-block .social-block {
+	position: relative;
+}
+
 /* healcode widget */
 .healcode .header, .healcode > table {
 	padding: 10px;
