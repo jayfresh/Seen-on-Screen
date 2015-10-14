@@ -206,7 +206,8 @@ function initMap() {
 					sosIcon = {
 				    size: new google.maps.Size(35, 35),
 						url: STYLESHEET_DIRECTORY + '/images/logo-35.png',
-						scaledSize: new google.maps.Size(35, 35)
+						scaledSize: new google.maps.Size(35, 35),
+						anchor: new google.maps.Point(17.5, 17.5)
 					};
 				map = new google.maps.Map(document.getElementById('map'), mapOptions);
 				$studios.each(function(i) {
