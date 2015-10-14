@@ -229,6 +229,7 @@ function initMap() {
 									marker.addListener('click', function() {
 										infoWindow.setContent(formattedAddress);
 										infoWindow.open(map, marker);
+										map.panTo(marker.getPosition());
 								  });
 									marker.setMap(map);
 									if(!bounds) {
