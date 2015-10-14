@@ -64,6 +64,7 @@ class null_instagram_widget extends WP_Widget {
 		$limit = empty( $instance['number'] ) ? 9 : $instance['number'];
 		$target = empty( $instance['target'] ) ? '_self' : $instance['target'];
 		$link = empty( $instance['link'] ) ? '' : $instance['link'];
+		$top_posts = empty( $instance['top_posts'] ) ? '' : $instance['top_posts'];
 
 		echo $before_widget;
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
@@ -72,7 +73,7 @@ class null_instagram_widget extends WP_Widget {
 
 		if ( $username != '' ) {
 
-			$media_array = $this->scrape_instagram( $username, $limit );
+			$media_array = $this->scrape_instagram( $username, $limit, $top_posts );
 
 			if ( is_wp_error( $media_array ) ) {
 
@@ -112,16 +113,18 @@ class null_instagram_widget extends WP_Widget {
 	}
 
 	function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array( 'title' => __( 'Instagram', 'wpiw' ), 'username' => '', 'link' => __( 'Follow Us', 'wpiw' ), 'number' => 9, 'target' => '_self' ) );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => __( 'Instagram', 'wpiw' ), 'username' => '', 'link' => __( 'Follow Us', 'wpiw' ), 'number' => 9, 'target' => '_self', 'top_posts' => FALSE ) );
 		$title = esc_attr( $instance['title'] );
 		$username = esc_attr( $instance['username'] );
 		$number = absint( $instance['number'] );
 		$target = esc_attr( $instance['target'] );
 		$link = esc_attr( $instance['link'] );
+		$top_posts = esc_attr( $instance['top_posts'] );
 		?>
 		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'wpiw' ); ?>: <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
 		<p><label for="<?php echo $this->get_field_id( 'username' ); ?>"><?php _e( 'Username', 'wpiw' ); ?>: <input class="widefat" id="<?php echo $this->get_field_id( 'username' ); ?>" name="<?php echo $this->get_field_name( 'username' ); ?>" type="text" value="<?php echo $username; ?>" /></label></p>
 		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of photos', 'wpiw' ); ?>: <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id( 'top_posts' ); ?>"><?php _e( 'Top posts only', 'wpiw' ); ?>: <input class="" id="<?php echo $this->get_field_id( 'top_posts' ); ?>" name="<?php echo $this->get_field_name( 'top_posts' ); ?>" type="checkbox" <?php if($top_posts) { echo "checked"; } ?> /></label></p>
 		<p><label for="<?php echo $this->get_field_id( 'target' ); ?>"><?php _e( 'Open links in', 'wpiw' ); ?>:</label>
 			<select id="<?php echo $this->get_field_id( 'target' ); ?>" name="<?php echo $this->get_field_name( 'target' ); ?>" class="widefat">
 				<option value="_self" <?php selected( '_self', $target ) ?>><?php _e( 'Current window (_self)', 'wpiw' ); ?></option>
@@ -140,11 +143,12 @@ class null_instagram_widget extends WP_Widget {
 		$instance['number'] = !absint( $new_instance['number'] ) ? 9 : $new_instance['number'];
 		$instance['target'] = ( ( $new_instance['target'] == '_self' || $new_instance['target'] == '_blank' ) ? $new_instance['target'] : '_self' );
 		$instance['link'] = strip_tags( $new_instance['link'] );
+		$instance['top_posts'] = $new_instance['top_posts'] ? TRUE : FALSE;
 		return $instance;
 	}
 
 	// based on https://gist.github.com/cosmocatalano/4544576
-	function scrape_instagram( $username, $slice = 9 ) {
+	function scrape_instagram( $username, $slice = 9, $top_posts = FALSE ) {
 
 		$username = strtolower( $username );
 
@@ -176,8 +180,13 @@ class null_instagram_widget extends WP_Widget {
 				$images = $insta_array['entry_data']['ProfilePage'][0]['user']['media']['nodes'];
 				$type = 'new';
 			// hashtag page
-			} else if( isset( $insta_array['entry_data']['TagPage'][0]['tag']['media']['nodes'] ) ) {
-				$images = $insta_array['entry_data']['TagPage'][0]['tag']['media']['nodes'];
+			} else if( isset( $insta_array['entry_data']['TagPage'][0]['tag'] ) ) {
+				if($top_posts) {
+					// top posts only
+					$images = $insta_array['entry_data']['TagPage'][0]['tag']['top_posts']['nodes'];
+				} else {
+					$images = $insta_array['entry_data']['TagPage'][0]['tag']['media']['nodes'];
+				}
 				$type = 'new';
 			} else {
 				return new WP_Error( 'bad_json_2', __( 'Instagram has returned invalid data.', 'wpiw' ) );
@@ -225,7 +234,7 @@ class null_instagram_widget extends WP_Widget {
 						}
 
 						$instagram[] = array(
-							'description'   => __( 'Instagram Image', 'wpiw' ),
+							'description'   => $image['caption'],
 							'link'		  	=> '//instagram.com/p/' . $image['code'],
 							'time'		  	=> $image['date'],
 							'comments'	  	=> $image['comments']['count'],
