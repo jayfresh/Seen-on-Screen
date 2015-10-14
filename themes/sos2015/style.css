@@ -383,8 +383,17 @@ body.home .subscribe-form input[type="submit"] {
 .content-block .primary-box h2 {
 	color: #000;
 }
+.content-block .contact-form-container {
+	clear: both;
+}
 .content-block .booking-form {
 	color: #fff;
+}
+.content-block .booking-form input[type="submit"] {
+	background-color: #000;
+	border-color: #000;
+	color: #fff;
+	font-weight: 400;
 }
 
 /* contact page */
@@ -402,9 +411,6 @@ body.home .subscribe-form input[type="submit"] {
 }
 .contact-block .container-holder {
 	padding-top: 0;
-}
-.contact-block .contact-form-container {
-	clear: both;
 }
 .contact-block .contact-form {
 	margin-top: -180px; /* pull the contact-form up into the hero area */
