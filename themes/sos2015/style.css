@@ -348,8 +348,16 @@ body.home .subscribe-form input[type="submit"] {
 	margin: auto;
 	max-width: 900px;
 }
+.logos-block .logo-list li {
+	padding-bottom: 70px;
+}
+.logos-block .logo-list li:nth-child(3n+1),
+.logos-block .logo-list li:nth-child(3n) {
+	text-align: center;
+}
 .logos-block .logo-list img {
 	max-width: 250px;
+	max-height: 120px; /* most logos are rectangular, so this adjust square logos */
 }
 
 /* events page */

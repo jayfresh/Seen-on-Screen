@@ -7,7 +7,7 @@ get_header();
 </div>
 <aside class="logos-block">
 	<div class="container-holder">
-		<h2>As Seen In</h2>
+		<h2>Recommended by&hellip;</h2>
 		<ul class="logo-list">
 		<?php if ( have_posts() ) :
 			while ( have_posts() ) : the_post();
