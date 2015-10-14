@@ -10,7 +10,7 @@ get_header();
 		<section class="content-section">
 			<div class="container-holder">
 				<div class="social-block">
-					<p>follow what the sos crew are upto , onstage,backstage and classes</p>
+					<?php the_content(); ?>
 					<?php include_once('_social-links.php'); ?>
 				</div>
 				<?php /* NB: you need to make sure this is using this structure:
