@@ -3,7 +3,7 @@
 get_header();
 ?>
 <section class="team-block">
-	<h1><mark>Meet Our Team</mark></h1>
+	<h1><mark>Meet The SOS Crew</mark></h1>
 	<div class="columns-holder">
 	<?php if ( have_posts() ) :
 		while ( have_posts() ) : the_post();

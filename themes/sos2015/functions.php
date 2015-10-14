@@ -28,7 +28,7 @@ function sos_register_custom_post_types() {
             'public' => true,
             'has_archive' => true,
             'supports' => array('title','editor','thumbnail'),
-            'rewrite' => array('slug' => 'team'), // So URL is /team
+            'rewrite' => array('slug' => 'crew'), // So URL is /crew
             'register_meta_box_cb' => 'sos_add_team_credits_metabox'
         )
     );
