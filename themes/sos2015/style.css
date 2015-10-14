@@ -158,10 +158,6 @@ main {
 	background-color: #fff;
 	color: #000;
 }
-.team-block h1 mark {
-	background-color: #000;
-	color: #fff;
-}
 .logos-block .container-holder { /* press page header */
 	padding-top: 80px;
 }
