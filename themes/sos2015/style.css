@@ -23,6 +23,9 @@ License: BSD
 	#header .logo img {
 		max-width: 100%;
 	}
+	body {
+		background-position: 0 0;
+	}
 }
 @media (max-width: 767px) {
 	#header .logo {
