@@ -178,6 +178,9 @@ main {
 body.home main {
 	margin-top: 0;
 }
+.banner-image {
+	position: relative; /* so the hero text can be positioned relative to this */
+}
 .banner-image img {
 	opacity: 0.8;
 }
@@ -202,6 +205,12 @@ body.home main {
 	color: white;
 	text-align: center;
 	text-transform: uppercase;
+}
+@media (max-width: 767px) {
+	.hero-text-container {
+		bottom: 20%;
+		top: auto;
+	}
 }
 .hero-text-container h1 {
 	font-size: 6rem;
@@ -239,15 +248,9 @@ body.home main {
 
 /* home page mailing list form */
 body.home .subscribe-form h2 {
-	font: bold 3.5vw/4vw "bebas-neue", "Trebuchet MS", "Helvetica", sans-serif;
+	font: bold 3.5vw/1 "bebas-neue", "Trebuchet MS", "Helvetica", sans-serif;
 	color: #fff;
 	margin-bottom: 10px;
-}
-@media (max-width: 1024px) {
-	body.home .subscribe-form h2 {
-		font-size: 5vw;
-		line-height: 6vw;
-	}
 }
 body.home .subscribe-form {
 	position: absolute;
@@ -268,7 +271,7 @@ body.home .subscribe-form .form-input input[type="text"], body.home .subscribe-f
   outline: none;
 	margin-left: auto;
 	margin-right: auto;
-  margin-bottom: 5px;
+  margin-bottom: 2%;
 }
 body.home .subscribe-form input[type="submit"] {
 	width: 90%;
@@ -282,6 +285,25 @@ body.home .subscribe-form input[type="submit"] {
   color: #000;
   text-align: center;
   margin: auto;
+}
+@media (max-width: 1024px) {
+	body.home .subscribe-form h2 {
+		font-size: 5vw;
+		line-height: 5vw;
+	}
+	body.home .subscribe-form .form-input input[type="text"],
+	body.home .subscribe-form .form-input input[type="email"],
+	body.home .subscribe-form input[type="submit"] {
+		font-size: 40px;
+		line-height: 48px;
+		height: 48px;
+	}
+}
+@media (max-width: 767px) {
+	body.home .subscribe-form h2 {
+		font-size: 30px;
+		line-height: 1;
+	}
 }
 
 /* locations page map */
