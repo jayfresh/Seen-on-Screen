@@ -195,7 +195,8 @@ function initMap() {
 				var mapOptions = {
 						zoom: 12,
 						center: new google.maps.LatLng(51.49196173105721, -0.10509915000000092),
-						mapTypeId: google.maps.MapTypeId.ROADMAP
+						mapTypeId: google.maps.MapTypeId.ROADMAP,
+						scrollwheel: false
 					},
 					bounds,
 					$studios = $('address'),
@@ -250,7 +251,7 @@ function initMap() {
 			};
 		window.initialize = initialize;
 		script.type = 'text/javascript';
-		script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAYDgLN6uNYCSeCvMXROLCvFYGkigEwIh4&callback=initialize'
+		script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAYDgLN6uNYCSeCvMXROLCvFYGkigEwIh4&callback=initialize';
 		//script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize';
 		$("head").append(script);
 		// set up location toggle - NB: this is using manually set coordinates for now
