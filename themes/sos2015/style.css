@@ -309,6 +309,68 @@ body.home .subscribe-form input[type="submit"] {
 	}
 }
 
+/* team page */
+.team-block .column .img-holder {
+	background: #fff;
+	padding: 31px 15px 65px;
+	border-radius: 6px;
+}
+.team-block .column .img-holder.shaun, .profile-block .pictures-block .img-holder.shaun {
+	-webkit-transform: rotate(0);
+	-ms-transform: rotate(0);
+	transform: rotate(0);
+}
+.team-block .column .img-holder.gary-lee, .profile-block .pictures-block .img-holder.gary-lee {
+	-webkit-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	transform: rotate(2deg);
+}
+.team-block .column .img-holder.lisa, .profile-block .pictures-block .img-holder.lisa {
+	-webkit-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+.team-block .column .img-holder.sammi-lee, .profile-block .pictures-block .img-holder.sammi-lee {
+	-webkit-transform: rotate(1deg);
+	-ms-transform: rotate(1deg);
+	transform: rotate(1deg);
+}
+.team-block .column .img-holder.nicole, .profile-block .pictures-block .img-holder.nicole {
+	-webkit-transform: rotate(-1deg);
+	-ms-transform: rotate(-1deg);
+	transform: rotate(-1deg);
+}
+.team-block .column .img-holder.steffy, .profile-block .pictures-block .img-holder.steffy {
+	-webkit-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	transform: rotate(2deg);
+}
+.team-block .column .img-holder.isa-welly, .profile-block .pictures-block .img-holder.isa-welly {
+	-webkit-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	transform: rotate(3deg);
+}
+.team-block .column .img-holder.kelechi, .profile-block .pictures-block .img-holder.kelechi {
+	-webkit-transform: rotate(1deg);
+	-ms-transform: rotate(1deg);
+	transform: rotate(1deg);
+}
+.team-block .column .img-holder.keeley, .profile-block .pictures-block .img-holder.keeley {
+	-webkit-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+.team-block .column .img-holder.leighton, .profile-block .pictures-block .img-holder.leighton {
+	-webkit-transform: rotate(-2deg);
+	-ms-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+.profile-block .pictures-block .img-holder {
+	background: #fff;
+	border-radius: 10px;
+	padding: 46px 25px 100px;
+}
+
 /* locations page map */
 .address-block .map-holder {
 	overflow: visible;
