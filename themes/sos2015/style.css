@@ -403,6 +403,9 @@ body.home .subscribe-form input[type="submit"] {
 .contact-block .container-holder {
 	padding-top: 0;
 }
+.contact-block .contact-form-container {
+	clear: both;
+}
 .contact-block .contact-form {
 	margin-top: -180px; /* pull the contact-form up into the hero area */
 	position: relative; /* give it a stacking context so it shows up on top of the hero */

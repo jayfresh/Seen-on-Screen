@@ -52,6 +52,8 @@ get_header();
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img30.jpg" alt="image description" width="314" height="315">
 					</div>
 				</div>
+			</div>
+			<div class="contact-form-container">
 				<?php $page = get_page_by_title('Events Contact Form'); ?>
 				<?php $content = wpautop($page->post_content);
 				$content = do_shortcode($content); ?>
