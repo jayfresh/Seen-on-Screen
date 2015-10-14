@@ -30,6 +30,9 @@ License: BSD
 		left: 0;
 		width: 120px;
 	}
+	body {
+		background-image: url(./images/sosbg767.jpg);
+	}
 }
 
 /* form errors */
