@@ -67,7 +67,7 @@ function sos_register_custom_post_types() {
                 ),
             'public' => true,
             'has_archive' => true,
-            'supports' => array('title','editor','thumbnail', 'excerpt'),
+            'supports' => array('title','editor','thumbnail', 'excerpt', 'page-attributes'),
             'rewrite' => array('slug' => 'tutorials'), // So URL is /tutorials
             // 'register_meta_box_cb' => 'sos_add_video_tutorials_metabox'
         )
@@ -475,14 +475,20 @@ function attachment_sos_save($post, $attachment) {
 }
 add_filter("attachment_fields_to_save", "attachment_sos_save", null, 2);
 
-/* order the Team archive page by the menu_order */
-function reorder_team_page( $query ) {
-  if($query->is_main_query() && $query->is_archive && $query->query['post_type'] == 'sos_team') {
-    $query->set( 'orderby', 'menu_order' );
-    $query->set( 'order', 'ASC' );
+/* order some archive pages by the menu_order */
+function reorder_archive_pages( $query ) {
+  if($query->is_main_query() && $query->is_archive) {
+    /* the Team archive page */
+    $is_team_archive = $query->query['post_type'] == 'sos_team';
+    /* the Video Tutorials archive page */
+    $is_tutorials_archive = $query->query['post_type'] == 'sos_video_tutorial';
+    if( $is_team_archive || $is_tutorials_archive ) {
+      $query->set( 'orderby', 'menu_order' );
+      $query->set( 'order', 'ASC' );
+    }
   }
 }
-add_action( 'pre_get_posts', 'reorder_team_page' );
+add_action( 'pre_get_posts', 'reorder_archive_pages' );
 
 // Add menus
 add_action( 'init', 'sos_register_menus' );
