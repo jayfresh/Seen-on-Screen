@@ -121,6 +121,11 @@ License: BSD
 .content-section .pictures-block ul.instagram-pics .image a:hover {
 	opacity: 0.8;
 }
+@media (max-width: 767px) {
+	.content-section .social-block .social-networks a.instagram {
+		background: url("./images/instagram-logo-35.png") no-repeat top left;
+	}
+}
 
 /* less space between blocks on tutorial page */
 .tutorial-block .container-holder {
