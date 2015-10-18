@@ -299,6 +299,7 @@ body.home .subscribe-form input[type="submit"] {
   color: #000;
   text-align: center;
   margin: auto;
+	background-color: #C0C0C0;
 }
 @media (max-width: 1024px) {
 	body.home .subscribe-form h2 {
