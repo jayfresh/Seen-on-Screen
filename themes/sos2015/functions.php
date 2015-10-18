@@ -41,7 +41,7 @@ function sos_register_custom_post_types() {
             'public' => true,
             'has_archive' => true,
             'supports' => array('title','editor','thumbnail'),
-            'rewrite' => array('slug' => 'studios'), // So URL is /studios
+            'rewrite' => array('slug' => 'locations'), // So URL is /studios
             'register_meta_box_cb' => 'sos_add_studio_metabox'
         )
     );
