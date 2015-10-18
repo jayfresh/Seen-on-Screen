@@ -42,7 +42,7 @@
 	<div id="wrapper">
 		<header id="header">
 			<?php $registration_page_url = get_permalink( get_page_by_path( 'register' ) ); ?>
-			<a href="<?php echo $registration_page_url; ?>" id="login">Login/Signup</a>
+			<a href="<?php echo $registration_page_url; ?>" id="login">Sign up</a>
 			<div class="container-holder">
 				<div class="logo">
 					<a href="<?php bloginfo('url'); ?>">
