@@ -20,7 +20,7 @@ get_header();
 				</span>
 			</a>
 		</div>
-		<div class="image">
+		<div class="image" id="timetable">
 			<a href="<?php echo get_permalink( get_page_by_path( 'timetable' ) ); ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/timetable-343.jpg" alt="SOS class" width="343" height="342">
 				<span class="text-wrap">

@@ -246,6 +246,19 @@ body.home main {
 	margin-left: auto;
 	margin-right: auto;
 }
+@media (max-width: 767px) {
+	.home .images-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.home .images-container .image {
+		order: 1;
+	}
+	#timetable {
+		order: 0;
+	}
+}
 
 /* home page mailing list form */
 body.home .subscribe-form h2 {
