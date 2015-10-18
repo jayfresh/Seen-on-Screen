@@ -365,6 +365,9 @@ body.home .subscribe-form input[type="submit"] {
 }
 
 /* team page */
+.team-block .colum .name img {
+	max-height: 65px;
+}
 .team-block .column .img-holder {
 	background: #fff;
 	padding: 31px 15px 65px;
