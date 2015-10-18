@@ -115,18 +115,20 @@ License: BSD
 .nav-active #nav .nav-drop {
 	background-color: rgba(255, 255, 255, 0.9);
 }
-#nav .nav-drop {
-	font-size: 35px;
-	line-height: 45px;
+@media (max-width: 1025px) {
+	#nav .nav-drop {
+		font-size: 35px;
+		line-height: 45px;
+	}
+	#nav .nav-drop ul li ul.sub-menu {
+		padding: 50px 0;
+	}
 }
 #nav .nav-drop ul li {
 	position: relative;
 }
 #nav .nav-drop ul li:hover a + ul.sub-menu {
 	display: block;
-}
-#nav .nav-drop ul li ul.sub-menu {
-	padding: 50px 0;
 }
 @media (min-width: 1026px) {
 	#nav .nav-drop ul li:hover a + ul.sub-menu {
