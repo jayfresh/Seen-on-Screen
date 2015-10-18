@@ -536,6 +536,15 @@ body.home .subscribe-form input[type="submit"] {
 	right: 0;
 	margin: -12px 0 0;
 }
+.page-content-container {
+	background-color: #fff;
+	padding: 5px;
+	margin-top: 30px;
+	text-align: center;
+}
+.page-content-container p {
+	margin-top: 1.2em;
+}
 
 /* footer social links */
 .social-block .social-networks a.instagram {
