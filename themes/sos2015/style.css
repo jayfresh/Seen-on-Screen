@@ -371,8 +371,14 @@ body.home .subscribe-form input[type="submit"] {
 }
 
 /* team page */
-.team-block .colum .name img {
+@media (max-width: 1025px) {
+	.team-block .column:nth-child(n+5) {
+		display: inline-block;
+	}
+}
+.team-block .column .name img {
 	max-height: 65px;
+	width: auto;
 }
 .team-block .column .img-holder {
 	background: #fff;
