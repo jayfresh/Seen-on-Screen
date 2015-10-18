@@ -36,8 +36,8 @@ get_header();
 						<?php the_content(); ?>
 				<?php endwhile; endif; ?> -->
 				<blockquote>
-					<q>&ldquo;Grab your hens, choose an  artist and prepare to dance like a star&rdquo;</q>
-					<cite>brides magazine</cite>
+					<q>&ldquo;Grab your hens, choose an  artist and prepare to dance like a star&hellip; they are amazing!&rdquo;</q>
+					<cite>Brides - the UK's No.1 Bridal Magazine</cite>
 				</blockquote>
 				<div class="text-wrap primary-box">
 					<?php $page =  get_page_by_title('Music Video Package'); ?>
