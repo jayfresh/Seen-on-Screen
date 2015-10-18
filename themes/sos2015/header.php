@@ -41,7 +41,7 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="wrapper">
 		<header id="header">
-			<a href="https://clients.mindbodyonline.com/classic/home?studioid=44775" id="login" target="_blank">Login/Signup</a>
+			<!-- <a href="https://clients.mindbodyonline.com/classic/home?studioid=44775" id="login" target="_blank">Login/Signup</a> -->
 			<div class="container-holder">
 				<div class="logo">
 					<a href="<?php bloginfo('url'); ?>">
