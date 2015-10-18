@@ -27,7 +27,7 @@ function sos_register_custom_post_types() {
                 ),
             'public' => true,
             'has_archive' => true,
-            'supports' => array('title','editor','thumbnail'),
+            'supports' => array('title','editor','thumbnail', 'page-attributes'),
             'rewrite' => array('slug' => 'crew'), // So URL is /crew
             'register_meta_box_cb' => 'sos_add_team_credits_metabox'
         )
@@ -474,6 +474,15 @@ function attachment_sos_save($post, $attachment) {
 	return $post;
 }
 add_filter("attachment_fields_to_save", "attachment_sos_save", null, 2);
+
+/* order the Team archive page by the menu_order */
+function reorder_team_page( $query ) {
+  if($query->is_main_query() && $query->is_archive && $query->query['post_type'] == 'sos_team') {
+    $query->set( 'orderby', 'menu_order' );
+    $query->set( 'order', 'ASC' );
+  }
+}
+add_action( 'pre_get_posts', 'reorder_team_page' );
 
 // Add menus
 add_action( 'init', 'sos_register_menus' );
