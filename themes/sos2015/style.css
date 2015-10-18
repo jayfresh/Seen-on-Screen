@@ -465,6 +465,11 @@ body.home .subscribe-form input[type="submit"] {
 	overflow: hidden;
 	background-color: #ddd;
 }
+@media (max-width: 1025px) {
+	.address-block .address-holder address:nth-child(n+3) {
+		display: inline-block;
+	}
+}
 
 /* press page */
 .logos-block .logo-list {
