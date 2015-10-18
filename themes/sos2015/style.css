@@ -35,6 +35,8 @@ License: BSD
 	}
 	body {
 		background-image: url(./images/sosbg767.jpg);
+		background-attachment: scroll;
+		background-size: auto;
 	}
 }
 
