@@ -40,6 +40,21 @@ License: BSD
 	}
 }
 
+/* login link */
+#login {
+	color: #fff;
+	text-transform: uppercase;
+	font: bold 24px/34px "bebas-neue", "Trebuchet MS", "Helvetica", sans-serif;
+	position: absolute;
+	top: 15px;
+	right: 10px;
+}
+@media (max-width: 767px) {
+	#login {
+		display: none;
+	}
+}
+
 /* form errors */
 .error input, .error textarea {
 	border-color: #f00 !important;
@@ -566,7 +581,7 @@ body.home .subscribe-form input[type="submit"] {
 #footer .social-block .social-networks a.instagram {
 	background: url("./images/instagram-logo-35.png") no-repeat top left;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
 	#footer .social-block .social-networks a.instagram {
 		background: url("./images/instagram-logo-59.png") no-repeat top left;
 	}
