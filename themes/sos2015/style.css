@@ -27,6 +27,11 @@ License: BSD
 		background-position: 0 0;
 	}
 }
+@media (min-width: 1026px) {
+	#header .logo img {
+		width: 20vw;
+	}
+}
 @media (max-width: 767px) {
 	#header .logo {
 		top: 0;
@@ -126,6 +131,13 @@ License: BSD
   margin: 0 0 1.2em;
 }
 
+/* nav */
+@media (min-width: 1026px) {
+	#nav .nav-drop ul {
+		display: flex;
+		justify-content: space-between;	
+	}
+}
 /* nav menu drop-downs */
 .nav-active #nav .nav-drop {
 	background-color: rgba(255, 255, 255, 0.9);
