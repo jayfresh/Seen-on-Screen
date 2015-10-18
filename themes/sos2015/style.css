@@ -523,6 +523,12 @@ body.home .subscribe-form input[type="submit"] {
 
 /* content pages */
 @media (min-width: 1026px) {
+	.content-section .tab-content {
+		padding-top: 50px;
+	}
+	.content-section .tab-content .scrollable-wrapper {
+		padding-top: 0;
+	}
 	.tabset-section {
 		display: flex;
 	}
