@@ -1,6 +1,7 @@
 <?php
 /* for What We Do page */
 get_header();
+$class_schedule_url = get_permalink( get_page_by_path( 'book-classes' ) );
 ?>
 	<div class="title-container">
 		<h1>What We Do</h1>
@@ -21,7 +22,7 @@ get_header();
 								<?php $page =  get_page_by_title('Classes'); ?>
 								<?php echo wpautop($page->post_content); ?>
 								<div class="btn-holder">
-									<a href="#" class="btn">View Classes</a>
+									<a href="<?php echo $class_schedule_url; ?>" class="btn">View Classes</a>
 								</div>
 							</div>
 						</div>
@@ -37,7 +38,7 @@ get_header();
 								<?php $page =  get_page_by_title('Workshops'); ?>
 								<?php echo wpautop($page->post_content); ?>
 								<div class="btn-holder">
-									<a href="#" class="btn">View Workshops</a>
+									<a href="<?php echo $class_schedule_url; ?>" class="btn">View Workshops</a>
 								</div>
 							</div>
 						</div>
@@ -53,7 +54,7 @@ get_header();
 								<?php $page =  get_page_by_title('Master Classes'); ?>
 								<?php echo wpautop($page->post_content); ?>
 								<div class="btn-holder">
-									<a href="#" class="btn">View Master Classes</a>
+									<a href="<?php echo $class_schedule_url; ?>" class="btn">View Master Classes</a>
 								</div>
 							</div>
 						</div>
@@ -69,7 +70,7 @@ get_header();
 								<?php $page =  get_page_by_title('Super Classes'); ?>
 								<?php echo wpautop($page->post_content); ?>
 								<div class="btn-holder">
-									<a href="#" class="btn">View Super Classes</a>
+									<a href="<?php echo $class_schedule_url; ?>" class="btn">View Super Classes</a>
 								</div>
 							</div>
 						</div>
