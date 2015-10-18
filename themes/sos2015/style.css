@@ -112,23 +112,37 @@ License: BSD
 }
 
 /* nav menu drop-downs */
+.nav-active #nav .nav-drop {
+	background-color: rgba(255, 255, 255, 0.9);
+}
+#nav .nav-drop {
+	font-size: 35px;
+	line-height: 45px;
+}
 #nav .nav-drop ul li {
 	position: relative;
 }
 #nav .nav-drop ul li:hover a + ul.sub-menu {
 	display: block;
-	position: absolute;
-	top: 44px;
-	left: 10px;
-	background-color: #fff;
-	width: 150px;
-	font-weight: normal;
 }
-#nav .nav-drop ul li ul.sub-menu li {
-	display: block;
+#nav .nav-drop ul li ul.sub-menu {
+	padding: 50px 0;
 }
-#nav .nav-drop ul li ul.sub-menu li a {
-	padding: 8px;
+@media (min-width: 1026px) {
+	#nav .nav-drop ul li:hover a + ul.sub-menu {
+		position: absolute;
+		top: 44px;
+		left: 10px;
+		background-color: #fff;
+		width: 150px;
+		font-weight: normal;
+	}
+	#nav .nav-drop ul li ul.sub-menu li {
+		display: block;
+	}
+	#nav .nav-drop ul li ul.sub-menu li a {
+		padding: 8px;
+	}	
 }
 
 /* page margins */
