@@ -404,6 +404,12 @@ body.home .subscribe-form input[type="submit"] {
 	overflow: visible;
 	position: relative;
 }
+@media (max-width: 767px) {
+	.address-block .map-holder {
+		height: 50vh;
+		margin-top: 30px; /* move down so the location links don't overlap the title */	
+	}
+}
 .address-block .map-holder ul.locations {
 	margin: 0;
 	padding-left: 0;

@@ -192,8 +192,14 @@ function initMap() {
 				map.setCenter(new google.maps.LatLng(53.480795379188926, -2.2417683089355656));
 			},
 			initialize = function() {
+				// set different zoom for mobile than for desktop
+				var windowWidth = $(window).width();
+				var zoom = 11;
+				if (windowWidth >= 767) {
+					zoom = 12;
+				}
 				var mapOptions = {
-						zoom: 12,
+						zoom: zoom,
 						center: new google.maps.LatLng(51.49196173105721, -0.10509915000000092),
 						mapTypeId: google.maps.MapTypeId.ROADMAP,
 						scrollwheel: false
