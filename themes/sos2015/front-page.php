@@ -29,7 +29,7 @@ get_header();
 			</a>
 		</div>
 		<div class="image">
-			<a href="<?php echo get_permalink( get_page_by_path( 'crew' ) ); ?>">
+			<a href="/crew">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/team-343.png" alt="The SOS team" width="343" height="343">
 				<span class="text-wrap">
 					Crew
