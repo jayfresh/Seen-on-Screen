@@ -144,6 +144,9 @@ License: BSD
 	}
 }
 /* overwriting the max-width media queries here */
+#nav .nav-drop {
+  font-size: 24px;
+}
 #nav .nav-drop ul li ul {
   display: none;
 }
