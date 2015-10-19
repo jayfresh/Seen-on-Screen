@@ -143,8 +143,14 @@ License: BSD
 		justify-content: space-between;	
 	}
 }
-#nav .nav-drop ul li ul { /* overwriting the max-width media query here */
+/* overwriting the max-width media queries here */
+#nav .nav-drop ul li ul {
   display: none;
+}
+#nav .nav-drop li {
+  display: table-cell;
+  float: none;
+  text-align: center;
 }
 /* nav menu drop-downs */
 .nav-active #nav .nav-drop {
