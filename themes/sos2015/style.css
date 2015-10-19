@@ -143,6 +143,9 @@ License: BSD
 		justify-content: space-between;	
 	}
 }
+#nav .nav-drop ul li ul { /* overwriting the max-width media query here */
+  display: none;
+}
 /* nav menu drop-downs */
 .nav-active #nav .nav-drop {
 	background-color: rgba(255, 255, 255, 0.9);
