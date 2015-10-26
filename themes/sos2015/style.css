@@ -624,6 +624,9 @@ body.home .subscribe-form input[type="submit"] {
 }
 
 /* footer social links */
+.contact-block .social-networks a {
+	height: 59px;
+}
 .social-block .social-networks a.instagram {
 	background: url("./images/instagram-logo-59.png") no-repeat top left;
 }
