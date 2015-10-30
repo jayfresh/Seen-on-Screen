@@ -249,7 +249,7 @@ body.home main {
 	position: relative; /* so the hero text can be positioned relative to this */
 }
 .banner-image img {
-	opacity: 0.8;
+	opacity: 1;
 }
 @media (min-width: 1026px) {
 	.banner-image {
