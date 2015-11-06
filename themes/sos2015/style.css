@@ -39,7 +39,8 @@ License: BSD
 		width: 120px;
 	}
 	body {
-		background-image: url(./images/sosbg767.jpg);
+		/*background-image: url(./images/sosbg767.jpg);*/
+		background-image: url(./images/sosbgimage-tall-thin.jpg);
 		background-attachment: scroll;
 		background-size: contain;
 	}
