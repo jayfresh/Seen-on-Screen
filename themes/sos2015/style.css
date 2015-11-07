@@ -625,18 +625,25 @@ body.home .subscribe-form input[type="submit"] {
 }
 
 /* footer social links */
-.contact-block .social-networks a {
-	height: 59px;
-}
 .social-block .social-networks a.instagram {
-	background: url("./images/instagram-logo-59.png") no-repeat top left;
-}
-#footer .social-block .social-networks a.instagram {
 	background: url("./images/instagram-logo-35.png") no-repeat top left;
 }
 @media (min-width: 768px) {
-	#footer .social-block .social-networks a.instagram {
+	.contact-block .social-networks a {
+		height: 59px;
+	}
+	.social-block .social-networks a.instagram {
 		background: url("./images/instagram-logo-59.png") no-repeat top left;
+	}
+}
+@media (max-width: 1025px) {
+	#footer .social-block .social-networks a.instagram {
+		background: url("./images/instagram-logo-53.png") no-repeat top left;
+	}
+}
+@media (max-width: 767px) {
+	#footer .social-block .social-networks a.instagram {
+		background: url("./images/instagram-logo-35.png") no-repeat top left;
 	}
 }
 @media (min-width: 1026px) {
