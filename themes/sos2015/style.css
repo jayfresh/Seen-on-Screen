@@ -122,11 +122,13 @@ License: BSD
 	padding: 0;
 	width: 100%;
 }
-.content-section .pictures-block ul.instagram-pics .image {
-	list-style: none;
-	float: left;
-	width: 25%;
-	padding: 6px;
+@media (min-width: 768px) {
+	.content-section .pictures-block ul.instagram-pics .image {
+		list-style: none;
+		float: left;
+		width: 25%;
+		padding: 6px;
+	}
 }
 .content-section .pictures-block ul.instagram-pics .image a {
 	display: block;

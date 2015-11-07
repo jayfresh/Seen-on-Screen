@@ -12,6 +12,10 @@ jQuery(function() {
 });
 
 function initMasonry() {
+	// if the page is mobile size, don't do this
+	if (jQuery(window).width() < 768) {
+		return;
+	}
 	var elem = document.querySelector('.pictures-block .instagram-pics');
 	if(elem) {
 		var msnry = new Masonry( elem, {
