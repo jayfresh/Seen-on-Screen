@@ -38,12 +38,24 @@ License: BSD
 		left: 0;
 		width: 120px;
 	}
+	/* fix for mobile safari's lack of background-position: fixed
+	on mobile, use an image fixed in place relative to the body,
+	which has its own background image */
 	body {
-		/*background-image: url(./images/sosbg767.jpg);*/
-		background-image: url(./images/sosbgimage-tall-thin.jpg);
-		background-attachment: scroll;
-		background-size: contain;
+		background-image: none;
 	}
+	body #background-image-mobile {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-image: url("./images/sosbg767.jpg");
+		background-size: cover;
+		position: fixed;
+		z-index: -1;
+	}
+}
+#background-image-mobile {
+	display: none;
 }
 
 /* login link */
