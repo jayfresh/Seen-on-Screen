@@ -104,6 +104,14 @@ License: BSD
 	margin: 0;
 	padding: 0;
 }
+@media (max-width: 767px) {
+	/* center the table on the mobile view */
+	.contact-block .images-holder ul.instagram-pics {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
 .contact-block .images-holder ul.instagram-pics .image {
 	list-style: none;
 	display: flex;
