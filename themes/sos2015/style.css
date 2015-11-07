@@ -79,11 +79,19 @@ License: BSD
 }
 
 /* adjustments for instagram strip on home page */
+@media (max-width: 767px) {
+	/* let the images strip scroll on mobile */
+	/* not doing this on desktop because the scrollbars typically don't
+	look good unless you're on an OS with prettier scrollbars */
+	.images-wrap {
+		overflow: auto;
+	}
+}
 .images-wrap ul.instagram-pics {
 	margin: 0;
 	padding: 0;
 	height: 170px;
-	width: 200%;
+	width: 3400px; /* there are 20 images */
 	overflow: hidden;
 }
 .banner-block .visual-container .images-wrap ul.instagram-pics .image {
