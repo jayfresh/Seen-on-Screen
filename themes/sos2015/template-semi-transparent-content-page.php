@@ -1,5 +1,5 @@
 <?php
-/* Template: Semi-transparent Content Area */
+/* Template Name: Semi-transparent Content Area */
 get_header();
 ?>
 	<?php if ( have_posts() ) :
