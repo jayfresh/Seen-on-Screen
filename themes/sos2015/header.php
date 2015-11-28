@@ -9,6 +9,7 @@
 		document.documentElement.className = "js";
 	</script>
 	<?php wp_head(); ?>
+	<script src="https://widgets.healcode.com/javascripts/healcode.js" type="text/javascript"></script>
 </head>
 <body <?php body_class(); ?>>
 	<div id="fb-root"></div>
@@ -22,7 +23,7 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="wrapper">
 		<header id="header">
-			<a href="https://clients.mindbodyonline.com/classic/home?studioid=44775" id="login" target="_blank">Login / Sign up</a>
+			<healcode-widget id="login" data-type="account-link" data-version="0.2" data-site-id="6023" data-inner-html="Login / Register"></healcode-widget>
 			<div class="container-holder">
 				<div class="logo">
 					<a href="<?php bloginfo('url'); ?>">

@@ -67,6 +67,9 @@ License: BSD
 	top: 15px;
 	right: 10px;
 }
+#login a {
+	color: #fff;
+}
 @media (max-width: 767px) {
 	#login {
 		display: none;
