@@ -9,7 +9,7 @@
 		document.documentElement.className = "js";
 	</script>
 	<?php wp_head(); ?>
-	<script src="https://widgets.healcode.com/javascripts/healcode.js" type="text/javascript"></script>
+	<script src="https://widgets.healcode.com/javascripts/healcode.js" type="text/javascript" async></script>
 </head>
 <body <?php body_class(); ?>>
 	<div id="fb-root"></div>
