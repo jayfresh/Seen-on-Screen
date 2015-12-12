@@ -24,8 +24,8 @@ endif; ?>
 			</div>
 			<div class="quote-holder">
 				<blockquote>
-					<q>&ldquo;You don't have to be a member to do our classes or workshop&rdquo;</q>
-					<cite>Elle Magazine</cite>
+					<q>&ldquo;Thanks to SOS, we can unleash our inner Sasha Fierce while burning up to 600 calories&rdquo;</q>
+					<cite>Mail Online</cite>
 				</blockquote>
 			</div>
 		</div>
