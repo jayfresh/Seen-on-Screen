@@ -31,45 +31,27 @@ endif; ?>
 		</div>
 		<div class="signup-holder">
 			<div class="signup-block">
-				<!-- <div class="img-holder">
+				<div class="img-holder">
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/membership-aaa.png" alt="Seen On Screen Unlimited Membership #sosbackstage" width="" height="">
-				</div> -->
+				</div>
 				<div class="text-holder">
-					<strong class="title">ACCESS ALL AREAS</strong>
-					<span class="rate">&pound;150 PER MONTH</span>
 					<?php $membership = get_page_by_title('Access All Areas'); ?>
 					<?php echo wpautop($membership->post_content); ?>
-					<div class="btn-signup-holder">
-						<a href="https://clients.mindbodyonline.com/classic/ws?studioid=44775&stype=40" target="_blank" class="btn-signup">Sign Up Now</a>
-					</div>
+					<strong class="title">ACCESS ALL AREAS</strong>
+					<span class="rate">&pound;100 PER MONTH</span>
+					<a href="https://clients.mindbodyonline.com/classic/ws?studioid=44775&stype=40" target="_blank" class="btn-signup">Sign Up Now</a>
 				</div>
 			</div>
 			<div class="signup-block">
-				<!-- <div class="img-holder">
+				<div class="img-holder">
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/membership-vip.png" alt="Seen On Screen Weekend Membership #sosbackstage" width="" height="">
-				</div> -->
+				</div>
 				<div class="text-holder">
-					<strong class="title">V.I.P</strong>
-					<span class="rate">&pound;100 PER MONTH</span>
 					<?php $membership = get_page_by_title('V.I.P'); ?>
 					<?php echo wpautop($membership->post_content); ?>
-					<div class="btn-signup-holder">
-						<a href="https://clients.mindbodyonline.com/classic/ws?studioid=44775&stype=40" target="_blank" class="btn-signup">Sign Up Now</a>
-					</div>
-				</div>
-			</div>
-			<div class="signup-block">
-				<!-- <div class="img-holder">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/membership-vip.png" alt="Seen On Screen Weekend Membership #sosbackstage" width="" height="">
-				</div> -->
-				<div class="text-holder">
-					<strong class="title">WEEKEND</strong>
+					<strong class="title">V.I.P</strong>
 					<span class="rate">&pound;75 PER MONTH</span>
-					<?php $membership = get_page_by_title('Weekend Membership'); ?>
-					<?php echo wpautop($membership->post_content); ?>
-					<div class="btn-signup-holder">
-						<a href="https://clients.mindbodyonline.com/classic/ws?studioid=44775&stype=40" target="_blank" class="btn-signup">Sign Up Now</a>
-					</div>
+					<a href="https://clients.mindbodyonline.com/classic/ws?studioid=44775&stype=40" target="_blank" class="btn-signup">Sign Up Now</a>
 				</div>
 			</div>
 		</div>

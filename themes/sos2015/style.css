@@ -687,3 +687,34 @@ body.home .subscribe-form input[type="submit"] {
 		background: url("./images/instagram-logo-35.png") no-repeat top left;
 	}
 }
+
+/* temporary design change for membership page */
+.membership-block .col-container {
+	margin-bottom: 3em;
+}
+@media (min-width: 768px) {
+	.membership-block .signup-holder {
+		display: flex;
+		justify-content: space-between;
+	}
+	.membership-block .signup-block {
+		width: 33%;
+	}
+	.membership-block .signup-block .btn-signup-holder {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 10px;
+	}
+}
+.membership-block .signup-block {
+	background-color: rgba(255, 255, 255, 0.59);
+	padding: 25px;
+	padding-bottom: 50px;
+	color: #000;
+	position: relative;
+}
+.membership-block .signup-block .text-holder .rate {
+	margin-bottom: 1em;
+}
