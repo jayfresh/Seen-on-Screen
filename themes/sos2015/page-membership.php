@@ -36,7 +36,7 @@ endif; ?>
 				</div> -->
 				<div class="text-holder">
 					<strong class="title">ACCESS ALL AREAS</strong>
-					<span class="rate">&pound;150 PER MONTH</span>
+					<span class="rate">&pound;170 PER MONTH</span>
 					<?php $membership = get_page_by_title('Access All Areas'); ?>
 					<?php echo wpautop($membership->post_content); ?>
 					<div class="btn-signup-holder">
