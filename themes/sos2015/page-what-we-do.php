@@ -17,7 +17,7 @@ $class_schedule_url = get_permalink( get_page_by_path( 'book-classes' ) );
 						</div>
 						<div class="text-block">
 							<h2>Classes</h2>
-							<span class="cost">Classes: &pound;12</span>
+							<span class="cost">Classes: &pound;15</span>
 							<div class="text-holder">
 								<?php $page =  get_page_by_title('Classes'); ?>
 								<?php echo wpautop($page->post_content); ?>
