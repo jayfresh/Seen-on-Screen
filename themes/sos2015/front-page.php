@@ -13,7 +13,7 @@ get_header();
 	</div>
 	<div class="images-container">
 		<div class="image no-border">
-			<a href="<?php echo get_permalink( get_page_by_path( 'tutorials' ) ); ?>">
+			<a href="/tutorials">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sosonlinetutorials-343.png" alt="SOS online tutorials" width="343" height="343">
 				<span class="text-wrap">
 					Online Tutorials
