@@ -3,7 +3,7 @@
 get_header();
 ?>
 	<div class="title-container">
-		<h1>Video Tutorials</h1>
+		<h1>Online Tutorials</h1>
 	</div>
 	<section class="tutorial-block">
 	<?php if ( have_posts() ) :
