@@ -165,6 +165,10 @@ License: BSD
 .tutorial-block .container-holder {
   padding-bottom: 50px;
 }
+/* narrower popups so YouTube thumbnails are not stretched */
+.popup-content {
+	max-width: 600px;
+}
 /* default margin back on paragraphs in popup */
 .popup-content .text-holder p {
   margin: 0 0 1.2em;
