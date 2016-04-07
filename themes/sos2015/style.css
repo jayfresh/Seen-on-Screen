@@ -165,6 +165,13 @@ License: BSD
 .tutorial-block .container-holder {
   padding-bottom: 50px;
 }
+/* less space between paragraphs on tutorial page, with adjustment for CTA spacing */
+.tutorial-block .text-block p {
+	margin-bottom: 2em;
+}
+.tutorial-block .text-block .btn-more {
+	margin-top: 41px;
+}
 /* narrower popups so YouTube thumbnails are not stretched */
 .popup-content {
 	max-width: 600px;
