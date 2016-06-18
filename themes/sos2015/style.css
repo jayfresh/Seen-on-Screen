@@ -587,12 +587,6 @@ body.home .subscribe-form input[type="submit"] {
 		padding-top: 40px;
 	}
 }
-@media (min-width: 767px) {
-	.work-page .page-content-container {
-		padding-top: 40px;
-		padding-bottom: 40px;
-	}	
-}
 .work-page .logos-block .container-holder {
 	padding-top: 60px;
 }
