@@ -1,10 +1,11 @@
 <?php
+/* Template Name: What We Do */
 /* for What We Do page */
 get_header();
 $class_schedule_url = get_permalink( get_page_by_path( 'book-classes' ) );
 ?>
 	<div class="title-container">
-		<h1>What We Do</h1>
+		<h1><?php the_title(); ?></h1>
 	</div>
 	<?php if ( have_posts() ) :
 		while ( have_posts() ) : the_post(); ?>
