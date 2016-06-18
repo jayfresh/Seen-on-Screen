@@ -615,9 +615,10 @@ body.home .subscribe-form input[type="submit"] {
 }
 .work-page .carouselContainer {
 	width: 100%;
-	background: #ccc;
 	overflow: hidden;
 	position: relative;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 .work-page .carousel {
 	width: 100%;
