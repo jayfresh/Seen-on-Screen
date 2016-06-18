@@ -1,5 +1,5 @@
 <?
-/* for the Work page */
+/* Template Name: Take SOS To Work */
 get_header(); ?>
 <div class="work-page">
 	<div class="title-container">
