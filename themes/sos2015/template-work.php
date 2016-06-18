@@ -6,9 +6,9 @@ get_header(); ?>
 		<h1>Take SOS to work</h1>
 	</div>
 	<section class="logos-block content-block">
-		<div class="container-holder">
+		<div class="container-holder page-content-container page-content-container-semi-transparent">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<div class="page-content-container page-content-container-semi-transparent">
+			<div class="work-intro">
 				<?php the_content(); ?>
 			</div>
 			<?php endwhile; endif; ?>
@@ -31,7 +31,7 @@ get_header(); ?>
 					endwhile; endif; ?>
 			</ul>
 			<h2>Testimonials</h2>
-			<div class="page-content-container page-content-container-semi-transparent carouselContainer autoScroll">
+			<div class="carouselContainer autoScroll">
 				<ul class="testimonials carousel">
 				<?php $quotes_query = new WP_Query(array(
 					'sos_quotes' => 'testimonials',
