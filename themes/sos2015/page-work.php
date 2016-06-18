@@ -23,25 +23,26 @@ get_header(); ?>
 						global $post;
 						$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 						$image_url = $thumb['0'];
+						// leaving no whitespace between li elements so they sit flush next to each other
+					?><li><img src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>"></li><?php
 					}
-					$quote_url = get_post_meta(get_the_ID(), '_url', true);
-				// leaving no whitespace between li elements so they sit flush next to each other
-				?><li>
-				<img src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>">
-				</li><?php
-					endwhile; endif;
-				?>
+					endwhile; endif; ?>
 			</ul>
 			<h2>Testimonials</h2>
 			<div class="page-content-container page-content-container-semi-transparent carouselContainer autoScroll">
 				<ul class="testimonials carousel">
 				<?php $quotes_query = new WP_Query(array(
-						'sos_quotes' => 'testimonials',
-						'posts_per_page' => -1
-					));
-					if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post(); ?>
-					<li class="testimonial"><?php the_content(); ?></li>
-					<?php endwhile; endif; ?>
+					'sos_quotes' => 'testimonials',
+					'posts_per_page' => -1
+				));
+				if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post(); ?>
+					<li class="testimonial"><?php the_content();
+					if ( has_post_thumbnail() ) {
+						global $post;
+						$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						$image_url = $thumb['0']; ?><img src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>"><?php
+					} ?></li>
+				<?php endwhile; endif; ?>
 				</ul>
 			</div>
 			<div class="contact-form-container">

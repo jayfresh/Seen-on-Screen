@@ -23,7 +23,7 @@
 							<img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo1.png" alt="Seen On Screen" width="189" height="106">
 						</a>
 					</div>
-					<p>&copy; 2011-2015 <a href="#">Seen On Screen Fitness &amp; Events Ltd</a></p>
+					<p>&copy; 2011-2016 <a href="#">Seen On Screen Fitness &amp; Events Ltd</a></p>
 				</footer>
 			</div>
 		</div>

@@ -630,6 +630,9 @@ body.home .subscribe-form input[type="submit"] {
 	width: auto;
 	display: block;
 }
+.work-page .carousel img {
+	max-width: 20%;
+}
 .work-page .carouselContainer .arrow {
 	position: absolute;
 	left: 12px;
