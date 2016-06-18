@@ -188,6 +188,9 @@ License: BSD
 		justify-content: space-between;	
 	}
 }
+#nav {
+	text-align: center;
+}
 /* overwriting the max-width media queries here */
 #nav .nav-drop {
   font-size: 24px;
@@ -565,6 +568,29 @@ body.home .subscribe-form input[type="submit"] {
 	max-height: 120px; /* most logos are rectangular, so this adjust square logos */
 }
 
+/* work page */
+.work-page h2 {
+	display: inline-block;
+	font: bold 50px/50px "bebas-neue", "Trebuchet MS", "Helvetica", sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	width: auto;
+	padding: 10px 50px;
+	background-color: #fff;
+	color: #000;
+	white-space: nowrap;
+	margin-bottom: 40px;
+}
+/* different styles for the client logos */
+.work-page .logos-block .logo-list li {
+	width: 20%;
+	padding: 0;
+}
+.work-page .logos-block .logo-list img {
+	max-width: 100%;
+	max-height: none;
+}
+
 /* events page */
 .content-block .secondary-box {
 	background: rgba(255, 255, 255, 0.59);
@@ -669,6 +695,8 @@ body.home .subscribe-form input[type="submit"] {
 }
 .page-content-container-semi-transparent {
 	background-color: rgba(255, 255, 255, 0.59);
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 /* footer social links */
