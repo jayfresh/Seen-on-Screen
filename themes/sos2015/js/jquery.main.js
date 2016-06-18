@@ -81,7 +81,7 @@ function initCarousel() {
 		add animation
 		add ability to wrap around */
 	var ANIMATE_TIME = 500,
-		SLIDESHOW_PAUSE = 3000;
+		SLIDESHOW_PAUSE = 5000;
 	$('.carouselContainer').each(function() {
 		var $container = $(this),
 			$carousel = $container.children('.carousel'),
@@ -111,7 +111,8 @@ function initCarousel() {
 		if(slideCount===1) {
 			return false;
 		}
-		$slides.width(width);
+		$slides.width(width)
+			.css('float', 'left');
 		$carousel.append($slides.clone())
 			.append($slides.clone())
 			.width(stripWidth*3)
