@@ -16,7 +16,9 @@ get_header(); ?>
 			<ul class="logo-list">
 			<?php $quotes_query = new WP_Query(array(
 					'sos_quotes' => 'corporate',
-					'posts_per_page' => -1
+					'posts_per_page' => -1,
+					'orderby'=>'menu_order',
+					'order'=>'ASC'
 				));
 				if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post();
 					if ( has_post_thumbnail() ) {
@@ -33,7 +35,9 @@ get_header(); ?>
 				<ul class="testimonials carousel">
 				<?php $quotes_query = new WP_Query(array(
 					'sos_quotes' => 'testimonials',
-					'posts_per_page' => -1
+					'posts_per_page' => -1,
+					'orderby'=>'menu_order',
+					'order'=>'ASC'
 				));
 				if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post(); ?>
 					<li class="testimonial"><?php the_content();
