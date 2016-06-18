@@ -617,8 +617,7 @@ body.home .subscribe-form input[type="submit"] {
 	width: 100%;
 	overflow: hidden;
 	position: relative;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding: 0;
 }
 .work-page .carousel {
 	width: 100%;
@@ -629,6 +628,9 @@ body.home .subscribe-form input[type="submit"] {
 	list-style: none;
 	width: auto;
 	display: block;
+}
+.work-page .carousel p {
+	padding: 0 30px;
 }
 .work-page .carousel img {
 	max-width: 20%;
