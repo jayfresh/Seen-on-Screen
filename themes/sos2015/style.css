@@ -590,6 +590,35 @@ body.home .subscribe-form input[type="submit"] {
 	max-width: 100%;
 	max-height: none;
 }
+.carouselContainer {
+	width: 100%;
+	background: #ccc;
+	overflow: hidden;
+	position: relative;
+	height: 500px;
+}
+.carousel {
+	width: 100%;
+	margin: 0;
+	position: relative;
+}
+.carousel li {
+	list-style: none;
+	float: left;
+	height: 300px;
+	width: auto;
+}
+.carouselContainer .arrow {
+	position: absolute;
+	left: 12px;
+	top: 50%;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+.carouselContainer .opposite {
+	right: 12px;
+	left: auto;
+}
 
 /* events page */
 .content-block .secondary-box {

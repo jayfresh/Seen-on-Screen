@@ -33,8 +33,8 @@ get_header(); ?>
 				?>
 			</ul>
 			<h2>Testimonials</h2>
-			<div class="page-content-container page-content-container-semi-transparent">
-				<ul class="testimonials">
+			<div class="page-content-container page-content-container-semi-transparent carouselContainer">
+				<ul class="testimonials carousel">
 				<?php $quotes_query = new WP_Query(array(
 						'sos_quotes' => 'testimonials',
 						'posts_per_page' => -1
