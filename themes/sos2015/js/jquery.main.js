@@ -81,7 +81,7 @@ function initCarousel() {
 		add animation
 		add ability to wrap around */
 	var ANIMATE_TIME = 500,
-		SLIDESHOW_PAUSE = 5000;
+		SLIDESHOW_PAUSE = 7500;
 	$('.carouselContainer').each(function() {
 		var $container = $(this),
 			$carousel = $container.children('.carousel'),
@@ -119,10 +119,7 @@ function initCarousel() {
 			.css('left', targetPos);
 		containerHalfHeight = $container.height()/2;
 		$arrows = $('<a href="#" class="arrow">&lt;</a><a href="#" class="arrow opposite">&gt;</a>')
-			.appendTo($container)
-			.css('top', function(i, val) {
-				return containerHalfHeight - $(this).height()/2;
-			});
+			.appendTo($container);
 		$arrows.on('click', function(e) {
 			e.preventDefault();
 			if($carousel.is(':animated')) {
