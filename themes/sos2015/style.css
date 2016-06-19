@@ -581,7 +581,6 @@ body.home .subscribe-form input[type="submit"] {
 	padding: 10px 50px;
 	background-color: #fff;
 	color: #000;
-	white-space: nowrap;
 	margin-bottom: 40px;
 }
 /* different styles for the client logos */
