@@ -6,33 +6,33 @@ get_header();
 	<div class="banner-image">
 		<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img1.jpg" alt="SOS crew" width="1400" height="705">
 		<div class="hero-text-container">
-			<h1>Dance like a star</h1>
-			<?php $class_schedule_url = get_permalink( get_page_by_path( 'book-classes' ) ); ?>
-			<p><a href="<?php echo $class_schedule_url; ?>">Book your class now</a></p>
+			<h1><span>The UK's sassiest exercise option</span></h1>
+			<?php $class_schedule_url = get_permalink( get_page_by_path( 'timetable' ) ); ?>
+			<p><a href="<?php echo $class_schedule_url; ?>">View timetable</a></p>
 		</div>
 	</div>
 	<div class="images-container">
-		<div class="image no-border">
-			<a href="/tutorials">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sosonlinetutorials-343.png" alt="SOS online tutorials" width="343" height="343">
+		<div class="image">
+			<a href="<?php echo get_permalink( get_page_by_path( 'book-classes' ) ); ?>">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/book-classes-343.jpg" alt="The SOS team" width="343" height="343">
 				<span class="text-wrap">
-					Online Tutorials
-				</span>
-			</a>
-		</div>
-		<div class="image" id="timetable">
-			<a href="<?php echo get_permalink( get_page_by_path( 'timetable' ) ); ?>">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/timetable-343.jpg" alt="SOS class" width="343" height="342">
-				<span class="text-wrap">
-					Timetable
+					Book Classes
 				</span>
 			</a>
 		</div>
 		<div class="image">
-			<a href="/crew">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/team-343.png" alt="The SOS team" width="343" height="343">
+			<a href="<?php echo get_permalink( get_page_by_path( 'take-sos-to-work' ) ); ?>">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/events-343.jpg" alt="SOS class" width="343" height="342">
 				<span class="text-wrap">
-					Crew
+					Events
+				</span>
+			</a>
+		</div>
+		<div class="image">
+			<a href="/online-classes">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/online-classes-343.jpg" alt="SOS online tutorials" width="343" height="343">
+				<span class="text-wrap">
+					Online Classes
 				</span>
 			</a>
 		</div>

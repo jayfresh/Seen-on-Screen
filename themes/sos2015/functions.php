@@ -68,7 +68,7 @@ function sos_register_custom_post_types() {
             'public' => true,
             'has_archive' => true,
             'supports' => array('title','editor','thumbnail', 'excerpt', 'page-attributes'),
-            'rewrite' => array('slug' => 'tutorials'), // So URL is /tutorials
+            'rewrite' => array('slug' => 'online-classes'), // So URL is /online-classes
             // 'register_meta_box_cb' => 'sos_add_video_tutorials_metabox'
         )
     );

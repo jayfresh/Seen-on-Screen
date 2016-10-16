@@ -260,6 +260,10 @@ License: BSD
 main {
 	margin-top: 80px;
 }
+.home h1 span {
+	background-color: rgba(0,0,0,0.5);
+	padding: 0 15px;	
+}
 .title-container {
 	text-align: center;
 }
@@ -312,7 +316,7 @@ body.home main {
 }
 .hero-text-container {
 	position: absolute;
-	top: 160px;
+	top: 200px;
 	left: 0;
 	width: 100%;
 	margin-left: 0;
@@ -328,18 +332,21 @@ body.home main {
 	}
 }
 .hero-text-container h1 {
-	font-size: 6rem;
+	font-size: 4rem;
 	margin-bottom: 0;
 	font-family: bebas-neue;
 }
 .hero-text-container p {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	font-weight: 600;
 	color: black;
 	background-color: white;
-	display: inline;
-	padding: 0 20px;
+	display: inline-block;
+	width: auto;
+	padding: 0px 20px;
 	font-family: bebas-neue;
+	margin-bottom: 0;
+	margin-top: 2rem;
 }
 .hero-text-container a {
 	color: #000;
@@ -350,7 +357,20 @@ body.home main {
 	}
 	.hero-text-container p {
 		font-size: 2.5rem;
+		padding: 12px 20px;
 	}	
+}
+@media (max-width: 500px) {
+	.hero-text-container {
+		bottom: 10%;
+	}
+	.hero-text-container h1 {
+		font-size: 3rem;
+	}
+	.hero-text-container p {
+		font-size: 2rem;
+		margin-top: 1rem;
+	}
 }
 
 /* home page blocks */
@@ -368,9 +388,6 @@ body.home main {
 	}
 	.home .images-container .image {
 		order: 1;
-	}
-	#timetable {
-		order: 0;
 	}
 }
 
