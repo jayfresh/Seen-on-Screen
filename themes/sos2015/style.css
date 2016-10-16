@@ -775,6 +775,18 @@ body.home .subscribe-form input[type="submit"] {
 	padding-right: 10px;
 }
 
+/* footer layout */
+@media (min-width: 1026px) {
+	#footer .container-holder {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: flex-end;
+	}
+	#footer .footer-frame {
+		margin: 0;
+	}	
+}
+
 /* footer social links */
 .social-block .social-networks a.instagram {
 	background: url("./images/instagram-logo-35.png") no-repeat top left;

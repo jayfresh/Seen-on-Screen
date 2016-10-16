@@ -24,7 +24,7 @@ get_header();
 			<a href="<?php echo get_permalink( get_page_by_path( 'take-sos-to-work' ) ); ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/events-343.jpg" alt="SOS class" width="343" height="342">
 				<span class="text-wrap">
-					Events
+					Book Events
 				</span>
 			</a>
 		</div>
