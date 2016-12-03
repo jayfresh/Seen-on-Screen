@@ -4,7 +4,7 @@ get_header();
 ?>
 <section class="banner-block">
 	<div class="banner-image">
-		<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img1.jpg" alt="SOS crew" width="1400" height="705">
+		<img src="<?php bloginfo('stylesheet_directory'); ?>/images/img1.jpg" alt="The UK's sassiest exercise option" width="1400" height="705">
 		<div class="hero-text-container">
 			<h1><span>The UK's sassiest exercise option</span></h1>
 			<?php $class_schedule_url = get_permalink( get_page_by_path( 'timetable' ) ); ?>
@@ -14,7 +14,7 @@ get_header();
 	<div class="images-container">
 		<div class="image">
 			<a href="<?php echo get_permalink( get_page_by_path( 'book-classes' ) ); ?>">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/book-classes-343.jpg" alt="The SOS team" width="343" height="343">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/book-classes-686.jpg" alt="Book SOS classes" width="343" height="343">
 				<span class="text-wrap">
 					Book Classes
 				</span>
@@ -22,7 +22,7 @@ get_header();
 		</div>
 		<div class="image">
 			<a href="<?php echo get_permalink( get_page_by_path( 'take-sos-to-work' ) ); ?>">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/events-343.jpg" alt="SOS class" width="343" height="342">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/events-686.jpg" alt="Book SOS events" width="343" height="342">
 				<span class="text-wrap">
 					Book Events
 				</span>
@@ -30,7 +30,7 @@ get_header();
 		</div>
 		<div class="image">
 			<a href="/online-classes">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/online-classes-343.jpg" alt="SOS online tutorials" width="343" height="343">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/images/online-classes-686.jpg" alt="SOS online classes" width="343" height="343">
 				<span class="text-wrap">
 					Online Classes
 				</span>
