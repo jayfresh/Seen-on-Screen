@@ -4,11 +4,6 @@
 				<aside class="footer-block">
 					<div class="social-block">
 						<?php include_once('_social-links.php'); ?>
-						<div class="card">
-							<a href="#">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/card.jpg" alt="NETBANX by OPTIMAL PAYMENTS VISA" width="106" height="67">
-							</a>
-						</div>
 					</div>
 					<nav class="footer-nav">
 						<?php wp_nav_menu( array(

@@ -1941,16 +1941,6 @@ main {
 	margin: 0 0 49px;
 }
 
-#footer .social-block .card {
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0 0 0 37px;
-}
-
-#footer .social-block .card a:hover {
-	opacity: .8;
-}
-
 #footer .social-block .social-networks {
 	text-align: center;
 	display: inline-block;
@@ -3167,18 +3157,6 @@ main {
 		margin: 0 0 83px;
 	}
 
-	#footer .social-block .card {
-		position: absolute;
-		width: 181px;
-		left: 50%;
-		bottom: 0;
-		margin: 0 0 0 -90px;
-	}
-
-	#footer .social-block .card img {
-		width: 100%;
-	}
-
 	#footer .social-block .social-networks {
 		display: block;
 	}
@@ -3785,11 +3763,6 @@ main {
 
 	#footer .social-block {
 		margin: 0 0 20px;
-	}
-
-	#footer .social-block .card {
-		width: 130px;
-		margin: 0 0 0 -65px;
 	}
 
 	#footer .social-block .social-networks li + li {
