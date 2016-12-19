@@ -5,6 +5,12 @@ get_header();
 	<div class="title-container">
 		<h1>Online Classes</h1>
 	</div>
+	<?php $online_classes_page = get_page_by_path('online-classes');
+	if ($online_classes_page) { ?>
+	<div class="page-content-container page-content-container-semi-transparent">
+			<?php echo wpautop($online_classes_page->post_content); ?>
+	</div>
+	<?php } ?>
 	<section class="tutorial-block">
 	<?php if ( have_posts() ) :
 		$i = 1;
@@ -23,7 +29,7 @@ get_header();
 				<h2><?php the_title(); ?></h2>
 				<span class="level">LEVEL - <?php echo $level->name; ?></span>
 				<?php the_excerpt(); ?>
-				<a href="#popup<?php echo $i; ?>" class="lightbox btn-more">more</a>
+				Buy now <a href="#popup<?php echo $i; ?>" class="lightbox btn-more">more</a>
 			</div>
 		</div>
 		<?php $i++;

@@ -170,7 +170,8 @@ License: BSD
 	margin-bottom: 2em;
 }
 .tutorial-block .text-block .btn-more {
-	margin-top: 41px;
+	margin-top: -6px;
+	margin-left: 6px;
 }
 /* narrower popups so YouTube thumbnails are not stretched */
 .popup-content {
