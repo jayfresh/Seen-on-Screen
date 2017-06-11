@@ -13,7 +13,7 @@
 					</nav>
 				</aside>
 				<footer class="footer-frame">
-					<p>&copy; 2011-2016 <a href="/">Seen On Screen Fitness &amp; Events Ltd</a></p>
+					<p>&copy; 2011-2017 <a href="/">Seen On Screen Fitness &amp; Events Ltd</a></p>
 				</footer>
 			</div>
 		</div>

@@ -13,7 +13,8 @@ get_header();
 			while ( have_posts() ) : the_post();
 			$quotes_query = new WP_Query(array(
 				'sos_quotes' => 'press',
-				'posts_per_page' => -1
+				'posts_per_page' => -1,
+				'orderby' => 'menu_order'
 			));
 			if($quotes_query->have_posts()) : while($quotes_query->have_posts()) : $quotes_query->the_post();
 				if ( has_post_thumbnail() ) {
